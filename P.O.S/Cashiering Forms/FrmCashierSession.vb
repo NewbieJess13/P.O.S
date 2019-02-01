@@ -75,16 +75,18 @@ Public Class FrmCashierSession
             Else
                 sum = sum + DGItemList.Rows(I).Cells(3).Value
                 sum = Math.Round(sum, 2)
-
             End If
         Next
-        LblTotalRes.Text = "₱ " + sum.ToString
+        LblTotalRes.Text = "₱" + sum.ToString
     End Sub
-    Private Sub TxtBarcode_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtBarcode.KeyDown
+    Private Sub TxtBarcode_TextChanged(sender As Object, e As EventArgs) Handles TxtBarcode.TextChanged
+        CheckBarcode()
+    End Sub
+    Private Sub CheckBarcode()
         If TxtBarcode.TextLength = TxtBarcode.MaxLength Then
             LblPrevBarcode.Text = TxtBarcode.Text
-            SelectFromProdListUsingBarcode()
             If TxtBarcode.Text = LblPrevPrevBarcode.Text Then
+                SelectFromProdListUsingBarcode()
                 TxtQuanProd.Text += 1
                 ComputeTotalPrice()
                 UpdateTempQuantity()
@@ -99,11 +101,30 @@ Public Class FrmCashierSession
             LoadDataToGrid()
         End If
     End Sub
+    'Private Sub TxtBarcode_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtBarcode.KeyDown
+    '    If TxtBarcode.TextLength = TxtBarcode.MaxLength Then
+    '        LblPrevBarcode.Text = TxtBarcode.Text
+    '        SelectFromProdListUsingBarcode()
+    '        If TxtBarcode.Text = LblPrevPrevBarcode.Text Then
+    '            TxtQuanProd.Text += 1
+    '            ComputeTotalPrice()
+    '            UpdateTempQuantity()
+    '            ClearTextbarcode()
+    '        Else
+    '            TxtQuanProd.Text = 1
+    '            ComputeTotalPrice()
+    '            CheckForDuplicateBarcode()
+    '            ClearTextbarcode()
+    '        End If
+
+    '        LoadDataToGrid()
+    '    End If
+    'End Sub
     Sub UpdateTempQuantity()
         MsSql.ExecuteQuery("UPDATE Tbl_TempTransaction SET Quantity += 1,TotalAmount='" & Total & "' WHERE Barcode ='" & TxtBarcode.Text & "'", Nothing)
         LoadDataToGrid()
     End Sub
-    Sub SelectFromProdListUsingBarcode()
+    Function SelectFromProdListUsingBarcode() As Boolean
         tbl = MsSql.Table("SELECT * FROM Tbl_Products WHERE RealBarcode = '" & TxtBarcode.Text & "'")
         Description = ""
         ItemCount = ""
@@ -117,10 +138,12 @@ Public Class FrmCashierSession
                 unit = dr(8)
                 SellingPrice = dr(3)
             Next
+            Return True
         Else
             MessageBox.Show("No records for that barcode!", "POS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            Return False
         End If
-    End Sub
+    End Function
 
     Private Sub Btn1_Click(sender As Object, e As EventArgs) Handles Btn1.Click, Btn2.Click, Btn3.Click, Btn4.Click, Btn5.Click, Btn6.Click, Btn7.Click, Btn8.Click, Btn9.Click, Btn0.Click, Btn00.Click
         If tfocus = "barcode" Then
@@ -159,7 +182,12 @@ Public Class FrmCashierSession
         LblDateTime.Text = Date.Now
     End Sub
 
+    Private Sub BtnEnter_Click(sender As Object, e As EventArgs) Handles BtnEnter.Click
+        CheckBarcode()
+    End Sub
+
     Sub InsertIntoTempBarcode()
+
         If MsSql.ExecuteQuery("INSERT INTO Tbl_TempTransaction (Description,Quantity,TotalAmount,ItemCode,Barcode,SellingPrice) VALUES ('" & Description & "','" & TxtQuanProd.Text & "','" & Total & "','" & ItemCode & "','" & TxtBarcode.Text & "','" & SellingPrice & "')", Nothing) = False Then
             MessageBox.Show("Not Inserted!")
         End If
@@ -170,9 +198,10 @@ Public Class FrmCashierSession
         If tbl.Rows.Count > 0 Then
             UpdateTempQuantity()
         Else
-            InsertIntoTempBarcode()
+            If SelectFromProdListUsingBarcode() = True Then
+                InsertIntoTempBarcode()
+            End If
         End If
-
     End Sub
 
     Private Sub TxtQuanProd_GotFocus(sender As Object, e As EventArgs) Handles TxtQuanProd.GotFocus

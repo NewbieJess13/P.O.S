@@ -26,6 +26,10 @@ Public Class FrmVoidItem
     End Sub
 
     Private Sub TxtAuthBarcode_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtAuthBarcode.KeyDown
+
+    End Sub
+
+    Private Sub TxtAuthBarcode_TextChanged(sender As Object, e As EventArgs) Handles TxtAuthBarcode.TextChanged
         If TxtAuthBarcode.TextLength = TxtAuthBarcode.MaxLength Then
             CheckBarcode()
         End If

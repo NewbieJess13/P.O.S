@@ -143,6 +143,7 @@ Partial Class FrmCashierSession
         Me.LblPrevPrevBarcode.TabIndex = 26
         Me.LblPrevPrevBarcode.Text = "PrevPrevBarcode"
         Me.LblPrevPrevBarcode.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.LblPrevPrevBarcode.Visible = False
         '
         'LblPrevBarcode
         '
@@ -155,6 +156,7 @@ Partial Class FrmCashierSession
         Me.LblPrevBarcode.TabIndex = 25
         Me.LblPrevBarcode.Text = "PrevBarcode"
         Me.LblPrevBarcode.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.LblPrevBarcode.Visible = False
         '
         'LblDateTime
         '
@@ -316,7 +318,7 @@ Partial Class FrmCashierSession
         Me.DGItemList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -361,6 +363,7 @@ Partial Class FrmCashierSession
         Me.Column3.HeaderText = "Quantity"
         Me.Column3.Name = "Column3"
         Me.Column3.ReadOnly = True
+        Me.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         '
         'Column4
         '
@@ -648,6 +651,7 @@ Partial Class FrmCashierSession
         'Btn1
         '
         Me.Btn1.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Btn1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn1.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -947,6 +951,11 @@ Partial Class FrmCashierSession
     Friend WithEvents BtnPullOutCash As Button
     Friend WithEvents BtnReplenishCash As Button
     Friend WithEvents BtnManualInput As Button
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents LblPrevBarcode As Label
+    Friend WithEvents LblPrevPrevBarcode As Label
+    Friend WithEvents LblNotification As Label
+    Friend WithEvents Timer1 As Timer
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
@@ -954,9 +963,4 @@ Partial Class FrmCashierSession
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents Panel9 As Panel
-    Friend WithEvents LblPrevBarcode As Label
-    Friend WithEvents LblPrevPrevBarcode As Label
-    Friend WithEvents LblNotification As Label
-    Friend WithEvents Timer1 As Timer
 End Class
