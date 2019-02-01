@@ -48,6 +48,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ClassSql">
+      <HintPath>..\..\..\..\Desktop\RAFFLE SYSTEM\RAFFLE SYSTEM\bin\Debug\ClassSql.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -73,6 +76,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BarcodeCode\ChangeTextColorMod.vb" />
     <Compile Include="Cashiering Forms\FrmAddToCredits.Designer.vb">
       <DependentUpon>FrmAddToCredits.vb</DependentUpon>
     </Compile>
@@ -85,16 +89,22 @@
     <Compile Include="Cashiering Forms\FrmCashierSession.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cashiering Forms\FrmCashTendered.Designer.vb">
-      <DependentUpon>FrmCashTendered.vb</DependentUpon>
+    <Compile Include="Cashiering Forms\FrmCheckOut.Designer.vb">
+      <DependentUpon>FrmCheckOut.vb</DependentUpon>
     </Compile>
-    <Compile Include="Cashiering Forms\FrmCashTendered.vb">
+    <Compile Include="Cashiering Forms\FrmCheckOut.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cashiering Forms\FrmCloseSession.Designer.vb">
       <DependentUpon>FrmCloseSession.vb</DependentUpon>
     </Compile>
     <Compile Include="Cashiering Forms\FrmCloseSession.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashiering Forms\FrmManual.Designer.vb">
+      <DependentUpon>FrmManual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cashiering Forms\FrmManual.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cashiering Forms\FrmOpenSession.Designer.vb">
@@ -115,17 +125,62 @@
     <Compile Include="Cashiering Forms\FrmReplenishCash.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="Cashiering Forms\FrmVoidItem.Designer.vb">
+      <DependentUpon>FrmVoidItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cashiering Forms\FrmVoidItem.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Cashiering Forms\FrmVoidTrans.Designer.vb">
+      <DependentUpon>FrmVoidTrans.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cashiering Forms\FrmVoidTrans.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BarcodeCode\EAN13Mod.vb" />
+    <Compile Include="Employee\FrmEmployee.Designer.vb">
+      <DependentUpon>FrmEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\FrmEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\UCEditEmployee.Designer.vb">
+      <DependentUpon>UCEditEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\UCEditEmployee.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Employee\UCExportMem.Designer.vb">
+      <DependentUpon>UCExportMem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\UCExportMem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Employee\UCUploadEmp.Designer.vb">
+      <DependentUpon>UCUploadEmp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\UCUploadEmp.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulas\VATFormulaMod.vb" />
+    <Compile Include="FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMainMenu.Designer.vb">
       <DependentUpon>FrmMainMenu.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmMainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="Settings\FrmSettings.Designer.vb">
+      <DependentUpon>FrmSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FrmSettings.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -143,6 +198,30 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Products\FrmProducts.Designer.vb">
+      <DependentUpon>FrmProducts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Products\FrmProducts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products\UCProductDetails.Designer.vb">
+      <DependentUpon>UCProductDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Products\UCProductDetails.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\UCCreditSet.Designer.vb">
+      <DependentUpon>UCCreditSet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\UCCreditSet.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\UCEditStaff.Designer.vb">
+      <DependentUpon>UCEditStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\UCEditStaff.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Cashiering Forms\FrmAddToCredits.resx">
@@ -151,11 +230,14 @@
     <EmbeddedResource Include="Cashiering Forms\FrmCashierSession.resx">
       <DependentUpon>FrmCashierSession.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cashiering Forms\FrmCashTendered.resx">
-      <DependentUpon>FrmCashTendered.vb</DependentUpon>
+    <EmbeddedResource Include="Cashiering Forms\FrmCheckOut.resx">
+      <DependentUpon>FrmCheckOut.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cashiering Forms\FrmCloseSession.resx">
       <DependentUpon>FrmCloseSession.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashiering Forms\FrmManual.resx">
+      <DependentUpon>FrmManual.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cashiering Forms\FrmOpenSession.resx">
       <DependentUpon>FrmOpenSession.vb</DependentUpon>
@@ -166,17 +248,50 @@
     <EmbeddedResource Include="Cashiering Forms\FrmReplenishCash.resx">
       <DependentUpon>FrmReplenishCash.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Cashiering Forms\FrmVoidItem.resx">
+      <DependentUpon>FrmVoidItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashiering Forms\FrmVoidTrans.resx">
+      <DependentUpon>FrmVoidTrans.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\FrmEmployee.resx">
+      <DependentUpon>FrmEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\UCEditEmployee.resx">
+      <DependentUpon>UCEditEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\UCExportMem.resx">
+      <DependentUpon>UCExportMem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\UCUploadEmp.resx">
+      <DependentUpon>UCUploadEmp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMainMenu.resx">
       <DependentUpon>FrmMainMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FrmSettings.resx">
+      <DependentUpon>FrmSettings.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\FrmProducts.resx">
+      <DependentUpon>FrmProducts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\UCProductDetails.resx">
+      <DependentUpon>UCProductDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\UCCreditSet.resx">
+      <DependentUpon>UCCreditSet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\UCEditStaff.resx">
+      <DependentUpon>UCEditStaff.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -202,6 +317,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upload-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-delivery-of-goods.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\job.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-contact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resume%282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\writing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-shopping-basket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verified-text-paper.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

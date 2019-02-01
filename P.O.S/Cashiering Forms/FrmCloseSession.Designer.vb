@@ -115,7 +115,7 @@ Partial Class FrmCloseSession
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(207, 62)
         Me.Label5.TabIndex = 4
-        Me.Label5.Text = "BEGINNING CASH"
+        Me.Label5.Text = "ENDING CASH"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label3
@@ -175,7 +175,7 @@ Partial Class FrmCloseSession
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78.0!))
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(713, 78)
         Me.TableLayoutPanel2.TabIndex = 1
         '
@@ -249,6 +249,7 @@ Partial Class FrmCloseSession
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ClientSize = New System.Drawing.Size(713, 364)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Panel1)
@@ -256,6 +257,7 @@ Partial Class FrmCloseSession
         Me.MaximumSize = New System.Drawing.Size(729, 403)
         Me.MinimumSize = New System.Drawing.Size(593, 403)
         Me.Name = "FrmCloseSession"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmCloseSession"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()

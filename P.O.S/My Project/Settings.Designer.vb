@@ -56,11 +56,35 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("ControlLight")>  _
-        Public ReadOnly Property formcolor() As Global.System.Drawing.Color
+         Global.System.Configuration.DefaultSettingValueAttribute("Server=DESKTOP-5ABB736\SQLEXPRESS;Database=POSDbase;Integrated Security=true")>  _
+        Public ReadOnly Property ConnectionString() As String
             Get
-                Return CType(Me("formcolor"),Global.System.Drawing.Color)
+                Return CType(Me("ConnectionString"),String)
             End Get
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property FullName() As String
+            Get
+                Return CType(Me("FullName"),String)
+            End Get
+            Set
+                Me("FullName") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property CreditLimit() As String
+            Get
+                Return CType(Me("CreditLimit"),String)
+            End Get
+            Set
+                Me("CreditLimit") = value
+            End Set
         End Property
     End Class
 End Namespace

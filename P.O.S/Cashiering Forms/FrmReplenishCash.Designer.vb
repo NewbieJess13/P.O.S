@@ -24,7 +24,6 @@ Partial Class FrmReplenishCash
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TxtNotes = New System.Windows.Forms.TextBox()
         Me.TxtCashAmount = New System.Windows.Forms.TextBox()
@@ -34,13 +33,14 @@ Partial Class FrmReplenishCash
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TxtBusinessDate = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.BtnReplenish = New System.Windows.Forms.Button()
         Me.BtnClear = New System.Windows.Forms.Button()
+        Me.BtnReplenish = New System.Windows.Forms.Button()
         Me.BtnExit = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -65,15 +65,6 @@ Partial Class FrmReplenishCash
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(713, 319)
         Me.Panel1.TabIndex = 2
-        '
-        'Panel2
-        '
-        Me.Panel2.Controls.Add(Me.TableLayoutPanel2)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 243)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(713, 76)
-        Me.Panel2.TabIndex = 1
         '
         'TableLayoutPanel1
         '
@@ -185,6 +176,15 @@ Partial Class FrmReplenishCash
         Me.TxtBusinessDate.Size = New System.Drawing.Size(494, 57)
         Me.TxtBusinessDate.TabIndex = 1
         '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.TableLayoutPanel2)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel2.Location = New System.Drawing.Point(0, 243)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(713, 76)
+        Me.Panel2.TabIndex = 1
+        '
         'TableLayoutPanel2
         '
         Me.TableLayoutPanel2.ColumnCount = 3
@@ -203,24 +203,6 @@ Partial Class FrmReplenishCash
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(713, 76)
         Me.TableLayoutPanel2.TabIndex = 0
         '
-        'BtnReplenish
-        '
-        Me.BtnReplenish.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnReplenish.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
-        Me.BtnReplenish.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnReplenish.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnReplenish.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnReplenish.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnReplenish.Location = New System.Drawing.Point(0, 0)
-        Me.BtnReplenish.Margin = New System.Windows.Forms.Padding(0)
-        Me.BtnReplenish.Name = "BtnReplenish"
-        Me.BtnReplenish.Size = New System.Drawing.Size(237, 76)
-        Me.BtnReplenish.TabIndex = 29
-        Me.BtnReplenish.Text = "REPLENISH"
-        Me.BtnReplenish.UseVisualStyleBackColor = False
-        '
         'BtnClear
         '
         Me.BtnClear.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -238,6 +220,24 @@ Partial Class FrmReplenishCash
         Me.BtnClear.TabIndex = 30
         Me.BtnClear.Text = "CLEAR"
         Me.BtnClear.UseVisualStyleBackColor = False
+        '
+        'BtnReplenish
+        '
+        Me.BtnReplenish.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnReplenish.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
+        Me.BtnReplenish.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnReplenish.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnReplenish.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnReplenish.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnReplenish.Location = New System.Drawing.Point(0, 0)
+        Me.BtnReplenish.Margin = New System.Windows.Forms.Padding(0)
+        Me.BtnReplenish.Name = "BtnReplenish"
+        Me.BtnReplenish.Size = New System.Drawing.Size(237, 76)
+        Me.BtnReplenish.TabIndex = 29
+        Me.BtnReplenish.Text = "REPLENISH"
+        Me.BtnReplenish.UseVisualStyleBackColor = False
         '
         'BtnExit
         '
@@ -271,9 +271,9 @@ Partial Class FrmReplenishCash
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "POS - Replenish Cash"
         Me.Panel1.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
