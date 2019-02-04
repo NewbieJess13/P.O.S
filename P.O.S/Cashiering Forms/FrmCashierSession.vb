@@ -101,25 +101,7 @@ Public Class FrmCashierSession
             LoadDataToGrid()
         End If
     End Sub
-    'Private Sub TxtBarcode_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtBarcode.KeyDown
-    '    If TxtBarcode.TextLength = TxtBarcode.MaxLength Then
-    '        LblPrevBarcode.Text = TxtBarcode.Text
-    '        SelectFromProdListUsingBarcode()
-    '        If TxtBarcode.Text = LblPrevPrevBarcode.Text Then
-    '            TxtQuanProd.Text += 1
-    '            ComputeTotalPrice()
-    '            UpdateTempQuantity()
-    '            ClearTextbarcode()
-    '        Else
-    '            TxtQuanProd.Text = 1
-    '            ComputeTotalPrice()
-    '            CheckForDuplicateBarcode()
-    '            ClearTextbarcode()
-    '        End If
 
-    '        LoadDataToGrid()
-    '    End If
-    'End Sub
     Sub UpdateTempQuantity()
         MsSql.ExecuteQuery("UPDATE Tbl_TempTransaction SET Quantity += 1,TotalAmount='" & Total & "' WHERE Barcode ='" & TxtBarcode.Text & "'", Nothing)
         LoadDataToGrid()

@@ -162,7 +162,6 @@
     <Compile Include="Employee\UCUploadEmp.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Formulas\VATFormulaMod.vb" />
     <Compile Include="FrmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -356,6 +355,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\verified-text-paper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ImagePath\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

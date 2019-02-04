@@ -2,16 +2,19 @@
 Imports System.Text.RegularExpressions
 Imports System.Data.SqlClient
 Public Class FrmOpenSession
+
     Dim dateTime As String
 
     Sub New()
         InitializeComponent()
         TxtBusinessDate.Text = Format(Date.Now, "dd-mm-yy hh:mm:ss")
     End Sub
+
     Private Sub FrmOpenSession_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MsSql.connectionString = My.Settings.ConnectionString
         TxtCashierName.Text = frmLogin.user1
     End Sub
+
     Private Sub BtnReplenish_Click(sender As Object, e As EventArgs) Handles BtnOpen.Click
         If TxtBegCash.Text <> "" And TxtNotes.Text <> "" Then
             If MessageBox.Show("Are you sure you want to start your session?", "POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
@@ -21,9 +24,10 @@ Public Class FrmOpenSession
                 FrmCashierSession.Show()
             End If
         Else
-            MessageBox.Show("Please fill up all the required fields", "POS", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Please fill up all the required fields.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
+
     Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
         ClearTexts()
     End Sub
@@ -31,15 +35,14 @@ Public Class FrmOpenSession
     Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit.Click
         Close()
     End Sub
-    Sub OpenSession(xDatexTime As String, CashierName As String, BeginningCash As String, Notes As String)
-        MsSql.ExecuteQuery("EXEC InsertCashierSession @xDatexTime, @Username, @BeginCash, @Notes ", New String() {xDatexTime, CashierName, BeginningCash, Notes})
-    End Sub
 
     Sub ClearTexts()
         TxtBegCash.Clear()
         TxtNotes.Clear()
     End Sub
+
     Dim TransNo As String = "0"
+
     Private Sub GetTransactionID()
         Try
             Dim dt As DataTable
@@ -63,7 +66,7 @@ Public Class FrmOpenSession
         Try
             Using conn As New SqlConnection(My.Settings.ConnectionString)
                 conn.Open()
-                Dim command As New SqlCommand("INSERT INTO Tbl_CashierSession (TransactionNo,SessionId,xDatexTime,BeginCash,EndCash,Notes,xTransaction) VALUES (@TransactionNo,@SessionId,@DateTime,@BeginCash,@EndCash,@Notes,@XTransaction)", conn)
+                Dim command As New SqlCommand("INSERT INTO Tbl_CashierSession (TransactionNo,SessionId,xDatexTime,CashAmount,EndCash,Notes,xTransaction) VALUES (@TransactionNo,@SessionId,@DateTime,@BeginCash,@EndCash,@Notes,@XTransaction)", conn)
                 command.Parameters.AddWithValue("@TransactionNo", TransNo)
                 command.Parameters.AddWithValue("@SessionId", Splitted() & TxtCashierName.Text)
                 command.Parameters.AddWithValue("@DateTime", Splitted)
@@ -72,15 +75,27 @@ Public Class FrmOpenSession
                 command.Parameters.AddWithValue("@Notes", TxtNotes.Text)
                 command.Parameters.AddWithValue("@XTransaction", "Beginning Balance")
                 command.ExecuteNonQuery()
-
             End Using
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+
     Function Splitted()
         dateTime = TxtBusinessDate.Text
         Dim Converted As String = Regex.Replace(dateTime, "[- :]", "")
         Return Converted
     End Function
+
+    Private Sub TxtBegCash_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtBegCash.KeyPress
+        If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) AndAlso Not e.KeyChar = "." Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtBegCash_TextChanged(sender As Object, e As EventArgs) Handles TxtBegCash.TextChanged
+        Dim digitsOnly As Regex = New Regex("[^\d.]")
+        TxtBegCash.Text = digitsOnly.Replace(TxtBegCash.Text, "")
+    End Sub
+
 End Class

@@ -1,17 +1,27 @@
 ﻿Imports ClassSql
 Imports System.Data.SqlClient
 Imports System.Text.RegularExpressions
+
 Public Class FrmAddToCredits
+
     Dim tbl As DataTable
     Dim Valerina As String
 
     Sub GetEmployeeInfo()
         tbl = MsSql.Table("SELECT COOP_id,FullName,TotalCredits FROM Tbl_EmployeeList WHERE RealBarcode='" & TxtBarcode.Text & "'")
-        For Each dr As DataRow In tbl.Rows
-            TxtIDno.Text = dr(0)
-            TxtName.Text = dr(1)
-            TxtCredits.Text = dr(2)
-        Next
+        If tbl.Rows.Count > 0 Then
+            For Each dr As DataRow In tbl.Rows
+                TxtIDno.Text = dr(0)
+                TxtName.Text = dr(1)
+                TxtCredits.Text = dr(2)
+            Next
+            CheckIfCreditLimitreached()
+        Else
+            LblNotifyCredit.Text = "Barcode not registered!"
+            LblNotifyCredit.ForeColor = Color.Red
+            BtnOk.Enabled = False
+        End If
+
     End Sub
 
     Private Sub FrmAddToCredits_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -22,8 +32,9 @@ Public Class FrmAddToCredits
 
     Private Sub TxtBarcode_TextChanged(sender As Object, e As EventArgs) Handles TxtBarcode.TextChanged
         If TxtBarcode.TextLength = TxtBarcode.MaxLength Then
+            BtnOk.Enabled = True
             GetEmployeeInfo()
-            CheckIfCreditLimitreached()
+
         End If
     End Sub
 
@@ -61,9 +72,6 @@ Public Class FrmAddToCredits
             LblNotifyCredit.Text = "● Credit allowed!"
             BtnOk.Enabled = True
         End If
-
-
-
     End Sub
 
     Private Sub BtnOk_Click(sender As Object, e As EventArgs) Handles BtnOk.Click
@@ -75,6 +83,5 @@ Public Class FrmAddToCredits
         Dim value As String = LblPurchaseAmount.Text
         Converted = Regex.Replace(value, "[^A-Za-z\-/0-9]", "")
         Return Converted
-
     End Function
 End Class

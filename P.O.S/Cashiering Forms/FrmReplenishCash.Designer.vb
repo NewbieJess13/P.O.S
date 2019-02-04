@@ -51,7 +51,7 @@ Partial Class FrmReplenishCash
         Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(713, 45)
+        Me.Label1.Size = New System.Drawing.Size(577, 45)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "REPLENISH CASH"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -63,7 +63,7 @@ Partial Class FrmReplenishCash
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 45)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(713, 319)
+        Me.Panel1.Size = New System.Drawing.Size(577, 319)
         Me.Panel1.TabIndex = 2
         '
         'TableLayoutPanel1
@@ -87,25 +87,25 @@ Partial Class FrmReplenishCash
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(713, 243)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(577, 243)
         Me.TableLayoutPanel1.TabIndex = 2
         '
         'TxtNotes
         '
         Me.TxtNotes.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TxtNotes.Font = New System.Drawing.Font("Century Gothic", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNotes.Location = New System.Drawing.Point(216, 183)
+        Me.TxtNotes.Location = New System.Drawing.Point(176, 183)
         Me.TxtNotes.Name = "TxtNotes"
-        Me.TxtNotes.Size = New System.Drawing.Size(494, 57)
+        Me.TxtNotes.Size = New System.Drawing.Size(398, 57)
         Me.TxtNotes.TabIndex = 10
         '
         'TxtCashAmount
         '
         Me.TxtCashAmount.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TxtCashAmount.Font = New System.Drawing.Font("Century Gothic", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCashAmount.Location = New System.Drawing.Point(216, 123)
+        Me.TxtCashAmount.Location = New System.Drawing.Point(176, 123)
         Me.TxtCashAmount.Name = "TxtCashAmount"
-        Me.TxtCashAmount.Size = New System.Drawing.Size(494, 57)
+        Me.TxtCashAmount.Size = New System.Drawing.Size(398, 57)
         Me.TxtCashAmount.TabIndex = 9
         '
         'TxtCashierName
@@ -113,9 +113,9 @@ Partial Class FrmReplenishCash
         Me.TxtCashierName.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TxtCashierName.Enabled = False
         Me.TxtCashierName.Font = New System.Drawing.Font("Century Gothic", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCashierName.Location = New System.Drawing.Point(216, 63)
+        Me.TxtCashierName.Location = New System.Drawing.Point(176, 63)
         Me.TxtCashierName.Name = "TxtCashierName"
-        Me.TxtCashierName.Size = New System.Drawing.Size(494, 57)
+        Me.TxtCashierName.Size = New System.Drawing.Size(398, 57)
         Me.TxtCashierName.TabIndex = 8
         '
         'Label7
@@ -125,7 +125,7 @@ Partial Class FrmReplenishCash
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(3, 180)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(207, 63)
+        Me.Label7.Size = New System.Drawing.Size(167, 63)
         Me.Label7.TabIndex = 7
         Me.Label7.Text = "NOTES"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -137,7 +137,7 @@ Partial Class FrmReplenishCash
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(3, 120)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(207, 60)
+        Me.Label5.Size = New System.Drawing.Size(167, 60)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "CASH AMOUNT"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -149,7 +149,7 @@ Partial Class FrmReplenishCash
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(3, 60)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(207, 60)
+        Me.Label3.Size = New System.Drawing.Size(167, 60)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "CASHIER NAME"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -161,7 +161,7 @@ Partial Class FrmReplenishCash
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(3, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(207, 60)
+        Me.Label2.Size = New System.Drawing.Size(167, 60)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "BUSINESS DATE"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -171,9 +171,9 @@ Partial Class FrmReplenishCash
         Me.TxtBusinessDate.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TxtBusinessDate.Enabled = False
         Me.TxtBusinessDate.Font = New System.Drawing.Font("Century Gothic", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtBusinessDate.Location = New System.Drawing.Point(216, 3)
+        Me.TxtBusinessDate.Location = New System.Drawing.Point(176, 3)
         Me.TxtBusinessDate.Name = "TxtBusinessDate"
-        Me.TxtBusinessDate.Size = New System.Drawing.Size(494, 57)
+        Me.TxtBusinessDate.Size = New System.Drawing.Size(398, 57)
         Me.TxtBusinessDate.TabIndex = 1
         '
         'Panel2
@@ -182,7 +182,7 @@ Partial Class FrmReplenishCash
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.Location = New System.Drawing.Point(0, 243)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(713, 76)
+        Me.Panel2.Size = New System.Drawing.Size(577, 76)
         Me.Panel2.TabIndex = 1
         '
         'TableLayoutPanel2
@@ -200,7 +200,7 @@ Partial Class FrmReplenishCash
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(713, 76)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(577, 76)
         Me.TableLayoutPanel2.TabIndex = 0
         '
         'BtnClear
@@ -213,10 +213,10 @@ Partial Class FrmReplenishCash
         Me.BtnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnClear.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnClear.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnClear.Location = New System.Drawing.Point(237, 0)
+        Me.BtnClear.Location = New System.Drawing.Point(192, 0)
         Me.BtnClear.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnClear.Name = "BtnClear"
-        Me.BtnClear.Size = New System.Drawing.Size(237, 76)
+        Me.BtnClear.Size = New System.Drawing.Size(192, 76)
         Me.BtnClear.TabIndex = 30
         Me.BtnClear.Text = "CLEAR"
         Me.BtnClear.UseVisualStyleBackColor = False
@@ -234,7 +234,7 @@ Partial Class FrmReplenishCash
         Me.BtnReplenish.Location = New System.Drawing.Point(0, 0)
         Me.BtnReplenish.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnReplenish.Name = "BtnReplenish"
-        Me.BtnReplenish.Size = New System.Drawing.Size(237, 76)
+        Me.BtnReplenish.Size = New System.Drawing.Size(192, 76)
         Me.BtnReplenish.TabIndex = 29
         Me.BtnReplenish.Text = "REPLENISH"
         Me.BtnReplenish.UseVisualStyleBackColor = False
@@ -249,10 +249,10 @@ Partial Class FrmReplenishCash
         Me.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnExit.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnExit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnExit.Location = New System.Drawing.Point(474, 0)
+        Me.BtnExit.Location = New System.Drawing.Point(384, 0)
         Me.BtnExit.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnExit.Name = "BtnExit"
-        Me.BtnExit.Size = New System.Drawing.Size(239, 76)
+        Me.BtnExit.Size = New System.Drawing.Size(193, 76)
         Me.BtnExit.TabIndex = 31
         Me.BtnExit.Text = "EXIT"
         Me.BtnExit.UseVisualStyleBackColor = False
@@ -262,7 +262,7 @@ Partial Class FrmReplenishCash
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ClientSize = New System.Drawing.Size(713, 364)
+        Me.ClientSize = New System.Drawing.Size(577, 364)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
         Me.MaximumSize = New System.Drawing.Size(729, 403)

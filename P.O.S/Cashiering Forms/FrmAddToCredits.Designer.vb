@@ -222,6 +222,7 @@ Partial Class FrmAddToCredits
         '
         Me.BtnOk.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
         Me.BtnOk.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnOk.Enabled = False
         Me.BtnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnOk.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnOk.Location = New System.Drawing.Point(388, 3)
@@ -234,11 +235,11 @@ Partial Class FrmAddToCredits
         'TxtBarcode
         '
         Me.TxtBarcode.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TxtBarcode.Font = New System.Drawing.Font("Century Gothic", 32.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtBarcode.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtBarcode.Location = New System.Drawing.Point(3, 3)
         Me.TxtBarcode.MaxLength = 13
         Me.TxtBarcode.Name = "TxtBarcode"
-        Me.TxtBarcode.Size = New System.Drawing.Size(379, 60)
+        Me.TxtBarcode.Size = New System.Drawing.Size(379, 37)
         Me.TxtBarcode.TabIndex = 0
         '
         'Panel1
@@ -292,7 +293,6 @@ Partial Class FrmAddToCredits
         Me.LblNotifyCredit.Name = "LblNotifyCredit"
         Me.LblNotifyCredit.Size = New System.Drawing.Size(456, 29)
         Me.LblNotifyCredit.TabIndex = 0
-        Me.LblNotifyCredit.Text = "● Credit allowed"
         Me.LblNotifyCredit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FrmAddToCredits
