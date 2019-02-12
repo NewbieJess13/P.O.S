@@ -10,40 +10,41 @@ Public Class UCBarcodePrinter
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
-            Dim conn As New SqlConnection(My.Settings.ConnectionString)
-            conn.Open()
-            Dim sql As String = "SELECT * FROM Tbl_Products WHERE RealBarcode='" & TxtBarcode.Text & "'"
-            'For i As Integer = 1 To TxtNumber.Text Step 1
-            '    sql = sql + " UNION ALL SELECT * FROM Tbl_Products WHERE RealBarcode='" & TxtBarcode.Text & "'"
-            'Next
-            Dim DA As New SqlDataAdapter("SELECT * FROM Tbl_Products WHERE RealBarcode='" & TxtBarcode.Text & "'", conn)
-            Dim DS As New DataSet
-            DA.Fill(DS, "RealBarcode")
-            crystal.SetDataSource(DS)
-            CrystalReportViewer1.ReportSource = crystal
-
-
+            Using conn As New SqlConnection(My.Settings.ConnectionString)
+                conn.Open()
+                Dim sql As String = "SELECT * FROM Tbl_Products WHERE RealBarcode= '" & TxtBarcode.Text & "' "
+                For i As Integer = 1 To TxtNumber.Text Step 1
+                    sql = sql + " UNION ALL Select * FROM Tbl_Products WHERE RealBarcode='" & TxtBarcode.Text & "'"
+                Next
+                Dim DA As New SqlDataAdapter(sql, conn)
+                Dim DS As New DataTable
+                DA.Fill(DS)
+                crystal.SetDataSource(DS)
+                CrystalReportViewer1.ReportSource = crystal
+            End Using
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Try
             Using conn As New SqlConnection(My.Settings.ConnectionString)
                 conn.Open()
                 Dim command As New SqlCommand("SELECT * FROM Tbl_Products", conn)
-                Dim DS As New DataSet
+                Dim DS As New DataTable
                 Dim DA As New SqlDataAdapter With {
-                    .SelectCommand = command
-                }
-                DA.Fill(DS, "RealBarcode")
+                        .SelectCommand = command
+                    }
+                DA.Fill(DS)
                 crystal.SetDataSource(DS)
                 CrystalReportViewer1.ReportSource = crystal
-
             End Using
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+
+
 End Class
