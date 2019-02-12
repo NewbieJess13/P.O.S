@@ -27,4 +27,8 @@ Public Class FrmCheckOut
         Return Converted
 
     End Function
+
+    Private Sub Btn1_Click(sender As Object, e As EventArgs) Handles Btn1.Click, Btn2.Click, Btn3.Click, Btn4.Click, Btn5.Click, Btn6.Click, Btn7.Click, Btn8.Click, Btn9.Click, Btndot.Click, Btn0.Click
+        TxtCashTendered.Text += sender.text
+    End Sub
 End Class

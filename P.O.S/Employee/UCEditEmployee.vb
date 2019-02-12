@@ -9,7 +9,7 @@ Public Class UCEditEmployee
     End Sub
 
     Sub LoadEmployees()
-        tbl = MsSql.Table("SELECT * FROM Tbl_EmployeeList ORDER BY TotalCredits DESC")
+        tbl = MsSql.Table("SELECT * FROM Tbl_EmployeeList WHERE EmployeeStatus='1' ORDER BY TotalCredits DESC")
         DGEmpList.Rows.Clear()
 
         For Each dr As DataRow In tbl.Rows
@@ -24,7 +24,7 @@ Public Class UCEditEmployee
     End Sub
 
     Sub AddEmployees()
-        MsSql.ExecuteQuery("INSERT INTO Tbl_EmployeeList (COOP_id, FullName, Position, Status, barcode, Site, TotalCredits,RealBarcode) VALUES ('" & TxtCoopId.Text & "', '" & TxtFullName.Text & "', '" & TxtPos.Text & "', '" & TxtStatus.Text & "', '" & TxtBarcode.Text & "', '" & TxtSite.Text & "', '" & TxtTotalCredits.Text & "','" & RchTxtRealBarcode.Text & "')", Nothing)
+        MsSql.ExecuteQuery("INSERT INTO Tbl_EmployeeList (COOP_id, FullName, Position, Status, barcode, Site, TotalCredits,RealBarcode,EmployeeStatus) VALUES ('" & TxtCoopId.Text & "', '" & TxtFullName.Text & "', '" & TxtPos.Text & "', '" & TxtStatus.Text & "', '" & TxtBarcode.Text & "', '" & TxtSite.Text & "', '" & TxtTotalCredits.Text & "','" & RchTxtRealBarcode.Text & "','1')", Nothing)
         MessageBox.Show("New Employee has been added!", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information)
         LoadEmployees()
         ClearTextBoxes()

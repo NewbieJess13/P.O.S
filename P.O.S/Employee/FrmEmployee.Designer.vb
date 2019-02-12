@@ -24,17 +24,18 @@ Partial Class FrmEmployee
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmEmployee))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.PnlContent = New System.Windows.Forms.Panel()
+        Me.BtnEmpSettings = New System.Windows.Forms.Button()
         Me.BtnViewMem = New System.Windows.Forms.Button()
         Me.BtnExport = New System.Windows.Forms.Button()
         Me.BtnUploadMem = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.PnlContent = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -46,8 +47,19 @@ Partial Class FrmEmployee
         Me.Panel1.Size = New System.Drawing.Size(1001, 89)
         Me.Panel1.TabIndex = 0
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(179, 69)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 19
+        Me.PictureBox1.TabStop = False
+        '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.BtnEmpSettings)
         Me.Panel2.Controls.Add(Me.BtnViewMem)
         Me.Panel2.Controls.Add(Me.BtnExport)
         Me.Panel2.Controls.Add(Me.BtnUploadMem)
@@ -57,25 +69,20 @@ Partial Class FrmEmployee
         Me.Panel2.Size = New System.Drawing.Size(191, 442)
         Me.Panel2.TabIndex = 1
         '
-        'Panel3
+        'BtnEmpSettings
         '
-        Me.Panel3.Controls.Add(Me.PnlContent)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(191, 89)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(810, 442)
-        Me.Panel3.TabIndex = 2
-        '
-        'PnlContent
-        '
-        Me.PnlContent.BackgroundImage = CType(resources.GetObject("PnlContent.BackgroundImage"), System.Drawing.Image)
-        Me.PnlContent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PnlContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PnlContent.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PnlContent.Location = New System.Drawing.Point(0, 0)
-        Me.PnlContent.Name = "PnlContent"
-        Me.PnlContent.Size = New System.Drawing.Size(810, 442)
-        Me.PnlContent.TabIndex = 22
+        Me.BtnEmpSettings.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
+        Me.BtnEmpSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnEmpSettings.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEmpSettings.Image = Global.P.O.S.My.Resources.Resources.employee_1_
+        Me.BtnEmpSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnEmpSettings.Location = New System.Drawing.Point(0, 273)
+        Me.BtnEmpSettings.Name = "BtnEmpSettings"
+        Me.BtnEmpSettings.Size = New System.Drawing.Size(191, 63)
+        Me.BtnEmpSettings.TabIndex = 3
+        Me.BtnEmpSettings.Text = "Employee Settings"
+        Me.BtnEmpSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnEmpSettings.UseVisualStyleBackColor = False
         '
         'BtnViewMem
         '
@@ -122,15 +129,25 @@ Partial Class FrmEmployee
         Me.BtnUploadMem.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnUploadMem.UseVisualStyleBackColor = False
         '
-        'PictureBox1
+        'Panel3
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(179, 69)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 19
-        Me.PictureBox1.TabStop = False
+        Me.Panel3.Controls.Add(Me.PnlContent)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel3.Location = New System.Drawing.Point(191, 89)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(810, 442)
+        Me.Panel3.TabIndex = 2
+        '
+        'PnlContent
+        '
+        Me.PnlContent.BackgroundImage = CType(resources.GetObject("PnlContent.BackgroundImage"), System.Drawing.Image)
+        Me.PnlContent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PnlContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PnlContent.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PnlContent.Location = New System.Drawing.Point(0, 0)
+        Me.PnlContent.Name = "PnlContent"
+        Me.PnlContent.Size = New System.Drawing.Size(810, 442)
+        Me.PnlContent.TabIndex = 22
         '
         'FrmEmployee
         '
@@ -145,11 +162,10 @@ Partial Class FrmEmployee
         Me.Name = "FrmEmployee"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "POS - Employee "
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -162,4 +178,5 @@ Partial Class FrmEmployee
     Friend WithEvents BtnExport As Button
     Friend WithEvents Panel3 As Panel
     Friend WithEvents PnlContent As Panel
+    Friend WithEvents BtnEmpSettings As Button
 End Class

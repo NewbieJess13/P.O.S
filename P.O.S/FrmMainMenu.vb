@@ -26,4 +26,25 @@
     Private Sub BtnProducts_Click(sender As Object, e As EventArgs) Handles BtnProducts.Click
         FrmProducts.ShowDialog()
     End Sub
+
+    Private Sub FrmMainMenu_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyCode = Keys.F1 Then
+            BtnOpenSession.PerformClick()
+        End If
+        If e.KeyCode = Keys.F2 Then
+            BtnProducts.PerformClick()
+        End If
+        If e.KeyCode = Keys.F3 Then
+            BtnUploadEmployee.PerformClick()
+        End If
+        If e.KeyCode = Keys.F4 Then
+            BtnReports.PerformClick()
+        End If
+        If e.KeyCode = Keys.F5 Then
+            BtnDelivery.PerformClick()
+        End If
+        If e.KeyCode = Keys.F6 Then
+            BtnSettings.PerformClick()
+        End If
+    End Sub
 End Class

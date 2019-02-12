@@ -55,6 +55,7 @@ Public Class FrmReplenishCash
                 command.Parameters.AddWithValue("@Notes", TxtNotes.Text)
                 command.Parameters.AddWithValue("@Transaction", "Replenish  Cash")
                 command.ExecuteNonQuery()
+                MessageBox.Show("Successfully replenished cash.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End Using
         Catch ex As Exception
             MessageBox.Show(ex.Message, "POS", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -84,7 +85,6 @@ Public Class FrmReplenishCash
         If TxtCashAmount.Text <> "" And TxtNotes.Text <> "" Then
             InsertReplenish()
             ClearTexts()
-            MessageBox.Show("Successfully replenished cash.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Close()
         Else
             MessageBox.Show("Please fill up all the fields.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Warning)

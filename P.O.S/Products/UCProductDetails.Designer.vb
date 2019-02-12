@@ -241,7 +241,7 @@ Partial Class UCProductDetails
         'RchTxtRealBarcode
         '
         Me.RchTxtRealBarcode.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.RchTxtRealBarcode.Location = New System.Drawing.Point(56, 105)
+        Me.RchTxtRealBarcode.Location = New System.Drawing.Point(74, 35)
         Me.RchTxtRealBarcode.MaxLength = 13
         Me.RchTxtRealBarcode.Multiline = False
         Me.RchTxtRealBarcode.Name = "RchTxtRealBarcode"
@@ -259,18 +259,18 @@ Partial Class UCProductDetails
         Me.LblId.Size = New System.Drawing.Size(44, 16)
         Me.LblId.TabIndex = 10
         Me.LblId.Text = "Label9"
+        Me.LblId.Visible = False
         '
         'LblBarcode
         '
         Me.LblBarcode.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblBarcode.Font = New System.Drawing.Font("Code EAN13", 44.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
+        Me.LblBarcode.Font = New System.Drawing.Font("Code EAN13", 39.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
         Me.LblBarcode.Location = New System.Drawing.Point(54, 21)
         Me.LblBarcode.Name = "LblBarcode"
         Me.LblBarcode.Size = New System.Drawing.Size(269, 93)
         Me.LblBarcode.TabIndex = 11
-        Me.LblBarcode.Text = "1"
         Me.LblBarcode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label2

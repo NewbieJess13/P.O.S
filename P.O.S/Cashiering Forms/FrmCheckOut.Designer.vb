@@ -31,21 +31,21 @@ Partial Class FrmCheckOut
         Me.BtnClear = New System.Windows.Forms.Button()
         Me.TxtCashTendered = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Button13 = New System.Windows.Forms.Button()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Btn = New System.Windows.Forms.Button()
+        Me.Btn0 = New System.Windows.Forms.Button()
+        Me.Btndot = New System.Windows.Forms.Button()
+        Me.Btn9 = New System.Windows.Forms.Button()
+        Me.Btn8 = New System.Windows.Forms.Button()
+        Me.Btn7 = New System.Windows.Forms.Button()
+        Me.Btn6 = New System.Windows.Forms.Button()
+        Me.Btn5 = New System.Windows.Forms.Button()
+        Me.Btn4 = New System.Windows.Forms.Button()
+        Me.Btn3 = New System.Windows.Forms.Button()
+        Me.Btn2 = New System.Windows.Forms.Button()
+        Me.Btn1 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.TxtChange = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -92,9 +92,9 @@ Partial Class FrmCheckOut
         Me.TxtTotalAmount.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TxtTotalAmount.Enabled = False
         Me.TxtTotalAmount.Font = New System.Drawing.Font("Century Gothic", 30.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtTotalAmount.Location = New System.Drawing.Point(142, 3)
+        Me.TxtTotalAmount.Location = New System.Drawing.Point(141, 3)
         Me.TxtTotalAmount.Name = "TxtTotalAmount"
-        Me.TxtTotalAmount.Size = New System.Drawing.Size(408, 58)
+        Me.TxtTotalAmount.Size = New System.Drawing.Size(409, 58)
         Me.TxtTotalAmount.TabIndex = 5
         Me.TxtTotalAmount.Text = "1000"
         Me.TxtTotalAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -106,7 +106,7 @@ Partial Class FrmCheckOut
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(3, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(133, 65)
+        Me.Label2.Size = New System.Drawing.Size(132, 64)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Total Amount:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -170,18 +170,18 @@ Partial Class FrmCheckOut
         Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel4.Controls.Add(Me.Button13, 2, 3)
-        Me.TableLayoutPanel4.Controls.Add(Me.Button12, 1, 3)
-        Me.TableLayoutPanel4.Controls.Add(Me.Button11, 0, 3)
-        Me.TableLayoutPanel4.Controls.Add(Me.Button10, 2, 2)
-        Me.TableLayoutPanel4.Controls.Add(Me.Button9, 1, 2)
-        Me.TableLayoutPanel4.Controls.Add(Me.Button8, 0, 2)
-        Me.TableLayoutPanel4.Controls.Add(Me.Button7, 2, 1)
-        Me.TableLayoutPanel4.Controls.Add(Me.Button6, 1, 1)
-        Me.TableLayoutPanel4.Controls.Add(Me.Button5, 0, 1)
-        Me.TableLayoutPanel4.Controls.Add(Me.Button4, 2, 0)
-        Me.TableLayoutPanel4.Controls.Add(Me.Button3, 1, 0)
-        Me.TableLayoutPanel4.Controls.Add(Me.Button2, 0, 0)
+        Me.TableLayoutPanel4.Controls.Add(Me.Btn, 2, 3)
+        Me.TableLayoutPanel4.Controls.Add(Me.Btn0, 1, 3)
+        Me.TableLayoutPanel4.Controls.Add(Me.Btndot, 0, 3)
+        Me.TableLayoutPanel4.Controls.Add(Me.Btn9, 2, 2)
+        Me.TableLayoutPanel4.Controls.Add(Me.Btn8, 1, 2)
+        Me.TableLayoutPanel4.Controls.Add(Me.Btn7, 0, 2)
+        Me.TableLayoutPanel4.Controls.Add(Me.Btn6, 2, 1)
+        Me.TableLayoutPanel4.Controls.Add(Me.Btn5, 1, 1)
+        Me.TableLayoutPanel4.Controls.Add(Me.Btn4, 0, 1)
+        Me.TableLayoutPanel4.Controls.Add(Me.Btn3, 2, 0)
+        Me.TableLayoutPanel4.Controls.Add(Me.Btn2, 1, 0)
+        Me.TableLayoutPanel4.Controls.Add(Me.Btn1, 0, 0)
         Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel4.Location = New System.Drawing.Point(3, 216)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
@@ -193,161 +193,161 @@ Partial Class FrmCheckOut
         Me.TableLayoutPanel4.Size = New System.Drawing.Size(553, 260)
         Me.TableLayoutPanel4.TabIndex = 2
         '
-        'Button13
+        'Btn
         '
-        Me.Button13.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
-        Me.Button13.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button13.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button13.Location = New System.Drawing.Point(371, 198)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(179, 59)
-        Me.Button13.TabIndex = 11
-        Me.Button13.Text = "OK"
-        Me.Button13.UseVisualStyleBackColor = False
+        Me.Btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
+        Me.Btn.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn.Location = New System.Drawing.Point(371, 198)
+        Me.Btn.Name = "Btn"
+        Me.Btn.Size = New System.Drawing.Size(179, 59)
+        Me.Btn.TabIndex = 11
+        Me.Btn.Text = "Bill Out"
+        Me.Btn.UseVisualStyleBackColor = False
         '
-        'Button12
+        'Btn0
         '
-        Me.Button12.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
-        Me.Button12.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button12.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button12.Location = New System.Drawing.Point(187, 198)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(178, 59)
-        Me.Button12.TabIndex = 10
-        Me.Button12.Text = "0"
-        Me.Button12.UseVisualStyleBackColor = False
+        Me.Btn0.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn0.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn0.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn0.Location = New System.Drawing.Point(187, 198)
+        Me.Btn0.Name = "Btn0"
+        Me.Btn0.Size = New System.Drawing.Size(178, 59)
+        Me.Btn0.TabIndex = 10
+        Me.Btn0.Text = "0"
+        Me.Btn0.UseVisualStyleBackColor = False
         '
-        'Button11
+        'Btndot
         '
-        Me.Button11.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
-        Me.Button11.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button11.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button11.Location = New System.Drawing.Point(3, 198)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(178, 59)
-        Me.Button11.TabIndex = 9
-        Me.Button11.Text = "."
-        Me.Button11.UseVisualStyleBackColor = False
+        Me.Btndot.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btndot.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btndot.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btndot.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btndot.Location = New System.Drawing.Point(3, 198)
+        Me.Btndot.Name = "Btndot"
+        Me.Btndot.Size = New System.Drawing.Size(178, 59)
+        Me.Btndot.TabIndex = 9
+        Me.Btndot.Text = "."
+        Me.Btndot.UseVisualStyleBackColor = False
         '
-        'Button10
+        'Btn9
         '
-        Me.Button10.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
-        Me.Button10.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button10.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.Location = New System.Drawing.Point(371, 133)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(179, 59)
-        Me.Button10.TabIndex = 8
-        Me.Button10.Text = "9"
-        Me.Button10.UseVisualStyleBackColor = False
+        Me.Btn9.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn9.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn9.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn9.Location = New System.Drawing.Point(371, 133)
+        Me.Btn9.Name = "Btn9"
+        Me.Btn9.Size = New System.Drawing.Size(179, 59)
+        Me.Btn9.TabIndex = 8
+        Me.Btn9.Text = "9"
+        Me.Btn9.UseVisualStyleBackColor = False
         '
-        'Button9
+        'Btn8
         '
-        Me.Button9.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
-        Me.Button9.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button9.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.Location = New System.Drawing.Point(187, 133)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(178, 59)
-        Me.Button9.TabIndex = 7
-        Me.Button9.Text = "8"
-        Me.Button9.UseVisualStyleBackColor = False
+        Me.Btn8.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn8.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn8.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn8.Location = New System.Drawing.Point(187, 133)
+        Me.Btn8.Name = "Btn8"
+        Me.Btn8.Size = New System.Drawing.Size(178, 59)
+        Me.Btn8.TabIndex = 7
+        Me.Btn8.Text = "8"
+        Me.Btn8.UseVisualStyleBackColor = False
         '
-        'Button8
+        'Btn7
         '
-        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
-        Me.Button8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.Location = New System.Drawing.Point(3, 133)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(178, 59)
-        Me.Button8.TabIndex = 6
-        Me.Button8.Text = "7"
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.Btn7.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn7.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn7.Location = New System.Drawing.Point(3, 133)
+        Me.Btn7.Name = "Btn7"
+        Me.Btn7.Size = New System.Drawing.Size(178, 59)
+        Me.Btn7.TabIndex = 6
+        Me.Btn7.Text = "7"
+        Me.Btn7.UseVisualStyleBackColor = False
         '
-        'Button7
+        'Btn6
         '
-        Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
-        Me.Button7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(371, 68)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(179, 59)
-        Me.Button7.TabIndex = 5
-        Me.Button7.Text = "6"
-        Me.Button7.UseVisualStyleBackColor = False
+        Me.Btn6.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn6.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn6.Location = New System.Drawing.Point(371, 68)
+        Me.Btn6.Name = "Btn6"
+        Me.Btn6.Size = New System.Drawing.Size(179, 59)
+        Me.Btn6.TabIndex = 5
+        Me.Btn6.Text = "6"
+        Me.Btn6.UseVisualStyleBackColor = False
         '
-        'Button6
+        'Btn5
         '
-        Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
-        Me.Button6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(187, 68)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(178, 59)
-        Me.Button6.TabIndex = 4
-        Me.Button6.Text = "5"
-        Me.Button6.UseVisualStyleBackColor = False
+        Me.Btn5.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn5.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn5.Location = New System.Drawing.Point(187, 68)
+        Me.Btn5.Name = "Btn5"
+        Me.Btn5.Size = New System.Drawing.Size(178, 59)
+        Me.Btn5.TabIndex = 4
+        Me.Btn5.Text = "5"
+        Me.Btn5.UseVisualStyleBackColor = False
         '
-        'Button5
+        'Btn4
         '
-        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
-        Me.Button5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(3, 68)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(178, 59)
-        Me.Button5.TabIndex = 3
-        Me.Button5.Text = "4"
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.Btn4.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn4.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn4.Location = New System.Drawing.Point(3, 68)
+        Me.Btn4.Name = "Btn4"
+        Me.Btn4.Size = New System.Drawing.Size(178, 59)
+        Me.Btn4.TabIndex = 3
+        Me.Btn4.Text = "4"
+        Me.Btn4.UseVisualStyleBackColor = False
         '
-        'Button4
+        'Btn3
         '
-        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
-        Me.Button4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(371, 3)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(179, 59)
-        Me.Button4.TabIndex = 2
-        Me.Button4.Text = "3"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.Btn3.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn3.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn3.Location = New System.Drawing.Point(371, 3)
+        Me.Btn3.Name = "Btn3"
+        Me.Btn3.Size = New System.Drawing.Size(179, 59)
+        Me.Btn3.TabIndex = 2
+        Me.Btn3.Text = "3"
+        Me.Btn3.UseVisualStyleBackColor = False
         '
-        'Button3
+        'Btn2
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
-        Me.Button3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(187, 3)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(178, 59)
-        Me.Button3.TabIndex = 1
-        Me.Button3.Text = "2"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.Btn2.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn2.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn2.Location = New System.Drawing.Point(187, 3)
+        Me.Btn2.Name = "Btn2"
+        Me.Btn2.Size = New System.Drawing.Size(178, 59)
+        Me.Btn2.TabIndex = 1
+        Me.Btn2.Text = "2"
+        Me.Btn2.UseVisualStyleBackColor = False
         '
-        'Button2
+        'Btn1
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
-        Me.Button2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(3, 3)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(178, 59)
-        Me.Button2.TabIndex = 0
-        Me.Button2.Text = "1"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.Btn1.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn1.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn1.Location = New System.Drawing.Point(3, 3)
+        Me.Btn1.Name = "Btn1"
+        Me.Btn1.Size = New System.Drawing.Size(178, 59)
+        Me.Btn1.TabIndex = 0
+        Me.Btn1.Text = "1"
+        Me.Btn1.UseVisualStyleBackColor = False
         '
         'TableLayoutPanel5
         '
@@ -364,6 +364,17 @@ Partial Class FrmCheckOut
         Me.TableLayoutPanel5.Size = New System.Drawing.Size(553, 66)
         Me.TableLayoutPanel5.TabIndex = 3
         '
+        'TxtChange
+        '
+        Me.TxtChange.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TxtChange.Enabled = False
+        Me.TxtChange.Font = New System.Drawing.Font("Century Gothic", 30.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtChange.Location = New System.Drawing.Point(141, 3)
+        Me.TxtChange.Name = "TxtChange"
+        Me.TxtChange.Size = New System.Drawing.Size(409, 58)
+        Me.TxtChange.TabIndex = 6
+        Me.TxtChange.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -376,17 +387,6 @@ Partial Class FrmCheckOut
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Change:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'TxtChange
-        '
-        Me.TxtChange.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TxtChange.Enabled = False
-        Me.TxtChange.Font = New System.Drawing.Font("Century Gothic", 30.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtChange.Location = New System.Drawing.Point(141, 3)
-        Me.TxtChange.Name = "TxtChange"
-        Me.TxtChange.Size = New System.Drawing.Size(409, 58)
-        Me.TxtChange.TabIndex = 6
-        Me.TxtChange.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'FrmCheckOut
         '
@@ -420,18 +420,18 @@ Partial Class FrmCheckOut
     Friend WithEvents BtnClear As Button
     Friend WithEvents TxtCashTendered As TextBox
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
-    Friend WithEvents Button13 As Button
-    Friend WithEvents Button12 As Button
-    Friend WithEvents Button11 As Button
-    Friend WithEvents Button10 As Button
-    Friend WithEvents Button9 As Button
-    Friend WithEvents Button8 As Button
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents Btn As Button
+    Friend WithEvents Btn0 As Button
+    Friend WithEvents Btndot As Button
+    Friend WithEvents Btn9 As Button
+    Friend WithEvents Btn8 As Button
+    Friend WithEvents Btn7 As Button
+    Friend WithEvents Btn6 As Button
+    Friend WithEvents Btn5 As Button
+    Friend WithEvents Btn4 As Button
+    Friend WithEvents Btn3 As Button
+    Friend WithEvents Btn2 As Button
+    Friend WithEvents Btn1 As Button
     Friend WithEvents TxtTotalAmount As TextBox
     Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
     Friend WithEvents TxtChange As TextBox

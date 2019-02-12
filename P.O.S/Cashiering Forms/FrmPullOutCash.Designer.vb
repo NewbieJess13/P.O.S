@@ -127,7 +127,7 @@ Partial Class FrmPullOutCash
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(167, 60)
         Me.Label5.TabIndex = 4
-        Me.Label5.Text = "PULLED OUT CASH"
+        Me.Label5.Text = "CASH TO PULLOUT"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label3

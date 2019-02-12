@@ -189,7 +189,7 @@ Partial Class FrmMainMenu
         Me.BtnDelivery.Name = "BtnDelivery"
         Me.BtnDelivery.Size = New System.Drawing.Size(320, 204)
         Me.BtnDelivery.TabIndex = 11
-        Me.BtnDelivery.Text = "Delivery"
+        Me.BtnDelivery.Text = "Delivery (F5)"
         Me.BtnDelivery.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnDelivery.UseVisualStyleBackColor = False
         '
@@ -210,7 +210,7 @@ Partial Class FrmMainMenu
         Me.BtnUploadEmployee.Name = "BtnUploadEmployee"
         Me.BtnUploadEmployee.Size = New System.Drawing.Size(322, 203)
         Me.BtnUploadEmployee.TabIndex = 9
-        Me.BtnUploadEmployee.Text = "Upload Employee"
+        Me.BtnUploadEmployee.Text = "Upload Employee (F3)"
         Me.BtnUploadEmployee.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnUploadEmployee.UseVisualStyleBackColor = False
         '
@@ -229,7 +229,7 @@ Partial Class FrmMainMenu
         Me.BtnProducts.Name = "BtnProducts"
         Me.BtnProducts.Size = New System.Drawing.Size(320, 203)
         Me.BtnProducts.TabIndex = 8
-        Me.BtnProducts.Text = "Products"
+        Me.BtnProducts.Text = "Products (F2)"
         Me.BtnProducts.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnProducts.UseVisualStyleBackColor = False
         '
@@ -250,7 +250,7 @@ Partial Class FrmMainMenu
         Me.BtnOpenSession.Name = "BtnOpenSession"
         Me.BtnOpenSession.Size = New System.Drawing.Size(320, 203)
         Me.BtnOpenSession.TabIndex = 7
-        Me.BtnOpenSession.Text = "Open Session"
+        Me.BtnOpenSession.Text = "Open Session (F1)"
         Me.BtnOpenSession.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnOpenSession.UseVisualStyleBackColor = False
         '
@@ -271,7 +271,7 @@ Partial Class FrmMainMenu
         Me.BtnSettings.Name = "BtnSettings"
         Me.BtnSettings.Size = New System.Drawing.Size(322, 204)
         Me.BtnSettings.TabIndex = 12
-        Me.BtnSettings.Text = "Settings"
+        Me.BtnSettings.Text = "Settings (F6)"
         Me.BtnSettings.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnSettings.UseVisualStyleBackColor = False
         '
@@ -292,7 +292,7 @@ Partial Class FrmMainMenu
         Me.BtnReports.Name = "BtnReports"
         Me.BtnReports.Size = New System.Drawing.Size(320, 204)
         Me.BtnReports.TabIndex = 10
-        Me.BtnReports.Text = "Reports"
+        Me.BtnReports.Text = "Reports (F4)"
         Me.BtnReports.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnReports.UseVisualStyleBackColor = False
         '
@@ -308,6 +308,7 @@ Partial Class FrmMainMenu
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.KeyPreview = True
         Me.MinimumSize = New System.Drawing.Size(996, 597)
         Me.Name = "FrmMainMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

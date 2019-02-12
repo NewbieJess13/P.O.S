@@ -5,6 +5,7 @@ Public Class UCProductDetails
     Private Sub UCProductDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MsSql.connectionString = My.Settings.ConnectionString
         LoadData()
+        PopulateComboCategory()
     End Sub
 
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
@@ -80,11 +81,23 @@ Public Class UCProductDetails
         MessageBox.Show("Item successfully deleted.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
+    Private Sub PopulateComboCategory()
+        tbl = MsSql.Table("SELECT * FROM Tbl_Category")
+
+        CmbCategory.DataSource = tbl
+        CmbCategory.ValueMember = "id"
+        CmbCategory.DisplayMember = "CategoryName"
+        CmbCategory.SelectedIndex = -1
+
+    End Sub
+
     Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
         If action = "add" Then
             AddItem()
         ElseIf action = "edit" Then
             EditItem()
+        Else
+            MessageBox.Show("Select action first!", "POS", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
 
@@ -144,6 +157,8 @@ Public Class UCProductDetails
         Dim Total As Decimal
         VATResult = Val(TxtRetailPrice.Text) * VAT
         Total = Val(TxtRetailPrice.Text) + VATResult
-        TxtSellingPrice.Text = Total
+        TxtSellingPrice.Text = Math.Round(Total, 2)
     End Sub
+
+
 End Class
