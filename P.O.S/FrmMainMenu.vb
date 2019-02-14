@@ -47,4 +47,8 @@
             BtnSettings.PerformClick()
         End If
     End Sub
+
+    Private Sub BtnReports_Click(sender As Object, e As EventArgs) Handles BtnReports.Click
+        FrmReports.ShowDialog()
+    End Sub
 End Class

@@ -97,7 +97,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BarcodeCode\ChangeTextColorMod.vb" />
-    <Compile Include="BarcodePrint.vb">
+    <Compile Include="Cashiering Forms\ReceiptReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReceiptReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmReports.Designer.vb">
+      <DependentUpon>FrmReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FrmReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\BarcodePrint.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BarcodePrint.rpt</DependentUpon>
@@ -261,7 +273,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BarcodePrint.rpt">
+    <EmbeddedResource Include="Cashiering Forms\ReceiptReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReceiptReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FrmReports.resx">
+      <DependentUpon>FrmReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\BarcodePrint.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>BarcodePrint.vb</LastGenOutput>
     </EmbeddedResource>
@@ -406,7 +425,7 @@
     <None Include="Resources\verified-text-paper.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ImagePath\" />
+    <None Include="Resources\inventory.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\employee.png" />
@@ -425,6 +444,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\printer-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credit-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sale.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

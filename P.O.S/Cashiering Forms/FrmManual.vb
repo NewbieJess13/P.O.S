@@ -59,6 +59,8 @@ Public Class FrmManual
         Next
     End Sub
 
+
+
     Sub SelectFromProductList()
         tbl = MsSql.Table("SELECT * FROM Tbl_Products WHERE Description = '" & txtDescrip.Text & "'")
         ItemCode = ""

@@ -1,4 +1,6 @@
 ﻿Imports ClassSql
+Imports System.Data.SqlClient
+
 Public Class UCProductDetails
     Dim tbl As DataTable
     Dim action As String
@@ -6,11 +8,13 @@ Public Class UCProductDetails
         MsSql.connectionString = My.Settings.ConnectionString
         LoadData()
         PopulateComboCategory()
+
     End Sub
 
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
         EnableTexts()
         ClearTexts()
+        GetRealBarcode()
         action = "add"
     End Sub
 
@@ -34,7 +38,6 @@ Public Class UCProductDetails
         TxtSellingPrice.Enabled = True
         CmbCategory.Enabled = True
         TxtItemCode.Enabled = True
-        TxtBarCode.Enabled = True
         TxtQuanti.Enabled = True
         TxtUnit.Enabled = True
     End Sub
@@ -50,6 +53,36 @@ Public Class UCProductDetails
         TxtUnit.Enabled = False
     End Sub
 
+    Dim RealBarcode As String = "0"
+
+    Sub GetRealBarcode()
+        Try
+            Using conn As New SqlConnection(My.Settings.ConnectionString)
+                conn.Open()
+                Dim command As New SqlCommand("SELECT TOP 1 RealBarcode FROM Tbl_Products ORDER BY RealBarcode DESC", conn)
+                Dim DT As New DataTable
+                Dim DA As New SqlDataAdapter With {
+                    .SelectCommand = command
+                }
+                DA.Fill(DT)
+                If DT.Rows.Count > 0 Then
+                    Dim Barcode As Integer
+                    For Each dr As DataRow In DT.Rows
+                        Barcode = dr(0) + 1
+                        RealBarcode = Format(Barcode, "00000000000")
+                    Next
+                Else
+                    RealBarcode = "00000000001"
+                End If
+                TxtBarCode.Text = RealBarcode
+                LblTextBar.Text = RealBarcode
+                LblBarcode.Text = RealBarcode
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
     Sub LoadData()
         tbl = MsSql.Table("SELECT * FROM Tbl_Products ORDER BY Description ASC", Nothing)
         DGProductList.Rows.Clear()
@@ -59,36 +92,38 @@ Public Class UCProductDetails
     End Sub
 
     Sub AddItem()
-        MsSql.ExecuteQuery("INSERT INTO Tbl_Products (Description, RetailPrice, SellingPrice, ItemCount, Category, ItemCode, Barcode, Unit, RealBarcode) VALUES ('" & TxtDesc.Text & "','" & TxtRetailPrice.Text & "','" & TxtSellingPrice.Text & "','" & TxtQuanti.Text & "','" & CmbCategory.Text & "','" & TxtItemCode.Text & "','" & TxtBarCode.Text & "','" & TxtUnit.Text & "','" & RchTxtRealBarcode.Text & "')", Nothing)
-        ClearTexts()
-        DisableTexts()
-        LoadData()
-        MessageBox.Show("Item successfully added.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        If MsSql.ExecuteQuery("INSERT INTO Tbl_Products (Description, RetailPrice, SellingPrice, ItemCount, Category, ItemCode, Barcode, Unit, RealBarcode) VALUES ('" & TxtDesc.Text & "','" & TxtRetailPrice.Text & "','" & TxtSellingPrice.Text & "','" & TxtQuanti.Text & "','" & CmbCategory.Text & "','" & TxtItemCode.Text & "','" & TxtBarCode.Text & "','" & TxtUnit.Text & "','" & TxtBarCode.Text & "')", Nothing) = True Then
+            ClearTexts()
+            DisableTexts()
+            LoadData()
+            MessageBox.Show("Item successfully added.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+
     End Sub
 
     Sub EditItem()
-        MsSql.ExecuteQuery("UPDATE Tbl_Products SET Description = '" & TxtDesc.Text & "', RetailPrice ='" & TxtRetailPrice.Text & "', SellingPrice = '" & TxtSellingPrice.Text & "', ItemCount = '" & TxtQuanti.Text & "', Category= '" & CmbCategory.Text & "', ItemCode='" & TxtItemCode.Text & "', Barcode='" & TxtBarCode.Text & "', Unit='" & TxtUnit.Text & "', RealBarcode='" & RchTxtRealBarcode.Text & "' WHERE id='" & LblId.Text & "'", Nothing)
-        ClearTexts()
-        DisableTexts()
-        LoadData()
-        MessageBox.Show("Item Successfully Updated.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        If MsSql.ExecuteQuery("UPDATE Tbl_Products SET Description = '" & TxtDesc.Text & "', RetailPrice ='" & TxtRetailPrice.Text & "', SellingPrice = '" & TxtSellingPrice.Text & "', ItemCount = '" & TxtQuanti.Text & "', Category= '" & CmbCategory.Text & "', ItemCode='" & TxtItemCode.Text & "', Barcode='" & TxtBarCode.Text & "', Unit='" & TxtUnit.Text & "', RealBarcode='" & TxtBarCode.Text & "' WHERE id='" & LblId.Text & "'", Nothing) = True Then
+            ClearTexts()
+            DisableTexts()
+            LoadData()
+            MessageBox.Show("Item Successfully Updated.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
     End Sub
     Sub DeleteITem()
-        MsSql.ExecuteQuery("DELETE FROM Tbl_Products WHERE id='" & LblId.Text & "'", Nothing)
-        ClearTexts()
-        DisableTexts()
-        LoadData()
-        MessageBox.Show("Item successfully deleted.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        If MsSql.ExecuteQuery("DELETE FROM Tbl_Products WHERE id='" & LblId.Text & "'", Nothing) = True Then
+            ClearTexts()
+            DisableTexts()
+            LoadData()
+            MessageBox.Show("Item successfully deleted.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
     End Sub
 
     Private Sub PopulateComboCategory()
         tbl = MsSql.Table("SELECT * FROM Tbl_Category")
-
         CmbCategory.DataSource = tbl
         CmbCategory.ValueMember = "id"
         CmbCategory.DisplayMember = "CategoryName"
         CmbCategory.SelectedIndex = -1
-
     End Sub
 
     Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
@@ -122,6 +157,8 @@ Public Class UCProductDetails
                 CmbCategory.Text = DGProductList.Rows(e.RowIndex).Cells(4).Value
                 TxtItemCode.Text = DGProductList.Rows(e.RowIndex).Cells(5).Value
                 TxtBarCode.Text = DGProductList.Rows(e.RowIndex).Cells(6).Value
+                LblBarcode.Text = TxtBarCode.Text
+                LblTextBar.Text = TxtBarCode.Text
                 TxtQuanti.Text = DGProductList.Rows(e.RowIndex).Cells(7).Value
                 TxtUnit.Text = DGProductList.Rows(e.RowIndex).Cells(8).Value
             End If
@@ -130,35 +167,8 @@ Public Class UCProductDetails
         End Try
     End Sub
 
-    Private Sub TxtBarCode_TextChanged(sender As Object, e As EventArgs) Handles TxtBarCode.TextChanged
-
-        Dim Barcode, Check12Digits As String
-
-        If Not (String.IsNullOrEmpty(TxtBarCode.Text)) Then
-
-            Check12Digits = TxtBarCode.Text.PadRight(12, CChar("0"))
-            Barcode = EAN13(Check12Digits)
-            LblBarcode.Text = Barcode
-
-            If Not (String.IsNullOrEmpty(Barcode13Digits)) And
-                    Not Barcode13Digits = "" Then
-
-                RchTxtRealBarcode.Text = Barcode13Digits.Trim.ToString
-
-                Dim intStart As Int16 = Convert.ToInt16(RchTxtRealBarcode.TextLength - 1)
-                ChangeColor(RchTxtRealBarcode, intStart)
-            End If
-        End If
-    End Sub
-
     Private Sub TxtRetailPrice_TextChanged(sender As Object, e As EventArgs) Handles TxtRetailPrice.TextChanged
-        Dim VAT As Decimal = 0.12
-        Dim VATResult As Decimal = 0
-        Dim Total As Decimal
-        VATResult = Val(TxtRetailPrice.Text) * VAT
-        Total = Val(TxtRetailPrice.Text) + VATResult
-        TxtSellingPrice.Text = Math.Round(Total, 2)
-    End Sub
 
+    End Sub
 
 End Class

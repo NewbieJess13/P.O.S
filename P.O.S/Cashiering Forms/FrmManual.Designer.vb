@@ -199,6 +199,7 @@ Partial Class FrmManual
         Me.Controls.Add(Me.TableLayoutPanel2)
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.KeyPreview = True
         Me.MaximumSize = New System.Drawing.Size(704, 527)
         Me.MinimumSize = New System.Drawing.Size(704, 527)
         Me.Name = "FrmManual"

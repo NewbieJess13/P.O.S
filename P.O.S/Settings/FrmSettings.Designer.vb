@@ -24,13 +24,13 @@ Partial Class FrmSettings
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmSettings))
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PnlContent = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.BtnBarcodePrinter = New System.Windows.Forms.Button()
         Me.BtnCredit = New System.Windows.Forms.Button()
         Me.BtnAppSettings = New System.Windows.Forms.Button()
         Me.BtnEditProfile = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -47,6 +47,17 @@ Partial Class FrmSettings
         Me.Panel3.Size = New System.Drawing.Size(844, 490)
         Me.Panel3.TabIndex = 5
         '
+        'PnlContent
+        '
+        Me.PnlContent.BackgroundImage = CType(resources.GetObject("PnlContent.BackgroundImage"), System.Drawing.Image)
+        Me.PnlContent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PnlContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PnlContent.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PnlContent.Location = New System.Drawing.Point(0, 0)
+        Me.PnlContent.Name = "PnlContent"
+        Me.PnlContent.Size = New System.Drawing.Size(844, 490)
+        Me.PnlContent.TabIndex = 22
+        '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.BtnBarcodePrinter)
@@ -59,32 +70,12 @@ Partial Class FrmSettings
         Me.Panel2.Size = New System.Drawing.Size(191, 490)
         Me.Panel2.TabIndex = 4
         '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1035, 89)
-        Me.Panel1.TabIndex = 3
-        '
-        'PnlContent
-        '
-        Me.PnlContent.BackgroundImage = CType(resources.GetObject("PnlContent.BackgroundImage"), System.Drawing.Image)
-        Me.PnlContent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PnlContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PnlContent.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PnlContent.Location = New System.Drawing.Point(0, 0)
-        Me.PnlContent.Name = "PnlContent"
-        Me.PnlContent.Size = New System.Drawing.Size(844, 490)
-        Me.PnlContent.TabIndex = 22
-        '
         'BtnBarcodePrinter
         '
         Me.BtnBarcodePrinter.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
         Me.BtnBarcodePrinter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnBarcodePrinter.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnBarcodePrinter.Image = Global.P.O.S.My.Resources.Resources.printer_
+        Me.BtnBarcodePrinter.Image = Global.P.O.S.My.Resources.Resources.printer
         Me.BtnBarcodePrinter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnBarcodePrinter.Location = New System.Drawing.Point(0, 273)
         Me.BtnBarcodePrinter.Name = "BtnBarcodePrinter"
@@ -135,6 +126,15 @@ Partial Class FrmSettings
         Me.BtnEditProfile.TabIndex = 0
         Me.BtnEditProfile.Text = "Edit Profile"
         Me.BtnEditProfile.UseVisualStyleBackColor = False
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1035, 89)
+        Me.Panel1.TabIndex = 3
         '
         'PictureBox1
         '
