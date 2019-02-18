@@ -12,8 +12,8 @@ Public Class FrmCashierSession
         InitializeComponent()
         AddHandler FrmVoidItem.LoadDataToGrid, AddressOf LoadDataToGrid
         AddHandler FrmManual.LoadDataToGrid, AddressOf LoadDataToGrid
+        AddHandler FrmCheckOut.LoadDataToGridToCheckOut, AddressOf LoadDataToGrid
         Timer1.Start()
-
     End Sub
 
     Private Sub BtnAddToCredits_Click(sender As Object, e As EventArgs) Handles BtnAddToCredits.Click

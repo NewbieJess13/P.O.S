@@ -22,8 +22,8 @@ Partial Class UCProductDetails
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TxtQuanti = New System.Windows.Forms.TextBox()
         Me.TxtSellingPrice = New System.Windows.Forms.TextBox()
         Me.TxtBarCode = New System.Windows.Forms.TextBox()
@@ -31,6 +31,10 @@ Partial Class UCProductDetails
         Me.TxtItemCode = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
+        Me.BtnEdit = New System.Windows.Forms.Button()
+        Me.BtnAdd = New System.Windows.Forms.Button()
+        Me.BtnDelete = New System.Windows.Forms.Button()
+        Me.BtnSave = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -59,10 +63,6 @@ Partial Class UCProductDetails
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BtnEdit = New System.Windows.Forms.Button()
-        Me.BtnAdd = New System.Windows.Forms.Button()
-        Me.BtnDelete = New System.Windows.Forms.Button()
-        Me.BtnSave = New System.Windows.Forms.Button()
         Me.TableLayoutPanel4.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -156,6 +156,66 @@ Partial Class UCProductDetails
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel4.Size = New System.Drawing.Size(959, 141)
         Me.TableLayoutPanel4.TabIndex = 2
+        '
+        'BtnEdit
+        '
+        Me.BtnEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.BtnEdit.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnEdit.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEdit.Image = Global.P.O.S.My.Resources.Resources.writing
+        Me.BtnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnEdit.Location = New System.Drawing.Point(672, 3)
+        Me.BtnEdit.Name = "BtnEdit"
+        Me.BtnEdit.Size = New System.Drawing.Size(137, 135)
+        Me.BtnEdit.TabIndex = 5
+        Me.BtnEdit.Text = "EDIT"
+        Me.BtnEdit.UseVisualStyleBackColor = False
+        '
+        'BtnAdd
+        '
+        Me.BtnAdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
+        Me.BtnAdd.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAdd.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAdd.Image = Global.P.O.S.My.Resources.Resources.bag
+        Me.BtnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnAdd.Location = New System.Drawing.Point(386, 3)
+        Me.BtnAdd.Name = "BtnAdd"
+        Me.BtnAdd.Size = New System.Drawing.Size(137, 135)
+        Me.BtnAdd.TabIndex = 7
+        Me.BtnAdd.Text = "ADD"
+        Me.BtnAdd.UseVisualStyleBackColor = False
+        '
+        'BtnDelete
+        '
+        Me.BtnDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.BtnDelete.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnDelete.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDelete.Image = Global.P.O.S.My.Resources.Resources.delete_shopping_basket
+        Me.BtnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnDelete.Location = New System.Drawing.Point(815, 3)
+        Me.BtnDelete.Name = "BtnDelete"
+        Me.BtnDelete.Size = New System.Drawing.Size(141, 135)
+        Me.BtnDelete.TabIndex = 6
+        Me.BtnDelete.Text = "DELETE"
+        Me.BtnDelete.UseVisualStyleBackColor = False
+        '
+        'BtnSave
+        '
+        Me.BtnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(148, Byte), Integer))
+        Me.BtnSave.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSave.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSave.Image = Global.P.O.S.My.Resources.Resources.save
+        Me.BtnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnSave.Location = New System.Drawing.Point(529, 3)
+        Me.BtnSave.Name = "BtnSave"
+        Me.BtnSave.Size = New System.Drawing.Size(137, 135)
+        Me.BtnSave.TabIndex = 8
+        Me.BtnSave.Text = "SAVE"
+        Me.BtnSave.UseVisualStyleBackColor = False
         '
         'Panel1
         '
@@ -404,24 +464,24 @@ Partial Class UCProductDetails
         Me.DGProductList.AllowUserToDeleteRows = False
         Me.DGProductList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DGProductList.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGProductList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGProductList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGProductList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9})
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGProductList.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGProductList.DefaultCellStyle = DataGridViewCellStyle2
         Me.DGProductList.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DGProductList.Location = New System.Drawing.Point(3, 333)
         Me.DGProductList.MultiSelect = False
@@ -485,66 +545,6 @@ Partial Class UCProductDetails
         Me.Column9.HeaderText = "Unit"
         Me.Column9.Name = "Column9"
         Me.Column9.ReadOnly = True
-        '
-        'BtnEdit
-        '
-        Me.BtnEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.BtnEdit.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnEdit.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEdit.Image = Global.P.O.S.My.Resources.Resources.writing
-        Me.BtnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEdit.Location = New System.Drawing.Point(672, 3)
-        Me.BtnEdit.Name = "BtnEdit"
-        Me.BtnEdit.Size = New System.Drawing.Size(137, 135)
-        Me.BtnEdit.TabIndex = 5
-        Me.BtnEdit.Text = "EDIT"
-        Me.BtnEdit.UseVisualStyleBackColor = False
-        '
-        'BtnAdd
-        '
-        Me.BtnAdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
-        Me.BtnAdd.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAdd.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAdd.Image = Global.P.O.S.My.Resources.Resources.bag
-        Me.BtnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnAdd.Location = New System.Drawing.Point(386, 3)
-        Me.BtnAdd.Name = "BtnAdd"
-        Me.BtnAdd.Size = New System.Drawing.Size(137, 135)
-        Me.BtnAdd.TabIndex = 7
-        Me.BtnAdd.Text = "ADD"
-        Me.BtnAdd.UseVisualStyleBackColor = False
-        '
-        'BtnDelete
-        '
-        Me.BtnDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.BtnDelete.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnDelete.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDelete.Image = Global.P.O.S.My.Resources.Resources.delete_shopping_basket
-        Me.BtnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnDelete.Location = New System.Drawing.Point(815, 3)
-        Me.BtnDelete.Name = "BtnDelete"
-        Me.BtnDelete.Size = New System.Drawing.Size(141, 135)
-        Me.BtnDelete.TabIndex = 6
-        Me.BtnDelete.Text = "DELETE"
-        Me.BtnDelete.UseVisualStyleBackColor = False
-        '
-        'BtnSave
-        '
-        Me.BtnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(148, Byte), Integer))
-        Me.BtnSave.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnSave.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnSave.Image = Global.P.O.S.My.Resources.Resources.save
-        Me.BtnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnSave.Location = New System.Drawing.Point(529, 3)
-        Me.BtnSave.Name = "BtnSave"
-        Me.BtnSave.Size = New System.Drawing.Size(137, 135)
-        Me.BtnSave.TabIndex = 8
-        Me.BtnSave.Text = "SAVE"
-        Me.BtnSave.UseVisualStyleBackColor = False
         '
         'UCProductDetails
         '

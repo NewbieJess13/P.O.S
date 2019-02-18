@@ -8,6 +8,7 @@ Public Class UCBarcodePrinter
         crystal.Load("C:\Users\JESTONI\source\repos\P.O.S\P.O.S\Settings\BarcodePrint.rpt")
         TxtNumber.Items.AddRange(Enumerable.Range(1, 50).Cast(Of Object)().ToArray())
         TxtNumber.SelectedItem = 1
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnShow1.Click
@@ -34,6 +35,7 @@ Public Class UCBarcodePrinter
                     DA.Fill(DS)
                     crystal.SetDataSource(DS)
                     CrystalReportViewer1.ReportSource = crystal
+
                 End Using
             Catch ex As Exception
                 MessageBox.Show(ex.Message)

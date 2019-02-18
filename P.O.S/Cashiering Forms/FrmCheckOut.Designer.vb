@@ -23,16 +23,6 @@ Partial Class FrmCheckOut
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TxtTotalAmount = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.BtnClear = New System.Windows.Forms.Button()
-        Me.TxtCashTendered = New System.Windows.Forms.TextBox()
-        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TxtChange = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.Btn = New System.Windows.Forms.Button()
         Me.Btn0 = New System.Windows.Forms.Button()
@@ -46,17 +36,32 @@ Partial Class FrmCheckOut
         Me.Btn3 = New System.Windows.Forms.Button()
         Me.Btn2 = New System.Windows.Forms.Button()
         Me.Btn1 = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.BtnClear = New System.Windows.Forms.Button()
+        Me.TxtCashTendered = New System.Windows.Forms.TextBox()
+        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.LblVat = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TxtChange = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TxtTotalAmount = New System.Windows.Forms.TextBox()
+        Me.LblTotalXVat = New System.Windows.Forms.Label()
+        Me.LblVATplus = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel1.SuspendLayout()
+        Me.TableLayoutPanel4.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TableLayoutPanel5.SuspendLayout()
-        Me.TableLayoutPanel4.SuspendLayout()
-        Me.TableLayoutPanel6.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.TableLayoutPanel6.SuspendLayout()
+        Me.TableLayoutPanel7.SuspendLayout()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -66,7 +71,7 @@ Partial Class FrmCheckOut
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel4, 0, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel3, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel5, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel5, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel6, 0, 3)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
@@ -79,136 +84,6 @@ Partial Class FrmCheckOut
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.84615!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(564, 490)
         Me.TableLayoutPanel1.TabIndex = 3
-        '
-        'TableLayoutPanel2
-        '
-        Me.TableLayoutPanel2.ColumnCount = 2
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.TxtTotalAmount, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label2, 0, 0)
-        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 3)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 1
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(558, 50)
-        Me.TableLayoutPanel2.TabIndex = 0
-        '
-        'TxtTotalAmount
-        '
-        Me.TxtTotalAmount.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TxtTotalAmount.Enabled = False
-        Me.TxtTotalAmount.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtTotalAmount.Location = New System.Drawing.Point(142, 3)
-        Me.TxtTotalAmount.Name = "TxtTotalAmount"
-        Me.TxtTotalAmount.Size = New System.Drawing.Size(413, 47)
-        Me.TxtTotalAmount.TabIndex = 5
-        Me.TxtTotalAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label2
-        '
-        Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(133, 50)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Total Amount:"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'TableLayoutPanel3
-        '
-        Me.TableLayoutPanel3.ColumnCount = 3
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.0!))
-        Me.TableLayoutPanel3.Controls.Add(Me.Label4, 0, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.BtnClear, 2, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.TxtCashTendered, 1, 0)
-        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 59)
-        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
-        Me.TableLayoutPanel3.RowCount = 1
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(558, 50)
-        Me.TableLayoutPanel3.TabIndex = 1
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(3, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(133, 50)
-        Me.Label4.TabIndex = 2
-        Me.Label4.Text = "Cash Tendered:"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'BtnClear
-        '
-        Me.BtnClear.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.BtnClear.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnClear.Font = New System.Drawing.Font("Microsoft YaHei", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnClear.Location = New System.Drawing.Point(460, 3)
-        Me.BtnClear.Name = "BtnClear"
-        Me.BtnClear.Size = New System.Drawing.Size(95, 44)
-        Me.BtnClear.TabIndex = 3
-        Me.BtnClear.Text = "C"
-        Me.BtnClear.UseVisualStyleBackColor = False
-        '
-        'TxtCashTendered
-        '
-        Me.TxtCashTendered.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TxtCashTendered.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCashTendered.Location = New System.Drawing.Point(142, 3)
-        Me.TxtCashTendered.Name = "TxtCashTendered"
-        Me.TxtCashTendered.Size = New System.Drawing.Size(312, 47)
-        Me.TxtCashTendered.TabIndex = 4
-        Me.TxtCashTendered.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'TableLayoutPanel5
-        '
-        Me.TableLayoutPanel5.ColumnCount = 2
-        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.0!))
-        Me.TableLayoutPanel5.Controls.Add(Me.Label3, 0, 0)
-        Me.TableLayoutPanel5.Controls.Add(Me.Panel1, 1, 0)
-        Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel5.Location = New System.Drawing.Point(3, 115)
-        Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
-        Me.TableLayoutPanel5.RowCount = 1
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel5.Size = New System.Drawing.Size(558, 50)
-        Me.TableLayoutPanel5.TabIndex = 3
-        '
-        'TxtChange
-        '
-        Me.TxtChange.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TxtChange.Enabled = False
-        Me.TxtChange.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtChange.Location = New System.Drawing.Point(142, 3)
-        Me.TxtChange.Name = "TxtChange"
-        Me.TxtChange.Size = New System.Drawing.Size(413, 47)
-        Me.TxtChange.TabIndex = 6
-        Me.TxtChange.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(133, 50)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Change:"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'TableLayoutPanel4
         '
@@ -395,20 +270,101 @@ Partial Class FrmCheckOut
         Me.Btn1.Text = "1"
         Me.Btn1.UseVisualStyleBackColor = False
         '
-        'TableLayoutPanel6
+        'TableLayoutPanel2
         '
-        Me.TableLayoutPanel6.ColumnCount = 2
-        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.0!))
-        Me.TableLayoutPanel6.Controls.Add(Me.TxtChange, 1, 0)
-        Me.TableLayoutPanel6.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel6.Location = New System.Drawing.Point(3, 171)
-        Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
-        Me.TableLayoutPanel6.RowCount = 1
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel6.Size = New System.Drawing.Size(558, 50)
-        Me.TableLayoutPanel6.TabIndex = 5
+        Me.TableLayoutPanel2.ColumnCount = 2
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.Label2, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel7, 1, 0)
+        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 59)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 1
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(558, 50)
+        Me.TableLayoutPanel2.TabIndex = 0
+        '
+        'Label2
+        '
+        Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(3, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(133, 50)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Total Amount:"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TableLayoutPanel3
+        '
+        Me.TableLayoutPanel3.ColumnCount = 3
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.0!))
+        Me.TableLayoutPanel3.Controls.Add(Me.Label4, 0, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.BtnClear, 2, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.TxtCashTendered, 1, 0)
+        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 115)
+        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
+        Me.TableLayoutPanel3.RowCount = 1
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(558, 50)
+        Me.TableLayoutPanel3.TabIndex = 1
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(3, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(133, 50)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "Cash Tendered:"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'BtnClear
+        '
+        Me.BtnClear.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.BtnClear.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnClear.Font = New System.Drawing.Font("Microsoft YaHei", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnClear.Location = New System.Drawing.Point(460, 3)
+        Me.BtnClear.Name = "BtnClear"
+        Me.BtnClear.Size = New System.Drawing.Size(95, 44)
+        Me.BtnClear.TabIndex = 3
+        Me.BtnClear.Text = "C"
+        Me.BtnClear.UseVisualStyleBackColor = False
+        '
+        'TxtCashTendered
+        '
+        Me.TxtCashTendered.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TxtCashTendered.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCashTendered.Location = New System.Drawing.Point(142, 3)
+        Me.TxtCashTendered.Name = "TxtCashTendered"
+        Me.TxtCashTendered.Size = New System.Drawing.Size(312, 47)
+        Me.TxtCashTendered.TabIndex = 4
+        Me.TxtCashTendered.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.TxtCashTendered.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TableLayoutPanel5
+        '
+        Me.TableLayoutPanel5.ColumnCount = 2
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.0!))
+        Me.TableLayoutPanel5.Controls.Add(Me.Label3, 0, 0)
+        Me.TableLayoutPanel5.Controls.Add(Me.Panel1, 1, 0)
+        Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel5.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
+        Me.TableLayoutPanel5.RowCount = 1
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(558, 50)
+        Me.TableLayoutPanel5.TabIndex = 3
         '
         'Label3
         '
@@ -425,24 +381,128 @@ Partial Class FrmCheckOut
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.LblVat)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(142, 3)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(413, 44)
         Me.Panel1.TabIndex = 5
         '
-        'Label5
+        'LblVat
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(6, 5)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(70, 34)
-        Me.Label5.TabIndex = 6
-        Me.Label5.Text = "12%"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.LblVat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LblVat.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LblVat.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblVat.Location = New System.Drawing.Point(0, 0)
+        Me.LblVat.Name = "LblVat"
+        Me.LblVat.Size = New System.Drawing.Size(413, 44)
+        Me.LblVat.TabIndex = 6
+        Me.LblVat.Text = "12%"
+        Me.LblVat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TableLayoutPanel6
+        '
+        Me.TableLayoutPanel6.ColumnCount = 2
+        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.0!))
+        Me.TableLayoutPanel6.Controls.Add(Me.TxtChange, 1, 0)
+        Me.TableLayoutPanel6.Controls.Add(Me.Label1, 0, 0)
+        Me.TableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel6.Location = New System.Drawing.Point(3, 171)
+        Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
+        Me.TableLayoutPanel6.RowCount = 1
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel6.Size = New System.Drawing.Size(558, 50)
+        Me.TableLayoutPanel6.TabIndex = 5
+        '
+        'TxtChange
+        '
+        Me.TxtChange.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TxtChange.Enabled = False
+        Me.TxtChange.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtChange.Location = New System.Drawing.Point(142, 3)
+        Me.TxtChange.Name = "TxtChange"
+        Me.TxtChange.Size = New System.Drawing.Size(413, 47)
+        Me.TxtChange.TabIndex = 6
+        Me.TxtChange.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(133, 50)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Change:"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TxtTotalAmount
+        '
+        Me.TxtTotalAmount.Enabled = False
+        Me.TxtTotalAmount.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtTotalAmount.Location = New System.Drawing.Point(253, 3)
+        Me.TxtTotalAmount.Name = "TxtTotalAmount"
+        Me.TxtTotalAmount.Size = New System.Drawing.Size(157, 41)
+        Me.TxtTotalAmount.TabIndex = 6
+        Me.TxtTotalAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'LblTotalXVat
+        '
+        Me.LblTotalXVat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LblTotalXVat.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LblTotalXVat.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTotalXVat.Location = New System.Drawing.Point(140, 0)
+        Me.LblTotalXVat.Name = "LblTotalXVat"
+        Me.LblTotalXVat.Size = New System.Drawing.Size(107, 44)
+        Me.LblTotalXVat.TabIndex = 7
+        Me.LblTotalXVat.Text = "12%"
+        Me.LblTotalXVat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'LblVATplus
+        '
+        Me.LblVATplus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LblVATplus.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LblVATplus.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblVATplus.Location = New System.Drawing.Point(3, 0)
+        Me.LblVATplus.Name = "LblVATplus"
+        Me.LblVATplus.Size = New System.Drawing.Size(95, 44)
+        Me.LblVATplus.TabIndex = 7
+        Me.LblVATplus.Text = "12%"
+        Me.LblVATplus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label7
+        '
+        Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(104, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(30, 44)
+        Me.Label7.TabIndex = 8
+        Me.Label7.Text = "+"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TableLayoutPanel7
+        '
+        Me.TableLayoutPanel7.ColumnCount = 4
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.72263!))
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.27737!))
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113.0!))
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 162.0!))
+        Me.TableLayoutPanel7.Controls.Add(Me.TxtTotalAmount, 3, 0)
+        Me.TableLayoutPanel7.Controls.Add(Me.Label7, 1, 0)
+        Me.TableLayoutPanel7.Controls.Add(Me.LblTotalXVat, 2, 0)
+        Me.TableLayoutPanel7.Controls.Add(Me.LblVATplus, 0, 0)
+        Me.TableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel7.Location = New System.Drawing.Point(142, 3)
+        Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
+        Me.TableLayoutPanel7.RowCount = 1
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel7.Size = New System.Drawing.Size(413, 44)
+        Me.TableLayoutPanel7.TabIndex = 2
         '
         'FrmCheckOut
         '
@@ -457,17 +517,17 @@ Partial Class FrmCheckOut
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "POS - Check Out"
         Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel4.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)
-        Me.TableLayoutPanel2.PerformLayout()
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel3.PerformLayout()
         Me.TableLayoutPanel5.ResumeLayout(False)
         Me.TableLayoutPanel5.PerformLayout()
-        Me.TableLayoutPanel4.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
         Me.TableLayoutPanel6.ResumeLayout(False)
         Me.TableLayoutPanel6.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        Me.TableLayoutPanel7.ResumeLayout(False)
+        Me.TableLayoutPanel7.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -487,7 +547,6 @@ Partial Class FrmCheckOut
     Friend WithEvents Btn2 As Button
     Friend WithEvents Btn1 As Button
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
-    Friend WithEvents TxtTotalAmount As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Label4 As Label
@@ -499,5 +558,10 @@ Partial Class FrmCheckOut
     Friend WithEvents TxtChange As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label5 As Label
+    Friend WithEvents LblVat As Label
+    Friend WithEvents TxtTotalAmount As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents LblVATplus As Label
+    Friend WithEvents LblTotalXVat As Label
+    Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
 End Class

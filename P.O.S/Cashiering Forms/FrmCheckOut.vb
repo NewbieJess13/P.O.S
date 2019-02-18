@@ -1,14 +1,12 @@
 ﻿Imports System.Text.RegularExpressions
 Imports System.Data.SqlClient
+Imports System.Text
 Public Class FrmCheckOut
-    Sub New()
-        InitializeComponent()
-        TxtTotalAmount.Text = ToBeMinusToTotalAmount()
 
-    End Sub
+    Public Event LoadDataToGridToCheckOut As EventHandler
+
     Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
         TxtCashTendered.Text = TxtCashTendered.Text.Remove(TxtCashTendered.TextLength - 1)
-
     End Sub
 
     Private Sub TxtCashTendered_TextChanged(sender As Object, e As EventArgs) Handles TxtCashTendered.TextChanged
@@ -20,9 +18,9 @@ Public Class FrmCheckOut
             TxtChange.Text = Val(TxtCashTendered.Text) - Val(TxtTotalAmount.Text)
         End If
     End Sub
-
+    Dim Converted, VAT As Decimal
     Function ToBeMinusToTotalAmount()
-        Dim Converted, VAT, Total As Decimal
+        Dim Total As Decimal
         Dim value As String = FrmCashierSession.LblTotalRes.Text
         Converted = Regex.Replace(value, "[^A-Za-z\-/0-9\./]", "")
         VAT = Converted * 0.12
@@ -37,6 +35,7 @@ Public Class FrmCheckOut
 
     Private Sub Btn_Click(sender As Object, e As EventArgs) Handles Btn.Click
         ConfirmBillOut()
+
     End Sub
 
     Sub ConfirmBillOut()
@@ -56,6 +55,8 @@ Public Class FrmCheckOut
                 command.Parameters.AddWithValue("@Change", TxtChange.Text)
                 command.ExecuteNonQuery()
             End Using
+            ReadyTheReceipt()
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -89,5 +90,36 @@ Public Class FrmCheckOut
         End Try
     End Sub
 
+    Sub ReadyTheReceipt()
+        Try
+            Using conn As New SqlConnection(My.Settings.ConnectionString)
+                conn.Open()
+                Dim xSQL As New StringBuilder
+                xSQL.AppendLine("EXEC InsertIntoTransactItems")
+                Dim command As New SqlCommand(xSQL.ToString, conn)
+                command.ExecuteNonQuery()
+            End Using
 
+            If MessageBox.Show("Print Receipt?", "POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                RaiseEvent LoadDataToGridToCheckOut(Me, Nothing)
+                ClearTexts()
+                Close()
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub FrmCheckOut_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TxtTotalAmount.Text = ToBeMinusToTotalAmount()
+        LblVATplus.Text = VAT.ToString
+        LblVat.Text = LblVATplus.Text
+        LblTotalXVat.Text = Converted.ToString
+    End Sub
+
+    Sub ClearTexts()
+        TxtTotalAmount.Clear()
+        TxtCashTendered.Clear()
+        TxtChange.Clear()
+    End Sub
 End Class
