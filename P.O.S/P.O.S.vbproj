@@ -383,7 +383,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="POSDbase.bak" />
+    <None Include="DB\POSDbase.bak" />
     <None Include="Resources\proxy.duckduckgo.com.png" />
   </ItemGroup>
   <ItemGroup>
