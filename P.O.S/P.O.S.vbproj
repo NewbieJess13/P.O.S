@@ -97,6 +97,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BarcodeCode\ChangeTextColorMod.vb" />
+    <Compile Include="Cashiering Forms\FrmCashierReport.Designer.vb">
+      <DependentUpon>FrmCashierReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cashiering Forms\FrmCashierReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Cashiering Forms\ReceiptReport.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -273,6 +279,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Cashiering Forms\FrmCashierReport.resx">
+      <DependentUpon>FrmCashierReport.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cashiering Forms\ReceiptReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReceiptReport.vb</LastGenOutput>
@@ -374,6 +383,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="POSDbase.bak" />
     <None Include="Resources\proxy.duckduckgo.com.png" />
   </ItemGroup>
   <ItemGroup>

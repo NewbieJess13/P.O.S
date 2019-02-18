@@ -15,7 +15,7 @@ Public Class FrmCheckOut
             TxtChange.Text = 0
         Else
             BtnClear.Enabled = True
-            TxtChange.Text = Val(TxtCashTendered.Text) - Val(TxtTotalAmount.Text)
+            TxtChange.Text = Math.Round(Val(TxtCashTendered.Text) - Val(TxtTotalAmount.Text), 2)
         End If
     End Sub
     Dim Converted, VAT As Decimal
@@ -23,7 +23,7 @@ Public Class FrmCheckOut
         Dim Total As Decimal
         Dim value As String = FrmCashierSession.LblTotalRes.Text
         Converted = Regex.Replace(value, "[^A-Za-z\-/0-9\./]", "")
-        VAT = Converted * 0.12
+        VAT = Math.Round(Converted * 0.12, 2)
         Total = VAT + Converted
         Total = Math.Round(Total, 2)
         Return Total
@@ -45,12 +45,13 @@ Public Class FrmCheckOut
             GetTransactionNo()
             Using conn As New SqlConnection(My.Settings.ConnectionString)
                 conn.Open()
-                Dim command As New SqlCommand("INSERT INTO Tbl_TransactionHeader (TransactionNo,TransDate,TransTime,Cashier,TotalAmount,PaymentMethod,CashTendered,Change,TransactionType) VALUES (@TransactionNo,@Date,@Time,@Cashier,@TotalAmount,'Cash',@CashTendered,@Change,'Sales')", conn)
+                Dim command As New SqlCommand("INSERT INTO Tbl_TransactionHeader (TransactionNo,TransDate,TransTime,Cashier,TotalAmount,VAT,PaymentMethod,CashTendered,Change,TransactionType) VALUES (@TransactionNo,@Date,@Time,@Cashier,@TotalAmount,@VAT,'Cash',@CashTendered,@Change,'Sales')", conn)
                 command.Parameters.AddWithValue("@TransactionNo", TransactionNo)
                 command.Parameters.AddWithValue("@Date", xDate)
                 command.Parameters.AddWithValue("@Time", xTime)
                 command.Parameters.AddWithValue("@Cashier", My.Settings.FullName)
                 command.Parameters.AddWithValue("@TotalAmount", TxtTotalAmount.Text)
+                command.Parameters.AddWithValue("@VAT", LblVat.Text)
                 command.Parameters.AddWithValue("@CashTendered", TxtCashTendered.Text)
                 command.Parameters.AddWithValue("@Change", TxtChange.Text)
                 command.ExecuteNonQuery()
@@ -103,7 +104,8 @@ Public Class FrmCheckOut
             If MessageBox.Show("Print Receipt?", "POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                 RaiseEvent LoadDataToGridToCheckOut(Me, Nothing)
                 ClearTexts()
-                Close()
+                Me.Hide()
+                FrmCashierReport.Show()
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message)
