@@ -98,4 +98,10 @@ Public Class FrmOpenSession
         TxtBegCash.Text = digitsOnly.Replace(TxtBegCash.Text, "")
     End Sub
 
+    Private Sub FrmOpenSession_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+
+        If e.KeyCode = Keys.Enter Then
+            BtnOpen.PerformClick()
+        End If
+    End Sub
 End Class

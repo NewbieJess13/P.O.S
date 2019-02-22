@@ -115,6 +115,12 @@
     <Compile Include="Reports\FrmReports.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ResPOS\FrmCashierSession-Res.Designer.vb">
+      <DependentUpon>FrmCashierSession-Res.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ResPOS\FrmCashierSession-Res.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Settings\BarcodePrint.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -288,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FrmReports.resx">
       <DependentUpon>FrmReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResPOS\FrmCashierSession-Res.resx">
+      <DependentUpon>FrmCashierSession-Res.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BarcodePrint.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -466,6 +475,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proxy.duckduckgo.com.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ProductImage\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -26,9 +26,9 @@ Partial Class FrmReports
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -80,16 +80,6 @@ Partial Class FrmReports
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(210, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.Button4)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(993, 54)
-        Me.Panel1.TabIndex = 3
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -113,6 +103,16 @@ Partial Class FrmReports
         Me.Button4.Size = New System.Drawing.Size(64, 47)
         Me.Button4.TabIndex = 0
         Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(210, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Button4)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(993, 54)
+        Me.Panel1.TabIndex = 3
         '
         'FrmReports
         '
@@ -140,7 +140,7 @@ Partial Class FrmReports
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Button4 As Button
+    Friend WithEvents Panel1 As Panel
 End Class

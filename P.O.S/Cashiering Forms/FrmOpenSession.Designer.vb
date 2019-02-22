@@ -253,6 +253,7 @@ Partial Class FrmOpenSession
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
+        Me.KeyPreview = True
         Me.MaximumSize = New System.Drawing.Size(729, 403)
         Me.MinimumSize = New System.Drawing.Size(593, 403)
         Me.Name = "FrmOpenSession"

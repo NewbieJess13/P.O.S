@@ -16,6 +16,7 @@ Public Class FrmCashierSession
         Timer1.Start()
     End Sub
 
+#Region "MenuControls"
     Private Sub BtnAddToCredits_Click(sender As Object, e As EventArgs) Handles BtnAddToCredits.Click
         FrmAddToCredits.ShowDialog()
     End Sub
@@ -47,6 +48,8 @@ Public Class FrmCashierSession
     Private Sub BtnCashTendered_Click(sender As Object, e As EventArgs) Handles BtnCashTendered.Click
         FrmCheckOut.ShowDialog()
     End Sub
+#End Region
+
 
     Private Sub FrmCashierSession_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TxtBarcode.Focus()
