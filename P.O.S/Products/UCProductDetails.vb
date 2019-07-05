@@ -1,6 +1,6 @@
 ﻿Imports ClassSql
 Imports System.Data.SqlClient
-
+Imports System.IO
 Public Class UCProductDetails
     Dim tbl As DataTable
     Dim action As String
@@ -27,7 +27,7 @@ Public Class UCProductDetails
         TxtBarCode.Clear()
         TxtQuanti.Clear()
         TxtUnit.Clear()
-
+        LblId.Text = ""
         TxtDesc.Focus()
 
     End Sub
@@ -75,8 +75,6 @@ Public Class UCProductDetails
                     RealBarcode = "00000000001"
                 End If
                 TxtBarCode.Text = RealBarcode
-                LblTextBar.Text = RealBarcode
-                LblBarcode.Text = RealBarcode
             End Using
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -87,26 +85,33 @@ Public Class UCProductDetails
         tbl = MsSql.Table("SELECT * FROM Tbl_Products ORDER BY Description ASC", Nothing)
         DGProductList.Rows.Clear()
         For Each dr As DataRow In tbl.Rows
-            DGProductList.Rows.Add(dr(0), dr(1), dr(2), dr(3), dr(5), dr(6), dr(7), dr(4), dr(8))
+            DGProductList.Rows.Add(dr(0), dr(1), dr(2), dr(3), dr(5), dr(6), dr(7), dr(4), dr(8), dr(10))
         Next
     End Sub
 
     Sub AddItem()
-        If MsSql.ExecuteQuery("INSERT INTO Tbl_Products (Description, RetailPrice, SellingPrice, ItemCount, Category, ItemCode, Barcode, Unit, RealBarcode) VALUES ('" & TxtDesc.Text & "','" & TxtRetailPrice.Text & "','" & TxtSellingPrice.Text & "','" & TxtQuanti.Text & "','" & CmbCategory.Text & "','" & TxtItemCode.Text & "','" & TxtBarCode.Text & "','" & TxtUnit.Text & "','" & TxtBarCode.Text & "')", Nothing) = True Then
+        If ImageFileName = "" Then
+            ImageFileName = "default.png"
+        End If
+        If MsSql.ExecuteQuery("INSERT INTO Tbl_Products (Description, RetailPrice, SellingPrice, ItemCount, Category, ItemCode, Barcode, Unit, RealBarcode,ImagePath) VALUES ('" & TxtDesc.Text & "','" & TxtRetailPrice.Text & "','" & TxtSellingPrice.Text & "','" & TxtQuanti.Text & "','" & CmbCategory.Text & "','" & TxtItemCode.Text & "','" & TxtBarCode.Text & "','" & TxtUnit.Text & "','" & TxtBarCode.Text & "','\ProductImage\" & ImageFileName & "')", Nothing) = True Then
             ClearTexts()
             DisableTexts()
             LoadData()
-            MessageBox.Show("Item successfully added.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Item successfully added.", My.Settings.Title, MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
-
     End Sub
 
+
+
     Sub EditItem()
-        If MsSql.ExecuteQuery("UPDATE Tbl_Products SET Description = '" & TxtDesc.Text & "', RetailPrice ='" & TxtRetailPrice.Text & "', SellingPrice = '" & TxtSellingPrice.Text & "', ItemCount = '" & TxtQuanti.Text & "', Category= '" & CmbCategory.Text & "', ItemCode='" & TxtItemCode.Text & "', Barcode='" & TxtBarCode.Text & "', Unit='" & TxtUnit.Text & "', RealBarcode='" & TxtBarCode.Text & "' WHERE id='" & LblId.Text & "'", Nothing) = True Then
+        If ImageFileName = "" Then
+            ImageFileName = "default.png"
+        End If
+        If MsSql.ExecuteQuery("UPDATE Tbl_Products SET Description = '" & TxtDesc.Text & "', RetailPrice ='" & TxtRetailPrice.Text & "', SellingPrice = '" & TxtSellingPrice.Text & "', ItemCount = '" & TxtQuanti.Text & "', Category= '" & CmbCategory.Text & "', ItemCode='" & TxtItemCode.Text & "', Barcode='" & TxtBarCode.Text & "', Unit='" & TxtUnit.Text & "', RealBarcode='" & TxtBarCode.Text & "', ImagePath='\ProductImage\" & ImageFileName & "' WHERE id='" & LblId.Text & "'", Nothing) = True Then
             ClearTexts()
             DisableTexts()
             LoadData()
-            MessageBox.Show("Item Successfully Updated.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Item Successfully Updated.", My.Settings.Title, MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
     Sub DeleteITem()
@@ -114,7 +119,7 @@ Public Class UCProductDetails
             ClearTexts()
             DisableTexts()
             LoadData()
-            MessageBox.Show("Item successfully deleted.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Item successfully deleted.", My.Settings.Title, MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
 
@@ -132,18 +137,26 @@ Public Class UCProductDetails
         ElseIf action = "edit" Then
             EditItem()
         Else
-            MessageBox.Show("Select action first!", "POS", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Select action first!", My.Settings.Title, MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
         action = "edit"
-        EnableTexts()
+        If LblId.Text <> "" Then
+            EnableTexts()
+        Else
+            MessageBox.Show("Please select the product to edit.", My.Settings.Title, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End If
     End Sub
 
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
-        If MessageBox.Show("Are you sure you want to delete this item?", "POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-            DeleteITem()
+        If LblId.Text <> "" Then
+            If MessageBox.Show("Are you sure you want to delete this item?", "POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                DeleteITem()
+            End If
+        Else
+            MessageBox.Show("Please select the product to delete!", My.Settings.Title, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
     End Sub
 
@@ -157,18 +170,36 @@ Public Class UCProductDetails
                 CmbCategory.Text = DGProductList.Rows(e.RowIndex).Cells(4).Value
                 TxtItemCode.Text = DGProductList.Rows(e.RowIndex).Cells(5).Value
                 TxtBarCode.Text = DGProductList.Rows(e.RowIndex).Cells(6).Value
-                LblBarcode.Text = TxtBarCode.Text
-                LblTextBar.Text = TxtBarCode.Text
                 TxtQuanti.Text = DGProductList.Rows(e.RowIndex).Cells(7).Value
                 TxtUnit.Text = DGProductList.Rows(e.RowIndex).Cells(8).Value
+                path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 9))
+                PicProdImg.Image = Image.FromFile(path + DGProductList.Rows(e.RowIndex).Cells(9).Value)
+
             End If
         Catch ex As Exception
-
+            MessageBox.Show(ex.Message)
         End Try
     End Sub
+    Dim ImageFileName, path As String
+    Private Sub BtnOpenDialog_Click(sender As Object, e As EventArgs) Handles BtnOpenDialog.Click
+        Try
+            Dim OpenDialog As New OpenFileDialog
+            OpenDialog.InitialDirectory = "C:\Users\JESTONI\Pictures\"
+            OpenDialog.Filter = "Image Files (*.jpg)|*.jpg|All Files(*.*)|*.*"
+            OpenDialog.FilterIndex = 1
+            ' OpenDialog.ShowDialog()
 
-    Private Sub TxtRetailPrice_TextChanged(sender As Object, e As EventArgs) Handles TxtRetailPrice.TextChanged
+            If OpenDialog.ShowDialog = DialogResult.OK Then
+                If OpenDialog.CheckFileExists Then
+                    path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 9))
+                    ImageFileName = System.IO.Path.GetFileName(OpenDialog.FileName)
+                    File.Copy(OpenDialog.FileName, path & "\ProductImage\" & ImageFileName)
+                    MessageBox.Show("Image successfully uploaded.", My.Settings.Title, MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
+            End If
+        Catch ex As Exception
+            MessageBox.Show("File already exists!", My.Settings.Title, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End Try
 
     End Sub
-
 End Class

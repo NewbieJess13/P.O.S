@@ -25,7 +25,7 @@ Partial Class FrmReports
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmReports))
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnInventory = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -64,21 +64,21 @@ Partial Class FrmReports
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button2.UseVisualStyleBackColor = False
         '
-        'Button1
+        'BtnInventory
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(104, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = Global.P.O.S.My.Resources.Resources.inventory_1_
-        Me.Button1.Location = New System.Drawing.Point(26, 172)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(309, 257)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Inventory"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.BtnInventory.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(212, Byte), Integer))
+        Me.BtnInventory.FlatAppearance.BorderSize = 0
+        Me.BtnInventory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(104, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.BtnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnInventory.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnInventory.Image = Global.P.O.S.My.Resources.Resources.inventory_1_
+        Me.BtnInventory.Location = New System.Drawing.Point(26, 172)
+        Me.BtnInventory.Name = "BtnInventory"
+        Me.BtnInventory.Size = New System.Drawing.Size(309, 257)
+        Me.BtnInventory.TabIndex = 0
+        Me.BtnInventory.Text = "Inventory"
+        Me.BtnInventory.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.BtnInventory.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -124,7 +124,7 @@ Partial Class FrmReports
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BtnInventory)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximumSize = New System.Drawing.Size(993, 470)
         Me.MinimumSize = New System.Drawing.Size(993, 470)
@@ -137,7 +137,7 @@ Partial Class FrmReports
 
     End Sub
 
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnInventory As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Label1 As Label

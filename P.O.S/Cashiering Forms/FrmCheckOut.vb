@@ -5,6 +5,15 @@ Public Class FrmCheckOut
 
     Public Event LoadDataToGridToCheckOut As EventHandler
 
+    Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+        TxtCashTendered.Text = 0
+        ' Add any initialization after the InitializeComponent() call.
+
+    End Sub
+
     Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
         TxtCashTendered.Text = TxtCashTendered.Text.Remove(TxtCashTendered.TextLength - 1)
     End Sub
@@ -13,6 +22,7 @@ Public Class FrmCheckOut
         If TxtCashTendered.TextLength = 0 Then
             BtnClear.Enabled = False
             TxtChange.Text = 0
+            TxtCashTendered.Text = 0
         Else
             BtnClear.Enabled = True
             TxtChange.Text = Math.Round(Val(TxtCashTendered.Text) - Val(TxtTotalAmount.Text), 2)
@@ -34,8 +44,11 @@ Public Class FrmCheckOut
     End Sub
 
     Private Sub Btn_Click(sender As Object, e As EventArgs) Handles Btn.Click
-        ConfirmBillOut()
-
+        If TxtCashTendered.Text <> 0 Then
+            ConfirmBillOut()
+        Else
+            MessageBox.Show("Please enter the Cash tendered first.", My.Settings.Title, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
     End Sub
 
     Sub ConfirmBillOut()

@@ -83,6 +83,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property camera() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("camera", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property credit_card() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("credit-card", resourceCulture)
@@ -193,6 +203,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property noimage() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("noimage", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property printer() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("printer", resourceCulture)
@@ -256,6 +276,16 @@ Namespace My.Resources
         Friend ReadOnly Property save() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("save", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property shopping_cart() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("shopping-cart", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

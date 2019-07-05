@@ -103,16 +103,30 @@
     <Compile Include="Cashiering Forms\FrmCashierReport.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Cashiering Forms\FrmResOptionFood.Designer.vb">
+      <DependentUpon>FrmResOptionFood.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cashiering Forms\FrmResOptionFood.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Cashiering Forms\ReceiptReport.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ReceiptReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ConnectionString.vb" />
     <Compile Include="Reports\FrmReports.Designer.vb">
       <DependentUpon>FrmReports.vb</DependentUpon>
     </Compile>
     <Compile Include="Reports\FrmReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Inventory Class.vb" />
+    <Compile Include="Reports\InventoryList.Designer.vb">
+      <DependentUpon>InventoryList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\InventoryList.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ResPOS\FrmCashierSession-Res.Designer.vb">
@@ -288,12 +302,18 @@
     <EmbeddedResource Include="Cashiering Forms\FrmCashierReport.resx">
       <DependentUpon>FrmCashierReport.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cashiering Forms\FrmResOptionFood.resx">
+      <DependentUpon>FrmResOptionFood.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cashiering Forms\ReceiptReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReceiptReport.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FrmReports.resx">
       <DependentUpon>FrmReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\InventoryList.resx">
+      <DependentUpon>InventoryList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ResPOS\FrmCashierSession-Res.resx">
       <DependentUpon>FrmCashierSession-Res.vb</DependentUpon>
@@ -481,6 +501,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ProductImage\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noimage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-cart.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

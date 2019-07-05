@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class UCProductDetails
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class UCProductDetails
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -37,9 +37,9 @@ Partial Class UCProductDetails
         Me.BtnSave = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.LblTextBar = New System.Windows.Forms.Label()
-        Me.LblBarcode = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.BtnOpenDialog = New System.Windows.Forms.Button()
+        Me.PicProdImg = New System.Windows.Forms.PictureBox()
         Me.LblId = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -63,10 +63,12 @@ Partial Class UCProductDetails
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TableLayoutPanel4.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
+        CType(Me.PicProdImg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         CType(Me.DGProductList, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -77,7 +79,7 @@ Partial Class UCProductDetails
         Me.TxtQuanti.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TxtQuanti.Enabled = False
         Me.TxtQuanti.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtQuanti.Location = New System.Drawing.Point(672, 91)
+        Me.TxtQuanti.Location = New System.Drawing.Point(672, 97)
         Me.TxtQuanti.Name = "TxtQuanti"
         Me.TxtQuanti.Size = New System.Drawing.Size(284, 31)
         Me.TxtQuanti.TabIndex = 6
@@ -87,7 +89,7 @@ Partial Class UCProductDetails
         Me.TxtSellingPrice.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TxtSellingPrice.Enabled = False
         Me.TxtSellingPrice.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtSellingPrice.Location = New System.Drawing.Point(194, 91)
+        Me.TxtSellingPrice.Location = New System.Drawing.Point(194, 97)
         Me.TxtSellingPrice.Name = "TxtSellingPrice"
         Me.TxtSellingPrice.Size = New System.Drawing.Size(281, 31)
         Me.TxtSellingPrice.TabIndex = 2
@@ -97,7 +99,7 @@ Partial Class UCProductDetails
         Me.TxtBarCode.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TxtBarCode.Enabled = False
         Me.TxtBarCode.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtBarCode.Location = New System.Drawing.Point(672, 47)
+        Me.TxtBarCode.Location = New System.Drawing.Point(672, 50)
         Me.TxtBarCode.MaxLength = 12
         Me.TxtBarCode.Name = "TxtBarCode"
         Me.TxtBarCode.Size = New System.Drawing.Size(284, 31)
@@ -108,7 +110,7 @@ Partial Class UCProductDetails
         Me.TxtRetailPrice.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TxtRetailPrice.Enabled = False
         Me.TxtRetailPrice.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtRetailPrice.Location = New System.Drawing.Point(194, 47)
+        Me.TxtRetailPrice.Location = New System.Drawing.Point(194, 50)
         Me.TxtRetailPrice.Name = "TxtRetailPrice"
         Me.TxtRetailPrice.Size = New System.Drawing.Size(281, 31)
         Me.TxtRetailPrice.TabIndex = 1
@@ -131,7 +133,7 @@ Partial Class UCProductDetails
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(185, 44)
+        Me.Label1.Size = New System.Drawing.Size(185, 47)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "DESCRIPTION"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -150,11 +152,11 @@ Partial Class UCProductDetails
         Me.TableLayoutPanel4.Controls.Add(Me.BtnSave, 2, 0)
         Me.TableLayoutPanel4.Controls.Add(Me.Panel1, 0, 0)
         Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(3, 186)
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(3, 200)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         Me.TableLayoutPanel4.RowCount = 1
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(959, 141)
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(959, 174)
         Me.TableLayoutPanel4.TabIndex = 2
         '
         'BtnEdit
@@ -164,12 +166,12 @@ Partial Class UCProductDetails
         Me.BtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnEdit.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEdit.Image = Global.P.O.S.My.Resources.Resources.writing
-        Me.BtnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnEdit.Location = New System.Drawing.Point(672, 3)
         Me.BtnEdit.Name = "BtnEdit"
-        Me.BtnEdit.Size = New System.Drawing.Size(137, 135)
+        Me.BtnEdit.Size = New System.Drawing.Size(137, 168)
         Me.BtnEdit.TabIndex = 5
         Me.BtnEdit.Text = "EDIT"
+        Me.BtnEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnEdit.UseVisualStyleBackColor = False
         '
         'BtnAdd
@@ -179,12 +181,12 @@ Partial Class UCProductDetails
         Me.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnAdd.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAdd.Image = Global.P.O.S.My.Resources.Resources.bag
-        Me.BtnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnAdd.Location = New System.Drawing.Point(386, 3)
         Me.BtnAdd.Name = "BtnAdd"
-        Me.BtnAdd.Size = New System.Drawing.Size(137, 135)
+        Me.BtnAdd.Size = New System.Drawing.Size(137, 168)
         Me.BtnAdd.TabIndex = 7
         Me.BtnAdd.Text = "ADD"
+        Me.BtnAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnAdd.UseVisualStyleBackColor = False
         '
         'BtnDelete
@@ -194,12 +196,12 @@ Partial Class UCProductDetails
         Me.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnDelete.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnDelete.Image = Global.P.O.S.My.Resources.Resources.delete_shopping_basket
-        Me.BtnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnDelete.Location = New System.Drawing.Point(815, 3)
         Me.BtnDelete.Name = "BtnDelete"
-        Me.BtnDelete.Size = New System.Drawing.Size(141, 135)
+        Me.BtnDelete.Size = New System.Drawing.Size(141, 168)
         Me.BtnDelete.TabIndex = 6
         Me.BtnDelete.Text = "DELETE"
+        Me.BtnDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnDelete.UseVisualStyleBackColor = False
         '
         'BtnSave
@@ -209,12 +211,12 @@ Partial Class UCProductDetails
         Me.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnSave.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSave.Image = Global.P.O.S.My.Resources.Resources.save
-        Me.BtnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnSave.Location = New System.Drawing.Point(529, 3)
         Me.BtnSave.Name = "BtnSave"
-        Me.BtnSave.Size = New System.Drawing.Size(137, 135)
+        Me.BtnSave.Size = New System.Drawing.Size(137, 168)
         Me.BtnSave.TabIndex = 8
         Me.BtnSave.Text = "SAVE"
+        Me.BtnSave.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnSave.UseVisualStyleBackColor = False
         '
         'Panel1
@@ -223,63 +225,76 @@ Partial Class UCProductDetails
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(3, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(377, 135)
+        Me.Panel1.Size = New System.Drawing.Size(377, 168)
         Me.Panel1.TabIndex = 9
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Panel2)
+        Me.GroupBox1.Controls.Add(Me.TableLayoutPanel1)
         Me.GroupBox1.Controls.Add(Me.LblId)
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(377, 135)
+        Me.GroupBox1.Size = New System.Drawing.Size(377, 168)
         Me.GroupBox1.TabIndex = 13
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Barcode"
+        Me.GroupBox1.Text = "Product Image"
         '
-        'Panel2
+        'TableLayoutPanel1
         '
-        Me.Panel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.BtnOpenDialog, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.PicProdImg, 0, 0)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 17)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 1
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(371, 148)
+        Me.TableLayoutPanel1.TabIndex = 11
+        '
+        'BtnOpenDialog
+        '
+        Me.BtnOpenDialog.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel2.Controls.Add(Me.LblTextBar)
-        Me.Panel2.Controls.Add(Me.LblBarcode)
-        Me.Panel2.Location = New System.Drawing.Point(36, 28)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(299, 88)
-        Me.Panel2.TabIndex = 14
+        Me.BtnOpenDialog.BackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(182, Byte), Integer))
+        Me.BtnOpenDialog.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnOpenDialog.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnOpenDialog.Image = Global.P.O.S.My.Resources.Resources.camera
+        Me.BtnOpenDialog.Location = New System.Drawing.Point(188, 3)
+        Me.BtnOpenDialog.Name = "BtnOpenDialog"
+        Me.BtnOpenDialog.Size = New System.Drawing.Size(180, 142)
+        Me.BtnOpenDialog.TabIndex = 14
+        Me.BtnOpenDialog.Text = "Upload"
+        Me.BtnOpenDialog.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.BtnOpenDialog.UseVisualStyleBackColor = False
         '
-        'LblTextBar
+        'PicProdImg
         '
-        Me.LblTextBar.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.LblTextBar.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTextBar.Location = New System.Drawing.Point(0, 68)
-        Me.LblTextBar.Name = "LblTextBar"
-        Me.LblTextBar.Size = New System.Drawing.Size(299, 20)
-        Me.LblTextBar.TabIndex = 13
-        Me.LblTextBar.Text = " "
-        Me.LblTextBar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'LblBarcode
-        '
-        Me.LblBarcode.Dock = System.Windows.Forms.DockStyle.Top
-        Me.LblBarcode.Font = New System.Drawing.Font("Code 128", 39.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
-        Me.LblBarcode.Location = New System.Drawing.Point(0, 0)
-        Me.LblBarcode.Name = "LblBarcode"
-        Me.LblBarcode.Size = New System.Drawing.Size(299, 68)
-        Me.LblBarcode.TabIndex = 11
-        Me.LblBarcode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.PicProdImg.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PicProdImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PicProdImg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PicProdImg.Image = Global.P.O.S.My.Resources.Resources.noimage
+        Me.PicProdImg.Location = New System.Drawing.Point(3, 3)
+        Me.PicProdImg.Name = "PicProdImg"
+        Me.PicProdImg.Size = New System.Drawing.Size(179, 142)
+        Me.PicProdImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PicProdImg.TabIndex = 13
+        Me.PicProdImg.TabStop = False
         '
         'LblId
         '
         Me.LblId.AutoSize = True
-        Me.LblId.Location = New System.Drawing.Point(330, 116)
+        Me.LblId.Location = New System.Drawing.Point(327, 20)
         Me.LblId.Name = "LblId"
-        Me.LblId.Size = New System.Drawing.Size(44, 16)
+        Me.LblId.Size = New System.Drawing.Size(0, 15)
         Me.LblId.TabIndex = 10
-        Me.LblId.Text = "Label9"
         Me.LblId.Visible = False
         '
         'Label2
@@ -288,9 +303,9 @@ Partial Class UCProductDetails
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 44)
+        Me.Label2.Location = New System.Drawing.Point(3, 47)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(185, 44)
+        Me.Label2.Size = New System.Drawing.Size(185, 47)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "RETAIL PRICE"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -303,7 +318,7 @@ Partial Class UCProductDetails
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(481, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(185, 44)
+        Me.Label4.Size = New System.Drawing.Size(185, 47)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "ITEM CODE"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -314,9 +329,9 @@ Partial Class UCProductDetails
         Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label6.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(481, 88)
+        Me.Label6.Location = New System.Drawing.Point(481, 94)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(185, 44)
+        Me.Label6.Size = New System.Drawing.Size(185, 47)
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "QUANTITY"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -327,9 +342,9 @@ Partial Class UCProductDetails
         Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label7.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(481, 44)
+        Me.Label7.Location = New System.Drawing.Point(481, 47)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(185, 44)
+        Me.Label7.Size = New System.Drawing.Size(185, 47)
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "BAR CODE"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -376,7 +391,7 @@ Partial Class UCProductDetails
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(959, 177)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(959, 191)
         Me.TableLayoutPanel3.TabIndex = 0
         '
         'TxtUnit
@@ -384,7 +399,7 @@ Partial Class UCProductDetails
         Me.TxtUnit.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TxtUnit.Enabled = False
         Me.TxtUnit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtUnit.Location = New System.Drawing.Point(672, 135)
+        Me.TxtUnit.Location = New System.Drawing.Point(672, 144)
         Me.TxtUnit.Name = "TxtUnit"
         Me.TxtUnit.Size = New System.Drawing.Size(284, 31)
         Me.TxtUnit.TabIndex = 7
@@ -395,9 +410,9 @@ Partial Class UCProductDetails
         Me.Label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label8.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label8.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(481, 132)
+        Me.Label8.Location = New System.Drawing.Point(481, 141)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(185, 45)
+        Me.Label8.Size = New System.Drawing.Size(185, 50)
         Me.Label8.TabIndex = 15
         Me.Label8.Text = "UNIT"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -408,9 +423,9 @@ Partial Class UCProductDetails
         Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(3, 88)
+        Me.Label5.Location = New System.Drawing.Point(3, 94)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(185, 44)
+        Me.Label5.Size = New System.Drawing.Size(185, 47)
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "SELLING PRICE"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -421,9 +436,9 @@ Partial Class UCProductDetails
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(3, 132)
+        Me.Label3.Location = New System.Drawing.Point(3, 141)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(185, 45)
+        Me.Label3.Size = New System.Drawing.Size(185, 50)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "CATEGORY"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -434,7 +449,7 @@ Partial Class UCProductDetails
         Me.CmbCategory.Enabled = False
         Me.CmbCategory.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbCategory.FormattingEnabled = True
-        Me.CmbCategory.Location = New System.Drawing.Point(194, 135)
+        Me.CmbCategory.Location = New System.Drawing.Point(194, 144)
         Me.CmbCategory.Name = "CmbCategory"
         Me.CmbCategory.Size = New System.Drawing.Size(281, 30)
         Me.CmbCategory.TabIndex = 3
@@ -452,9 +467,9 @@ Partial Class UCProductDetails
         Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(1)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 3
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.91216!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.83108!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.91892!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.27703!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.57432!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.14865!))
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(965, 592)
         Me.TableLayoutPanel2.TabIndex = 2
         '
@@ -473,7 +488,7 @@ Partial Class UCProductDetails
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DGProductList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGProductList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9})
+        Me.DGProductList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10})
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -483,12 +498,12 @@ Partial Class UCProductDetails
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DGProductList.DefaultCellStyle = DataGridViewCellStyle2
         Me.DGProductList.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DGProductList.Location = New System.Drawing.Point(3, 333)
+        Me.DGProductList.Location = New System.Drawing.Point(3, 380)
         Me.DGProductList.MultiSelect = False
         Me.DGProductList.Name = "DGProductList"
         Me.DGProductList.ReadOnly = True
         Me.DGProductList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGProductList.Size = New System.Drawing.Size(959, 256)
+        Me.DGProductList.Size = New System.Drawing.Size(959, 209)
         Me.DGProductList.TabIndex = 1
         '
         'Column1
@@ -546,6 +561,13 @@ Partial Class UCProductDetails
         Me.Column9.Name = "Column9"
         Me.Column9.ReadOnly = True
         '
+        'Column10
+        '
+        Me.Column10.HeaderText = "ImagePath"
+        Me.Column10.Name = "Column10"
+        Me.Column10.ReadOnly = True
+        Me.Column10.Visible = False
+        '
         'UCProductDetails
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -557,7 +579,8 @@ Partial Class UCProductDetails
         Me.Panel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        CType(Me.PicProdImg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel3.PerformLayout()
         Me.TableLayoutPanel2.ResumeLayout(False)
@@ -589,6 +612,12 @@ Partial Class UCProductDetails
     Friend WithEvents Label8 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents CmbCategory As ComboBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents LblId As Label
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents BtnOpenDialog As Button
+    Friend WithEvents PicProdImg As PictureBox
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
@@ -598,10 +627,5 @@ Partial Class UCProductDetails
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents LblId As Label
-    Friend WithEvents LblBarcode As Label
-    Friend WithEvents LblTextBar As Label
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Column10 As DataGridViewTextBoxColumn
 End Class

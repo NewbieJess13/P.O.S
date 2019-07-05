@@ -11,5 +11,8 @@
     <Setting Name="CreditLimit" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="Title" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Point of Sales</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -123,7 +123,7 @@ Partial Class FrmCheckOut
         Me.Btn.Location = New System.Drawing.Point(375, 198)
         Me.Btn.Name = "Btn"
         Me.Btn.Size = New System.Drawing.Size(180, 59)
-        Me.Btn.TabIndex = 11
+        Me.Btn.TabIndex = 13
         Me.Btn.Text = "Bill Out"
         Me.Btn.UseVisualStyleBackColor = False
         '
@@ -136,7 +136,7 @@ Partial Class FrmCheckOut
         Me.Btn0.Location = New System.Drawing.Point(189, 198)
         Me.Btn0.Name = "Btn0"
         Me.Btn0.Size = New System.Drawing.Size(180, 59)
-        Me.Btn0.TabIndex = 10
+        Me.Btn0.TabIndex = 12
         Me.Btn0.Text = "0"
         Me.Btn0.UseVisualStyleBackColor = False
         '
@@ -149,7 +149,7 @@ Partial Class FrmCheckOut
         Me.Btndot.Location = New System.Drawing.Point(3, 198)
         Me.Btndot.Name = "Btndot"
         Me.Btndot.Size = New System.Drawing.Size(180, 59)
-        Me.Btndot.TabIndex = 9
+        Me.Btndot.TabIndex = 11
         Me.Btndot.Text = "."
         Me.Btndot.UseVisualStyleBackColor = False
         '
@@ -162,7 +162,7 @@ Partial Class FrmCheckOut
         Me.Btn9.Location = New System.Drawing.Point(375, 133)
         Me.Btn9.Name = "Btn9"
         Me.Btn9.Size = New System.Drawing.Size(180, 59)
-        Me.Btn9.TabIndex = 8
+        Me.Btn9.TabIndex = 10
         Me.Btn9.Text = "9"
         Me.Btn9.UseVisualStyleBackColor = False
         '
@@ -175,7 +175,7 @@ Partial Class FrmCheckOut
         Me.Btn8.Location = New System.Drawing.Point(189, 133)
         Me.Btn8.Name = "Btn8"
         Me.Btn8.Size = New System.Drawing.Size(180, 59)
-        Me.Btn8.TabIndex = 7
+        Me.Btn8.TabIndex = 9
         Me.Btn8.Text = "8"
         Me.Btn8.UseVisualStyleBackColor = False
         '
@@ -188,7 +188,7 @@ Partial Class FrmCheckOut
         Me.Btn7.Location = New System.Drawing.Point(3, 133)
         Me.Btn7.Name = "Btn7"
         Me.Btn7.Size = New System.Drawing.Size(180, 59)
-        Me.Btn7.TabIndex = 6
+        Me.Btn7.TabIndex = 8
         Me.Btn7.Text = "7"
         Me.Btn7.UseVisualStyleBackColor = False
         '
@@ -201,7 +201,7 @@ Partial Class FrmCheckOut
         Me.Btn6.Location = New System.Drawing.Point(375, 68)
         Me.Btn6.Name = "Btn6"
         Me.Btn6.Size = New System.Drawing.Size(180, 59)
-        Me.Btn6.TabIndex = 5
+        Me.Btn6.TabIndex = 7
         Me.Btn6.Text = "6"
         Me.Btn6.UseVisualStyleBackColor = False
         '
@@ -214,7 +214,7 @@ Partial Class FrmCheckOut
         Me.Btn5.Location = New System.Drawing.Point(189, 68)
         Me.Btn5.Name = "Btn5"
         Me.Btn5.Size = New System.Drawing.Size(180, 59)
-        Me.Btn5.TabIndex = 4
+        Me.Btn5.TabIndex = 6
         Me.Btn5.Text = "5"
         Me.Btn5.UseVisualStyleBackColor = False
         '
@@ -227,7 +227,7 @@ Partial Class FrmCheckOut
         Me.Btn4.Location = New System.Drawing.Point(3, 68)
         Me.Btn4.Name = "Btn4"
         Me.Btn4.Size = New System.Drawing.Size(180, 59)
-        Me.Btn4.TabIndex = 3
+        Me.Btn4.TabIndex = 5
         Me.Btn4.Text = "4"
         Me.Btn4.UseVisualStyleBackColor = False
         '
@@ -240,7 +240,7 @@ Partial Class FrmCheckOut
         Me.Btn3.Location = New System.Drawing.Point(375, 3)
         Me.Btn3.Name = "Btn3"
         Me.Btn3.Size = New System.Drawing.Size(180, 59)
-        Me.Btn3.TabIndex = 2
+        Me.Btn3.TabIndex = 4
         Me.Btn3.Text = "3"
         Me.Btn3.UseVisualStyleBackColor = False
         '
@@ -253,7 +253,7 @@ Partial Class FrmCheckOut
         Me.Btn2.Location = New System.Drawing.Point(189, 3)
         Me.Btn2.Name = "Btn2"
         Me.Btn2.Size = New System.Drawing.Size(180, 59)
-        Me.Btn2.TabIndex = 1
+        Me.Btn2.TabIndex = 3
         Me.Btn2.Text = "2"
         Me.Btn2.UseVisualStyleBackColor = False
         '
@@ -266,7 +266,7 @@ Partial Class FrmCheckOut
         Me.Btn1.Location = New System.Drawing.Point(3, 3)
         Me.Btn1.Name = "Btn1"
         Me.Btn1.Size = New System.Drawing.Size(180, 59)
-        Me.Btn1.TabIndex = 0
+        Me.Btn1.TabIndex = 2
         Me.Btn1.Text = "1"
         Me.Btn1.UseVisualStyleBackColor = False
         '
@@ -303,7 +303,7 @@ Partial Class FrmCheckOut
         Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.72263!))
         Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.27737!))
         Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113.0!))
-        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 163.0!))
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166.0!))
         Me.TableLayoutPanel7.Controls.Add(Me.TxtTotalAmount, 3, 0)
         Me.TableLayoutPanel7.Controls.Add(Me.Label7, 1, 0)
         Me.TableLayoutPanel7.Controls.Add(Me.LblTotalXVat, 2, 0)
@@ -320,7 +320,7 @@ Partial Class FrmCheckOut
         '
         Me.TxtTotalAmount.Enabled = False
         Me.TxtTotalAmount.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtTotalAmount.Location = New System.Drawing.Point(252, 3)
+        Me.TxtTotalAmount.Location = New System.Drawing.Point(249, 3)
         Me.TxtTotalAmount.Name = "TxtTotalAmount"
         Me.TxtTotalAmount.Size = New System.Drawing.Size(157, 41)
         Me.TxtTotalAmount.TabIndex = 6
@@ -331,7 +331,7 @@ Partial Class FrmCheckOut
         Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label7.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(104, 0)
+        Me.Label7.Location = New System.Drawing.Point(101, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(29, 44)
         Me.Label7.TabIndex = 8
@@ -343,7 +343,7 @@ Partial Class FrmCheckOut
         Me.LblTotalXVat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.LblTotalXVat.Dock = System.Windows.Forms.DockStyle.Fill
         Me.LblTotalXVat.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTotalXVat.Location = New System.Drawing.Point(139, 0)
+        Me.LblTotalXVat.Location = New System.Drawing.Point(136, 0)
         Me.LblTotalXVat.Name = "LblTotalXVat"
         Me.LblTotalXVat.Size = New System.Drawing.Size(107, 44)
         Me.LblTotalXVat.TabIndex = 7
@@ -357,7 +357,7 @@ Partial Class FrmCheckOut
         Me.LblVATplus.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblVATplus.Location = New System.Drawing.Point(3, 0)
         Me.LblVATplus.Name = "LblVATplus"
-        Me.LblVATplus.Size = New System.Drawing.Size(95, 44)
+        Me.LblVATplus.Size = New System.Drawing.Size(92, 44)
         Me.LblVATplus.TabIndex = 7
         Me.LblVATplus.Text = "12%"
         Me.LblVATplus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -401,7 +401,7 @@ Partial Class FrmCheckOut
         Me.BtnClear.Location = New System.Drawing.Point(460, 3)
         Me.BtnClear.Name = "BtnClear"
         Me.BtnClear.Size = New System.Drawing.Size(95, 44)
-        Me.BtnClear.TabIndex = 3
+        Me.BtnClear.TabIndex = 1
         Me.BtnClear.Text = "C"
         Me.BtnClear.UseVisualStyleBackColor = False
         '
@@ -412,7 +412,7 @@ Partial Class FrmCheckOut
         Me.TxtCashTendered.Location = New System.Drawing.Point(142, 3)
         Me.TxtCashTendered.Name = "TxtCashTendered"
         Me.TxtCashTendered.Size = New System.Drawing.Size(312, 47)
-        Me.TxtCashTendered.TabIndex = 4
+        Me.TxtCashTendered.TabIndex = 0
         Me.TxtCashTendered.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.TxtCashTendered.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
