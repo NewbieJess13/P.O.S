@@ -1,4 +1,5 @@
-﻿Public Class InventoryList
+﻿Imports Microsoft.Office.Interop.Excel
+Public Class InventoryList
     Dim action As String = 1
     Private Sub InventoryList_Load(sender As Object, e As EventArgs) Handles Me.Load
         LoadInventory()
@@ -8,10 +9,10 @@
     Sub LoadInventory()
         DGInvList.Rows.Clear()
         Dim InvCrud As New InventoryCrud
-        Dim DTInv As DataTable = InvCrud.GetInventoryList
+        Dim DTInv As System.Data.DataTable = InvCrud.GetInventoryList
         If DTInv.Rows.Count > 0 Then
             For Each dr As DataRow In DTInv.Rows
-                DGInvList.Rows.Add(dr(0), False, dr(1), dr(2), dr(3), dr(4))
+                DGInvList.Rows.Add(dr(0), False, dr(1), dr(2) & " pieces ", dr(2), dr(3), dr(4), dr(5))
             Next
         End If
     End Sub
@@ -19,18 +20,21 @@
     Sub ClearControls()
         TxtItem.Clear()
         TxtQuan.Clear()
+        TxtUnit.Clear()
         TxtSupp.Clear()
         CbStatus.SelectedIndex = -1
     End Sub
     Sub EnableControls()
         TxtItem.Enabled = True
         TxtQuan.Enabled = True
+        TxtUnit.Enabled = True
         TxtSupp.Enabled = True
         CbStatus.Enabled = True
     End Sub
     Sub DisableControls()
         TxtItem.Enabled = False
         TxtQuan.Enabled = False
+        TxtUnit.Enabled = False
         TxtSupp.Enabled = False
         CbStatus.Enabled = False
     End Sub
@@ -38,6 +42,7 @@
         Dim InvenData As New InventoryData
         InvenData.ItemName = TxtItem.Text
         InvenData.Quantity = TxtQuan.Text
+        InvenData.Unit = TxtUnit.Text
         InvenData.Supplier = TxtSupp.Text
         InvenData.Status = CbStatus.Text
         Return InvenData
@@ -55,9 +60,10 @@
             If e.RowIndex >= 0 Or e.ColumnIndex >= 0 Then
                 id = DGInvList.Rows(e.RowIndex).Cells(0).Value
                 TxtItem.Text = DGInvList.Rows(e.RowIndex).Cells(1).Value
-                TxtQuan.Text = DGInvList.Rows(e.RowIndex).Cells(2).Value
-                TxtSupp.Text = DGInvList.Rows(e.RowIndex).Cells(3).Value
-                CbStatus.Text = DGInvList.Rows(e.RowIndex).Cells(4).Value
+                TxtQuan.Text = DGInvList.Rows(e.RowIndex).Cells(4).Value
+                TxtUnit.Text = DGInvList.Rows(e.RowIndex).Cells(5).Value
+                TxtSupp.Text = DGInvList.Rows(e.RowIndex).Cells(6).Value
+                CbStatus.Text = DGInvList.Rows(e.RowIndex).Cells(7).Value
             End If
         Catch ex As Exception
 
@@ -74,33 +80,42 @@
         Dim selectedRows As List(Of DataGridViewRow) = (From row In DGInvList.Rows.Cast(Of DataGridViewRow)()
                                                         Where
                                         Convert.ToBoolean(row.Cells("Column6").Value) = True).ToList()
-        If MessageBox.Show(String.Format("Are you sure you want to delete the selected {0} items", selectedRows.Count), "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = vbYes Then
+        If MessageBox.Show(String.Format("Are you sure you want to delete the selected {0} items", selectedRows.Count), "",
+                           MessageBoxButtons.YesNo, MessageBoxIcon.Question) = vbYes Then
             For Each row As DataGridViewRow In selectedRows
                 InvCrud.DeleteInventory(row.Cells(0).Value)
             Next
-            MessageBox.Show(String.Format("{0} items deleted.", selectedRows.Count), "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show(String.Format("{0} item(s) deleted.", selectedRows.Count), "", MessageBoxButtons.OK, MessageBoxIcon.Information)
             LoadInventory()
         End If
     End Sub
 
     Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
+        Dim InvenCrud As New InventoryCrud
         If action = "1" Then
-            Dim InvenCrud As New InventoryCrud
-            If InvenCrud.InsertInventory(GetInvData) Then
-                MessageBox.Show("New item added.", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                LoadInventory()
-                ClearControls()
-                ' DisableControls()
-            End If
-        ElseIf action = "2" Then
-            Dim InvCrud As New InventoryCrud
-            If id IsNot Nothing Then
-                If InvCrud.EditInventory(GetInvData) Then
-                    MessageBox.Show("Item Edited", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    id = ""
+            If TxtItem.Text <> "" AndAlso TxtQuan.Text <> "" Then
+                If InvenCrud.InsertInventory(GetInvData) Then
+                    MessageBox.Show("New item added.", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     LoadInventory()
                     ClearControls()
-                    DisableControls()
+                    ' DisableControls()
+                End If
+            Else
+                MessageBox.Show("Item name and quantity is required!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            End If
+
+        ElseIf action = "2" Then
+            If id IsNot Nothing Then
+                If TxtItem.Text <> "" AndAlso TxtQuan.Text <> "" Then
+                    If InvenCrud.EditInventory(GetInvData) Then
+                        MessageBox.Show("Item Edited", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        id = ""
+                        LoadInventory()
+                        ClearControls()
+                        DisableControls()
+                    End If
+                Else
+                    MessageBox.Show("Item name and quantity is required!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 End If
             Else
                 MessageBox.Show("Select the item to be updated.", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -122,6 +137,48 @@
     End Sub
 
     Private Sub BtnExcelReport_Click(sender As Object, e As EventArgs) Handles BtnExcelReport.Click
+        Dim xlApp As Application
+        Dim xlWorkBook As Workbook
+        Dim xlWorkSheet As Worksheet
+        Dim misValue As Object = Reflection.Missing.Value
+        Dim i As Integer
+        Dim j As Integer
+        xlApp = New ApplicationClass
+        xlWorkBook = xlApp.Workbooks.Add(misValue)
+        xlWorkSheet = xlWorkBook.Sheets("sheet1")
 
+        For i = 0 To DGInvList.RowCount - 1
+            For j = 0 To DGInvList.ColumnCount - 1
+                For k As Integer = 1 To DGInvList.Columns.Count
+                    xlWorkSheet.Cells(1, k) = DGInvList.Columns(k - 1).HeaderText
+                    xlWorkSheet.Cells(i + 2, j + 1) = DGInvList(j, i).Value
+                Next
+            Next
+        Next
+        Dim Location As String = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+        Dim _Date As String = Date.Now.ToString("yyyy-MM-dd")
+        xlWorkSheet.Range("A:Z").EntireColumn.AutoFit()
+        xlWorkSheet.Range("A:B").EntireColumn.Hidden = True
+        xlWorkSheet.Range("E:F").EntireColumn.Hidden = True
+        xlWorkSheet.SaveAs(Location & "\Inventory-Report" & _Date & ".xlsx")
+        xlWorkBook.Close()
+        xlApp.Quit()
+
+        releaseObject(xlApp)
+        releaseObject(xlWorkBook)
+        releaseObject(xlWorkSheet)
+
+        MsgBox("You can find the file at the Desktop.")
+    End Sub
+
+    Private Sub releaseObject(ByVal obj As Object)
+        Try
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(obj)
+            obj = Nothing
+        Catch ex As Exception
+            obj = Nothing
+        Finally
+            GC.Collect()
+        End Try
     End Sub
 End Class

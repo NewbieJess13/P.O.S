@@ -4,7 +4,7 @@ Friend Class InventoryData
     Friend Property ItemID() As String = ""
     Friend Property ItemName() As String = ""
     Friend Property Quantity() As String = ""
-
+    Friend Property Unit() As String = ""
     Friend Property Supplier() As String = ""
     Friend Property Status() As String = ""
 End Class
@@ -20,6 +20,7 @@ Public Class InventoryCrud
                 xSQL.AppendLine("id, ")
                 xSQL.AppendLine("ItemName, ")
                 xSQL.AppendLine("Quantity, ")
+                xSQL.AppendLine("Unit, ")
                 xSQL.AppendLine("Supplier, ")
                 xSQL.AppendLine("Status ")
                 xSQL.AppendLine("FROM ")
@@ -49,6 +50,7 @@ Public Class InventoryCrud
                 xSQL.AppendLine("( ")
                 xSQL.AppendLine("ItemName, ")
                 xSQL.AppendLine("Quantity, ")
+                xSQL.AppendLine("Unit, ")
                 xSQL.AppendLine("Supplier, ")
                 xSQL.AppendLine("Status ")
                 xSQL.AppendLine(") ")
@@ -56,6 +58,7 @@ Public Class InventoryCrud
                 xSQL.AppendLine("( ")
                 xSQL.AppendLine("@Item, ")
                 xSQL.AppendLine("@Quan, ")
+                xSQL.AppendLine("@Unit, ")
                 xSQL.AppendLine("@Supplier, ")
                 xSQL.AppendLine("@Status ")
                 xSQL.AppendLine(") ")
@@ -63,6 +66,7 @@ Public Class InventoryCrud
                 Dim command As New SqlCommand(xSQL.ToString, conn)
                 command.Parameters.AddWithValue("@Item", InvData.ItemName)
                 command.Parameters.AddWithValue("@Quan", InvData.Quantity)
+                command.Parameters.AddWithValue("@Unit", InvData.Unit)
                 command.Parameters.AddWithValue("@Supplier", InvData.Supplier)
                 command.Parameters.AddWithValue("@Status", InvData.Status)
                 Dim isExecute As Integer = command.ExecuteNonQuery
@@ -83,6 +87,7 @@ Public Class InventoryCrud
                 xSQL.AppendLine("UPDATE Tbl_Inventory SET ")
                 xSQL.AppendLine("ItemName = @Item, ")
                 xSQL.AppendLine("Quantity = @Quan, ")
+                xSQL.AppendLine("Unit = @Unit, ")
                 xSQL.AppendLine("Supplier = @Supp, ")
                 xSQL.AppendLine("Status = @Status ")
                 xSQL.AppendLine("WHERE id = @id")
@@ -90,6 +95,7 @@ Public Class InventoryCrud
                 command.Parameters.AddWithValue("@id", InvData.ItemID)
                 command.Parameters.AddWithValue("@Item", InvData.ItemName)
                 command.Parameters.AddWithValue("@Quan", InvData.Quantity)
+                command.Parameters.AddWithValue("@Unit", InvData.Unit)
                 command.Parameters.AddWithValue("@Supp", InvData.Supplier)
                 command.Parameters.AddWithValue("@Status", InvData.Status)
                 Dim isExecute As Integer = command.ExecuteNonQuery

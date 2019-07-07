@@ -41,13 +41,17 @@ Partial Class InventoryList
         Me.TxtItem = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.DGInvList = New System.Windows.Forms.DataGridView()
+        Me.ChkCheck = New System.Windows.Forms.CheckBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TxtUnit = New System.Windows.Forms.TextBox()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ChkCheck = New System.Windows.Forms.CheckBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -198,6 +202,8 @@ Partial Class InventoryList
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.TxtUnit)
         Me.Panel1.Controls.Add(Me.CbStatus)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label3)
@@ -220,7 +226,7 @@ Partial Class InventoryList
         Me.CbStatus.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CbStatus.FormattingEnabled = True
         Me.CbStatus.Items.AddRange(New Object() {"Good", "Bad"})
-        Me.CbStatus.Location = New System.Drawing.Point(171, 281)
+        Me.CbStatus.Location = New System.Drawing.Point(171, 331)
         Me.CbStatus.Margin = New System.Windows.Forms.Padding(4)
         Me.CbStatus.Name = "CbStatus"
         Me.CbStatus.Size = New System.Drawing.Size(258, 25)
@@ -230,7 +236,7 @@ Partial Class InventoryList
         '
         Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(10, 292)
+        Me.Label4.Location = New System.Drawing.Point(10, 342)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(159, 17)
@@ -242,7 +248,7 @@ Partial Class InventoryList
         '
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(7, 213)
+        Me.Label3.Location = New System.Drawing.Point(7, 263)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(162, 17)
@@ -255,7 +261,7 @@ Partial Class InventoryList
         Me.TxtSupp.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TxtSupp.Enabled = False
         Me.TxtSupp.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtSupp.Location = New System.Drawing.Point(171, 206)
+        Me.TxtSupp.Location = New System.Drawing.Point(171, 256)
         Me.TxtSupp.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtSupp.Name = "TxtSupp"
         Me.TxtSupp.Size = New System.Drawing.Size(258, 23)
@@ -331,7 +337,7 @@ Partial Class InventoryList
         Me.DGInvList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DGInvList.BackgroundColor = System.Drawing.SystemColors.ControlLight
         Me.DGInvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGInvList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column6, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
+        Me.DGInvList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column6, Me.Column2, Me.Column3, Me.Column8, Me.Column7, Me.Column4, Me.Column5})
         Me.DGInvList.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DGInvList.Location = New System.Drawing.Point(5, 36)
         Me.DGInvList.Margin = New System.Windows.Forms.Padding(4)
@@ -339,39 +345,6 @@ Partial Class InventoryList
         Me.DGInvList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGInvList.Size = New System.Drawing.Size(712, 445)
         Me.DGInvList.TabIndex = 2
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "id"
-        Me.Column1.Name = "Column1"
-        Me.Column1.Visible = False
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = ""
-        Me.Column6.Name = "Column6"
-        Me.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Item"
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Quantity"
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Supplier"
-        Me.Column4.Name = "Column4"
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Status"
-        Me.Column5.Name = "Column5"
         '
         'ChkCheck
         '
@@ -384,6 +357,80 @@ Partial Class InventoryList
         Me.ChkCheck.TabIndex = 3
         Me.ChkCheck.Text = "Check all"
         Me.ChkCheck.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(4, 206)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(165, 17)
+        Me.Label5.TabIndex = 10
+        Me.Label5.Text = "Unit:"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'TxtUnit
+        '
+        Me.TxtUnit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TxtUnit.Enabled = False
+        Me.TxtUnit.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtUnit.Location = New System.Drawing.Point(171, 197)
+        Me.TxtUnit.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtUnit.Name = "TxtUnit"
+        Me.TxtUnit.Size = New System.Drawing.Size(258, 23)
+        Me.TxtUnit.TabIndex = 9
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "id"
+        Me.Column1.Name = "Column1"
+        Me.Column1.Visible = False
+        '
+        'Column6
+        '
+        Me.Column6.FillWeight = 60.9137!
+        Me.Column6.HeaderText = ""
+        Me.Column6.Name = "Column6"
+        Me.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'Column2
+        '
+        Me.Column2.FillWeight = 107.8172!
+        Me.Column2.HeaderText = "Item"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.FillWeight = 107.8172!
+        Me.Column3.HeaderText = "Quantity"
+        Me.Column3.Name = "Column3"
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Quan"
+        Me.Column8.Name = "Column8"
+        Me.Column8.Visible = False
+        '
+        'Column7
+        '
+        Me.Column7.FillWeight = 107.8172!
+        Me.Column7.HeaderText = "Unit"
+        Me.Column7.Name = "Column7"
+        Me.Column7.Visible = False
+        '
+        'Column4
+        '
+        Me.Column4.FillWeight = 107.8172!
+        Me.Column4.HeaderText = "Supplier"
+        Me.Column4.Name = "Column4"
+        '
+        'Column5
+        '
+        Me.Column5.FillWeight = 107.8172!
+        Me.Column5.HeaderText = "Status"
+        Me.Column5.Name = "Column5"
         '
         'InventoryList
         '
@@ -427,11 +474,15 @@ Partial Class InventoryList
     Friend WithEvents BtnExcelReport As Button
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents DGInvList As DataGridView
+    Friend WithEvents ChkCheck As CheckBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TxtUnit As TextBox
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewCheckBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents ChkCheck As CheckBox
 End Class
