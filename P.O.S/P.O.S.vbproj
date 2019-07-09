@@ -79,6 +79,7 @@
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -106,10 +107,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BarcodeCode\ChangeTextColorMod.vb" />
+    <Compile Include="Cashiering Forms\CashierSessionClass.vb" />
     <Compile Include="Cashiering Forms\FrmCashierReport.Designer.vb">
       <DependentUpon>FrmCashierReport.vb</DependentUpon>
     </Compile>
     <Compile Include="Cashiering Forms\FrmCashierReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashiering Forms\FrmManualNew.Designer.vb">
+      <DependentUpon>FrmManualNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cashiering Forms\FrmManualNew.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cashiering Forms\FrmResOptionFood.Designer.vb">
@@ -310,6 +318,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Cashiering Forms\FrmCashierReport.resx">
       <DependentUpon>FrmCashierReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashiering Forms\FrmManualNew.resx">
+      <DependentUpon>FrmManualNew.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cashiering Forms\FrmResOptionFood.resx">
       <DependentUpon>FrmResOptionFood.vb</DependentUpon>

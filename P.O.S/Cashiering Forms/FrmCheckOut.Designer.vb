@@ -129,7 +129,7 @@ Partial Class FrmCheckOut
         '
         'Btn0
         '
-        Me.Btn0.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn0.BackColor = System.Drawing.Color.Gray
         Me.Btn0.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn0.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -142,7 +142,7 @@ Partial Class FrmCheckOut
         '
         'Btndot
         '
-        Me.Btndot.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btndot.BackColor = System.Drawing.Color.Gray
         Me.Btndot.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btndot.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btndot.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -155,7 +155,7 @@ Partial Class FrmCheckOut
         '
         'Btn9
         '
-        Me.Btn9.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn9.BackColor = System.Drawing.Color.Gray
         Me.Btn9.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn9.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -168,7 +168,7 @@ Partial Class FrmCheckOut
         '
         'Btn8
         '
-        Me.Btn8.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn8.BackColor = System.Drawing.Color.Gray
         Me.Btn8.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn8.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -181,7 +181,7 @@ Partial Class FrmCheckOut
         '
         'Btn7
         '
-        Me.Btn7.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn7.BackColor = System.Drawing.Color.Gray
         Me.Btn7.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn7.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -194,7 +194,7 @@ Partial Class FrmCheckOut
         '
         'Btn6
         '
-        Me.Btn6.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn6.BackColor = System.Drawing.Color.Gray
         Me.Btn6.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn6.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -207,7 +207,7 @@ Partial Class FrmCheckOut
         '
         'Btn5
         '
-        Me.Btn5.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn5.BackColor = System.Drawing.Color.Gray
         Me.Btn5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn5.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -220,7 +220,7 @@ Partial Class FrmCheckOut
         '
         'Btn4
         '
-        Me.Btn4.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn4.BackColor = System.Drawing.Color.Gray
         Me.Btn4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn4.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -233,7 +233,7 @@ Partial Class FrmCheckOut
         '
         'Btn3
         '
-        Me.Btn3.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn3.BackColor = System.Drawing.Color.Gray
         Me.Btn3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn3.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -246,7 +246,7 @@ Partial Class FrmCheckOut
         '
         'Btn2
         '
-        Me.Btn2.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn2.BackColor = System.Drawing.Color.Gray
         Me.Btn2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn2.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -259,7 +259,7 @@ Partial Class FrmCheckOut
         '
         'Btn1
         '
-        Me.Btn1.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn1.BackColor = System.Drawing.Color.Gray
         Me.Btn1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn1.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -303,7 +303,7 @@ Partial Class FrmCheckOut
         Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.72263!))
         Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.27737!))
         Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113.0!))
-        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166.0!))
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 167.0!))
         Me.TableLayoutPanel7.Controls.Add(Me.TxtTotalAmount, 3, 0)
         Me.TableLayoutPanel7.Controls.Add(Me.Label7, 1, 0)
         Me.TableLayoutPanel7.Controls.Add(Me.LblTotalXVat, 2, 0)
@@ -320,7 +320,7 @@ Partial Class FrmCheckOut
         '
         Me.TxtTotalAmount.Enabled = False
         Me.TxtTotalAmount.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtTotalAmount.Location = New System.Drawing.Point(249, 3)
+        Me.TxtTotalAmount.Location = New System.Drawing.Point(248, 3)
         Me.TxtTotalAmount.Name = "TxtTotalAmount"
         Me.TxtTotalAmount.Size = New System.Drawing.Size(157, 41)
         Me.TxtTotalAmount.TabIndex = 6
@@ -333,7 +333,7 @@ Partial Class FrmCheckOut
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(101, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(29, 44)
+        Me.Label7.Size = New System.Drawing.Size(28, 44)
         Me.Label7.TabIndex = 8
         Me.Label7.Text = "+"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -343,7 +343,7 @@ Partial Class FrmCheckOut
         Me.LblTotalXVat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.LblTotalXVat.Dock = System.Windows.Forms.DockStyle.Fill
         Me.LblTotalXVat.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTotalXVat.Location = New System.Drawing.Point(136, 0)
+        Me.LblTotalXVat.Location = New System.Drawing.Point(135, 0)
         Me.LblTotalXVat.Name = "LblTotalXVat"
         Me.LblTotalXVat.Size = New System.Drawing.Size(107, 44)
         Me.LblTotalXVat.TabIndex = 7

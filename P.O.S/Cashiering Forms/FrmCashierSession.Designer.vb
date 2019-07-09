@@ -482,7 +482,7 @@ Partial Class FrmCashierSession
         '
         'Btn00
         '
-        Me.Btn00.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn00.BackColor = System.Drawing.Color.Gray
         Me.Btn00.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btn00.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn00.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -496,7 +496,7 @@ Partial Class FrmCashierSession
         '
         'BtnTuldok
         '
-        Me.BtnTuldok.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.BtnTuldok.BackColor = System.Drawing.Color.Gray
         Me.BtnTuldok.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnTuldok.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnTuldok.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -524,7 +524,7 @@ Partial Class FrmCashierSession
         '
         'Btn9
         '
-        Me.Btn9.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn9.BackColor = System.Drawing.Color.Gray
         Me.Btn9.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn9.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -538,7 +538,7 @@ Partial Class FrmCashierSession
         '
         'Btn8
         '
-        Me.Btn8.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn8.BackColor = System.Drawing.Color.Gray
         Me.Btn8.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn8.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -552,7 +552,7 @@ Partial Class FrmCashierSession
         '
         'Btn0
         '
-        Me.Btn0.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn0.BackColor = System.Drawing.Color.Gray
         Me.Btn0.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn0.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -580,7 +580,7 @@ Partial Class FrmCashierSession
         '
         'Btn7
         '
-        Me.Btn7.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn7.BackColor = System.Drawing.Color.Gray
         Me.Btn7.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn7.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -594,7 +594,7 @@ Partial Class FrmCashierSession
         '
         'Btn5
         '
-        Me.Btn5.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn5.BackColor = System.Drawing.Color.Gray
         Me.Btn5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn5.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -608,7 +608,7 @@ Partial Class FrmCashierSession
         '
         'Btn6
         '
-        Me.Btn6.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn6.BackColor = System.Drawing.Color.Gray
         Me.Btn6.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn6.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -636,7 +636,7 @@ Partial Class FrmCashierSession
         '
         'Btn2
         '
-        Me.Btn2.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn2.BackColor = System.Drawing.Color.Gray
         Me.Btn2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn2.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -650,7 +650,7 @@ Partial Class FrmCashierSession
         '
         'Btn1
         '
-        Me.Btn1.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn1.BackColor = System.Drawing.Color.Gray
         Me.Btn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Btn1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -665,7 +665,7 @@ Partial Class FrmCashierSession
         '
         'Btn3
         '
-        Me.Btn3.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn3.BackColor = System.Drawing.Color.Gray
         Me.Btn3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn3.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -679,7 +679,7 @@ Partial Class FrmCashierSession
         '
         'Btn4
         '
-        Me.Btn4.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(196, Byte), Integer))
+        Me.Btn4.BackColor = System.Drawing.Color.Gray
         Me.Btn4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn4.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -732,7 +732,7 @@ Partial Class FrmCashierSession
         '
         'BtnAddToCredits
         '
-        Me.BtnAddToCredits.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(148, Byte), Integer))
+        Me.BtnAddToCredits.BackColor = System.Drawing.Color.Gray
         Me.BtnAddToCredits.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnAddToCredits.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnAddToCredits.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -746,7 +746,7 @@ Partial Class FrmCashierSession
         '
         'BtnCashTendered
         '
-        Me.BtnCashTendered.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(148, Byte), Integer))
+        Me.BtnCashTendered.BackColor = System.Drawing.Color.Gray
         Me.BtnCashTendered.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnCashTendered.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCashTendered.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -778,7 +778,7 @@ Partial Class FrmCashierSession
         '
         'BtnEndSession
         '
-        Me.BtnEndSession.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(148, Byte), Integer))
+        Me.BtnEndSession.BackColor = System.Drawing.Color.Gray
         Me.BtnEndSession.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnEndSession.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnEndSession.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -792,7 +792,7 @@ Partial Class FrmCashierSession
         '
         'BtnPullOutCash
         '
-        Me.BtnPullOutCash.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(148, Byte), Integer))
+        Me.BtnPullOutCash.BackColor = System.Drawing.Color.Gray
         Me.BtnPullOutCash.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnPullOutCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnPullOutCash.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -806,7 +806,7 @@ Partial Class FrmCashierSession
         '
         'BtnReplenishCash
         '
-        Me.BtnReplenishCash.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(148, Byte), Integer))
+        Me.BtnReplenishCash.BackColor = System.Drawing.Color.Gray
         Me.BtnReplenishCash.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnReplenishCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnReplenishCash.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

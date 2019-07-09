@@ -171,6 +171,10 @@ Public Class FrmCashierSession
         CheckBarcode()
     End Sub
 
+    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
+        TxtBarcode.Text = TxtBarcode.Text.Remove(TxtBarcode.TextLength - 1)
+    End Sub
+
     Sub InsertIntoTempBarcode()
 
         If MsSql.ExecuteQuery("INSERT INTO Tbl_TempTransaction (Description,Quantity,TotalAmount,ItemCode,Barcode,SellingPrice) VALUES ('" & Description & "','" & TxtQuanProd.Text & "','" & Total & "','" & ItemCode & "','" & TxtBarcode.Text & "','" & SellingPrice & "')", Nothing) = False Then
@@ -196,5 +200,6 @@ Public Class FrmCashierSession
     Private Sub TxtBarcode_GotFocus(sender As Object, e As EventArgs) Handles TxtBarcode.GotFocus
         tfocus = "barcode"
     End Sub
+
 
 End Class
