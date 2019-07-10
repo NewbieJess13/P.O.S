@@ -87,6 +87,29 @@ Public Class CashierSessionCrud
         End Try
         Return DTSelected
     End Function
+
+    Friend Function SendToTempTrans(TempTrans As CashierSessionData) As Boolean
+        Dim isSent As Boolean = False
+        Try
+            Using conn As New SqlConnection(CP.ConnectionString)
+                conn.Open()
+                Dim xSQL As New StringBuilder
+                xSQL.AppendLine("INSERT INTO ")
+                xSQL.AppendLine("Tbl_Products ")
+                xSQL.AppendLine("( ")
+                xSQL.AppendLine("Description, ")
+                xSQL.AppendLine("Quantity, ")
+                xSQL.AppendLine("TotalAmount, ")
+                xSQL.AppendLine("ItemCode, ")
+                xSQL.AppendLine("Barcode, ")
+                xSQL.AppendLine("SellingPrice ")
+                xSQL.AppendLine(") VALUES ( ")
+                xSQL.AppendLine("Description, ")
+            End Using
+        Catch ex As Exception
+
+        End Try
+    End Function
 End Class
 
 

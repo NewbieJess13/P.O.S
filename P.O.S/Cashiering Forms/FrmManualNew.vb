@@ -38,11 +38,11 @@
                     .Dock = DockStyle.Bottom,
                     .AutoSize = False,
                     .Size = New Drawing.Size(60, 30),
-                    .TextAlign = ContentAlignment.MiddleCenter,
+                    .TextAlign = ContentAlignment.MiddleLeft,
                     .BorderStyle = BorderStyle.FixedSingle,
-                    .Text = Dr(1)
+                    .Text = Dr(1) & "- ₱" & Dr(2)
                 }
-                ToolTip1.SetToolTip(productImage, Dr(1))
+                ToolTip1.SetToolTip(productImage, Dr(1) & "- ₱" & Dr(2))
                 AddHandler productImage.Click, AddressOf ProductImageAll_Click
                 AddHandler productImage.MouseHover, AddressOf ProductImageAll_Hover
                 AddHandler productImage.MouseLeave, AddressOf ProductImageAll_Leave
