@@ -11,6 +11,8 @@
 
     End Sub
 
+    Public Event LoadDataToGrid As EventHandler
+
     Sub PopulateMenu(Filter As String, FlowPanel As FlowLayoutPanel)
         Dim PopulateFM As New CashierSessionCrud
         Dim DT As DataTable = PopulateFM.PopulateFoodMenu(Filter)
@@ -43,6 +45,7 @@
                     .Text = Dr(1) & "- ₱" & Dr(2)
                 }
                 ToolTip1.SetToolTip(productImage, Dr(1) & "- ₱" & Dr(2))
+
                 AddHandler productImage.Click, AddressOf ProductImageAll_Click
                 AddHandler productImage.MouseHover, AddressOf ProductImageAll_Hover
                 AddHandler productImage.MouseLeave, AddressOf ProductImageAll_Leave
@@ -59,12 +62,19 @@
         sender.BorderStyle = BorderStyle.FixedSingle
     End Sub
     Dim id As String
+    Dim SellingPrice As Decimal
+    Dim Category As String
+    Dim ItemCode As String
+    Dim TotalAmount As Decimal
     Private Sub ProductImageAll_Click(ByVal sender As Object, ByVal e As EventArgs)
         id = sender.tag
         Dim SelectedMenu As New CashierSessionCrud
         Dim DT As DataTable = SelectedMenu.SelectedFood(id)
         If DT.Rows.Count > 0 Then
             LblDesc.Text = DT.Rows(0)(1)
+            SellingPrice = DT.Rows(0)(2)
+            Category = DT.Rows(0)(3)
+            ItemCode = DT.Rows(0)(4)
         End If
     End Sub
     Private Sub BtnPrev_Click(sender As Object, e As EventArgs) Handles BtnPrev.Click
@@ -77,5 +87,39 @@
 
     Private Sub BtnNext_Click(sender As Object, e As EventArgs) Handles BtnNext.Click
         LblNumber.Text += 1
+    End Sub
+
+    Private Sub BtnGo_Click(sender As Object, e As EventArgs) Handles BtnGo.Click
+        TotalAmount = SellingPrice * LblNumber.Text
+
+        Dim CSessionData As New CashierSessionData
+        CSessionData.Description = LblDesc.Text
+        CSessionData.TotalAmount = TotalAmount
+        CSessionData.Quantity = LblNumber.Text
+        CSessionData.ItemCode = ItemCode
+        CSessionData.SellingPrice = SellingPrice
+        CSessionData.SessionID = My.Settings.SessionID
+
+        Dim TempTrans As New CashierSessionCrud
+        Dim DT As DataTable = TempTrans.CheckForExistingTempItem(ItemCode, My.Settings.SessionID)
+        If DT.Rows.Count > 0 Then
+
+            If TempTrans.UpdateExistingItem(ItemCode, My.Settings.SessionID, LblNumber.Text, TotalAmount) Then
+                'Nothing
+                RaiseEvent LoadDataToGrid(Me, e)
+            End If
+        Else
+            If TempTrans.SendToTempTrans(CSessionData) Then
+                RaiseEvent LoadDataToGrid(Me, e)
+            End If
+
+        End If
+        LblDesc.Text = "-"
+        LblNumber.Text = "1"
+
+    End Sub
+
+    Private Sub BtnDone_Click(sender As Object, e As EventArgs) Handles BtnDone.Click
+        Me.Close()
     End Sub
 End Class

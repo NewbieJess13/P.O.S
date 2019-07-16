@@ -40,10 +40,10 @@ Partial Class FrmManualNew
         Me.LblNumber = New System.Windows.Forms.Label()
         Me.BtnNext = New System.Windows.Forms.Button()
         Me.BtnPrev = New System.Windows.Forms.Button()
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
-        Me.BtnGo = New System.Windows.Forms.Button()
         Me.BtnDone = New System.Windows.Forms.Button()
+        Me.BtnGo = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel5.SuspendLayout()
@@ -299,16 +299,6 @@ Partial Class FrmManualNew
         Me.TableLayoutPanel7.Size = New System.Drawing.Size(317, 82)
         Me.TableLayoutPanel7.TabIndex = 2
         '
-        'BtnGo
-        '
-        Me.BtnGo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnGo.Location = New System.Drawing.Point(4, 4)
-        Me.BtnGo.Name = "BtnGo"
-        Me.BtnGo.Size = New System.Drawing.Size(151, 74)
-        Me.BtnGo.TabIndex = 3
-        Me.BtnGo.Text = "NEXT"
-        Me.BtnGo.UseVisualStyleBackColor = True
-        '
         'BtnDone
         '
         Me.BtnDone.Dock = System.Windows.Forms.DockStyle.Fill
@@ -318,6 +308,16 @@ Partial Class FrmManualNew
         Me.BtnDone.TabIndex = 4
         Me.BtnDone.Text = "DONE"
         Me.BtnDone.UseVisualStyleBackColor = True
+        '
+        'BtnGo
+        '
+        Me.BtnGo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnGo.Location = New System.Drawing.Point(4, 4)
+        Me.BtnGo.Name = "BtnGo"
+        Me.BtnGo.Size = New System.Drawing.Size(151, 74)
+        Me.BtnGo.TabIndex = 3
+        Me.BtnGo.Text = "NEXT"
+        Me.BtnGo.UseVisualStyleBackColor = True
         '
         'FrmManualNew
         '

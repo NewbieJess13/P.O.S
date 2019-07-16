@@ -39,6 +39,9 @@ Partial Class FrmCashierReport
         Me.CrystalReportReceipt.TabIndex = 0
         Me.CrystalReportReceipt.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
+        'receiptReport1
+        '
+        '
         'FrmCashierReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)

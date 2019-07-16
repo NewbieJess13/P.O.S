@@ -56,21 +56,9 @@ Partial Class FrmCashierSession
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.BtnManualInput = New System.Windows.Forms.Button()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Btn00 = New System.Windows.Forms.Button()
-        Me.BtnTuldok = New System.Windows.Forms.Button()
         Me.BtnVoidTrans = New System.Windows.Forms.Button()
-        Me.Btn9 = New System.Windows.Forms.Button()
-        Me.Btn8 = New System.Windows.Forms.Button()
-        Me.Btn0 = New System.Windows.Forms.Button()
         Me.BtnVoidItem = New System.Windows.Forms.Button()
-        Me.Btn7 = New System.Windows.Forms.Button()
-        Me.Btn5 = New System.Windows.Forms.Button()
-        Me.Btn6 = New System.Windows.Forms.Button()
         Me.BtnEnter = New System.Windows.Forms.Button()
-        Me.Btn2 = New System.Windows.Forms.Button()
-        Me.Btn1 = New System.Windows.Forms.Button()
-        Me.Btn3 = New System.Windows.Forms.Button()
-        Me.Btn4 = New System.Windows.Forms.Button()
         Me.BtnClear = New System.Windows.Forms.Button()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
@@ -85,6 +73,18 @@ Partial Class FrmCashierSession
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TxtQuanProd = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.BtnTuldok = New System.Windows.Forms.Button()
+        Me.Btn00 = New System.Windows.Forms.Button()
+        Me.Btn0 = New System.Windows.Forms.Button()
+        Me.Btn9 = New System.Windows.Forms.Button()
+        Me.Btn8 = New System.Windows.Forms.Button()
+        Me.Btn7 = New System.Windows.Forms.Button()
+        Me.Btn6 = New System.Windows.Forms.Button()
+        Me.Btn5 = New System.Windows.Forms.Button()
+        Me.Btn4 = New System.Windows.Forms.Button()
+        Me.Btn3 = New System.Windows.Forms.Button()
+        Me.Btn2 = New System.Windows.Forms.Button()
+        Me.Btn1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -117,7 +117,7 @@ Partial Class FrmCashierSession
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1062, 100)
+        Me.Panel1.Size = New System.Drawing.Size(1062, 94)
         Me.Panel1.TabIndex = 1
         '
         'LblNotification
@@ -126,7 +126,7 @@ Partial Class FrmCashierSession
         Me.LblNotification.AutoSize = True
         Me.LblNotification.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblNotification.ForeColor = System.Drawing.Color.Brown
-        Me.LblNotification.Location = New System.Drawing.Point(955, 82)
+        Me.LblNotification.Location = New System.Drawing.Point(955, 76)
         Me.LblNotification.Name = "LblNotification"
         Me.LblNotification.Size = New System.Drawing.Size(0, 15)
         Me.LblNotification.TabIndex = 27
@@ -239,9 +239,9 @@ Partial Class FrmCashierSession
         '
         Me.Panel3.Controls.Add(Me.TableLayoutPanel1)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(0, 100)
+        Me.Panel3.Location = New System.Drawing.Point(0, 94)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1062, 469)
+        Me.Panel3.Size = New System.Drawing.Size(1062, 475)
         Me.Panel3.TabIndex = 3
         '
         'TableLayoutPanel1
@@ -256,7 +256,7 @@ Partial Class FrmCashierSession
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1062, 469)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1062, 475)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'Panel4
@@ -266,7 +266,7 @@ Partial Class FrmCashierSession
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel4.Location = New System.Drawing.Point(3, 3)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(418, 463)
+        Me.Panel4.Size = New System.Drawing.Size(418, 469)
         Me.Panel4.TabIndex = 0
         '
         'Panel9
@@ -275,7 +275,7 @@ Partial Class FrmCashierSession
         Me.Panel9.Controls.Add(Me.Label13)
         Me.Panel9.Controls.Add(Me.LblTotalRes)
         Me.Panel9.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel9.Location = New System.Drawing.Point(0, 418)
+        Me.Panel9.Location = New System.Drawing.Point(0, 424)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(418, 45)
         Me.Panel9.TabIndex = 4
@@ -342,7 +342,7 @@ Partial Class FrmCashierSession
         Me.DGItemList.RowHeadersVisible = False
         Me.DGItemList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.DGItemList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGItemList.Size = New System.Drawing.Size(412, 415)
+        Me.DGItemList.Size = New System.Drawing.Size(412, 358)
         Me.DGItemList.TabIndex = 23
         '
         'Column1
@@ -399,7 +399,7 @@ Partial Class FrmCashierSession
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel5.Location = New System.Drawing.Point(427, 3)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(632, 463)
+        Me.Panel5.Size = New System.Drawing.Size(632, 469)
         Me.Panel5.TabIndex = 1
         '
         'Panel7
@@ -408,7 +408,7 @@ Partial Class FrmCashierSession
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel7.Location = New System.Drawing.Point(0, 43)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(632, 420)
+        Me.Panel7.Size = New System.Drawing.Size(632, 426)
         Me.Panel7.TabIndex = 1
         '
         'TableLayoutPanel2
@@ -426,7 +426,7 @@ Partial Class FrmCashierSession
         Me.TableLayoutPanel2.RowCount = 2
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(632, 420)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(632, 426)
         Me.TableLayoutPanel2.TabIndex = 0
         '
         'BtnManualInput
@@ -436,9 +436,9 @@ Partial Class FrmCashierSession
         Me.BtnManualInput.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnManualInput.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnManualInput.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.BtnManualInput.Location = New System.Drawing.Point(445, 339)
+        Me.BtnManualInput.Location = New System.Drawing.Point(445, 343)
         Me.BtnManualInput.Name = "BtnManualInput"
-        Me.BtnManualInput.Size = New System.Drawing.Size(184, 78)
+        Me.BtnManualInput.Size = New System.Drawing.Size(184, 80)
         Me.BtnManualInput.TabIndex = 23
         Me.BtnManualInput.Text = "MANUAL INPUT"
         Me.BtnManualInput.UseVisualStyleBackColor = False
@@ -477,36 +477,8 @@ Partial Class FrmCashierSession
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(436, 330)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(436, 334)
         Me.TableLayoutPanel3.TabIndex = 1
-        '
-        'Btn00
-        '
-        Me.Btn00.BackColor = System.Drawing.Color.Gray
-        Me.Btn00.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn00.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn00.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn00.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Btn00.Location = New System.Drawing.Point(106, 249)
-        Me.Btn00.Name = "Btn00"
-        Me.Btn00.Size = New System.Drawing.Size(100, 78)
-        Me.Btn00.TabIndex = 12
-        Me.Btn00.Text = "00"
-        Me.Btn00.UseVisualStyleBackColor = False
-        '
-        'BtnTuldok
-        '
-        Me.BtnTuldok.BackColor = System.Drawing.Color.Gray
-        Me.BtnTuldok.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnTuldok.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnTuldok.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnTuldok.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.BtnTuldok.Location = New System.Drawing.Point(212, 249)
-        Me.BtnTuldok.Name = "BtnTuldok"
-        Me.BtnTuldok.Size = New System.Drawing.Size(100, 78)
-        Me.BtnTuldok.TabIndex = 13
-        Me.BtnTuldok.Text = "."
-        Me.BtnTuldok.UseVisualStyleBackColor = False
         '
         'BtnVoidTrans
         '
@@ -515,54 +487,12 @@ Partial Class FrmCashierSession
         Me.BtnVoidTrans.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnVoidTrans.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnVoidTrans.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.BtnVoidTrans.Location = New System.Drawing.Point(318, 249)
+        Me.BtnVoidTrans.Location = New System.Drawing.Point(318, 252)
         Me.BtnVoidTrans.Name = "BtnVoidTrans"
-        Me.BtnVoidTrans.Size = New System.Drawing.Size(115, 78)
+        Me.BtnVoidTrans.Size = New System.Drawing.Size(115, 79)
         Me.BtnVoidTrans.TabIndex = 17
         Me.BtnVoidTrans.Text = "VOID TRANSACTION"
         Me.BtnVoidTrans.UseVisualStyleBackColor = False
-        '
-        'Btn9
-        '
-        Me.Btn9.BackColor = System.Drawing.Color.Gray
-        Me.Btn9.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn9.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn9.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Btn9.Location = New System.Drawing.Point(212, 167)
-        Me.Btn9.Name = "Btn9"
-        Me.Btn9.Size = New System.Drawing.Size(100, 76)
-        Me.Btn9.TabIndex = 10
-        Me.Btn9.Text = "9"
-        Me.Btn9.UseVisualStyleBackColor = False
-        '
-        'Btn8
-        '
-        Me.Btn8.BackColor = System.Drawing.Color.Gray
-        Me.Btn8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn8.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn8.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Btn8.Location = New System.Drawing.Point(106, 167)
-        Me.Btn8.Name = "Btn8"
-        Me.Btn8.Size = New System.Drawing.Size(100, 76)
-        Me.Btn8.TabIndex = 9
-        Me.Btn8.Text = "8"
-        Me.Btn8.UseVisualStyleBackColor = False
-        '
-        'Btn0
-        '
-        Me.Btn0.BackColor = System.Drawing.Color.Gray
-        Me.Btn0.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn0.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn0.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Btn0.Location = New System.Drawing.Point(3, 249)
-        Me.Btn0.Name = "Btn0"
-        Me.Btn0.Size = New System.Drawing.Size(97, 78)
-        Me.Btn0.TabIndex = 11
-        Me.Btn0.Text = "0"
-        Me.Btn0.UseVisualStyleBackColor = False
         '
         'BtnVoidItem
         '
@@ -571,54 +501,12 @@ Partial Class FrmCashierSession
         Me.BtnVoidItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnVoidItem.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnVoidItem.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.BtnVoidItem.Location = New System.Drawing.Point(318, 167)
+        Me.BtnVoidItem.Location = New System.Drawing.Point(318, 169)
         Me.BtnVoidItem.Name = "BtnVoidItem"
-        Me.BtnVoidItem.Size = New System.Drawing.Size(115, 76)
+        Me.BtnVoidItem.Size = New System.Drawing.Size(115, 77)
         Me.BtnVoidItem.TabIndex = 16
         Me.BtnVoidItem.Text = "VOID ITEM"
         Me.BtnVoidItem.UseVisualStyleBackColor = False
-        '
-        'Btn7
-        '
-        Me.Btn7.BackColor = System.Drawing.Color.Gray
-        Me.Btn7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn7.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn7.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Btn7.Location = New System.Drawing.Point(3, 167)
-        Me.Btn7.Name = "Btn7"
-        Me.Btn7.Size = New System.Drawing.Size(97, 76)
-        Me.Btn7.TabIndex = 8
-        Me.Btn7.Text = "7"
-        Me.Btn7.UseVisualStyleBackColor = False
-        '
-        'Btn5
-        '
-        Me.Btn5.BackColor = System.Drawing.Color.Gray
-        Me.Btn5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn5.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn5.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Btn5.Location = New System.Drawing.Point(106, 85)
-        Me.Btn5.Name = "Btn5"
-        Me.Btn5.Size = New System.Drawing.Size(100, 76)
-        Me.Btn5.TabIndex = 6
-        Me.Btn5.Text = "5"
-        Me.Btn5.UseVisualStyleBackColor = False
-        '
-        'Btn6
-        '
-        Me.Btn6.BackColor = System.Drawing.Color.Gray
-        Me.Btn6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn6.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn6.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Btn6.Location = New System.Drawing.Point(212, 85)
-        Me.Btn6.Name = "Btn6"
-        Me.Btn6.Size = New System.Drawing.Size(100, 76)
-        Me.Btn6.TabIndex = 7
-        Me.Btn6.Text = "6"
-        Me.Btn6.UseVisualStyleBackColor = False
         '
         'BtnEnter
         '
@@ -627,69 +515,12 @@ Partial Class FrmCashierSession
         Me.BtnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnEnter.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEnter.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.BtnEnter.Location = New System.Drawing.Point(318, 85)
+        Me.BtnEnter.Location = New System.Drawing.Point(318, 86)
         Me.BtnEnter.Name = "BtnEnter"
-        Me.BtnEnter.Size = New System.Drawing.Size(115, 76)
+        Me.BtnEnter.Size = New System.Drawing.Size(115, 77)
         Me.BtnEnter.TabIndex = 15
         Me.BtnEnter.Text = "ENTER"
         Me.BtnEnter.UseVisualStyleBackColor = False
-        '
-        'Btn2
-        '
-        Me.Btn2.BackColor = System.Drawing.Color.Gray
-        Me.Btn2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn2.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn2.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Btn2.Location = New System.Drawing.Point(106, 3)
-        Me.Btn2.Name = "Btn2"
-        Me.Btn2.Size = New System.Drawing.Size(100, 76)
-        Me.Btn2.TabIndex = 3
-        Me.Btn2.Text = "2"
-        Me.Btn2.UseVisualStyleBackColor = False
-        '
-        'Btn1
-        '
-        Me.Btn1.BackColor = System.Drawing.Color.Gray
-        Me.Btn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Btn1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn1.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn1.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Btn1.Location = New System.Drawing.Point(3, 3)
-        Me.Btn1.Name = "Btn1"
-        Me.Btn1.Size = New System.Drawing.Size(97, 76)
-        Me.Btn1.TabIndex = 2
-        Me.Btn1.Text = "1"
-        Me.Btn1.UseVisualStyleBackColor = False
-        '
-        'Btn3
-        '
-        Me.Btn3.BackColor = System.Drawing.Color.Gray
-        Me.Btn3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn3.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn3.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Btn3.Location = New System.Drawing.Point(212, 3)
-        Me.Btn3.Name = "Btn3"
-        Me.Btn3.Size = New System.Drawing.Size(100, 76)
-        Me.Btn3.TabIndex = 4
-        Me.Btn3.Text = "3"
-        Me.Btn3.UseVisualStyleBackColor = False
-        '
-        'Btn4
-        '
-        Me.Btn4.BackColor = System.Drawing.Color.Gray
-        Me.Btn4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn4.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn4.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Btn4.Location = New System.Drawing.Point(3, 85)
-        Me.Btn4.Name = "Btn4"
-        Me.Btn4.Size = New System.Drawing.Size(97, 76)
-        Me.Btn4.TabIndex = 5
-        Me.Btn4.Text = "4"
-        Me.Btn4.UseVisualStyleBackColor = False
         '
         'BtnClear
         '
@@ -700,7 +531,7 @@ Partial Class FrmCashierSession
         Me.BtnClear.ForeColor = System.Drawing.SystemColors.InfoText
         Me.BtnClear.Location = New System.Drawing.Point(318, 3)
         Me.BtnClear.Name = "BtnClear"
-        Me.BtnClear.Size = New System.Drawing.Size(115, 76)
+        Me.BtnClear.Size = New System.Drawing.Size(115, 77)
         Me.BtnClear.TabIndex = 14
         Me.BtnClear.Text = "C"
         Me.BtnClear.UseVisualStyleBackColor = False
@@ -711,7 +542,7 @@ Partial Class FrmCashierSession
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel8.Location = New System.Drawing.Point(445, 3)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(184, 330)
+        Me.Panel8.Size = New System.Drawing.Size(184, 334)
         Me.Panel8.TabIndex = 2
         '
         'TableLayoutPanel5
@@ -727,7 +558,7 @@ Partial Class FrmCashierSession
         Me.TableLayoutPanel5.RowCount = 2
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel5.Size = New System.Drawing.Size(184, 330)
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(184, 334)
         Me.TableLayoutPanel5.TabIndex = 0
         '
         'BtnAddToCredits
@@ -737,9 +568,9 @@ Partial Class FrmCashierSession
         Me.BtnAddToCredits.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnAddToCredits.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAddToCredits.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.BtnAddToCredits.Location = New System.Drawing.Point(3, 168)
+        Me.BtnAddToCredits.Location = New System.Drawing.Point(3, 170)
         Me.BtnAddToCredits.Name = "BtnAddToCredits"
-        Me.BtnAddToCredits.Size = New System.Drawing.Size(178, 159)
+        Me.BtnAddToCredits.Size = New System.Drawing.Size(178, 161)
         Me.BtnAddToCredits.TabIndex = 19
         Me.BtnAddToCredits.Text = "ADD TO CREDITS"
         Me.BtnAddToCredits.UseVisualStyleBackColor = False
@@ -753,7 +584,7 @@ Partial Class FrmCashierSession
         Me.BtnCashTendered.ForeColor = System.Drawing.SystemColors.ControlText
         Me.BtnCashTendered.Location = New System.Drawing.Point(3, 3)
         Me.BtnCashTendered.Name = "BtnCashTendered"
-        Me.BtnCashTendered.Size = New System.Drawing.Size(178, 159)
+        Me.BtnCashTendered.Size = New System.Drawing.Size(178, 161)
         Me.BtnCashTendered.TabIndex = 18
         Me.BtnCashTendered.Text = "CHECK OUT"
         Me.BtnCashTendered.UseVisualStyleBackColor = False
@@ -768,12 +599,12 @@ Partial Class FrmCashierSession
         Me.TableLayoutPanel4.Controls.Add(Me.BtnPullOutCash, 0, 0)
         Me.TableLayoutPanel4.Controls.Add(Me.BtnReplenishCash, 0, 0)
         Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(3, 339)
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(3, 343)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         Me.TableLayoutPanel4.RowCount = 1
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(436, 78)
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(436, 80)
         Me.TableLayoutPanel4.TabIndex = 3
         '
         'BtnEndSession
@@ -785,7 +616,7 @@ Partial Class FrmCashierSession
         Me.BtnEndSession.ForeColor = System.Drawing.SystemColors.ControlText
         Me.BtnEndSession.Location = New System.Drawing.Point(293, 3)
         Me.BtnEndSession.Name = "BtnEndSession"
-        Me.BtnEndSession.Size = New System.Drawing.Size(140, 72)
+        Me.BtnEndSession.Size = New System.Drawing.Size(140, 74)
         Me.BtnEndSession.TabIndex = 22
         Me.BtnEndSession.Text = "CLOSE SESSION"
         Me.BtnEndSession.UseVisualStyleBackColor = False
@@ -799,7 +630,7 @@ Partial Class FrmCashierSession
         Me.BtnPullOutCash.ForeColor = System.Drawing.SystemColors.ControlText
         Me.BtnPullOutCash.Location = New System.Drawing.Point(148, 3)
         Me.BtnPullOutCash.Name = "BtnPullOutCash"
-        Me.BtnPullOutCash.Size = New System.Drawing.Size(139, 72)
+        Me.BtnPullOutCash.Size = New System.Drawing.Size(139, 74)
         Me.BtnPullOutCash.TabIndex = 21
         Me.BtnPullOutCash.Text = "PULL OUT CASH"
         Me.BtnPullOutCash.UseVisualStyleBackColor = False
@@ -813,7 +644,7 @@ Partial Class FrmCashierSession
         Me.BtnReplenishCash.ForeColor = System.Drawing.SystemColors.ControlText
         Me.BtnReplenishCash.Location = New System.Drawing.Point(3, 3)
         Me.BtnReplenishCash.Name = "BtnReplenishCash"
-        Me.BtnReplenishCash.Size = New System.Drawing.Size(139, 72)
+        Me.BtnReplenishCash.Size = New System.Drawing.Size(139, 74)
         Me.BtnReplenishCash.TabIndex = 20
         Me.BtnReplenishCash.Text = "REPLENISH CASH"
         Me.BtnReplenishCash.UseVisualStyleBackColor = False
@@ -866,6 +697,175 @@ Partial Class FrmCashierSession
         '
         'Timer1
         '
+        '
+        'BtnTuldok
+        '
+        Me.BtnTuldok.BackColor = System.Drawing.Color.Gray
+        Me.BtnTuldok.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnTuldok.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnTuldok.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnTuldok.ForeColor = System.Drawing.SystemColors.InfoText
+        Me.BtnTuldok.Location = New System.Drawing.Point(212, 252)
+        Me.BtnTuldok.Name = "BtnTuldok"
+        Me.BtnTuldok.Size = New System.Drawing.Size(100, 79)
+        Me.BtnTuldok.TabIndex = 13
+        Me.BtnTuldok.Text = "."
+        Me.BtnTuldok.UseVisualStyleBackColor = False
+        '
+        'Btn00
+        '
+        Me.Btn00.BackColor = System.Drawing.Color.Gray
+        Me.Btn00.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn00.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn00.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn00.ForeColor = System.Drawing.SystemColors.InfoText
+        Me.Btn00.Location = New System.Drawing.Point(106, 252)
+        Me.Btn00.Name = "Btn00"
+        Me.Btn00.Size = New System.Drawing.Size(100, 79)
+        Me.Btn00.TabIndex = 12
+        Me.Btn00.Text = "00"
+        Me.Btn00.UseVisualStyleBackColor = False
+        '
+        'Btn0
+        '
+        Me.Btn0.BackColor = System.Drawing.Color.Gray
+        Me.Btn0.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn0.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn0.ForeColor = System.Drawing.SystemColors.InfoText
+        Me.Btn0.Location = New System.Drawing.Point(3, 252)
+        Me.Btn0.Name = "Btn0"
+        Me.Btn0.Size = New System.Drawing.Size(97, 79)
+        Me.Btn0.TabIndex = 11
+        Me.Btn0.Text = "0"
+        Me.Btn0.UseVisualStyleBackColor = False
+        '
+        'Btn9
+        '
+        Me.Btn9.BackColor = System.Drawing.Color.Gray
+        Me.Btn9.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn9.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn9.ForeColor = System.Drawing.SystemColors.InfoText
+        Me.Btn9.Location = New System.Drawing.Point(212, 169)
+        Me.Btn9.Name = "Btn9"
+        Me.Btn9.Size = New System.Drawing.Size(100, 77)
+        Me.Btn9.TabIndex = 10
+        Me.Btn9.Text = "9"
+        Me.Btn9.UseVisualStyleBackColor = False
+        '
+        'Btn8
+        '
+        Me.Btn8.BackColor = System.Drawing.Color.Gray
+        Me.Btn8.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn8.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn8.ForeColor = System.Drawing.SystemColors.InfoText
+        Me.Btn8.Location = New System.Drawing.Point(106, 169)
+        Me.Btn8.Name = "Btn8"
+        Me.Btn8.Size = New System.Drawing.Size(100, 77)
+        Me.Btn8.TabIndex = 9
+        Me.Btn8.Text = "8"
+        Me.Btn8.UseVisualStyleBackColor = False
+        '
+        'Btn7
+        '
+        Me.Btn7.BackColor = System.Drawing.Color.Gray
+        Me.Btn7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn7.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn7.ForeColor = System.Drawing.SystemColors.InfoText
+        Me.Btn7.Location = New System.Drawing.Point(3, 169)
+        Me.Btn7.Name = "Btn7"
+        Me.Btn7.Size = New System.Drawing.Size(97, 77)
+        Me.Btn7.TabIndex = 8
+        Me.Btn7.Text = "7"
+        Me.Btn7.UseVisualStyleBackColor = False
+        '
+        'Btn6
+        '
+        Me.Btn6.BackColor = System.Drawing.Color.Gray
+        Me.Btn6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn6.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn6.ForeColor = System.Drawing.SystemColors.InfoText
+        Me.Btn6.Location = New System.Drawing.Point(212, 86)
+        Me.Btn6.Name = "Btn6"
+        Me.Btn6.Size = New System.Drawing.Size(100, 77)
+        Me.Btn6.TabIndex = 7
+        Me.Btn6.Text = "6"
+        Me.Btn6.UseVisualStyleBackColor = False
+        '
+        'Btn5
+        '
+        Me.Btn5.BackColor = System.Drawing.Color.Gray
+        Me.Btn5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn5.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn5.ForeColor = System.Drawing.SystemColors.InfoText
+        Me.Btn5.Location = New System.Drawing.Point(106, 86)
+        Me.Btn5.Name = "Btn5"
+        Me.Btn5.Size = New System.Drawing.Size(100, 77)
+        Me.Btn5.TabIndex = 6
+        Me.Btn5.Text = "5"
+        Me.Btn5.UseVisualStyleBackColor = False
+        '
+        'Btn4
+        '
+        Me.Btn4.BackColor = System.Drawing.Color.Gray
+        Me.Btn4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn4.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn4.ForeColor = System.Drawing.SystemColors.InfoText
+        Me.Btn4.Location = New System.Drawing.Point(3, 86)
+        Me.Btn4.Name = "Btn4"
+        Me.Btn4.Size = New System.Drawing.Size(97, 77)
+        Me.Btn4.TabIndex = 5
+        Me.Btn4.Text = "4"
+        Me.Btn4.UseVisualStyleBackColor = False
+        '
+        'Btn3
+        '
+        Me.Btn3.BackColor = System.Drawing.Color.Gray
+        Me.Btn3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn3.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn3.ForeColor = System.Drawing.SystemColors.InfoText
+        Me.Btn3.Location = New System.Drawing.Point(212, 3)
+        Me.Btn3.Name = "Btn3"
+        Me.Btn3.Size = New System.Drawing.Size(100, 77)
+        Me.Btn3.TabIndex = 4
+        Me.Btn3.Text = "3"
+        Me.Btn3.UseVisualStyleBackColor = False
+        '
+        'Btn2
+        '
+        Me.Btn2.BackColor = System.Drawing.Color.Gray
+        Me.Btn2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn2.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn2.ForeColor = System.Drawing.SystemColors.InfoText
+        Me.Btn2.Location = New System.Drawing.Point(106, 3)
+        Me.Btn2.Name = "Btn2"
+        Me.Btn2.Size = New System.Drawing.Size(100, 77)
+        Me.Btn2.TabIndex = 3
+        Me.Btn2.Text = "2"
+        Me.Btn2.UseVisualStyleBackColor = False
+        '
+        'Btn1
+        '
+        Me.Btn1.BackColor = System.Drawing.Color.Gray
+        Me.Btn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Btn1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn1.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn1.ForeColor = System.Drawing.SystemColors.InfoText
+        Me.Btn1.Location = New System.Drawing.Point(3, 3)
+        Me.Btn1.Name = "Btn1"
+        Me.Btn1.Size = New System.Drawing.Size(97, 77)
+        Me.Btn1.TabIndex = 2
+        Me.Btn1.Text = "1"
+        Me.Btn1.UseVisualStyleBackColor = False
         '
         'FrmCashierSession
         '
@@ -926,21 +926,9 @@ Partial Class FrmCashierSession
     Friend WithEvents Panel7 As Panel
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
-    Friend WithEvents Btn00 As Button
-    Friend WithEvents BtnTuldok As Button
     Friend WithEvents BtnVoidTrans As Button
-    Friend WithEvents Btn9 As Button
-    Friend WithEvents Btn8 As Button
-    Friend WithEvents Btn0 As Button
     Friend WithEvents BtnVoidItem As Button
-    Friend WithEvents Btn7 As Button
-    Friend WithEvents Btn5 As Button
-    Friend WithEvents Btn6 As Button
     Friend WithEvents BtnEnter As Button
-    Friend WithEvents Btn2 As Button
-    Friend WithEvents Btn1 As Button
-    Friend WithEvents Btn3 As Button
-    Friend WithEvents Btn4 As Button
     Friend WithEvents BtnClear As Button
     Friend WithEvents Panel8 As Panel
     Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
@@ -963,4 +951,16 @@ Partial Class FrmCashierSession
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Btn00 As Button
+    Friend WithEvents BtnTuldok As Button
+    Friend WithEvents Btn9 As Button
+    Friend WithEvents Btn8 As Button
+    Friend WithEvents Btn0 As Button
+    Friend WithEvents Btn7 As Button
+    Friend WithEvents Btn5 As Button
+    Friend WithEvents Btn6 As Button
+    Friend WithEvents Btn2 As Button
+    Friend WithEvents Btn1 As Button
+    Friend WithEvents Btn3 As Button
+    Friend WithEvents Btn4 As Button
 End Class

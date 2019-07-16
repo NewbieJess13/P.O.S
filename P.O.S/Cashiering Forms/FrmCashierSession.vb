@@ -11,7 +11,7 @@ Public Class FrmCashierSession
     Sub New()
         InitializeComponent()
         AddHandler FrmVoidItem.LoadDataToGrid, AddressOf LoadDataToGrid
-        AddHandler FrmManual.LoadDataToGrid, AddressOf LoadDataToGrid
+        AddHandler FrmManualNew.LoadDataToGrid, AddressOf LoadDataToGrid
         AddHandler FrmCheckOut.LoadDataToGridToCheckOut, AddressOf LoadDataToGrid
         Timer1.Start()
     End Sub
@@ -34,7 +34,7 @@ Public Class FrmCashierSession
     End Sub
 
     Private Sub BtnManualInput_Click(sender As Object, e As EventArgs) Handles BtnManualInput.Click
-        FrmManual.ShowDialog()
+        FrmManualNew.ShowDialog()
     End Sub
 
     Private Sub BtnVoidItem_Click(sender As Object, e As EventArgs) Handles BtnVoidItem.Click
@@ -61,7 +61,7 @@ Public Class FrmCashierSession
     End Sub
 
     Sub LoadDataToGrid()
-        tbl = MsSql.Table("SELECT * FROM Tbl_TempTransaction")
+        tbl = MsSql.Table("SELECT * FROM Tbl_TempTransaction WHERE CashierSessionID = '" & My.Settings.SessionID & "'")
         DGItemList.Rows.Clear()
 
         For Each dr As DataRow In tbl.Rows

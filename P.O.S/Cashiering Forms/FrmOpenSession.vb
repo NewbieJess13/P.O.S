@@ -63,12 +63,14 @@ Public Class FrmOpenSession
 
     Private Sub InsertCashierSession()
         GetTransactionID()
+        Dim SessionID As String = Splitted() & TxtCashierName.Text
+        My.Settings.SessionID = SessionID
         Try
             Using conn As New SqlConnection(My.Settings.ConnectionString)
                 conn.Open()
                 Dim command As New SqlCommand("INSERT INTO Tbl_CashierSession (TransactionNo,SessionId,xDatexTime,CashAmount,EndCash,Notes,xTransaction) VALUES (@TransactionNo,@SessionId,@DateTime,@BeginCash,@EndCash,@Notes,@XTransaction)", conn)
                 command.Parameters.AddWithValue("@TransactionNo", TransNo)
-                command.Parameters.AddWithValue("@SessionId", Splitted() & TxtCashierName.Text)
+                command.Parameters.AddWithValue("@SessionId", SessionID)
                 command.Parameters.AddWithValue("@DateTime", Splitted)
                 command.Parameters.AddWithValue("@BeginCash", TxtBegCash.Text)
                 command.Parameters.AddWithValue("@EndCash", "")

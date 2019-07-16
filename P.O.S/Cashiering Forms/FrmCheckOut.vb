@@ -33,8 +33,8 @@ Public Class FrmCheckOut
         Dim Total As Decimal
         Dim value As String = FrmCashierSession.LblTotalRes.Text
         Converted = Regex.Replace(value, "[^A-Za-z\-/0-9\./]", "")
-        VAT = Math.Round(Converted * 0.12, 2)
-        Total = VAT + Converted
+        '   VAT = Math.Round(Converted * 0.12, 2)
+        Total = Converted
         Total = Math.Round(Total, 2)
         Return Total
     End Function
@@ -52,19 +52,19 @@ Public Class FrmCheckOut
     End Sub
 
     Sub ConfirmBillOut()
-        Dim xDate As String = Format(Date.Now, "dd-mm-yy").ToString
+        Dim xDate As String = Format(Date.Now, "dd-MM-yy").ToString
         Dim xTime As String = Format(Date.Now, "hh:mm:ss tt").ToString
         Try
             GetTransactionNo()
             Using conn As New SqlConnection(My.Settings.ConnectionString)
                 conn.Open()
-                Dim command As New SqlCommand("INSERT INTO Tbl_TransactionHeader (TransactionNo,TransDate,TransTime,Cashier,TotalAmount,VAT,PaymentMethod,CashTendered,Change,TransactionType) VALUES (@TransactionNo,@Date,@Time,@Cashier,@TotalAmount,@VAT,'Cash',@CashTendered,@Change,'Sales')", conn)
+                Dim command As New SqlCommand("INSERT INTO Tbl_TransactionHeader (TransactionNo,TransDate,TransTime,Cashier,TotalAmount,PaymentMethod,CashTendered,Change,TransactionType) VALUES (@TransactionNo,@Date,@Time,@Cashier,@TotalAmount,'Cash',@CashTendered,@Change,'Sales')", conn)
                 command.Parameters.AddWithValue("@TransactionNo", TransactionNo)
                 command.Parameters.AddWithValue("@Date", xDate)
                 command.Parameters.AddWithValue("@Time", xTime)
                 command.Parameters.AddWithValue("@Cashier", My.Settings.FullName)
                 command.Parameters.AddWithValue("@TotalAmount", TxtTotalAmount.Text)
-                command.Parameters.AddWithValue("@VAT", LblVat.Text)
+                'command.Parameters.AddWithValue("@VAT", LblVat.Text)
                 command.Parameters.AddWithValue("@CashTendered", TxtCashTendered.Text)
                 command.Parameters.AddWithValue("@Change", TxtChange.Text)
                 command.ExecuteNonQuery()
@@ -89,13 +89,14 @@ Public Class FrmCheckOut
                 }
                 DA.Fill(DT)
                 If DT.Rows.Count > 0 Then
-                    Dim TransNum As Integer
+                    Dim TransNum As String
                     For Each dr As DataRow In DT.Rows
-                        TransNum = dr(0) + 1
-                        TransactionNo = Format(TransNum, "000000000000")
+                        ' TransNum = dr(0) + 1
+                        TransNum = Date.Now.ToString("yyyyMMdd-hhmmss")
+                        TransactionNo = TransNum + My.Settings.Username
                     Next
-                Else
-                    TransactionNo = "000000000001"
+                    'Else
+                    '    TransactionNo = "000000000001"
                 End If
 
             End Using
@@ -127,10 +128,12 @@ Public Class FrmCheckOut
 
     Private Sub FrmCheckOut_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TxtTotalAmount.Text = ToBeMinusToTotalAmount()
-        LblVATplus.Text = VAT.ToString
-        LblVat.Text = LblVATplus.Text
+        '     LblVATplus.Text = VAT.ToString
+        '  LblVat.Text = LblVATplus.Text
         LblTotalXVat.Text = Converted.ToString
     End Sub
+
+
 
     Sub ClearTexts()
         TxtTotalAmount.Clear()

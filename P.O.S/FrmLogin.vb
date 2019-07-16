@@ -28,6 +28,7 @@ Public Class frmLogin
                     user1 = dr(3)
                     pass1 = dr(4)
                     My.Settings.FullName = dr(1)
+                    My.Settings.Username = user1
                 Next
                 If txtUsername.Text = user1 AndAlso txtPassword.Text = pass1 Then
                     If MessageBox.Show("Welcome " & Lblaccount.Text, "POS - Login", MessageBoxButtons.OK, MessageBoxIcon.Information) = DialogResult.OK Then
