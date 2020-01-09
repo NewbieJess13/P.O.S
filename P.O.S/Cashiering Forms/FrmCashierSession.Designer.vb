@@ -26,23 +26,17 @@ Partial Class FrmCashierSession
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCashierSession))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.LblNotification = New System.Windows.Forms.Label()
-        Me.LblPrevPrevBarcode = New System.Windows.Forms.Label()
-        Me.LblPrevBarcode = New System.Windows.Forms.Label()
         Me.LblDateTime = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.LblCashier = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.LblTotalRes = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
         Me.DGItemList = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -51,73 +45,82 @@ Partial Class FrmCashierSession
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.BtnManualInput = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.BtnVoidTrans = New System.Windows.Forms.Button()
-        Me.BtnVoidItem = New System.Windows.Forms.Button()
-        Me.BtnEnter = New System.Windows.Forms.Button()
-        Me.BtnClear = New System.Windows.Forms.Button()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
+        Me.LblTotalRes = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel10 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel9 = New System.Windows.Forms.TableLayoutPanel()
         Me.BtnAddToCredits = New System.Windows.Forms.Button()
         Me.BtnCashTendered = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel8 = New System.Windows.Forms.TableLayoutPanel()
+        Me.BtnReplenishCash = New System.Windows.Forms.Button()
         Me.BtnEndSession = New System.Windows.Forms.Button()
         Me.BtnPullOutCash = New System.Windows.Forms.Button()
-        Me.BtnReplenishCash = New System.Windows.Forms.Button()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.TxtBarcode = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TxtQuanProd = New System.Windows.Forms.TextBox()
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnSnacks = New System.Windows.Forms.Button()
+        Me.btnOthers = New System.Windows.Forms.Button()
+        Me.btnMeals = New System.Windows.Forms.Button()
+        Me.btnBeverages = New System.Windows.Forms.Button()
+        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.BtnTuldok = New System.Windows.Forms.Button()
-        Me.Btn00 = New System.Windows.Forms.Button()
-        Me.Btn0 = New System.Windows.Forms.Button()
-        Me.Btn9 = New System.Windows.Forms.Button()
-        Me.Btn8 = New System.Windows.Forms.Button()
-        Me.Btn7 = New System.Windows.Forms.Button()
-        Me.Btn6 = New System.Windows.Forms.Button()
-        Me.Btn5 = New System.Windows.Forms.Button()
-        Me.Btn4 = New System.Windows.Forms.Button()
-        Me.Btn3 = New System.Windows.Forms.Button()
-        Me.Btn2 = New System.Windows.Forms.Button()
-        Me.Btn1 = New System.Windows.Forms.Button()
-        Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
-        Me.Panel3.SuspendLayout()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.TableLayoutPanel1.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        Me.Panel9.SuspendLayout()
-        CType(Me.DGItemList, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel5.SuspendLayout()
-        Me.Panel7.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
-        Me.TableLayoutPanel3.SuspendLayout()
-        Me.Panel8.SuspendLayout()
-        Me.TableLayoutPanel5.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
-        Me.Panel6.SuspendLayout()
+        Me.TableLayoutPanel6.SuspendLayout()
+        CType(Me.DGItemList, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel10.SuspendLayout()
+        Me.TableLayoutPanel9.SuspendLayout()
+        Me.TableLayoutPanel8.SuspendLayout()
+        Me.TableLayoutPanel3.SuspendLayout()
+        Me.TableLayoutPanel7.SuspendLayout()
+        Me.TableLayoutPanel5.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.ColumnCount = 1
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 1)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 3
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1062, 608)
+        Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label1.Font = New System.Drawing.Font("Malgun Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(3, 576)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(1056, 32)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "© Copyright | GAMOSA TECHNOLOGY SOLUTIONS"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.LblNotification)
-        Me.Panel1.Controls.Add(Me.LblPrevPrevBarcode)
-        Me.Panel1.Controls.Add(Me.LblPrevBarcode)
         Me.Panel1.Controls.Add(Me.LblDateTime)
-        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.LblCashier)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.PictureBox2)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Location = New System.Drawing.Point(3, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1062, 94)
+        Me.Panel1.Size = New System.Drawing.Size(1056, 50)
         Me.Panel1.TabIndex = 1
         '
         'LblNotification
@@ -126,183 +129,110 @@ Partial Class FrmCashierSession
         Me.LblNotification.AutoSize = True
         Me.LblNotification.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblNotification.ForeColor = System.Drawing.Color.Brown
-        Me.LblNotification.Location = New System.Drawing.Point(955, 76)
+        Me.LblNotification.Location = New System.Drawing.Point(949, 32)
         Me.LblNotification.Name = "LblNotification"
         Me.LblNotification.Size = New System.Drawing.Size(0, 15)
         Me.LblNotification.TabIndex = 27
         Me.LblNotification.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'LblPrevPrevBarcode
-        '
-        Me.LblPrevPrevBarcode.AutoSize = True
-        Me.LblPrevPrevBarcode.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPrevPrevBarcode.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.LblPrevPrevBarcode.Location = New System.Drawing.Point(366, 78)
-        Me.LblPrevPrevBarcode.Name = "LblPrevPrevBarcode"
-        Me.LblPrevPrevBarcode.Size = New System.Drawing.Size(101, 15)
-        Me.LblPrevPrevBarcode.TabIndex = 26
-        Me.LblPrevPrevBarcode.Text = "PrevPrevBarcode"
-        Me.LblPrevPrevBarcode.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.LblPrevPrevBarcode.Visible = False
-        '
-        'LblPrevBarcode
-        '
-        Me.LblPrevBarcode.AutoSize = True
-        Me.LblPrevBarcode.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPrevBarcode.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.LblPrevBarcode.Location = New System.Drawing.Point(272, 78)
-        Me.LblPrevBarcode.Name = "LblPrevBarcode"
-        Me.LblPrevBarcode.Size = New System.Drawing.Size(77, 15)
-        Me.LblPrevBarcode.TabIndex = 25
-        Me.LblPrevBarcode.Text = "PrevBarcode"
-        Me.LblPrevBarcode.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.LblPrevBarcode.Visible = False
-        '
         'LblDateTime
         '
         Me.LblDateTime.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblDateTime.AutoSize = True
         Me.LblDateTime.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblDateTime.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.LblDateTime.Location = New System.Drawing.Point(635, 39)
+        Me.LblDateTime.Location = New System.Drawing.Point(899, 7)
         Me.LblDateTime.Name = "LblDateTime"
-        Me.LblDateTime.Size = New System.Drawing.Size(424, 23)
+        Me.LblDateTime.Size = New System.Drawing.Size(154, 23)
         Me.LblDateTime.TabIndex = 24
         Me.LblDateTime.Text = "{date and time}"
         Me.LblDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'Label3
+        'LblCashier
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label3.Location = New System.Drawing.Point(365, 39)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(76, 23)
-        Me.Label3.TabIndex = 23
-        Me.Label3.Text = "{name}"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblCashier.AutoSize = True
+        Me.LblCashier.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCashier.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.LblCashier.Location = New System.Drawing.Point(300, 9)
+        Me.LblCashier.Name = "LblCashier"
+        Me.LblCashier.Size = New System.Drawing.Size(65, 21)
+        Me.LblCashier.TabIndex = 23
+        Me.LblCashier.Text = "{name}"
+        Me.LblCashier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label2.Location = New System.Drawing.Point(259, 39)
+        Me.Label2.Location = New System.Drawing.Point(218, 9)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(104, 23)
+        Me.Label2.Size = New System.Drawing.Size(87, 21)
         Me.Label2.TabIndex = 22
         Me.Label2.Text = "CASHIER |"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.P.O.S.My.Resources.Resources.horLine
-        Me.PictureBox1.Location = New System.Drawing.Point(222, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(31, 93)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 21
-        Me.PictureBox1.TabStop = False
-        '
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox2.Location = New System.Drawing.Point(12, 7)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(204, 69)
+        Me.PictureBox2.Size = New System.Drawing.Size(167, 36)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 20
         Me.PictureBox2.TabStop = False
         '
-        'Panel2
+        'TableLayoutPanel2
         '
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 569)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1062, 39)
-        Me.Panel2.TabIndex = 2
+        Me.TableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial
+        Me.TableLayoutPanel2.ColumnCount = 2
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.26686!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.73315!))
+        Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel4, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel3, 1, 0)
+        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 63)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 1
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1056, 510)
+        Me.TableLayoutPanel2.TabIndex = 2
         '
-        'Label1
+        'TableLayoutPanel4
         '
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label1.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(0, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1062, 39)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "© Copyright | GAMOSA TECHNOLOGY SOLUTIONS"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.TableLayoutPanel4.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel4.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
+        Me.TableLayoutPanel4.ColumnCount = 1
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.63736!))
+        Me.TableLayoutPanel4.Controls.Add(Me.TableLayoutPanel6, 0, 0)
+        Me.TableLayoutPanel4.Controls.Add(Me.TableLayoutPanel10, 0, 1)
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(6, 6)
+        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
+        Me.TableLayoutPanel4.RowCount = 2
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.38631!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.61368!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(237, 498)
+        Me.TableLayoutPanel4.TabIndex = 1
         '
-        'Panel3
+        'TableLayoutPanel6
         '
-        Me.Panel3.Controls.Add(Me.TableLayoutPanel1)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(0, 94)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1062, 475)
-        Me.Panel3.TabIndex = 3
-        '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Panel4, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Panel5, 1, 0)
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 1
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1062, 475)
-        Me.TableLayoutPanel1.TabIndex = 0
-        '
-        'Panel4
-        '
-        Me.Panel4.Controls.Add(Me.Panel9)
-        Me.Panel4.Controls.Add(Me.DGItemList)
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel4.Location = New System.Drawing.Point(3, 3)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(418, 469)
-        Me.Panel4.TabIndex = 0
-        '
-        'Panel9
-        '
-        Me.Panel9.BackColor = System.Drawing.Color.IndianRed
-        Me.Panel9.Controls.Add(Me.Label13)
-        Me.Panel9.Controls.Add(Me.LblTotalRes)
-        Me.Panel9.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel9.Location = New System.Drawing.Point(0, 424)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(418, 45)
-        Me.Panel9.TabIndex = 4
-        '
-        'Label13
-        '
-        Me.Label13.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label13.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label13.Location = New System.Drawing.Point(0, 0)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(155, 45)
-        Me.Label13.TabIndex = 2
-        Me.Label13.Text = "TOTAL"
-        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'LblTotalRes
-        '
-        Me.LblTotalRes.Dock = System.Windows.Forms.DockStyle.Right
-        Me.LblTotalRes.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTotalRes.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.LblTotalRes.Location = New System.Drawing.Point(85, 0)
-        Me.LblTotalRes.Name = "LblTotalRes"
-        Me.LblTotalRes.Size = New System.Drawing.Size(333, 45)
-        Me.LblTotalRes.TabIndex = 3
-        Me.LblTotalRes.Text = "0.00"
-        Me.LblTotalRes.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.TableLayoutPanel6.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
+        Me.TableLayoutPanel6.ColumnCount = 1
+        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel6.Controls.Add(Me.DGItemList, 0, 0)
+        Me.TableLayoutPanel6.Controls.Add(Me.LblTotalRes, 0, 1)
+        Me.TableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel6.Location = New System.Drawing.Point(4, 4)
+        Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
+        Me.TableLayoutPanel6.RowCount = 2
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.45981!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.54019!))
+        Me.TableLayoutPanel6.Size = New System.Drawing.Size(229, 312)
+        Me.TableLayoutPanel6.TabIndex = 7
         '
         'DGItemList
         '
@@ -318,31 +248,31 @@ Partial Class FrmCashierSession
         Me.DGItemList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Malgun Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DGItemList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DGItemList.ColumnHeadersHeight = 41
+        Me.DGItemList.ColumnHeadersHeight = 20
         Me.DGItemList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DGItemList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Malgun Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DGItemList.DefaultCellStyle = DataGridViewCellStyle2
-        Me.DGItemList.Location = New System.Drawing.Point(3, 0)
+        Me.DGItemList.Location = New System.Drawing.Point(4, 4)
         Me.DGItemList.MultiSelect = False
         Me.DGItemList.Name = "DGItemList"
         Me.DGItemList.ReadOnly = True
         Me.DGItemList.RowHeadersVisible = False
         Me.DGItemList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.DGItemList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGItemList.Size = New System.Drawing.Size(412, 358)
+        Me.DGItemList.Size = New System.Drawing.Size(221, 264)
         Me.DGItemList.TabIndex = 23
         '
         'Column1
@@ -392,185 +322,61 @@ Partial Class FrmCashierSession
         Me.Column7.ReadOnly = True
         Me.Column7.Visible = False
         '
-        'Panel5
+        'LblTotalRes
         '
-        Me.Panel5.Controls.Add(Me.Panel7)
-        Me.Panel5.Controls.Add(Me.Panel6)
-        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel5.Location = New System.Drawing.Point(427, 3)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(632, 469)
-        Me.Panel5.TabIndex = 1
+        Me.LblTotalRes.BackColor = System.Drawing.Color.Salmon
+        Me.LblTotalRes.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LblTotalRes.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTotalRes.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.LblTotalRes.Location = New System.Drawing.Point(4, 272)
+        Me.LblTotalRes.Name = "LblTotalRes"
+        Me.LblTotalRes.Size = New System.Drawing.Size(221, 39)
+        Me.LblTotalRes.TabIndex = 3
+        Me.LblTotalRes.Text = "0.00"
+        Me.LblTotalRes.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'Panel7
+        'TableLayoutPanel10
         '
-        Me.Panel7.Controls.Add(Me.TableLayoutPanel2)
-        Me.Panel7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel7.Location = New System.Drawing.Point(0, 43)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(632, 426)
-        Me.Panel7.TabIndex = 1
+        Me.TableLayoutPanel10.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset
+        Me.TableLayoutPanel10.ColumnCount = 1
+        Me.TableLayoutPanel10.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel10.Controls.Add(Me.TableLayoutPanel9, 0, 1)
+        Me.TableLayoutPanel10.Controls.Add(Me.TableLayoutPanel8, 0, 0)
+        Me.TableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel10.Location = New System.Drawing.Point(4, 323)
+        Me.TableLayoutPanel10.Name = "TableLayoutPanel10"
+        Me.TableLayoutPanel10.RowCount = 2
+        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.77049!))
+        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.22951!))
+        Me.TableLayoutPanel10.Size = New System.Drawing.Size(229, 171)
+        Me.TableLayoutPanel10.TabIndex = 24
         '
-        'TableLayoutPanel2
+        'TableLayoutPanel9
         '
-        Me.TableLayoutPanel2.ColumnCount = 2
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.BtnManualInput, 1, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel3, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Panel8, 1, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel4, 0, 1)
-        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 2
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(632, 426)
-        Me.TableLayoutPanel2.TabIndex = 0
-        '
-        'BtnManualInput
-        '
-        Me.BtnManualInput.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(76, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.BtnManualInput.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnManualInput.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnManualInput.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnManualInput.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.BtnManualInput.Location = New System.Drawing.Point(445, 343)
-        Me.BtnManualInput.Name = "BtnManualInput"
-        Me.BtnManualInput.Size = New System.Drawing.Size(184, 80)
-        Me.BtnManualInput.TabIndex = 23
-        Me.BtnManualInput.Text = "MANUAL INPUT"
-        Me.BtnManualInput.UseVisualStyleBackColor = False
-        '
-        'TableLayoutPanel3
-        '
-        Me.TableLayoutPanel3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel3.ColumnCount = 4
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.63736!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.45245!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.46342!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.44677!))
-        Me.TableLayoutPanel3.Controls.Add(Me.Btn00, 0, 3)
-        Me.TableLayoutPanel3.Controls.Add(Me.BtnTuldok, 0, 3)
-        Me.TableLayoutPanel3.Controls.Add(Me.BtnVoidTrans, 0, 3)
-        Me.TableLayoutPanel3.Controls.Add(Me.Btn9, 0, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.Btn8, 0, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.Btn0, 0, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.BtnVoidItem, 0, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.Btn7, 0, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.Btn5, 0, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.Btn6, 0, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.BtnEnter, 0, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.Btn2, 0, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.Btn1, 0, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.Btn3, 0, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.Btn4, 0, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.BtnClear, 0, 0)
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 3)
-        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
-        Me.TableLayoutPanel3.RowCount = 4
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(436, 334)
-        Me.TableLayoutPanel3.TabIndex = 1
-        '
-        'BtnVoidTrans
-        '
-        Me.BtnVoidTrans.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(112, Byte), Integer), CType(CType(85, Byte), Integer))
-        Me.BtnVoidTrans.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnVoidTrans.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnVoidTrans.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnVoidTrans.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.BtnVoidTrans.Location = New System.Drawing.Point(318, 252)
-        Me.BtnVoidTrans.Name = "BtnVoidTrans"
-        Me.BtnVoidTrans.Size = New System.Drawing.Size(115, 79)
-        Me.BtnVoidTrans.TabIndex = 17
-        Me.BtnVoidTrans.Text = "VOID TRANSACTION"
-        Me.BtnVoidTrans.UseVisualStyleBackColor = False
-        '
-        'BtnVoidItem
-        '
-        Me.BtnVoidItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.BtnVoidItem.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnVoidItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnVoidItem.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnVoidItem.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.BtnVoidItem.Location = New System.Drawing.Point(318, 169)
-        Me.BtnVoidItem.Name = "BtnVoidItem"
-        Me.BtnVoidItem.Size = New System.Drawing.Size(115, 77)
-        Me.BtnVoidItem.TabIndex = 16
-        Me.BtnVoidItem.Text = "VOID ITEM"
-        Me.BtnVoidItem.UseVisualStyleBackColor = False
-        '
-        'BtnEnter
-        '
-        Me.BtnEnter.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
-        Me.BtnEnter.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnEnter.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEnter.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.BtnEnter.Location = New System.Drawing.Point(318, 86)
-        Me.BtnEnter.Name = "BtnEnter"
-        Me.BtnEnter.Size = New System.Drawing.Size(115, 77)
-        Me.BtnEnter.TabIndex = 15
-        Me.BtnEnter.Text = "ENTER"
-        Me.BtnEnter.UseVisualStyleBackColor = False
-        '
-        'BtnClear
-        '
-        Me.BtnClear.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.BtnClear.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnClear.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnClear.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.BtnClear.Location = New System.Drawing.Point(318, 3)
-        Me.BtnClear.Name = "BtnClear"
-        Me.BtnClear.Size = New System.Drawing.Size(115, 77)
-        Me.BtnClear.TabIndex = 14
-        Me.BtnClear.Text = "C"
-        Me.BtnClear.UseVisualStyleBackColor = False
-        '
-        'Panel8
-        '
-        Me.Panel8.Controls.Add(Me.TableLayoutPanel5)
-        Me.Panel8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel8.Location = New System.Drawing.Point(445, 3)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(184, 334)
-        Me.Panel8.TabIndex = 2
-        '
-        'TableLayoutPanel5
-        '
-        Me.TableLayoutPanel5.ColumnCount = 1
-        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel5.Controls.Add(Me.BtnAddToCredits, 0, 1)
-        Me.TableLayoutPanel5.Controls.Add(Me.BtnCashTendered, 0, 0)
-        Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel5.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
-        Me.TableLayoutPanel5.RowCount = 2
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel5.Size = New System.Drawing.Size(184, 334)
-        Me.TableLayoutPanel5.TabIndex = 0
+        Me.TableLayoutPanel9.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset
+        Me.TableLayoutPanel9.ColumnCount = 2
+        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel9.Controls.Add(Me.BtnAddToCredits, 1, 0)
+        Me.TableLayoutPanel9.Controls.Add(Me.BtnCashTendered, 0, 0)
+        Me.TableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel9.Location = New System.Drawing.Point(5, 87)
+        Me.TableLayoutPanel9.Name = "TableLayoutPanel9"
+        Me.TableLayoutPanel9.RowCount = 1
+        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel9.Size = New System.Drawing.Size(219, 79)
+        Me.TableLayoutPanel9.TabIndex = 24
         '
         'BtnAddToCredits
         '
         Me.BtnAddToCredits.BackColor = System.Drawing.Color.Gray
         Me.BtnAddToCredits.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnAddToCredits.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAddToCredits.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAddToCredits.Font = New System.Drawing.Font("Malgun Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAddToCredits.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.BtnAddToCredits.Location = New System.Drawing.Point(3, 170)
+        Me.BtnAddToCredits.Location = New System.Drawing.Point(113, 5)
         Me.BtnAddToCredits.Name = "BtnAddToCredits"
-        Me.BtnAddToCredits.Size = New System.Drawing.Size(178, 161)
+        Me.BtnAddToCredits.Size = New System.Drawing.Size(101, 69)
         Me.BtnAddToCredits.TabIndex = 19
         Me.BtnAddToCredits.Text = "ADD TO CREDITS"
         Me.BtnAddToCredits.UseVisualStyleBackColor = False
@@ -580,43 +386,57 @@ Partial Class FrmCashierSession
         Me.BtnCashTendered.BackColor = System.Drawing.Color.Gray
         Me.BtnCashTendered.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnCashTendered.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCashTendered.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCashTendered.Font = New System.Drawing.Font("Malgun Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCashTendered.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.BtnCashTendered.Location = New System.Drawing.Point(3, 3)
+        Me.BtnCashTendered.Location = New System.Drawing.Point(5, 5)
         Me.BtnCashTendered.Name = "BtnCashTendered"
-        Me.BtnCashTendered.Size = New System.Drawing.Size(178, 161)
+        Me.BtnCashTendered.Size = New System.Drawing.Size(100, 69)
         Me.BtnCashTendered.TabIndex = 18
         Me.BtnCashTendered.Text = "CHECK OUT"
         Me.BtnCashTendered.UseVisualStyleBackColor = False
         '
-        'TableLayoutPanel4
+        'TableLayoutPanel8
         '
-        Me.TableLayoutPanel4.ColumnCount = 3
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel4.Controls.Add(Me.BtnEndSession, 0, 0)
-        Me.TableLayoutPanel4.Controls.Add(Me.BtnPullOutCash, 0, 0)
-        Me.TableLayoutPanel4.Controls.Add(Me.BtnReplenishCash, 0, 0)
-        Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(3, 343)
-        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
-        Me.TableLayoutPanel4.RowCount = 1
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(436, 80)
-        Me.TableLayoutPanel4.TabIndex = 3
+        Me.TableLayoutPanel8.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset
+        Me.TableLayoutPanel8.ColumnCount = 3
+        Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel8.Controls.Add(Me.BtnReplenishCash, 0, 0)
+        Me.TableLayoutPanel8.Controls.Add(Me.BtnEndSession, 2, 0)
+        Me.TableLayoutPanel8.Controls.Add(Me.BtnPullOutCash, 1, 0)
+        Me.TableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel8.Location = New System.Drawing.Point(5, 5)
+        Me.TableLayoutPanel8.Name = "TableLayoutPanel8"
+        Me.TableLayoutPanel8.RowCount = 1
+        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel8.Size = New System.Drawing.Size(219, 74)
+        Me.TableLayoutPanel8.TabIndex = 23
+        '
+        'BtnReplenishCash
+        '
+        Me.BtnReplenishCash.BackColor = System.Drawing.Color.Gray
+        Me.BtnReplenishCash.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnReplenishCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnReplenishCash.Font = New System.Drawing.Font("Malgun Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnReplenishCash.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.BtnReplenishCash.Location = New System.Drawing.Point(5, 5)
+        Me.BtnReplenishCash.Name = "BtnReplenishCash"
+        Me.BtnReplenishCash.Size = New System.Drawing.Size(64, 64)
+        Me.BtnReplenishCash.TabIndex = 20
+        Me.BtnReplenishCash.Text = "REPLENISH CASH"
+        Me.BtnReplenishCash.UseVisualStyleBackColor = False
         '
         'BtnEndSession
         '
         Me.BtnEndSession.BackColor = System.Drawing.Color.Gray
         Me.BtnEndSession.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnEndSession.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnEndSession.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEndSession.Font = New System.Drawing.Font("Malgun Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEndSession.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.BtnEndSession.Location = New System.Drawing.Point(293, 3)
+        Me.BtnEndSession.Location = New System.Drawing.Point(149, 5)
         Me.BtnEndSession.Name = "BtnEndSession"
-        Me.BtnEndSession.Size = New System.Drawing.Size(140, 74)
+        Me.BtnEndSession.Size = New System.Drawing.Size(65, 64)
         Me.BtnEndSession.TabIndex = 22
         Me.BtnEndSession.Text = "CLOSE SESSION"
         Me.BtnEndSession.UseVisualStyleBackColor = False
@@ -626,246 +446,195 @@ Partial Class FrmCashierSession
         Me.BtnPullOutCash.BackColor = System.Drawing.Color.Gray
         Me.BtnPullOutCash.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnPullOutCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnPullOutCash.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnPullOutCash.Font = New System.Drawing.Font("Malgun Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnPullOutCash.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.BtnPullOutCash.Location = New System.Drawing.Point(148, 3)
+        Me.BtnPullOutCash.Location = New System.Drawing.Point(77, 5)
         Me.BtnPullOutCash.Name = "BtnPullOutCash"
-        Me.BtnPullOutCash.Size = New System.Drawing.Size(139, 74)
+        Me.BtnPullOutCash.Size = New System.Drawing.Size(64, 64)
         Me.BtnPullOutCash.TabIndex = 21
         Me.BtnPullOutCash.Text = "PULL OUT CASH"
         Me.BtnPullOutCash.UseVisualStyleBackColor = False
         '
-        'BtnReplenishCash
+        'TableLayoutPanel3
         '
-        Me.BtnReplenishCash.BackColor = System.Drawing.Color.Gray
-        Me.BtnReplenishCash.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnReplenishCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnReplenishCash.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnReplenishCash.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.BtnReplenishCash.Location = New System.Drawing.Point(3, 3)
-        Me.BtnReplenishCash.Name = "BtnReplenishCash"
-        Me.BtnReplenishCash.Size = New System.Drawing.Size(139, 74)
-        Me.BtnReplenishCash.TabIndex = 20
-        Me.BtnReplenishCash.Text = "REPLENISH CASH"
-        Me.BtnReplenishCash.UseVisualStyleBackColor = False
+        Me.TableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset
+        Me.TableLayoutPanel3.ColumnCount = 1
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel7, 0, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel5, 0, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.FlowLayoutPanel1, 0, 1)
+        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(252, 6)
+        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
+        Me.TableLayoutPanel3.RowCount = 3
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(798, 498)
+        Me.TableLayoutPanel3.TabIndex = 2
         '
-        'Panel6
+        'TableLayoutPanel7
         '
-        Me.Panel6.Controls.Add(Me.TxtBarcode)
-        Me.Panel6.Controls.Add(Me.Label4)
-        Me.Panel6.Controls.Add(Me.TxtQuanProd)
-        Me.Panel6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel6.Location = New System.Drawing.Point(0, 0)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(632, 43)
-        Me.Panel6.TabIndex = 0
+        Me.TableLayoutPanel7.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
+        Me.TableLayoutPanel7.ColumnCount = 4
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel7.Controls.Add(Me.btnSnacks, 0, 0)
+        Me.TableLayoutPanel7.Controls.Add(Me.btnOthers, 0, 0)
+        Me.TableLayoutPanel7.Controls.Add(Me.btnMeals, 0, 0)
+        Me.TableLayoutPanel7.Controls.Add(Me.btnBeverages, 0, 0)
+        Me.TableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel7.Location = New System.Drawing.Point(5, 5)
+        Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
+        Me.TableLayoutPanel7.RowCount = 1
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel7.Size = New System.Drawing.Size(788, 43)
+        Me.TableLayoutPanel7.TabIndex = 1
         '
-        'TxtBarcode
+        'btnSnacks
         '
-        Me.TxtBarcode.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtBarcode.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TxtBarcode.Font = New System.Drawing.Font("Century Gothic", 24.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtBarcode.Location = New System.Drawing.Point(208, 0)
-        Me.TxtBarcode.MaxLength = 13
-        Me.TxtBarcode.Name = "TxtBarcode"
-        Me.TxtBarcode.Size = New System.Drawing.Size(424, 41)
-        Me.TxtBarcode.TabIndex = 0
+        Me.btnSnacks.BackColor = System.Drawing.Color.Gray
+        Me.btnSnacks.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnSnacks.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSnacks.Font = New System.Drawing.Font("Malgun Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSnacks.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnSnacks.Location = New System.Drawing.Point(396, 4)
+        Me.btnSnacks.Name = "btnSnacks"
+        Me.btnSnacks.Size = New System.Drawing.Size(189, 35)
+        Me.btnSnacks.TabIndex = 23
+        Me.btnSnacks.Text = "SNACKS"
+        Me.btnSnacks.UseVisualStyleBackColor = False
         '
-        'Label4
+        'btnOthers
         '
-        Me.Label4.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label4.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(163, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(45, 43)
-        Me.Label4.TabIndex = 1
-        Me.Label4.Text = "X"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnOthers.BackColor = System.Drawing.Color.Gray
+        Me.btnOthers.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnOthers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnOthers.Font = New System.Drawing.Font("Malgun Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOthers.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnOthers.Location = New System.Drawing.Point(592, 4)
+        Me.btnOthers.Name = "btnOthers"
+        Me.btnOthers.Size = New System.Drawing.Size(192, 35)
+        Me.btnOthers.TabIndex = 22
+        Me.btnOthers.Text = "OTHERS"
+        Me.btnOthers.UseVisualStyleBackColor = False
         '
-        'TxtQuanProd
+        'btnMeals
         '
-        Me.TxtQuanProd.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtQuanProd.Dock = System.Windows.Forms.DockStyle.Left
-        Me.TxtQuanProd.Font = New System.Drawing.Font("Century Gothic", 24.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtQuanProd.Location = New System.Drawing.Point(0, 0)
-        Me.TxtQuanProd.Name = "TxtQuanProd"
-        Me.TxtQuanProd.Size = New System.Drawing.Size(163, 41)
-        Me.TxtQuanProd.TabIndex = 1
-        Me.TxtQuanProd.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.btnMeals.BackColor = System.Drawing.Color.Gray
+        Me.btnMeals.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnMeals.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMeals.Font = New System.Drawing.Font("Malgun Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMeals.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnMeals.Location = New System.Drawing.Point(4, 4)
+        Me.btnMeals.Name = "btnMeals"
+        Me.btnMeals.Size = New System.Drawing.Size(189, 35)
+        Me.btnMeals.TabIndex = 21
+        Me.btnMeals.Text = "MEALS"
+        Me.btnMeals.UseVisualStyleBackColor = False
+        '
+        'btnBeverages
+        '
+        Me.btnBeverages.BackColor = System.Drawing.Color.Gray
+        Me.btnBeverages.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnBeverages.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBeverages.Font = New System.Drawing.Font("Malgun Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBeverages.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnBeverages.Location = New System.Drawing.Point(200, 4)
+        Me.btnBeverages.Name = "btnBeverages"
+        Me.btnBeverages.Size = New System.Drawing.Size(189, 35)
+        Me.btnBeverages.TabIndex = 20
+        Me.btnBeverages.Text = "BEVERAGES"
+        Me.btnBeverages.UseVisualStyleBackColor = False
+        '
+        'TableLayoutPanel5
+        '
+        Me.TableLayoutPanel5.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
+        Me.TableLayoutPanel5.ColumnCount = 4
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel5.Controls.Add(Me.Button8, 0, 0)
+        Me.TableLayoutPanel5.Controls.Add(Me.Button7, 0, 0)
+        Me.TableLayoutPanel5.Controls.Add(Me.Button6, 0, 0)
+        Me.TableLayoutPanel5.Controls.Add(Me.Button5, 0, 0)
+        Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel5.Location = New System.Drawing.Point(5, 450)
+        Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
+        Me.TableLayoutPanel5.RowCount = 1
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(788, 43)
+        Me.TableLayoutPanel5.TabIndex = 0
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.Silver
+        Me.Button8.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Malgun Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Button8.Location = New System.Drawing.Point(396, 4)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(189, 35)
+        Me.Button8.TabIndex = 25
+        Me.Button8.Text = "Load Card"
+        Me.Button8.UseVisualStyleBackColor = False
+        '
+        'Button7
+        '
+        Me.Button7.BackColor = System.Drawing.Color.Silver
+        Me.Button7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Font = New System.Drawing.Font("Malgun Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Button7.Location = New System.Drawing.Point(592, 4)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(192, 35)
+        Me.Button7.TabIndex = 24
+        Me.Button7.Text = "Via Cashcard"
+        Me.Button7.UseVisualStyleBackColor = False
+        '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.Color.Silver
+        Me.Button6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Malgun Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Button6.Location = New System.Drawing.Point(4, 4)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(189, 35)
+        Me.Button6.TabIndex = 23
+        Me.Button6.Text = "Via Allowance"
+        Me.Button6.UseVisualStyleBackColor = False
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.Silver
+        Me.Button5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Malgun Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Button5.Location = New System.Drawing.Point(200, 4)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(189, 35)
+        Me.Button5.TabIndex = 22
+        Me.Button5.Text = "Via Cash"
+        Me.Button5.UseVisualStyleBackColor = False
+        '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(5, 56)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(788, 386)
+        Me.FlowLayoutPanel1.TabIndex = 2
         '
         'Timer1
         '
-        '
-        'BtnTuldok
-        '
-        Me.BtnTuldok.BackColor = System.Drawing.Color.Gray
-        Me.BtnTuldok.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnTuldok.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnTuldok.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnTuldok.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.BtnTuldok.Location = New System.Drawing.Point(212, 252)
-        Me.BtnTuldok.Name = "BtnTuldok"
-        Me.BtnTuldok.Size = New System.Drawing.Size(100, 79)
-        Me.BtnTuldok.TabIndex = 13
-        Me.BtnTuldok.Text = "."
-        Me.BtnTuldok.UseVisualStyleBackColor = False
-        '
-        'Btn00
-        '
-        Me.Btn00.BackColor = System.Drawing.Color.Gray
-        Me.Btn00.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn00.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn00.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn00.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Btn00.Location = New System.Drawing.Point(106, 252)
-        Me.Btn00.Name = "Btn00"
-        Me.Btn00.Size = New System.Drawing.Size(100, 79)
-        Me.Btn00.TabIndex = 12
-        Me.Btn00.Text = "00"
-        Me.Btn00.UseVisualStyleBackColor = False
-        '
-        'Btn0
-        '
-        Me.Btn0.BackColor = System.Drawing.Color.Gray
-        Me.Btn0.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn0.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn0.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Btn0.Location = New System.Drawing.Point(3, 252)
-        Me.Btn0.Name = "Btn0"
-        Me.Btn0.Size = New System.Drawing.Size(97, 79)
-        Me.Btn0.TabIndex = 11
-        Me.Btn0.Text = "0"
-        Me.Btn0.UseVisualStyleBackColor = False
-        '
-        'Btn9
-        '
-        Me.Btn9.BackColor = System.Drawing.Color.Gray
-        Me.Btn9.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn9.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn9.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Btn9.Location = New System.Drawing.Point(212, 169)
-        Me.Btn9.Name = "Btn9"
-        Me.Btn9.Size = New System.Drawing.Size(100, 77)
-        Me.Btn9.TabIndex = 10
-        Me.Btn9.Text = "9"
-        Me.Btn9.UseVisualStyleBackColor = False
-        '
-        'Btn8
-        '
-        Me.Btn8.BackColor = System.Drawing.Color.Gray
-        Me.Btn8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn8.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn8.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Btn8.Location = New System.Drawing.Point(106, 169)
-        Me.Btn8.Name = "Btn8"
-        Me.Btn8.Size = New System.Drawing.Size(100, 77)
-        Me.Btn8.TabIndex = 9
-        Me.Btn8.Text = "8"
-        Me.Btn8.UseVisualStyleBackColor = False
-        '
-        'Btn7
-        '
-        Me.Btn7.BackColor = System.Drawing.Color.Gray
-        Me.Btn7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn7.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn7.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Btn7.Location = New System.Drawing.Point(3, 169)
-        Me.Btn7.Name = "Btn7"
-        Me.Btn7.Size = New System.Drawing.Size(97, 77)
-        Me.Btn7.TabIndex = 8
-        Me.Btn7.Text = "7"
-        Me.Btn7.UseVisualStyleBackColor = False
-        '
-        'Btn6
-        '
-        Me.Btn6.BackColor = System.Drawing.Color.Gray
-        Me.Btn6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn6.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn6.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Btn6.Location = New System.Drawing.Point(212, 86)
-        Me.Btn6.Name = "Btn6"
-        Me.Btn6.Size = New System.Drawing.Size(100, 77)
-        Me.Btn6.TabIndex = 7
-        Me.Btn6.Text = "6"
-        Me.Btn6.UseVisualStyleBackColor = False
-        '
-        'Btn5
-        '
-        Me.Btn5.BackColor = System.Drawing.Color.Gray
-        Me.Btn5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn5.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn5.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Btn5.Location = New System.Drawing.Point(106, 86)
-        Me.Btn5.Name = "Btn5"
-        Me.Btn5.Size = New System.Drawing.Size(100, 77)
-        Me.Btn5.TabIndex = 6
-        Me.Btn5.Text = "5"
-        Me.Btn5.UseVisualStyleBackColor = False
-        '
-        'Btn4
-        '
-        Me.Btn4.BackColor = System.Drawing.Color.Gray
-        Me.Btn4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn4.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn4.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Btn4.Location = New System.Drawing.Point(3, 86)
-        Me.Btn4.Name = "Btn4"
-        Me.Btn4.Size = New System.Drawing.Size(97, 77)
-        Me.Btn4.TabIndex = 5
-        Me.Btn4.Text = "4"
-        Me.Btn4.UseVisualStyleBackColor = False
-        '
-        'Btn3
-        '
-        Me.Btn3.BackColor = System.Drawing.Color.Gray
-        Me.Btn3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn3.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn3.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Btn3.Location = New System.Drawing.Point(212, 3)
-        Me.Btn3.Name = "Btn3"
-        Me.Btn3.Size = New System.Drawing.Size(100, 77)
-        Me.Btn3.TabIndex = 4
-        Me.Btn3.Text = "3"
-        Me.Btn3.UseVisualStyleBackColor = False
-        '
-        'Btn2
-        '
-        Me.Btn2.BackColor = System.Drawing.Color.Gray
-        Me.Btn2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn2.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn2.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Btn2.Location = New System.Drawing.Point(106, 3)
-        Me.Btn2.Name = "Btn2"
-        Me.Btn2.Size = New System.Drawing.Size(100, 77)
-        Me.Btn2.TabIndex = 3
-        Me.Btn2.Text = "2"
-        Me.Btn2.UseVisualStyleBackColor = False
-        '
-        'Btn1
-        '
-        Me.Btn1.BackColor = System.Drawing.Color.Gray
-        Me.Btn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Btn1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn1.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn1.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Btn1.Location = New System.Drawing.Point(3, 3)
-        Me.Btn1.Name = "Btn1"
-        Me.Btn1.Size = New System.Drawing.Size(97, 77)
-        Me.Btn1.TabIndex = 2
-        Me.Btn1.Text = "1"
-        Me.Btn1.UseVisualStyleBackColor = False
         '
         'FrmCashierSession
         '
@@ -873,77 +642,40 @@ Partial Class FrmCashierSession
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ClientSize = New System.Drawing.Size(1062, 608)
-        Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.TableLayoutPanel1)
         Me.MinimumSize = New System.Drawing.Size(1078, 647)
         Me.Name = "FrmCashierSession"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "POS - Cashier Session"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.TableLayoutPanel1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel9.ResumeLayout(False)
-        CType(Me.DGItemList, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel7.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)
-        Me.TableLayoutPanel3.ResumeLayout(False)
-        Me.Panel8.ResumeLayout(False)
-        Me.TableLayoutPanel5.ResumeLayout(False)
         Me.TableLayoutPanel4.ResumeLayout(False)
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
+        Me.TableLayoutPanel6.ResumeLayout(False)
+        CType(Me.DGItemList, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel10.ResumeLayout(False)
+        Me.TableLayoutPanel9.ResumeLayout(False)
+        Me.TableLayoutPanel8.ResumeLayout(False)
+        Me.TableLayoutPanel3.ResumeLayout(False)
+        Me.TableLayoutPanel7.ResumeLayout(False)
+        Me.TableLayoutPanel5.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents LblDateTime As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Panel3 As Panel
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents Label13 As Label
-    Friend WithEvents LblTotalRes As Label
-    Friend WithEvents DGItemList As DataGridView
-    Friend WithEvents Panel5 As Panel
-    Friend WithEvents Panel6 As Panel
-    Friend WithEvents TxtBarcode As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents TxtQuanProd As TextBox
-    Friend WithEvents Panel7 As Panel
-    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
-    Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
-    Friend WithEvents BtnVoidTrans As Button
-    Friend WithEvents BtnVoidItem As Button
-    Friend WithEvents BtnEnter As Button
-    Friend WithEvents BtnClear As Button
-    Friend WithEvents Panel8 As Panel
-    Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
-    Friend WithEvents BtnAddToCredits As Button
-    Friend WithEvents BtnCashTendered As Button
-    Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
-    Friend WithEvents BtnEndSession As Button
-    Friend WithEvents BtnPullOutCash As Button
-    Friend WithEvents BtnReplenishCash As Button
-    Friend WithEvents BtnManualInput As Button
-    Friend WithEvents Panel9 As Panel
-    Friend WithEvents LblPrevBarcode As Label
-    Friend WithEvents LblPrevPrevBarcode As Label
-    Friend WithEvents LblNotification As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents LblCashier As Label
+    Friend WithEvents LblDateTime As Label
+    Friend WithEvents LblNotification As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
+    Friend WithEvents DGItemList As DataGridView
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
@@ -951,16 +683,28 @@ Partial Class FrmCashierSession
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents Btn00 As Button
-    Friend WithEvents BtnTuldok As Button
-    Friend WithEvents Btn9 As Button
-    Friend WithEvents Btn8 As Button
-    Friend WithEvents Btn0 As Button
-    Friend WithEvents Btn7 As Button
-    Friend WithEvents Btn5 As Button
-    Friend WithEvents Btn6 As Button
-    Friend WithEvents Btn2 As Button
-    Friend WithEvents Btn1 As Button
-    Friend WithEvents Btn3 As Button
-    Friend WithEvents Btn4 As Button
+    Friend WithEvents LblTotalRes As Label
+    Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
+    Friend WithEvents BtnEndSession As Button
+    Friend WithEvents BtnPullOutCash As Button
+    Friend WithEvents BtnReplenishCash As Button
+    Friend WithEvents TableLayoutPanel10 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel9 As TableLayoutPanel
+    Friend WithEvents BtnAddToCredits As Button
+    Friend WithEvents BtnCashTendered As Button
+    Friend WithEvents TableLayoutPanel8 As TableLayoutPanel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
+    Friend WithEvents btnSnacks As Button
+    Friend WithEvents btnOthers As Button
+    Friend WithEvents btnMeals As Button
+    Friend WithEvents btnBeverages As Button
+    Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
+    Friend WithEvents Button8 As Button
+    Friend WithEvents Button7 As Button
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

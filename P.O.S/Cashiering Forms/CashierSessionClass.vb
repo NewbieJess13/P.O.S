@@ -29,20 +29,11 @@ Public Class CashierSessionCrud
                 xSQL.AppendLine("id, ")
                 xSQL.AppendLine("Description, ")
                 xSQL.AppendLine("SellingPrice, ")
-                xSQL.AppendLine("Category, ")
-                xSQL.AppendLine("ItemCode, ")
-                xSQL.AppendLine("RealBarcode, ")
-                xSQL.AppendLine("ImagePath ")
-                xSQL.AppendLine("FROM Tbl_Products   ")
-                If Filter = "MEALS" Then
-                    xSQL.AppendLine("WHERE Category=@Filter ")
-                ElseIf Filter = "DRINKS" Then
-                    xSQL.AppendLine("WHERE Category=@Filter ")
-                ElseIf Filter = "SNACKS" Then
-                    xSQL.AppendLine("WHERE Category=@Filter ")
-                End If
-
-
+                xSQL.AppendLine("ItemCode ")
+                xSQL.AppendLine("FROM Tbl_Products ")
+                xSQL.AppendLine("WHERE Category=@Filter ")
+                xSQL.AppendLine("AND isAvailable = 1 ")
+                xSQL.AppendLine("ORDER BY Description ASC")
                 Dim command As New SqlCommand(xSQL.ToString, conn)
                 command.Parameters.AddWithValue("@Filter", Filter)
                 Dim DA As New SqlDataAdapter(command)
