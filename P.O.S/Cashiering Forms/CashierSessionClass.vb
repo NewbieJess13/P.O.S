@@ -61,9 +61,7 @@ Public Class CashierSessionCrud
                 xSQL.AppendLine("Description, ")
                 xSQL.AppendLine("SellingPrice, ")
                 xSQL.AppendLine("Category, ")
-                xSQL.AppendLine("ItemCode, ")
-                xSQL.AppendLine("RealBarcode, ")
-                xSQL.AppendLine("ImagePath ")
+                xSQL.AppendLine("ItemCode ")
                 xSQL.AppendLine("FROM Tbl_Products ")
                 xSQL.AppendLine("WHERE id = @id ")
 
@@ -95,7 +93,6 @@ Public Class CashierSessionCrud
                 xSQL.AppendLine("Quantity, ")
                 xSQL.AppendLine("TotalAmount, ")
                 xSQL.AppendLine("ItemCode, ")
-                '  xSQL.AppendLine("Barcode, ")
                 xSQL.AppendLine("SellingPrice, ")
                 xSQL.AppendLine("CashierSessionID ")
                 xSQL.AppendLine(") VALUES ( ")
@@ -103,7 +100,6 @@ Public Class CashierSessionCrud
                 xSQL.AppendLine("@Quan, ")
                 xSQL.AppendLine("@TotalAmount, ")
                 xSQL.AppendLine("@ItemCode, ")
-                ' xSQL.AppendLine("@Barcode, ")
                 xSQL.AppendLine("@SellingPrice, ")
                 xSQL.AppendLine("@CashierSessionID ")
                 xSQL.AppendLine(") ")
@@ -113,9 +109,9 @@ Public Class CashierSessionCrud
                 command.Parameters.AddWithValue("@Quan", TempTrans.Quantity)
                 command.Parameters.AddWithValue("@TotalAmount", TempTrans.TotalAmount)
                 command.Parameters.AddWithValue("@ItemCode", TempTrans.ItemCode)
-                ' command.Parameters.AddWithValue("@Barcode", TempTrans.Barcode)
                 command.Parameters.AddWithValue("@SellingPrice", TempTrans.SellingPrice)
-                command.Parameters.AddWithValue("@CashierSessionID", TempTrans.SessionID)
+                command.Parameters.AddWithValue("@CashierSessionID", My.Settings.SessionID)
+
                 Dim isExecute As Integer = command.ExecuteNonQuery
                 If isExecute <> 0 Then isSent = True
             End Using
@@ -125,7 +121,7 @@ Public Class CashierSessionCrud
         Return isSent
     End Function
 
-    Friend Function CheckForExistingTempItem(ItemCode As String, SessionID As String) As DataTable
+    Friend Function CheckForExistingTempItem(ItemCode As String) As DataTable
         Dim TempItemDT As New DataTable
         Try
             Using conn As New SqlConnection(CP.ConnectionString)
@@ -142,7 +138,7 @@ Public Class CashierSessionCrud
 
                 Dim command As New SqlCommand(xSQL.ToString, conn)
                 command.Parameters.AddWithValue("@ItemCode", ItemCode)
-                command.Parameters.AddWithValue("@SessionID", SessionID)
+                command.Parameters.AddWithValue("@SessionID", My.Settings.SessionID)
                 Dim DA As New SqlDataAdapter(command)
                 Dim DS As New DataSet
                 DA.Fill(DS)
@@ -156,7 +152,7 @@ Public Class CashierSessionCrud
         Return TempItemDT
     End Function
 
-    Friend Function UpdateExistingItem(ItemCode As String, SessionID As String, Quantity As Integer, Amount As Integer) As Boolean
+    Friend Function UpdateExistingItem(ItemCode As String, Quantity As Integer, Amount As Integer) As Boolean
         Dim isUpdated As Boolean = False
         Try
             Using conn As New SqlConnection(CP.ConnectionString)
@@ -172,7 +168,7 @@ Public Class CashierSessionCrud
                 command.Parameters.AddWithValue("@quan", Quantity)
                 command.Parameters.AddWithValue("@Amount", Amount)
                 command.Parameters.AddWithValue("@ItemCode", ItemCode)
-                command.Parameters.AddWithValue("@SessionID", SessionID)
+                command.Parameters.AddWithValue("@SessionID", My.Settings.SessionID)
 
                 Dim isExecute As Integer = command.ExecuteNonQuery
                 If isExecute <> 0 Then isUpdated = True
@@ -182,6 +178,39 @@ Public Class CashierSessionCrud
             Throw New Exception(ex.Message, ex)
         End Try
         Return isUpdated
+    End Function
+
+    Friend Function LoadSessionItems() As DataTable
+        Dim SessionItemsDT As New DataTable
+        Try
+            Using conn As New SqlConnection(CP.ConnectionString)
+                conn.Open()
+                Dim xSQL As New StringBuilder
+                xSQL.AppendLine("SELECT ")
+                xSQL.AppendLine("id, ")
+                xSQL.AppendLine("Description, ")
+                xSQL.AppendLine("Quantity, ")
+                xSQL.AppendLine("TotalAmount, ")
+                xSQL.AppendLine("ItemCode, ")
+                xSQL.AppendLine("SellingPrice ")
+                xSQL.AppendLine("FROM ")
+                xSQL.AppendLine("Tbl_TempTransaction ")
+                xSQL.AppendLine("WHERE ")
+                xSQL.AppendLine("CashierSessionID = @SessionID ")
+
+                Dim command As New SqlCommand(xSQL.ToString, conn)
+                command.Parameters.AddWithValue("@SessionID", My.Settings.SessionID)
+                Dim DA As New SqlDataAdapter(command)
+                Dim DS As New DataSet
+                DA.Fill(DS)
+                If DS.Tables.Count > 0 Then
+                    SessionItemsDT = DS.Tables(0)
+                End If
+            End Using
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        End Try
+        Return SessionItemsDT
     End Function
 End Class
 

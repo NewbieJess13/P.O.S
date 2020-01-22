@@ -24,8 +24,8 @@ Partial Class FrmCashierSession
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCashierSession))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -40,11 +40,10 @@ Partial Class FrmCashierSession
         Me.DGItemList = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LblTotalRes = New System.Windows.Forms.Label()
         Me.TableLayoutPanel10 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel9 = New System.Windows.Forms.TableLayoutPanel()
@@ -118,9 +117,10 @@ Partial Class FrmCashierSession
         Me.Panel1.Controls.Add(Me.LblCashier)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.PictureBox2)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(3, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1056, 50)
+        Me.Panel1.Size = New System.Drawing.Size(1056, 54)
         Me.Panel1.TabIndex = 1
         '
         'LblNotification
@@ -129,7 +129,7 @@ Partial Class FrmCashierSession
         Me.LblNotification.AutoSize = True
         Me.LblNotification.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblNotification.ForeColor = System.Drawing.Color.Brown
-        Me.LblNotification.Location = New System.Drawing.Point(949, 32)
+        Me.LblNotification.Location = New System.Drawing.Point(949, 36)
         Me.LblNotification.Name = "LblNotification"
         Me.LblNotification.Size = New System.Drawing.Size(0, 15)
         Me.LblNotification.TabIndex = 27
@@ -137,14 +137,12 @@ Partial Class FrmCashierSession
         '
         'LblDateTime
         '
-        Me.LblDateTime.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblDateTime.AutoSize = True
+        Me.LblDateTime.Dock = System.Windows.Forms.DockStyle.Right
         Me.LblDateTime.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblDateTime.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.LblDateTime.Location = New System.Drawing.Point(899, 7)
+        Me.LblDateTime.Location = New System.Drawing.Point(602, 0)
         Me.LblDateTime.Name = "LblDateTime"
-        Me.LblDateTime.Size = New System.Drawing.Size(154, 23)
+        Me.LblDateTime.Size = New System.Drawing.Size(454, 54)
         Me.LblDateTime.TabIndex = 24
         Me.LblDateTime.Text = "{date and time}"
         Me.LblDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -246,25 +244,25 @@ Partial Class FrmCashierSession
         Me.DGItemList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DGItemList.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DGItemList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Malgun Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGItemList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Malgun Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGItemList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DGItemList.ColumnHeadersHeight = 20
         Me.DGItemList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DGItemList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Malgun Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGItemList.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DGItemList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column7, Me.Column3, Me.Column4, Me.Column5})
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Malgun Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGItemList.DefaultCellStyle = DataGridViewCellStyle6
         Me.DGItemList.Location = New System.Drawing.Point(4, 4)
         Me.DGItemList.MultiSelect = False
         Me.DGItemList.Name = "DGItemList"
@@ -288,6 +286,12 @@ Partial Class FrmCashierSession
         Me.Column2.Name = "Column2"
         Me.Column2.ReadOnly = True
         '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Selling Price"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        '
         'Column3
         '
         Me.Column3.HeaderText = "Quantity"
@@ -307,20 +311,6 @@ Partial Class FrmCashierSession
         Me.Column5.Name = "Column5"
         Me.Column5.ReadOnly = True
         Me.Column5.Visible = False
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Barcode"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        Me.Column6.Visible = False
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "Selling Price"
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        Me.Column7.Visible = False
         '
         'LblTotalRes
         '
@@ -676,13 +666,6 @@ Partial Class FrmCashierSession
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
     Friend WithEvents DGItemList As DataGridView
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents LblTotalRes As Label
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents BtnEndSession As Button
@@ -707,4 +690,10 @@ Partial Class FrmCashierSession
     Friend WithEvents Button5 As Button
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
 End Class

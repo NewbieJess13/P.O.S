@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmLogin
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,18 +20,15 @@ Partial Class frmLogin
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.BtnCancel = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtPassword = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtUsername = New System.Windows.Forms.TextBox()
+        Me.TxtCoopID = New System.Windows.Forms.TextBox()
         Me.BtnLogin = New System.Windows.Forms.Button()
-        Me.Lblaccount = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel2.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -70,19 +67,16 @@ Partial Class frmLogin
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.BtnCancel, 0, 6)
         Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.txtPassword, 0, 3)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label2, 0, 2)
-        Me.TableLayoutPanel2.Controls.Add(Me.txtUsername, 0, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.TxtCoopID, 0, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.BtnLogin, 0, 5)
-        Me.TableLayoutPanel2.Controls.Add(Me.Lblaccount, 0, 7)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(21, 3)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 8
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.36232!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.405797!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.65217!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.5942!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.768116!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.91304!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.14493!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1.805869!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.36232!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.65217!))
@@ -114,41 +108,19 @@ Partial Class frmLogin
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(460, 69)
+        Me.Label1.Size = New System.Drawing.Size(460, 109)
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "Username"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
-        'txtPassword
+        'TxtCoopID
         '
-        Me.txtPassword.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtPassword.Font = New System.Drawing.Font("Century Gothic", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.Location = New System.Drawing.Point(3, 154)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(460, 50)
-        Me.txtPassword.TabIndex = 1
-        Me.txtPassword.UseSystemPasswordChar = True
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 122)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(460, 29)
-        Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Password"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft
-        '
-        'txtUsername
-        '
-        Me.txtUsername.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtUsername.Font = New System.Drawing.Font("Century Gothic", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsername.Location = New System.Drawing.Point(3, 72)
-        Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(460, 50)
-        Me.txtUsername.TabIndex = 0
+        Me.TxtCoopID.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TxtCoopID.Font = New System.Drawing.Font("Century Gothic", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCoopID.Location = New System.Drawing.Point(3, 112)
+        Me.TxtCoopID.Name = "TxtCoopID"
+        Me.TxtCoopID.Size = New System.Drawing.Size(460, 50)
+        Me.TxtCoopID.TabIndex = 0
         '
         'BtnLogin
         '
@@ -166,16 +138,6 @@ Partial Class frmLogin
         Me.BtnLogin.TabIndex = 2
         Me.BtnLogin.Text = "Log In"
         Me.BtnLogin.UseVisualStyleBackColor = False
-        '
-        'Lblaccount
-        '
-        Me.Lblaccount.AutoSize = True
-        Me.Lblaccount.Location = New System.Drawing.Point(3, 318)
-        Me.Lblaccount.Name = "Lblaccount"
-        Me.Lblaccount.Size = New System.Drawing.Size(39, 13)
-        Me.Lblaccount.TabIndex = 14
-        Me.Lblaccount.Text = "Label3"
-        Me.Lblaccount.Visible = False
         '
         'Panel3
         '
@@ -210,11 +172,8 @@ Partial Class frmLogin
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents Label1 As Label
-    Friend WithEvents txtPassword As TextBox
     Friend WithEvents BtnLogin As Button
-    Friend WithEvents Label2 As Label
-    Friend WithEvents txtUsername As TextBox
+    Friend WithEvents TxtCoopID As TextBox
     Friend WithEvents BtnCancel As Button
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents Lblaccount As Label
 End Class

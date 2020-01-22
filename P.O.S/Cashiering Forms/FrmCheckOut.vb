@@ -128,12 +128,12 @@ Public Class FrmCheckOut
 
     Private Sub FrmCheckOut_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TxtTotalAmount.Text = ToBeMinusToTotalAmount()
-        '     LblVATplus.Text = VAT.ToString
-        '  LblVat.Text = LblVATplus.Text
-        LblTotalXVat.Text = Converted.ToString
+
     End Sub
 
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
 
+    End Sub
 
     Sub ClearTexts()
         TxtTotalAmount.Clear()

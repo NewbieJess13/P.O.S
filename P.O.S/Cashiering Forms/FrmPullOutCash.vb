@@ -7,7 +7,7 @@ Public Class FrmPullOutCash
 
         InitializeComponent()
         TxtBusinessDate.Text = Format(Date.Now, "dd-mm-yy hh:mm:ss")
-        TxtCashierName.Text = frmLogin.user1
+        '   TxtCashierName.Text = frmLogin.user1
     End Sub
 
     Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click

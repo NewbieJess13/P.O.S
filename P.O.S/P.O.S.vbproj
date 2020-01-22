@@ -114,18 +114,6 @@
     <Compile Include="Cashiering Forms\FrmCashierReport.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cashiering Forms\FrmManualNew.Designer.vb">
-      <DependentUpon>FrmManualNew.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Cashiering Forms\FrmManualNew.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cashiering Forms\FrmResOptionFood.Designer.vb">
-      <DependentUpon>FrmResOptionFood.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Cashiering Forms\FrmResOptionFood.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Cashiering Forms\ReceiptReport.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -133,6 +121,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ConnectionString.vb" />
+    <Compile Include="LoginClass.vb" />
     <Compile Include="Reports\FrmReports.Designer.vb">
       <DependentUpon>FrmReports.vb</DependentUpon>
     </Compile>
@@ -146,23 +135,11 @@
     <Compile Include="Reports\InventoryList.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ResPOS\FrmCashierSession-Res.Designer.vb">
-      <DependentUpon>FrmCashierSession-Res.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ResPOS\FrmCashierSession-Res.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Settings\BarcodePrint.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BarcodePrint.rpt</DependentUpon>
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Cashiering Forms\FrmAddToCredits.Designer.vb">
-      <DependentUpon>FrmAddToCredits.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Cashiering Forms\FrmAddToCredits.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cashiering Forms\FrmCashierSession.Designer.vb">
       <DependentUpon>FrmCashierSession.vb</DependentUpon>
@@ -180,12 +157,6 @@
       <DependentUpon>FrmCloseSession.vb</DependentUpon>
     </Compile>
     <Compile Include="Cashiering Forms\FrmCloseSession.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cashiering Forms\FrmManual.Designer.vb">
-      <DependentUpon>FrmManual.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Cashiering Forms\FrmManual.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cashiering Forms\FrmOpenSession.Designer.vb">
@@ -319,12 +290,6 @@
     <EmbeddedResource Include="Cashiering Forms\FrmCashierReport.resx">
       <DependentUpon>FrmCashierReport.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cashiering Forms\FrmManualNew.resx">
-      <DependentUpon>FrmManualNew.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cashiering Forms\FrmResOptionFood.resx">
-      <DependentUpon>FrmResOptionFood.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Cashiering Forms\ReceiptReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReceiptReport.vb</LastGenOutput>
@@ -335,15 +300,9 @@
     <EmbeddedResource Include="Reports\InventoryList.resx">
       <DependentUpon>InventoryList.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ResPOS\FrmCashierSession-Res.resx">
-      <DependentUpon>FrmCashierSession-Res.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Settings\BarcodePrint.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>BarcodePrint.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cashiering Forms\FrmAddToCredits.resx">
-      <DependentUpon>FrmAddToCredits.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cashiering Forms\FrmCashierSession.resx">
       <DependentUpon>FrmCashierSession.vb</DependentUpon>
@@ -353,9 +312,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cashiering Forms\FrmCloseSession.resx">
       <DependentUpon>FrmCloseSession.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cashiering Forms\FrmManual.resx">
-      <DependentUpon>FrmManual.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cashiering Forms\FrmOpenSession.resx">
       <DependentUpon>FrmOpenSession.vb</DependentUpon>

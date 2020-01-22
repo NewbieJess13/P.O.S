@@ -12,7 +12,7 @@ Public Class FrmOpenSession
 
     Private Sub FrmOpenSession_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MsSql.connectionString = My.Settings.ConnectionString
-        TxtCashierName.Text = frmLogin.user1
+        '  TxtCashierName.Text = frmLogin.user1
     End Sub
 
     Private Sub BtnReplenish_Click(sender As Object, e As EventArgs) Handles BtnOpen.Click

@@ -1,25 +1,21 @@
 ﻿Imports ClassSql
 
 Public Class FrmCashierSession
-    Dim tbl As DataTable
-    Dim Description, ItemCount, ItemCode, unit As String
-    Dim BarcodeStorage As String
-    Dim SellingPrice, Total As Decimal
-    Public Shared PurchaseID As String
-    Dim tfocus As String
 
+    Dim _Quantity As Integer
+    Dim rnd As New Random
+    Dim CSCrud As New CashierSessionCrud
     Sub New()
         InitializeComponent()
         'AddHandler FrmVoidItem.LoadDataToGrid, AddressOf LoadDataToGrid
         'AddHandler FrmManualNew.LoadDataToGrid, AddressOf LoadDataToGrid
-        'AddHandler FrmCheckOut.LoadDataToGridToCheckOut, AddressOf LoadDataToGrid
+        'AddHandler FrmCheckOut.LoadDataToGridToCheckOut, AddressOf 
+
+        LblCashier.Text = My.Settings.FullName
         Timer1.Start()
     End Sub
-
 #Region "MenuControls"
-    Private Sub BtnAddToCredits_Click(sender As Object, e As EventArgs)
-        FrmAddToCredits.ShowDialog()
-    End Sub
+
 
     Private Sub BtnReplenishCash_Click(sender As Object, e As EventArgs)
         FrmReplenishCash.ShowDialog()
@@ -31,10 +27,6 @@ Public Class FrmCashierSession
 
     Private Sub BtnEndSession_Click(sender As Object, e As EventArgs)
         FrmCloseSession.ShowDialog()
-    End Sub
-
-    Private Sub BtnManualInput_Click(sender As Object, e As EventArgs)
-        FrmManualNew.ShowDialog()
     End Sub
 
     Private Sub BtnVoidItem_Click(sender As Object, e As EventArgs)
@@ -50,27 +42,24 @@ Public Class FrmCashierSession
     End Sub
 #End Region
 
-
     Private Sub FrmCashierSession_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        LoadDataToGrid()
+        MessageBox.Show(My.Settings.SessionID)
+    End Sub
 
+    Sub LoadDataToGrid()
 
-        LblCashier.Text = My.Settings.FullName
-        '  LoadDataToGrid()
+        If CSCrud.LoadSessionItems().Rows.Count > 0 Then
+            DGItemList.Rows.Clear()
+            For Each dr As DataRow In CSCrud.LoadSessionItems().Rows
+                DGItemList.Rows.Add(dr(0), dr(1), dr(5), dr(2), Convert.ToDecimal(dr(3)).ToString("N2"), dr(4))
+            Next
+        End If
+        GetTotal()
 
     End Sub
 
-    'Sub LoadDataToGrid()
-
-    '    DGItemList.Rows.Clear()
-
-    '    For Each dr As DataRow In tbl.Rows
-    '        DGItemList.Rows.Add(dr(0), dr(1), dr(2), dr(3), dr(4), dr(5), dr(6))
-    '    Next
-    '    GetTotal()
-
-    'End Sub
-    Dim rnd As New Random
     Private Sub PopulateMenu(CAT As String, FLPanel As FlowLayoutPanel)
         Dim PopulateFM As New CashierSessionCrud
         Dim DT As DataTable = PopulateFM.PopulateFoodMenu(CAT)
@@ -89,10 +78,8 @@ Public Class FrmCashierSession
                     .Text = dr(1) & "- ₱" & dr(2),
                     .Tag = dr(0)
                 }
-                '.BackColor = Color.FromArgb(255, rnd.Next(255), rnd.Next(255), rnd.Next(255)),
                 ToolTip1.SetToolTip(btnProd, dr(1) & "- ₱" & dr(2))
                 FLPanel.Controls.Add(btnProd)
-
                 AddHandler btnProd.Click, AddressOf btnProd_Click
             Next
         End If
@@ -100,15 +87,30 @@ Public Class FrmCashierSession
     End Sub
 
     Private Sub btnProd_Click(ByVal sender As Object, ByVal e As EventArgs)
-        sender.tag
-        Dim SelectedMenu As New CashierSessionCrud
-        Dim DT As DataTable = SelectedMenu.SelectedFood(sender.tag)
-        If DT.Rows.Count > 0 Then
-            'LblDesc.Text = DT.Rows(0)(1)
-            'SellingPrice = DT.Rows(0)(2)
-            'Category = DT.Rows(0)(3)
-            'ItemCode = DT.Rows(0)(4)
+        _Quantity = 1
+        If CSCrud.SelectedFood(sender.tag).Rows.Count > 0 Then
+
+            Dim ItemData As New CashierSessionData() With
+                    {
+                        .Description = CSCrud.SelectedFood(sender.tag).Rows(0)(1),
+                        .SellingPrice = CSCrud.SelectedFood(sender.tag).Rows(0)(2),
+                        .Quantity = _Quantity,
+                        .TotalAmount = CDbl(_Quantity) * .SellingPrice,
+                        .Category = CSCrud.SelectedFood(sender.tag).Rows(0)(3),
+                        .ItemCode = CSCrud.SelectedFood(sender.tag)(0)(4)
+                    }
+
+            If CSCrud.CheckForExistingTempItem(ItemData.ItemCode).Rows.Count > 0 Then
+                If CSCrud.UpdateExistingItem(ItemData.ItemCode, _Quantity, ItemData.TotalAmount) Then
+
+                End If
+            Else
+                If CSCrud.SendToTempTrans(ItemData) Then
+
+                End If
+            End If
         End If
+        LoadDataToGrid()
     End Sub
 
     Private Sub btnMeals_Click(sender As Object, e As EventArgs) Handles btnMeals.Click
@@ -133,29 +135,24 @@ Public Class FrmCashierSession
             If DGItemList.Rows.Count < 1 Then
                 LblTotalRes.Text = "0.00"
             Else
-                sum = sum + DGItemList.Rows(I).Cells(3).Value
+                sum = sum + DGItemList.Rows(I).Cells(4).Value
                 sum = Math.Round(sum, 2)
             End If
         Next
-        LblTotalRes.Text = "₱" + sum.ToString
+        LblTotalRes.Text = "₱" + sum.ToString("N2")
     End Sub
 
 
-    Private Sub DGItemList_CellClick(sender As Object, e As DataGridViewCellEventArgs)
-        Try
-            If e.RowIndex >= 0 Or e.ColumnIndex >= 0 Then
-                PurchaseID = DGItemList.Rows(e.RowIndex).Cells(0).Value
-            End If
-        Catch ex As Exception
-        End Try
-    End Sub
+    'Private Sub DGItemList_CellClick(sender As Object, e As DataGridViewCellEventArgs)
+    '    Try
+    '        If e.RowIndex >= 0 Or e.ColumnIndex >= 0 Then
+    '            PurchaseID = DGItemList.Rows(e.RowIndex).Cells(0).Value
+    '        End If
+    '    Catch ex As Exception
+    '    End Try
+    'End Sub
 
-    Sub ClearTextbarcode()
 
-        Total = 0
-        SellingPrice = 0
-
-    End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         LblDateTime.Text = Date.Now

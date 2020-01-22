@@ -5,7 +5,7 @@ Public Class FrmReplenishCash
     Sub New()
         InitializeComponent()
         TxtBusinessDate.Text = Format(Date.Now, "dd-mm-yy hh:mm:ss")
-        TxtCashierName.Text = frmLogin.user1
+        'TxtCashierName.Text = frmLogin.user1
     End Sub
 
     Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit.Click
