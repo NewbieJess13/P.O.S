@@ -25,9 +25,9 @@ Public Class FrmReplenishCash
 
     Sub GetTransactionID()
         Try
-            MsSql.connectionString = My.Settings.ConnectionString
+            '      MsSql.connectionString = My.Settings.ConnectionString
             Dim dt As DataTable
-            dt = MsSql.Table("SELECT TOP 1 TransactionNo FROM Tbl_CashierSession ORDER BY TransactionNo DESC")
+            '       dt = MsSql.Table("SELECT TOP 1 TransactionNo FROM Tbl_CashierSession ORDER BY TransactionNo DESC")
             If dt.Rows.Count > 0 Then
                 Dim TransNum As Integer
                 For Each dr As DataRow In dt.Rows

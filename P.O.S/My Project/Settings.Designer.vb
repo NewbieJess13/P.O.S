@@ -56,7 +56,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Server=DESKTOP-5ABB736\SQLEXP;Database=POSDbase;User = sa;Password=sasa")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Server=DESKTOP-RIULON1\SQLEXPRESSJESS;Database=POSDbase;User = sa;Password=sasa")>  _
         Public ReadOnly Property ConnectionString() As String
             Get
                 Return CType(Me("ConnectionString"),String)

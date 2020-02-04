@@ -36,14 +36,14 @@ Public Class UCEditStaff
     End Sub
 
     Sub AddUserAccounts()
-        MsSql.ExecuteQuery("INSERT INTO Tbl_UserAccounts (Full_Name, COOP_id, UserName, Password,  Position, Account_Type, Barcode,RealBarcode) VALUES ('" & TxtFullName.Text & "', '" & txtCoopId.Text & "', '" & TxtUsername.Text & "', '" & TxtPassword.Text & "', '" & TxtPos.Text & "', '" & CmbUserType.Text & "','" & TxtBarcode.Text & "', '" & RchTxtRealBarcode.Text & "')", Nothing)
+        '      MsSql.ExecuteQuery("INSERT INTO Tbl_UserAccounts (Full_Name, COOP_id, UserName, Password,  Position, Account_Type, Barcode,RealBarcode) VALUES ('" & TxtFullName.Text & "', '" & txtCoopId.Text & "', '" & TxtUsername.Text & "', '" & TxtPassword.Text & "', '" & TxtPos.Text & "', '" & CmbUserType.Text & "','" & TxtBarcode.Text & "', '" & RchTxtRealBarcode.Text & "')", Nothing)
         LoadUsers()
         ClearTexts()
         DisableTexts()
         MessageBox.Show("New staff has been added!", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
     Sub EditUserAccounts()
-        MsSql.ExecuteQuery("UPDATE Tbl_UserAccounts SET Full_Name ='" & TxtFullName.Text & "', COOP_id='" & txtCoopId.Text & "', UserName ='" & TxtUsername.Text & "', Password ='" & TxtPassword.Text & "', Position='" & TxtPos.Text & "',Account_Type='" & CmbUserType.Text & "',Barcode='" & TxtBarcode.Text & "',RealBarcode='" & RchTxtRealBarcode.Text & "' WHERE id='" & LblId.Text & "' ", Nothing)
+        '    MsSql.ExecuteQuery("UPDATE Tbl_UserAccounts SET Full_Name ='" & TxtFullName.Text & "', COOP_id='" & txtCoopId.Text & "', UserName ='" & TxtUsername.Text & "', Password ='" & TxtPassword.Text & "', Position='" & TxtPos.Text & "',Account_Type='" & CmbUserType.Text & "',Barcode='" & TxtBarcode.Text & "',RealBarcode='" & RchTxtRealBarcode.Text & "' WHERE id='" & LblId.Text & "' ", Nothing)
         LoadUsers()
         ClearTexts()
         DisableTexts()
@@ -51,7 +51,7 @@ Public Class UCEditStaff
     End Sub
     Sub DeleteUserAccounts()
         If MessageBox.Show("Are you sure you want to delete this user?", "POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-            MsSql.ExecuteQuery("DELETE FROM Tbl_UserAccounts WHERE id='" & LblID.Text & "'", Nothing)
+            '         MsSql.ExecuteQuery("DELETE FROM Tbl_UserAccounts WHERE id='" & LblID.Text & "'", Nothing)
             LoadUsers()
             ClearTexts()
             DisableTexts()
@@ -59,7 +59,7 @@ Public Class UCEditStaff
     End Sub
 
     Sub LoadUsers()
-        tbl = MsSql.Table("SELECT * FROM Tbl_UserAccounts ORDER BY Full_Name ASC")
+        '     tbl = MsSql.Table("SELECT * FROM Tbl_UserAccounts ORDER BY Full_Name ASC")
         DGUserAccounts.Rows.Clear()
         For Each dr As DataRow In tbl.Rows
             DGUserAccounts.Rows.Add(dr(0), dr(1), dr(2), dr(3), dr(4), dr(5), dr(6), dr(7))
@@ -68,7 +68,7 @@ Public Class UCEditStaff
     End Sub
 
     Private Sub UCEditStaff_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MsSql.connectionString = My.Settings.ConnectionString
+        '     MsSql.connectionString = My.Settings.ConnectionString
         LoadUsers()
     End Sub
 

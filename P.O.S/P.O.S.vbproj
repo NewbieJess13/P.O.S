@@ -65,6 +65,9 @@
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MealAllowance">
+      <HintPath>..\..\..\..\Desktop\MealAllowance.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -112,6 +115,12 @@
       <DependentUpon>FrmCashierReport.vb</DependentUpon>
     </Compile>
     <Compile Include="Cashiering Forms\FrmCashierReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashiering Forms\FrmViaAllowance.Designer.vb">
+      <DependentUpon>FrmViaAllowance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cashiering Forms\FrmViaAllowance.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cashiering Forms\ReceiptReport.vb">
@@ -177,12 +186,6 @@
     <Compile Include="Cashiering Forms\FrmReplenishCash.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cashiering Forms\FrmVoidItem.Designer.vb">
-      <DependentUpon>FrmVoidItem.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Cashiering Forms\FrmVoidItem.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Cashiering Forms\FrmVoidTrans.Designer.vb">
       <DependentUpon>FrmVoidTrans.vb</DependentUpon>
     </Compile>
@@ -190,36 +193,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BarcodeCode\EAN13Mod.vb" />
-    <Compile Include="Employee\FrmEmployee.Designer.vb">
-      <DependentUpon>FrmEmployee.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Employee\FrmEmployee.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Employee\UCEditEmployee.Designer.vb">
-      <DependentUpon>UCEditEmployee.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Employee\UCEditEmployee.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Employee\UCEmployeeSettings.Designer.vb">
-      <DependentUpon>UCEmployeeSettings.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Employee\UCEmployeeSettings.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Employee\UCExportMem.Designer.vb">
-      <DependentUpon>UCExportMem.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Employee\UCExportMem.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Employee\UCUploadEmp.Designer.vb">
-      <DependentUpon>UCUploadEmp.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Employee\UCUploadEmp.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="FrmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -290,6 +263,9 @@
     <EmbeddedResource Include="Cashiering Forms\FrmCashierReport.resx">
       <DependentUpon>FrmCashierReport.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cashiering Forms\FrmViaAllowance.resx">
+      <DependentUpon>FrmViaAllowance.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cashiering Forms\ReceiptReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReceiptReport.vb</LastGenOutput>
@@ -322,26 +298,8 @@
     <EmbeddedResource Include="Cashiering Forms\FrmReplenishCash.resx">
       <DependentUpon>FrmReplenishCash.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cashiering Forms\FrmVoidItem.resx">
-      <DependentUpon>FrmVoidItem.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Cashiering Forms\FrmVoidTrans.resx">
       <DependentUpon>FrmVoidTrans.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Employee\FrmEmployee.resx">
-      <DependentUpon>FrmEmployee.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Employee\UCEditEmployee.resx">
-      <DependentUpon>UCEditEmployee.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Employee\UCEmployeeSettings.resx">
-      <DependentUpon>UCEmployeeSettings.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Employee\UCExportMem.resx">
-      <DependentUpon>UCExportMem.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Employee\UCUploadEmp.resx">
-      <DependentUpon>UCUploadEmp.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
@@ -475,9 +433,7 @@
   <ItemGroup>
     <None Include="Resources\proxy.duckduckgo.com.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ProductImage\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\noimage.jpg" />
   </ItemGroup>

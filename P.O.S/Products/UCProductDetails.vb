@@ -5,7 +5,7 @@ Public Class UCProductDetails
     Dim tbl As DataTable
     Dim action As String
     Private Sub UCProductDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MsSql.connectionString = My.Settings.ConnectionString
+        '   MsSql.connectionString = My.Settings.ConnectionString
         LoadData()
         PopulateComboCategory()
 
@@ -82,7 +82,7 @@ Public Class UCProductDetails
     End Sub
 
     Sub LoadData()
-        tbl = MsSql.Table("SELECT * FROM Tbl_Products ORDER BY Description ASC", Nothing)
+        '    tbl = MsSql.Table("SELECT * FROM Tbl_Products ORDER BY Description ASC", Nothing)
         DGProductList.Rows.Clear()
         For Each dr As DataRow In tbl.Rows
             DGProductList.Rows.Add(dr(0), dr(1), dr(2), dr(3), dr(5), dr(6), dr(7), dr(4), dr(8), dr(10))
@@ -93,12 +93,12 @@ Public Class UCProductDetails
         If ImageFileName = "" Then
             ImageFileName = "default.png"
         End If
-        If MsSql.ExecuteQuery("INSERT INTO Tbl_Products (Description, RetailPrice, SellingPrice, ItemCount, Category, ItemCode, Barcode, Unit, RealBarcode,ImagePath) VALUES ('" & TxtDesc.Text & "','" & TxtRetailPrice.Text & "','" & TxtSellingPrice.Text & "','" & TxtQuanti.Text & "','" & CmbCategory.Text & "','" & TxtItemCode.Text & "','" & TxtBarCode.Text & "','" & TxtUnit.Text & "','" & TxtBarCode.Text & "','\ProductImage\" & ImageFileName & "')", Nothing) = True Then
-            ClearTexts()
+        '    If MsSql.ExecuteQuery("INSERT INTO Tbl_Products (Description, RetailPrice, SellingPrice, ItemCount, Category, ItemCode, Barcode, Unit, RealBarcode,ImagePath) VALUES ('" & TxtDesc.Text & "','" & TxtRetailPrice.Text & "','" & TxtSellingPrice.Text & "','" & TxtQuanti.Text & "','" & CmbCategory.Text & "','" & TxtItemCode.Text & "','" & TxtBarCode.Text & "','" & TxtUnit.Text & "','" & TxtBarCode.Text & "','\ProductImage\" & ImageFileName & "')", Nothing) = True Then
+        ClearTexts()
             DisableTexts()
             LoadData()
             MessageBox.Show("Item successfully added.", My.Settings.Title, MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End If
+        '  End If
     End Sub
 
 
@@ -107,24 +107,24 @@ Public Class UCProductDetails
         If ImageFileName = "" Then
             ImageFileName = "default.png"
         End If
-        If MsSql.ExecuteQuery("UPDATE Tbl_Products SET Description = '" & TxtDesc.Text & "', RetailPrice ='" & TxtRetailPrice.Text & "', SellingPrice = '" & TxtSellingPrice.Text & "', ItemCount = '" & TxtQuanti.Text & "', Category= '" & CmbCategory.Text & "', ItemCode='" & TxtItemCode.Text & "', Barcode='" & TxtBarCode.Text & "', Unit='" & TxtUnit.Text & "', RealBarcode='" & TxtBarCode.Text & "', ImagePath='\ProductImage\" & ImageFileName & "' WHERE id='" & LblId.Text & "'", Nothing) = True Then
-            ClearTexts()
+        '  If MsSql.ExecuteQuery("UPDATE Tbl_Products SET Description = '" & TxtDesc.Text & "', RetailPrice ='" & TxtRetailPrice.Text & "', SellingPrice = '" & TxtSellingPrice.Text & "', ItemCount = '" & TxtQuanti.Text & "', Category= '" & CmbCategory.Text & "', ItemCode='" & TxtItemCode.Text & "', Barcode='" & TxtBarCode.Text & "', Unit='" & TxtUnit.Text & "', RealBarcode='" & TxtBarCode.Text & "', ImagePath='\ProductImage\" & ImageFileName & "' WHERE id='" & LblId.Text & "'", Nothing) = True Then
+        ClearTexts()
             DisableTexts()
             LoadData()
             MessageBox.Show("Item Successfully Updated.", My.Settings.Title, MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End If
+        '  End If
     End Sub
     Sub DeleteITem()
-        If MsSql.ExecuteQuery("DELETE FROM Tbl_Products WHERE id='" & LblId.Text & "'", Nothing) = True Then
-            ClearTexts()
+        '   If MsSql.ExecuteQuery("DELETE FROM Tbl_Products WHERE id='" & LblId.Text & "'", Nothing) = True Then
+        ClearTexts()
             DisableTexts()
             LoadData()
             MessageBox.Show("Item successfully deleted.", My.Settings.Title, MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End If
+        '   End If
     End Sub
 
     Private Sub PopulateComboCategory()
-        tbl = MsSql.Table("SELECT * FROM Tbl_Category")
+        '       tbl = MsSql.Table("SELECT * FROM Tbl_Category")
         CmbCategory.DataSource = tbl
         CmbCategory.ValueMember = "id"
         CmbCategory.DisplayMember = "CategoryName"

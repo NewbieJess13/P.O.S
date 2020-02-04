@@ -24,8 +24,8 @@ Partial Class FrmCashierSession
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCashierSession))
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -63,7 +63,7 @@ Partial Class FrmCashierSession
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.BtnCash = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
@@ -244,25 +244,25 @@ Partial Class FrmCashierSession
         Me.DGItemList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DGItemList.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DGItemList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Malgun Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGItemList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Malgun Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGItemList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGItemList.ColumnHeadersHeight = 20
         Me.DGItemList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DGItemList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column7, Me.Column3, Me.Column4, Me.Column5})
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Malgun Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGItemList.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Malgun Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGItemList.DefaultCellStyle = DataGridViewCellStyle2
         Me.DGItemList.Location = New System.Drawing.Point(4, 4)
         Me.DGItemList.MultiSelect = False
         Me.DGItemList.Name = "DGItemList"
@@ -550,7 +550,7 @@ Partial Class FrmCashierSession
         Me.TableLayoutPanel5.Controls.Add(Me.Button8, 0, 0)
         Me.TableLayoutPanel5.Controls.Add(Me.Button7, 0, 0)
         Me.TableLayoutPanel5.Controls.Add(Me.Button6, 0, 0)
-        Me.TableLayoutPanel5.Controls.Add(Me.Button5, 0, 0)
+        Me.TableLayoutPanel5.Controls.Add(Me.BtnCash, 0, 0)
         Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel5.Location = New System.Drawing.Point(5, 450)
         Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
@@ -601,19 +601,19 @@ Partial Class FrmCashierSession
         Me.Button6.Text = "Via Allowance"
         Me.Button6.UseVisualStyleBackColor = False
         '
-        'Button5
+        'BtnCash
         '
-        Me.Button5.BackColor = System.Drawing.Color.Silver
-        Me.Button5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Malgun Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button5.Location = New System.Drawing.Point(200, 4)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(189, 35)
-        Me.Button5.TabIndex = 22
-        Me.Button5.Text = "Via Cash"
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.BtnCash.BackColor = System.Drawing.Color.Silver
+        Me.BtnCash.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCash.Font = New System.Drawing.Font("Malgun Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCash.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.BtnCash.Location = New System.Drawing.Point(200, 4)
+        Me.BtnCash.Name = "BtnCash"
+        Me.BtnCash.Size = New System.Drawing.Size(189, 35)
+        Me.BtnCash.TabIndex = 22
+        Me.BtnCash.Text = "Via Cash"
+        Me.BtnCash.UseVisualStyleBackColor = False
         '
         'FlowLayoutPanel1
         '
@@ -687,7 +687,7 @@ Partial Class FrmCashierSession
     Friend WithEvents Button8 As Button
     Friend WithEvents Button7 As Button
     Friend WithEvents Button6 As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents BtnCash As Button
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents Column1 As DataGridViewTextBoxColumn

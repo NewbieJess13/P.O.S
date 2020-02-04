@@ -11,7 +11,7 @@ Public Class FrmOpenSession
     End Sub
 
     Private Sub FrmOpenSession_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MsSql.connectionString = My.Settings.ConnectionString
+        '  MsSql.connectionString = My.Settings.ConnectionString
         '  TxtCashierName.Text = frmLogin.user1
     End Sub
 
@@ -46,7 +46,7 @@ Public Class FrmOpenSession
     Private Sub GetTransactionID()
         Try
             Dim dt As DataTable
-            dt = MsSql.Table("SELECT TOP 1 TransactionNo FROM Tbl_CashierSession ORDER BY TransactionNo DESC")
+            '    dt = MsSql.Table("SELECT TOP 1 TransactionNo FROM Tbl_CashierSession ORDER BY TransactionNo DESC")
             If dt.Rows.Count > 0 Then
                 Dim TransNumber As Integer
                 For Each dr As DataRow In dt.Rows

@@ -44,7 +44,7 @@ Public Class frmLogin
         ClearTexts()
     End Sub
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MsSql.connectionString = My.Settings.ConnectionString
+
     End Sub
 
     Private Sub frmLogin_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown

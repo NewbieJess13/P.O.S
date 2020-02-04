@@ -14,10 +14,6 @@
         LblTimer.Text = Format(Now, "dd-MMM-yyyy hh:mm:ss tt")
     End Sub
 
-    Private Sub BtnUploadEmployee_Click(sender As Object, e As EventArgs) Handles BtnUploadEmployee.Click
-        FrmEmployee.ShowDialog()
-
-    End Sub
 
     Private Sub BtnSettings_Click(sender As Object, e As EventArgs) Handles BtnSettings.Click
         FrmSettings.ShowDialog()
