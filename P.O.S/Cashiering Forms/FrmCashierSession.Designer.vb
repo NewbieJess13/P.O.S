@@ -62,7 +62,7 @@ Partial Class FrmCashierSession
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.BtnAllowance = New System.Windows.Forms.Button()
         Me.BtnCash = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
@@ -549,7 +549,7 @@ Partial Class FrmCashierSession
         Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel5.Controls.Add(Me.Button8, 0, 0)
         Me.TableLayoutPanel5.Controls.Add(Me.Button7, 0, 0)
-        Me.TableLayoutPanel5.Controls.Add(Me.Button6, 0, 0)
+        Me.TableLayoutPanel5.Controls.Add(Me.BtnAllowance, 0, 0)
         Me.TableLayoutPanel5.Controls.Add(Me.BtnCash, 0, 0)
         Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel5.Location = New System.Drawing.Point(5, 450)
@@ -587,19 +587,19 @@ Partial Class FrmCashierSession
         Me.Button7.Text = "Via Cashcard"
         Me.Button7.UseVisualStyleBackColor = False
         '
-        'Button6
+        'BtnAllowance
         '
-        Me.Button6.BackColor = System.Drawing.Color.Silver
-        Me.Button6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("Malgun Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button6.Location = New System.Drawing.Point(4, 4)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(189, 35)
-        Me.Button6.TabIndex = 23
-        Me.Button6.Text = "Via Allowance"
-        Me.Button6.UseVisualStyleBackColor = False
+        Me.BtnAllowance.BackColor = System.Drawing.Color.Silver
+        Me.BtnAllowance.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnAllowance.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAllowance.Font = New System.Drawing.Font("Malgun Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAllowance.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.BtnAllowance.Location = New System.Drawing.Point(4, 4)
+        Me.BtnAllowance.Name = "BtnAllowance"
+        Me.BtnAllowance.Size = New System.Drawing.Size(189, 35)
+        Me.BtnAllowance.TabIndex = 23
+        Me.BtnAllowance.Text = "Via Allowance"
+        Me.BtnAllowance.UseVisualStyleBackColor = False
         '
         'BtnCash
         '
@@ -686,7 +686,7 @@ Partial Class FrmCashierSession
     Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
     Friend WithEvents Button8 As Button
     Friend WithEvents Button7 As Button
-    Friend WithEvents Button6 As Button
+    Friend WithEvents BtnAllowance As Button
     Friend WithEvents BtnCash As Button
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents ToolTip1 As ToolTip

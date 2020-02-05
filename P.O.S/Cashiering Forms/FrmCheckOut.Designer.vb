@@ -120,7 +120,6 @@ Partial Class FrmCheckOut
         Me.TxtCashTendered.Size = New System.Drawing.Size(216, 53)
         Me.TxtCashTendered.TabIndex = 0
         Me.TxtCashTendered.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.TxtCashTendered.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'BtnClear
         '
@@ -143,7 +142,6 @@ Partial Class FrmCheckOut
         Me.TxtTotalAmount.Name = "TxtTotalAmount"
         Me.TxtTotalAmount.Size = New System.Drawing.Size(306, 53)
         Me.TxtTotalAmount.TabIndex = 7
-        Me.TxtTotalAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TxtChange
         '
@@ -153,7 +151,6 @@ Partial Class FrmCheckOut
         Me.TxtChange.Name = "TxtChange"
         Me.TxtChange.Size = New System.Drawing.Size(306, 53)
         Me.TxtChange.TabIndex = 6
-        Me.TxtChange.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TxtBalance
         '
@@ -163,7 +160,6 @@ Partial Class FrmCheckOut
         Me.TxtBalance.Name = "TxtBalance"
         Me.TxtBalance.Size = New System.Drawing.Size(306, 53)
         Me.TxtBalance.TabIndex = 11
-        Me.TxtBalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label2
         '

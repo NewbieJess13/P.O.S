@@ -4,7 +4,7 @@ Imports System.Text
 Public Class FrmCheckOut
 
     Public Event LoadDataToGridToCheckOut As EventHandler
-    Dim Converted, VAT As Decimal
+    Dim Converted As Decimal
     Dim CSCrud As New CashierSessionCrud
     Dim CSdata As New CashierTransData
 

@@ -80,7 +80,7 @@ Public Class CashierSessionCrud
                 If DS.Tables.Count > 0 Then
                     FoodMenuDT = DS.Tables(0)
                 End If
-
+                conn.Close()
             End Using
         Catch ex As Exception
             Throw New Exception(ex.Message, ex)
@@ -111,6 +111,7 @@ Public Class CashierSessionCrud
                 If DS.Tables.Count > 0 Then
                     DTSelected = DS.Tables(0)
                 End If
+                conn.Close()
             End Using
         Catch ex As Exception
             Throw New Exception(ex.Message, ex)
@@ -141,7 +142,6 @@ Public Class CashierSessionCrud
                 xSQL.AppendLine("@SellingPrice, ")
                 xSQL.AppendLine("@CashierSessionID ")
                 xSQL.AppendLine(") ")
-
                 Dim command As New SqlCommand(xSQL.ToString, conn)
                 command.Parameters.AddWithValue("@Desc", TempTrans.Description)
                 command.Parameters.AddWithValue("@Quan", TempTrans.Quantity)
@@ -149,9 +149,9 @@ Public Class CashierSessionCrud
                 command.Parameters.AddWithValue("@ItemCode", TempTrans.ItemCode)
                 command.Parameters.AddWithValue("@SellingPrice", TempTrans.SellingPrice)
                 command.Parameters.AddWithValue("@CashierSessionID", My.Settings.SessionID)
-
                 Dim isExecute As Integer = command.ExecuteNonQuery
                 If isExecute <> 0 Then isSent = True
+                conn.Close()
             End Using
         Catch ex As Exception
             Throw New Exception(ex.Message, ex)
@@ -183,6 +183,7 @@ Public Class CashierSessionCrud
                 If DS.Tables.Count > 0 Then
                     TempItemDT = DS.Tables(0)
                 End If
+                conn.Close()
             End Using
         Catch ex As Exception
             Throw New Exception(ex.Message, ex)
@@ -210,7 +211,7 @@ Public Class CashierSessionCrud
 
                 Dim isExecute As Integer = command.ExecuteNonQuery
                 If isExecute <> 0 Then isUpdated = True
-
+                conn.Close()
             End Using
         Catch ex As Exception
             Throw New Exception(ex.Message, ex)
@@ -244,6 +245,7 @@ Public Class CashierSessionCrud
                 If DS.Tables.Count > 0 Then
                     SessionItemsDT = DS.Tables(0)
                 End If
+                conn.Close()
             End Using
         Catch ex As Exception
             Throw New Exception(ex.Message, ex)
@@ -300,6 +302,104 @@ Public Class CashierSessionCrud
             Throw New Exception(ex.Message, ex)
         End Try
         Return isExe
+    End Function
+
+    Friend Function GetTransactionNo() As DataTable
+        Dim TransNoDT As New DataTable
+        Try
+            Using conn As New SqlConnection(CP.ConnectionString)
+                conn.Open()
+                Dim xSQL As New StringBuilder
+                xSQL.AppendLine("SELECT TOP 1 ")
+                xSQL.AppendLine("TransactionNo ")
+                xSQL.AppendLine("FROM ")
+                xSQL.AppendLine("Tbl_TransactionHeader ")
+                xSQL.AppendLine("WHERE ")
+                xSQL.AppendLine("SessionID = @SessionID  ")
+                xSQL.AppendLine("AND Cashier = @Cashier  ")
+                xSQL.AppendLine("ORDER BY id DESC  ")
+                Dim command As New SqlCommand(xSQL.ToString, conn)
+                command.Parameters.AddWithValue("@SessionID", My.Settings.SessionID)
+                command.Parameters.AddWithValue("@Cashier", My.Settings.FullName)
+                Dim DA As New SqlDataAdapter(command)
+                Dim DS As New DataSet
+                DA.Fill(DS)
+                If DS.Tables.Count > 0 Then
+                    TransNoDT = DS.Tables(0)
+                End If
+                conn.Close()
+            End Using
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        End Try
+        Return TransNoDT
+    End Function
+
+    Friend Function SaveCaptureTrans(CTdata As CaptureTransData) As Boolean
+        Dim isSent As Boolean = False
+        Try
+            Using conn As New SqlConnection(CP.ConnectionString)
+                conn.Open()
+                Dim xSQL As New StringBuilder
+                xSQL.AppendLine("INSERT INTO ")
+                xSQL.AppendLine("Tbl_CaptureTrans ")
+                xSQL.AppendLine("( ")
+                xSQL.AppendLine("EmployeeID, ")
+                xSQL.AppendLine("AvailableBal, ")
+                xSQL.AppendLine("PurchasedList, ")
+                xSQL.AppendLine("PurchasedAmount, ")
+                xSQL.AppendLine("CashierName, ")
+                xSQL.AppendLine("ReceiptNo, ")
+                xSQL.AppendLine("TransactionDate, ")
+                xSQL.AppendLine("CanteenCode, ")
+                xSQL.AppendLine("RegAllowanceBalance, ")
+                xSQL.AppendLine("SpeAllowanceBalance, ")
+                xSQL.AppendLine("CostCenterCode, ")
+                xSQL.AppendLine("PrevRegBalance, ")
+                xSQL.AppendLine("PrevSpeBalance, ")
+                xSQL.AppendLine("errorCode, ")
+                xSQL.AppendLine("DateFormat ")
+                xSQL.AppendLine(") VALUES ( ")
+                xSQL.AppendLine("@EmpID, ")
+                xSQL.AppendLine("@AvailableBal, ")
+                xSQL.AppendLine("@PurchasedList, ")
+                xSQL.AppendLine("@PurchaseAmount, ")
+                xSQL.AppendLine("@CashierName, ")
+                xSQL.AppendLine("@ReceiptNo, ")
+                xSQL.AppendLine("@Transdate, ")
+                xSQL.AppendLine("@CanteenCode, ")
+                xSQL.AppendLine("@RegAllowance, ")
+                xSQL.AppendLine("@SpeAllowance, ")
+                xSQL.AppendLine("@CostCenterCode, ")
+                xSQL.AppendLine("@PrevRegAllowance, ")
+                xSQL.AppendLine("@PrevSpeAllowance, ")
+                xSQL.AppendLine("@errorCode, ")
+                xSQL.AppendLine("@dateFormat, ")
+                xSQL.AppendLine(") ")
+                Dim command As New SqlCommand(xSQL.ToString, conn)
+                command.Parameters.AddWithValue("@EmpID", CTdata.EmployeeID)
+                command.Parameters.AddWithValue("@AvailableBal", CTdata.AvailableBalance)
+                command.Parameters.AddWithValue("@PurchasedList", CTdata.PurchasedList)
+                command.Parameters.AddWithValue("@PurchaseAmount", CTdata.PurchasedAmount)
+                command.Parameters.AddWithValue("@CashierName", My.Settings.FullName)
+                command.Parameters.AddWithValue("@ReceiptNo", CTdata.ReceiptNo)
+                command.Parameters.AddWithValue("@Transdate", CTdata.TransactionDate)
+                command.Parameters.AddWithValue("@CanteenCode", CTdata.CanteenCode)
+                command.Parameters.AddWithValue("@RegAllowance", CTdata.RegAllowance)
+                command.Parameters.AddWithValue("@SpeAllowance", CTdata.SpeAllowance)
+                command.Parameters.AddWithValue("@CostCenterCode", CTdata.CostCenterCode)
+                command.Parameters.AddWithValue("@PrevRegAllowance", CTdata.PrevRegAllowance)
+                command.Parameters.AddWithValue("@PrevSpeAllowance", CTdata.PrevSpeAllowance)
+                command.Parameters.AddWithValue("@errorCode", CTdata.errorCode)
+                command.Parameters.AddWithValue("@dateFormat", Date.Now.ToString("yyyy.MM.dd"))
+                Dim isExecute As Integer = command.ExecuteNonQuery
+                If isExecute <> 0 Then isSent = True
+                conn.Close()
+            End Using
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        End Try
+        Return isSent
     End Function
 End Class
 

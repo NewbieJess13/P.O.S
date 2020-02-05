@@ -1,5 +1,4 @@
-﻿Imports ClassSql
-
+﻿
 Public Class FrmCashierSession
 
     Dim _Quantity As Integer
@@ -9,15 +8,14 @@ Public Class FrmCashierSession
         InitializeComponent()
 
         AddHandler FrmCheckOut.LoadDataToGridToCheckOut, AddressOf LoadDataToGrid
+        AddHandler FrmViaAllowance.LoadDataToGridToCheckOut, AddressOf LoadDataToGrid
 
         LblCashier.Text = My.Settings.FullName
         Timer1.Start()
     End Sub
 
     Private Sub FrmCashierSession_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         LoadDataToGrid()
-        MessageBox.Show(My.Settings.SessionID)
     End Sub
 #Region "MenuControls"
     Private Sub BtnCash_Click(sender As Object, e As EventArgs) Handles BtnCash.Click
@@ -102,8 +100,8 @@ Public Class FrmCashierSession
             End If
         End If
         LoadDataToGrid()
-    End Sub
 
+    End Sub
 
     Private Sub GetTotal()
         Dim sum As Decimal = 0
@@ -117,8 +115,19 @@ Public Class FrmCashierSession
         Next
         LblTotalRes.Text = "₱" + sum.ToString("N2")
     End Sub
-
-
-
-
+    Friend purchasedList As String
+    Private Sub BtnAllowance_Click(sender As Object, e As EventArgs) Handles BtnAllowance.Click
+        Dim qty As String
+        Dim desc As String
+        Dim i As Integer = 0
+        Do While i < DGItemList.Rows.Count()
+            qty = DGItemList.Rows(i).Cells(3).Value
+            desc = DGItemList.Rows(i).Cells(1).Value
+            purchasedList = purchasedList & qty & "-" & desc & ","
+            i += 1
+        Loop
+        If purchasedList <> "" Then
+            FrmViaAllowance.ShowDialog()
+        End If
+    End Sub
 End Class

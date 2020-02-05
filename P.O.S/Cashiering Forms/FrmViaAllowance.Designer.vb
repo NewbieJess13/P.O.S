@@ -22,6 +22,7 @@ Partial Class FrmViaAllowance
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
@@ -53,6 +54,7 @@ Partial Class FrmViaAllowance
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -60,6 +62,7 @@ Partial Class FrmViaAllowance
         Me.TableLayoutPanel5.SuspendLayout()
         Me.TableLayoutPanel6.SuspendLayout()
         Me.TableLayoutPanel7.SuspendLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -376,7 +379,6 @@ Partial Class FrmViaAllowance
         Me.txtBarcode.Name = "txtBarcode"
         Me.txtBarcode.Size = New System.Drawing.Size(317, 43)
         Me.txtBarcode.TabIndex = 8
-        Me.txtBarcode.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TableLayoutPanel7
         '
@@ -385,12 +387,12 @@ Partial Class FrmViaAllowance
         Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.23529!))
         Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.76471!))
         Me.TableLayoutPanel7.Controls.Add(Me.txtChange, 4, 3)
-        Me.TableLayoutPanel7.Controls.Add(Me.txtBalance, 3, 2)
-        Me.TableLayoutPanel7.Controls.Add(Me.txtTendered, 2, 1)
+        Me.TableLayoutPanel7.Controls.Add(Me.txtBalance, 2, 1)
+        Me.TableLayoutPanel7.Controls.Add(Me.txtTendered, 2, 2)
         Me.TableLayoutPanel7.Controls.Add(Me.txtTotalAmount, 1, 0)
         Me.TableLayoutPanel7.Controls.Add(Me.Label7, 0, 3)
-        Me.TableLayoutPanel7.Controls.Add(Me.Label6, 0, 2)
-        Me.TableLayoutPanel7.Controls.Add(Me.Label5, 0, 1)
+        Me.TableLayoutPanel7.Controls.Add(Me.Label6, 0, 1)
+        Me.TableLayoutPanel7.Controls.Add(Me.Label5, 0, 2)
         Me.TableLayoutPanel7.Controls.Add(Me.Label4, 0, 0)
         Me.TableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel7.Location = New System.Drawing.Point(4, 100)
@@ -400,6 +402,7 @@ Partial Class FrmViaAllowance
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43.0!))
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42.0!))
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8.0!))
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel7.Size = New System.Drawing.Size(529, 174)
         Me.TableLayoutPanel7.TabIndex = 1
         '
@@ -411,27 +414,24 @@ Partial Class FrmViaAllowance
         Me.txtChange.Name = "txtChange"
         Me.txtChange.Size = New System.Drawing.Size(318, 37)
         Me.txtChange.TabIndex = 17
-        Me.txtChange.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtBalance
         '
         Me.txtBalance.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtBalance.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBalance.Location = New System.Drawing.Point(206, 93)
+        Me.txtBalance.Location = New System.Drawing.Point(206, 48)
         Me.txtBalance.Name = "txtBalance"
         Me.txtBalance.Size = New System.Drawing.Size(318, 37)
         Me.txtBalance.TabIndex = 16
-        Me.txtBalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtTendered
         '
         Me.txtTendered.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtTendered.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTendered.Location = New System.Drawing.Point(206, 48)
+        Me.txtTendered.Location = New System.Drawing.Point(206, 93)
         Me.txtTendered.Name = "txtTendered"
         Me.txtTendered.Size = New System.Drawing.Size(318, 37)
         Me.txtTendered.TabIndex = 15
-        Me.txtTendered.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtTotalAmount
         '
@@ -441,7 +441,6 @@ Partial Class FrmViaAllowance
         Me.txtTotalAmount.Name = "txtTotalAmount"
         Me.txtTotalAmount.Size = New System.Drawing.Size(318, 37)
         Me.txtTotalAmount.TabIndex = 14
-        Me.txtTotalAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label7
         '
@@ -462,9 +461,9 @@ Partial Class FrmViaAllowance
         Me.Label6.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(5, 90)
+        Me.Label6.Location = New System.Drawing.Point(5, 45)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(193, 42)
+        Me.Label6.Size = New System.Drawing.Size(193, 43)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "Balance:"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -475,9 +474,9 @@ Partial Class FrmViaAllowance
         Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(5, 45)
+        Me.Label5.Location = New System.Drawing.Point(5, 90)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(193, 43)
+        Me.Label5.Size = New System.Drawing.Size(193, 42)
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "Cash Tendered:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -494,6 +493,10 @@ Partial Class FrmViaAllowance
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Amount:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
         '
         'FrmViaAllowance
         '
@@ -515,6 +518,7 @@ Partial Class FrmViaAllowance
         Me.TableLayoutPanel6.PerformLayout()
         Me.TableLayoutPanel7.ResumeLayout(False)
         Me.TableLayoutPanel7.PerformLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -550,4 +554,5 @@ Partial Class FrmViaAllowance
     Friend WithEvents txtBalance As TextBox
     Friend WithEvents txtTendered As TextBox
     Friend WithEvents txtTotalAmount As TextBox
+    Friend WithEvents ErrorProvider1 As ErrorProvider
 End Class
