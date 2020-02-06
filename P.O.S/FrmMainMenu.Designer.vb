@@ -25,27 +25,25 @@ Partial Class FrmMainMenu
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMainMenu))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.LblTimer = New System.Windows.Forms.Label()
         Me.LblName = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.BtnDelivery = New System.Windows.Forms.Button()
         Me.BtnUploadEmployee = New System.Windows.Forms.Button()
         Me.BtnProducts = New System.Windows.Forms.Button()
         Me.BtnOpenSession = New System.Windows.Forms.Button()
         Me.BtnSettings = New System.Windows.Forms.Button()
         Me.BtnReports = New System.Windows.Forms.Button()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -54,35 +52,19 @@ Partial Class FrmMainMenu
         Me.Panel1.Controls.Add(Me.LblTimer)
         Me.Panel1.Controls.Add(Me.LblName)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.PictureBox2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(980, 100)
+        Me.Panel1.Size = New System.Drawing.Size(980, 63)
         Me.Panel1.TabIndex = 0
-        '
-        'Button1
-        '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.Button1.BackgroundImage = Global.P.O.S.My.Resources.Resources.logout
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(236, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(241, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(899, 21)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(69, 58)
-        Me.Button1.TabIndex = 25
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'LblTimer
         '
         Me.LblTimer.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.LblTimer.Font = New System.Drawing.Font("PMingLiU-ExtB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTimer.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.LblTimer.Location = New System.Drawing.Point(631, 23)
+        Me.LblTimer.Location = New System.Drawing.Point(671, -10)
         Me.LblTimer.Name = "LblTimer"
         Me.LblTimer.Size = New System.Drawing.Size(241, 47)
         Me.LblTimer.TabIndex = 24
@@ -93,7 +75,7 @@ Partial Class FrmMainMenu
         '
         Me.LblName.Font = New System.Drawing.Font("PMingLiU-ExtB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblName.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.LblName.Location = New System.Drawing.Point(395, 23)
+        Me.LblName.Location = New System.Drawing.Point(176, 13)
         Me.LblName.Name = "LblName"
         Me.LblName.Size = New System.Drawing.Size(334, 47)
         Me.LblName.TabIndex = 23
@@ -104,32 +86,12 @@ Partial Class FrmMainMenu
         '
         Me.Label2.Font = New System.Drawing.Font("PMingLiU-ExtB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label2.Location = New System.Drawing.Point(259, 23)
+        Me.Label2.Location = New System.Drawing.Point(72, 13)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(109, 47)
         Me.Label2.TabIndex = 22
         Me.Label2.Text = "CASHIER |"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.P.O.S.My.Resources.Resources.horLine
-        Me.PictureBox1.Location = New System.Drawing.Point(222, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(31, 93)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 21
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(12, 12)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(204, 69)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 20
-        Me.PictureBox2.TabStop = False
         '
         'Panel2
         '
@@ -164,13 +126,16 @@ Partial Class FrmMainMenu
         Me.TableLayoutPanel1.Controls.Add(Me.BtnSettings, 2, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.BtnReports, 0, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 100)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 63)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(980, 419)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(980, 456)
         Me.TableLayoutPanel1.TabIndex = 2
+        '
+        'Timer1
+        '
         '
         'BtnDelivery
         '
@@ -185,9 +150,9 @@ Partial Class FrmMainMenu
         Me.BtnDelivery.Font = New System.Drawing.Font("Microsoft YaHei", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnDelivery.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnDelivery.Image = CType(resources.GetObject("BtnDelivery.Image"), System.Drawing.Image)
-        Me.BtnDelivery.Location = New System.Drawing.Point(329, 212)
+        Me.BtnDelivery.Location = New System.Drawing.Point(329, 231)
         Me.BtnDelivery.Name = "BtnDelivery"
-        Me.BtnDelivery.Size = New System.Drawing.Size(320, 204)
+        Me.BtnDelivery.Size = New System.Drawing.Size(320, 222)
         Me.BtnDelivery.TabIndex = 11
         Me.BtnDelivery.Text = "Delivery (F5)"
         Me.BtnDelivery.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -208,9 +173,9 @@ Partial Class FrmMainMenu
         Me.BtnUploadEmployee.Image = CType(resources.GetObject("BtnUploadEmployee.Image"), System.Drawing.Image)
         Me.BtnUploadEmployee.Location = New System.Drawing.Point(655, 3)
         Me.BtnUploadEmployee.Name = "BtnUploadEmployee"
-        Me.BtnUploadEmployee.Size = New System.Drawing.Size(322, 203)
+        Me.BtnUploadEmployee.Size = New System.Drawing.Size(322, 222)
         Me.BtnUploadEmployee.TabIndex = 9
-        Me.BtnUploadEmployee.Text = "Upload Employee (F3)"
+        Me.BtnUploadEmployee.Text = "CASH CARD(F3)"
         Me.BtnUploadEmployee.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnUploadEmployee.UseVisualStyleBackColor = False
         '
@@ -227,7 +192,7 @@ Partial Class FrmMainMenu
         Me.BtnProducts.Image = CType(resources.GetObject("BtnProducts.Image"), System.Drawing.Image)
         Me.BtnProducts.Location = New System.Drawing.Point(329, 3)
         Me.BtnProducts.Name = "BtnProducts"
-        Me.BtnProducts.Size = New System.Drawing.Size(320, 203)
+        Me.BtnProducts.Size = New System.Drawing.Size(320, 222)
         Me.BtnProducts.TabIndex = 8
         Me.BtnProducts.Text = "Products (F2)"
         Me.BtnProducts.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -248,7 +213,7 @@ Partial Class FrmMainMenu
         Me.BtnOpenSession.Image = CType(resources.GetObject("BtnOpenSession.Image"), System.Drawing.Image)
         Me.BtnOpenSession.Location = New System.Drawing.Point(3, 3)
         Me.BtnOpenSession.Name = "BtnOpenSession"
-        Me.BtnOpenSession.Size = New System.Drawing.Size(320, 203)
+        Me.BtnOpenSession.Size = New System.Drawing.Size(320, 222)
         Me.BtnOpenSession.TabIndex = 7
         Me.BtnOpenSession.Text = "Open Session (F1)"
         Me.BtnOpenSession.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -267,9 +232,9 @@ Partial Class FrmMainMenu
         Me.BtnSettings.Font = New System.Drawing.Font("Microsoft YaHei", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSettings.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnSettings.Image = CType(resources.GetObject("BtnSettings.Image"), System.Drawing.Image)
-        Me.BtnSettings.Location = New System.Drawing.Point(655, 212)
+        Me.BtnSettings.Location = New System.Drawing.Point(655, 231)
         Me.BtnSettings.Name = "BtnSettings"
-        Me.BtnSettings.Size = New System.Drawing.Size(322, 204)
+        Me.BtnSettings.Size = New System.Drawing.Size(322, 222)
         Me.BtnSettings.TabIndex = 12
         Me.BtnSettings.Text = "Settings (F6)"
         Me.BtnSettings.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -288,16 +253,38 @@ Partial Class FrmMainMenu
         Me.BtnReports.Font = New System.Drawing.Font("Microsoft YaHei", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnReports.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnReports.Image = CType(resources.GetObject("BtnReports.Image"), System.Drawing.Image)
-        Me.BtnReports.Location = New System.Drawing.Point(3, 212)
+        Me.BtnReports.Location = New System.Drawing.Point(3, 231)
         Me.BtnReports.Name = "BtnReports"
-        Me.BtnReports.Size = New System.Drawing.Size(320, 204)
+        Me.BtnReports.Size = New System.Drawing.Size(320, 222)
         Me.BtnReports.TabIndex = 10
         Me.BtnReports.Text = "Reports (F4)"
         Me.BtnReports.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnReports.UseVisualStyleBackColor = False
         '
-        'Timer1
+        'Button1
         '
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
+        Me.Button1.BackgroundImage = Global.P.O.S.My.Resources.Resources.logout
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(236, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(241, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Location = New System.Drawing.Point(927, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(50, 49)
+        Me.Button1.TabIndex = 25
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.P.O.S.My.Resources.Resources.logoSGSreport
+        Me.PictureBox2.Location = New System.Drawing.Point(12, 3)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(54, 57)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 20
+        Me.PictureBox2.TabStop = False
         '
         'FrmMainMenu
         '
@@ -315,16 +302,14 @@ Partial Class FrmMainMenu
         Me.Text = "POS -  Main Menu"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents LblTimer As Label
     Friend WithEvents LblName As Label

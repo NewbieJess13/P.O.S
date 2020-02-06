@@ -56,7 +56,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Server=DESKTOP-RIULON1\SQLEXPRESSJESS;Database=POSDbase;User = sa;Password=sasa")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Server=DESKTOP-5ABB736\SQLEXP;Database=POSDbase;User = sa;Password=sasa")>  _
         Public ReadOnly Property ConnectionString() As String
             Get
                 Return CType(Me("ConnectionString"),String)
@@ -108,6 +108,18 @@ Namespace My
             End Get
             Set
                 Me("Username") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property UserID() As String
+            Get
+                Return CType(Me("UserID"),String)
+            End Get
+            Set
+                Me("UserID") = value
             End Set
         End Property
     End Class

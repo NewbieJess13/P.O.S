@@ -55,6 +55,7 @@ Partial Class FrmViaAllowance
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.CRVAllowance = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -72,6 +73,7 @@ Partial Class FrmViaAllowance
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.67686!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.32314!))
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.CRVAllowance, 1, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -498,6 +500,18 @@ Partial Class FrmViaAllowance
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'CRVAllowance
+        '
+        Me.CRVAllowance.ActiveViewIndex = -1
+        Me.CRVAllowance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CRVAllowance.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CRVAllowance.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CRVAllowance.Location = New System.Drawing.Point(554, 4)
+        Me.CRVAllowance.Name = "CRVAllowance"
+        Me.CRVAllowance.Size = New System.Drawing.Size(489, 555)
+        Me.CRVAllowance.TabIndex = 1
+        Me.CRVAllowance.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+        '
         'FrmViaAllowance
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -555,4 +569,5 @@ Partial Class FrmViaAllowance
     Friend WithEvents txtTendered As TextBox
     Friend WithEvents txtTotalAmount As TextBox
     Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents CRVAllowance As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class

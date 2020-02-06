@@ -115,18 +115,18 @@ Public Class UCEditStaff
         ClearTexts()
     End Sub
 
-    Private Sub TxtBarcode_TextChanged(sender As Object, e As EventArgs) Handles TxtBarcode.TextChanged
-        Dim Barcode, Check12Digits As String
-        If Not (String.IsNullOrEmpty(TxtBarcode.Text)) Then
-            Check12Digits = TxtBarcode.Text.PadRight(12, "0")
-            Barcode = EAN13(Check12Digits)
-            LblBarcode.Text = Barcode
-            If Not (String.IsNullOrEmpty(Barcode13Digits)) And
-                    Not Barcode13Digits = "" Then
-                RchTxtRealBarcode.Text = Barcode13Digits.Trim.ToString
-                Dim intStart As Short = Convert.ToInt16(RchTxtRealBarcode.TextLength - 1)
-                ChangeColor(RchTxtRealBarcode, intStart)
-            End If
-        End If
-    End Sub
+    'Private Sub TxtBarcode_TextChanged(sender As Object, e As EventArgs) Handles TxtBarcode.TextChanged
+    '    Dim Barcode, Check12Digits As String
+    '    If Not (String.IsNullOrEmpty(TxtBarcode.Text)) Then
+    '        Check12Digits = TxtBarcode.Text.PadRight(12, "0")
+    '        Barcode = EAN13(Check12Digits)
+    '        LblBarcode.Text = Barcode
+    '        If Not (String.IsNullOrEmpty(Barcode13Digits)) And
+    '                Not Barcode13Digits = "" Then
+    '            RchTxtRealBarcode.Text = Barcode13Digits.Trim.ToString
+    '            Dim intStart As Short = Convert.ToInt16(RchTxtRealBarcode.TextLength - 1)
+    '            ChangeColor(RchTxtRealBarcode, intStart)
+    '        End If
+    '    End If
+    'End Sub
 End Class

@@ -48,6 +48,7 @@ Partial Class FrmCheckOut
         Me.Btn2 = New System.Windows.Forms.Button()
         Me.Btn1 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
+        Me.CRVcash = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -244,7 +245,7 @@ Partial Class FrmCheckOut
         Me.BtnBillOut.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
         Me.BtnBillOut.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnBillOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnBillOut.Font = New System.Drawing.Font("Microsoft YaHei", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBillOut.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnBillOut.Location = New System.Drawing.Point(313, 153)
         Me.BtnBillOut.Name = "BtnBillOut"
         Me.BtnBillOut.Size = New System.Drawing.Size(150, 47)
@@ -402,6 +403,7 @@ Partial Class FrmCheckOut
         Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.0!))
         Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
         Me.TableLayoutPanel5.Controls.Add(Me.TableLayoutPanel1, 0, 0)
+        Me.TableLayoutPanel5.Controls.Add(Me.CRVcash, 1, 0)
         Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel5.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
@@ -409,6 +411,18 @@ Partial Class FrmCheckOut
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel5.Size = New System.Drawing.Size(803, 490)
         Me.TableLayoutPanel5.TabIndex = 4
+        '
+        'CRVcash
+        '
+        Me.CRVcash.ActiveViewIndex = -1
+        Me.CRVcash.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CRVcash.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CRVcash.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CRVcash.Location = New System.Drawing.Point(485, 4)
+        Me.CRVcash.Name = "CRVcash"
+        Me.CRVcash.Size = New System.Drawing.Size(314, 482)
+        Me.CRVcash.TabIndex = 4
+        Me.CRVcash.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
         'FrmCheckOut
         '
@@ -458,4 +472,5 @@ Partial Class FrmCheckOut
     Friend WithEvents Label3 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
+    Friend WithEvents CRVcash As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class

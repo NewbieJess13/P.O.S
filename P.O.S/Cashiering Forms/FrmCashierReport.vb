@@ -5,7 +5,7 @@ Public Class FrmCashierReport
     Dim crystal As New ReportDocument
 
     Private Sub FrmCashierReport_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        crystal.Load("C:\Users\JESTONI\source\repos\P.O.S\P.O.S\Cashiering Forms\ReceiptReport.rpt")
+        crystal.Load(Application.StartupPath & "\ReceiptReport.rpt")
         GetTransactionNo()
 
     End Sub

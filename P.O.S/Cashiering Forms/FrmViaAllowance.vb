@@ -1,4 +1,4 @@
-﻿Imports MealAllowance.Ibiden
+﻿Imports CrystalDecisions.CrystalReports.Engine
 Imports System.Text.RegularExpressions
 Public Class FrmViaAllowance
     Public Event LoadDataToGridToCheckOut As EventHandler
@@ -11,7 +11,7 @@ Public Class FrmViaAllowance
     Dim TotalBal As String
     Dim purchasedList As String
     Dim TransactionDate As String
-    Dim CanteenCode As String
+    Dim CanteenCode As String = "5"
     Dim newRegAllowance As String
     Dim newSpeAllowance As String
     Dim CostCenterCode As String
@@ -30,6 +30,7 @@ Public Class FrmViaAllowance
     Dim CSCrud As New CashierSessionCrud
     Dim CSData As New CashierTransData
     Dim CTData As New CaptureTransData
+    Dim crystal As New ReportDocument
     Function ToBeMinusToTotalAmount()
         Dim Total As Decimal
         Dim value As String = FrmCashierSession.LblTotalRes.Text
@@ -40,6 +41,7 @@ Public Class FrmViaAllowance
     End Function
 
     Private Sub FrmViaAllowance_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        crystal.Load(Application.StartupPath & "\ReceiptMealAllowance.rpt")
         txtTotalAmount.ReadOnly = True
         txtBalance.ReadOnly = True
         txtChange.ReadOnly = True
@@ -52,10 +54,11 @@ Public Class FrmViaAllowance
         If e.KeyCode = Keys.Enter Then
             If txtBarcode.TextLength = 11 Then
                 InquiryID = txtBarcode.Text.Substring(0, txtBarcode.TextLength - 2)
-                errorCode = ibiden.BalanceInquiry(server, InquiryID, regAllowancestr, speAllowancestr, sectionName)
+                ' errorCode = ibiden.BalanceInquiry(server, InquiryID, regAllowancestr, speAllowancestr, sectionName)
                 TotalBal = regAllowancestr + speAllowancestr
                 LblBalance.Text = "₱ " & TotalBal
 
+                MessageBox.Show(realID)
                 If errorCode = "-1" Then
                     MessageBox.Show("Server not Found!", My.Settings.Title, MessageBoxButtons.OK, MessageBoxIcon.Error)
                 ElseIf errorCode = "-2" Then
@@ -114,8 +117,16 @@ Public Class FrmViaAllowance
         End If
     End Sub
 
+    Sub GetTransactionNo()
+        Dim DT As DataTable = CSCrud.GetTransactionNo
+        If DT.Rows.Count > 0 Then
+            receiptNum = DT.Rows(0)(0)
+            CaptureTransaction()
+        End If
+    End Sub
+
     Sub CaptureTransaction()
-        TransactionDate = Date.Now.ToString("yyyyMMddHHmm")
+        TransactionDate = Date.Now.ToString("yyyyMMddhhmm")
         errorCode = ibiden.CaptureTransaction(server, InquiryID, TotalBal, purchasedList, purchasedAmount, My.Settings.FullName, receiptNum, TransactionDate, CanteenCode, regAllowance, speAllowance, CostCenterCode, employeeClass)
         remBalance = regAllowance + speAllowance
         If errorCode = "-1" Then
@@ -138,35 +149,68 @@ Public Class FrmViaAllowance
             errorCode = ibiden.BalanceInquiry(server, InquiryID, newRegAllowance, newSpeAllowance, sectionName)
             'trim id
             realID = InquiryID.TrimStart("0"c)
+            'If realID.Length < 3 Then
+            '    realID.ToString().PadLeft(2, "0")
+            'End If
             CTData.EmployeeID = realID
-            CTData.AvailableBalance = remBalance
-            CTData.PurchasedList = purchasedList
-            CTData.PurchasedAmount = purchasedAmount
-            CTData.ReceiptNo = receiptNum
-            CTData.TransactionDate = TransactionDate
-            CTData.CanteenCode = CanteenCode
-            CTData.RegAllowance = newRegAllowance
-            CTData.SpeAllowance = newSpeAllowance
-            CTData.CostCenterCode = CostCenterCode
-            CTData.PrevRegAllowance = regAllowancestr
-            CTData.PrevSpeAllowance = speAllowancestr
-            CTData.errorCode = errorCode
-            If CSCrud.SaveCaptureTrans(CTData) Then
-                RaiseEvent LoadDataToGridToCheckOut(Me, Nothing)
+                CTData.AvailableBalance = remBalance
+                CTData.PurchasedList = purchasedList
+                CTData.PurchasedAmount = purchasedAmount
+                CTData.ReceiptNo = receiptNum
+                CTData.TransactionDate = TransactionDate
+                CTData.CanteenCode = CanteenCode
+                CTData.RegAllowance = newRegAllowance
+                CTData.SpeAllowance = newSpeAllowance
+                CTData.CostCenterCode = CostCenterCode
+                CTData.PrevRegAllowance = regAllowancestr
+                CTData.PrevSpeAllowance = speAllowancestr
+                CTData.errorCode = errorCode
+                If CSCrud.SaveCaptureTrans(CTData) Then
+                    PrintReport()
+                End If
             End If
-        End If
     End Sub
 
-    Sub GetTransactionNo()
-        Dim DT As DataTable = CSCrud.GetTransactionNo
+    Sub PrintReport()
+        Dim DT As DataTable = CSCrud.GetReport(receiptNum)
         If DT.Rows.Count > 0 Then
-            receiptNum = DT.Rows(0)(0)
-            CaptureTransaction()
+            crystal.SetDataSource(DT)
+            CRVAllowance.ReportSource = crystal
+            RaiseEvent LoadDataToGridToCheckOut(Me, Nothing)
+            Me.Close()
         End If
     End Sub
 
     Private Sub FrmViaAllowance_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         FrmCashierSession.purchasedList = ""
+        regAllowance = 0
+        speAllowance = 0
+        regAllowancestr = ""
+        speAllowancestr = ""
+        sectionName = ""
+        TotalBal = ""
+        purchasedList = ""
+        TransactionDate = ""
+        CanteenCode = ""
+        newRegAllowance = ""
+        newSpeAllowance = ""
+        CostCenterCode = ""
+        errorCode = 0
+        InquiryID = ""
+        receiptNum = ""
+        employeeClass = ""
+        remBalance = ""
+        Converted = 0
+        purchasedAmount = ""
+        tendered = ""
+        change = ""
+        bal = ""
+        realID = ""
+        txtBarcode.Clear()
+        txtTotalAmount.Clear()
+        txtBalance.Clear()
+        txtTendered.Clear()
+        txtChange.Clear()
     End Sub
 
     Private Sub txtTendered_TextChanged(sender As Object, e As EventArgs) Handles txtTendered.TextChanged

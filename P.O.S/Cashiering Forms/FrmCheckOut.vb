@@ -1,17 +1,18 @@
 ﻿Imports System.Text.RegularExpressions
-Imports System.Data.SqlClient
-Imports System.Text
+Imports CrystalDecisions.CrystalReports.Engine
 Public Class FrmCheckOut
 
     Public Event LoadDataToGridToCheckOut As EventHandler
     Dim Converted As Decimal
     Dim CSCrud As New CashierSessionCrud
     Dim CSdata As New CashierTransData
-
+    Dim ReceiptNo As String
+    Dim crystal As New ReportDocument
     Private Sub FrmCheckOut_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TxtTotalAmount.Text = ToBeMinusToTotalAmount()
         TxtChange.ReadOnly = True
         TxtCashTendered.Text = ""
+        crystal.Load(Application.StartupPath & "\ReceiptReport.rpt")
     End Sub
 
     Private Sub TxtCashTendered_TextChanged(sender As Object, e As EventArgs) Handles TxtCashTendered.TextChanged
@@ -58,19 +59,26 @@ Public Class FrmCheckOut
         CSdata.CashBalance = 0
         If CSCrud.ConfirmBillOut(CSdata) Then
             ReadyTheReceipt()
+            Dim DT As DataTable = CSCrud.GetTransactionNo()
+            If DT.Rows.Count > 0 Then
+                ReceiptNo = DT.Rows(0)(0)
+                Dim DTprint As DataTable = CSCrud.GetReport(ReceiptNo)
+                If DTprint.Rows.Count > 0 Then
+                    crystal.SetDataSource(DTprint)
+                    CRVcash.ReportSource = crystal
+                    RaiseEvent LoadDataToGridToCheckOut(Me, Nothing)
+                    Me.Close()
+                End If
+            End If
         End If
     End Sub
 
 
     Sub ReadyTheReceipt()
         If CSCrud.InsertIntoItems() Then
-            RaiseEvent LoadDataToGridToCheckOut(Me, Nothing)
-            ClearTexts()
-            Me.Close()
+
         End If
     End Sub
-
-
 
     Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
         TxtCashTendered.Text = TxtCashTendered.Text.Remove(TxtCashTendered.TextLength - 1)

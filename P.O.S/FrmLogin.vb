@@ -23,6 +23,7 @@ Public Class frmLogin
         If DT.Rows.Count > 0 Then
             For Each dr As DataRow In DT.Rows
                 My.Settings.FullName = dr(0)
+                My.Settings.UserID = dr(1)
                 My.Settings.Username = dr(2)
                 Account_Type = dr(4)
                 Position = dr(3)

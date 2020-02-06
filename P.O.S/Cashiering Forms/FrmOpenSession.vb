@@ -4,25 +4,21 @@ Imports System.Data.SqlClient
 Public Class FrmOpenSession
 
     Dim dateTime As String
-
+    Dim CSCrud As New CashierSessionCrud
+    Dim SesData As New SessionData
     Sub New()
         InitializeComponent()
         TxtBusinessDate.Text = Format(Date.Now, "dd-mm-yy hh:mm:ss")
     End Sub
 
     Private Sub FrmOpenSession_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        '  MsSql.connectionString = My.Settings.ConnectionString
-        '  TxtCashierName.Text = frmLogin.user1
+
+        TxtCashierName.Text = My.Settings.FullName
     End Sub
 
     Private Sub BtnReplenish_Click(sender As Object, e As EventArgs) Handles BtnOpen.Click
         If TxtBegCash.Text <> "" And TxtNotes.Text <> "" Then
-            If MessageBox.Show("Are you sure you want to start your session?", "POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                InsertCashierSession()
-                ClearTexts()
-                MessageBox.Show("Session Opened.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                FrmCashierSession.Show()
-            End If
+            InsertCashierSession()
         Else
             MessageBox.Show("Please fill up all the required fields.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
@@ -36,20 +32,15 @@ Public Class FrmOpenSession
         Close()
     End Sub
 
-    Sub ClearTexts()
-        TxtBegCash.Clear()
-        TxtNotes.Clear()
-    End Sub
+
 
     Dim TransNo As String = "0"
-
     Private Sub GetTransactionID()
         Try
-            Dim dt As DataTable
-            '    dt = MsSql.Table("SELECT TOP 1 TransactionNo FROM Tbl_CashierSession ORDER BY TransactionNo DESC")
-            If dt.Rows.Count > 0 Then
+            Dim DT As DataTable = CSCrud.GetTransSession
+            If DT.Rows.Count > 0 Then
                 Dim TransNumber As Integer
-                For Each dr As DataRow In dt.Rows
+                For Each dr As DataRow In DT.Rows
                     TransNumber = dr(0) + 1
                     TransNo = Format(TransNumber, "000000000000")
                 Next
@@ -63,31 +54,27 @@ Public Class FrmOpenSession
 
     Private Sub InsertCashierSession()
         GetTransactionID()
-        Dim SessionID As String = Splitted() & TxtCashierName.Text
-        My.Settings.SessionID = SessionID
-        Try
-            Using conn As New SqlConnection(My.Settings.ConnectionString)
-                conn.Open()
-                Dim command As New SqlCommand("INSERT INTO Tbl_CashierSession (TransactionNo,SessionId,xDatexTime,CashAmount,EndCash,Notes,xTransaction) VALUES (@TransactionNo,@SessionId,@DateTime,@BeginCash,@EndCash,@Notes,@XTransaction)", conn)
-                command.Parameters.AddWithValue("@TransactionNo", TransNo)
-                command.Parameters.AddWithValue("@SessionId", SessionID)
-                command.Parameters.AddWithValue("@DateTime", Splitted)
-                command.Parameters.AddWithValue("@BeginCash", TxtBegCash.Text)
-                command.Parameters.AddWithValue("@EndCash", "")
-                command.Parameters.AddWithValue("@Notes", TxtNotes.Text)
-                command.Parameters.AddWithValue("@XTransaction", "Beginning Balance")
-                command.ExecuteNonQuery()
-            End Using
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+        SesData.TransactionNo = TransNo
+        SesData.SessionID = String.Concat(Date.Now.ToString("yyMMddhhmmss"), My.Settings.FullName)
+        SesData.DateTime = TxtBusinessDate.Text
+        SesData.CashAmount = TxtBegCash.Text
+        SesData.Notes = TxtNotes.Text
+        SesData.xTransaction = "Open Session"
+        SesData.SessionUser = My.Settings.FullName
+        If CSCrud.InsertSession(SesData) Then
+            ClearTexts()
+            FrmCashierSession.Show()
+            Me.Close()
+            My.Settings.SessionID = SesData.SessionID
+            UpdateAcctSes()
+        End If
     End Sub
 
-    Function Splitted()
-        dateTime = TxtBusinessDate.Text
-        Dim Converted As String = Regex.Replace(dateTime, "[- :]", "")
-        Return Converted
-    End Function
+    Sub UpdateAcctSes()
+        If CSCrud.UpdateSessionAcct() Then
+
+        End If
+    End Sub
 
     Private Sub TxtBegCash_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtBegCash.KeyPress
         If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) AndAlso Not e.KeyChar = "." Then
@@ -105,5 +92,11 @@ Public Class FrmOpenSession
         If e.KeyCode = Keys.Enter Then
             BtnOpen.PerformClick()
         End If
+    End Sub
+
+
+    Sub ClearTexts()
+        TxtBegCash.Clear()
+        TxtNotes.Clear()
     End Sub
 End Class

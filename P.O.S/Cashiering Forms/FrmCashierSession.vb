@@ -4,6 +4,7 @@ Public Class FrmCashierSession
     Dim _Quantity As Integer
     Dim rnd As New Random
     Dim CSCrud As New CashierSessionCrud
+    Dim id As String
     Sub New()
         InitializeComponent()
 
@@ -50,6 +51,7 @@ Public Class FrmCashierSession
                 DGItemList.Rows.Add(dr(0), dr(1), dr(5), dr(2), Convert.ToDecimal(dr(3)).ToString("N2"), dr(4))
             Next
         End If
+        DGItemList.ClearSelection()
         GetTotal()
 
     End Sub
@@ -128,6 +130,30 @@ Public Class FrmCashierSession
         Loop
         If purchasedList <> "" Then
             FrmViaAllowance.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub DGItemList_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGItemList.CellClick
+        Try
+            If e.RowIndex >= 0 Or e.ColumnIndex >= 0 Then
+                id = DGItemList.Rows(e.RowIndex).Cells(0).Value
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub BtnVoidItem_Click(sender As Object, e As EventArgs) Handles BtnVoidItem.Click
+        If id <> "" Then
+            If CSCrud.DeleteItems(id) Then
+                LoadDataToGrid()
+            End If
+        End If
+    End Sub
+
+    Private Sub BtnVoidTrans_Click(sender As Object, e As EventArgs) Handles BtnVoidTrans.Click
+        If CSCrud.DeleteItems() Then
+            LoadDataToGrid()
         End If
     End Sub
 End Class

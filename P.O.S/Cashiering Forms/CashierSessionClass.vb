@@ -401,6 +401,147 @@ Public Class CashierSessionCrud
         End Try
         Return isSent
     End Function
+
+
+    Friend Function GetReport(transno As String) As DataTable
+        Dim ReportDT As New DataTable
+        Try
+            Using conn As New SqlConnection(CP.ConnectionString)
+                conn.Open()
+                Dim xSQL As New StringBuilder
+                xSQL.AppendLine("SELECT * ")
+                xSQL.AppendLine("FROM ")
+                xSQL.AppendLine("ViewReceiptReport ")
+                xSQL.AppendLine("WHERE ")
+                xSQL.AppendLine("CashierSessionID = @SessionID  ")
+                xSQL.AppendLine(" AND TransactionNo = @TransNo ")
+                Dim command As New SqlCommand(xSQL.ToString, conn)
+                command.Parameters.AddWithValue("@SessionID", My.Settings.SessionID)
+                command.Parameters.AddWithValue("@TransNo", transno)
+                Dim DA As New SqlDataAdapter(command)
+                Dim DS As New DataSet
+                DA.Fill(DS)
+                If DS.Tables.Count > 0 Then
+                    ReportDT = DS.Tables(0)
+                End If
+                conn.Close()
+            End Using
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        End Try
+        Return ReportDT
+    End Function
+
+    Friend Function DeleteItems(Optional id As String = "") As Boolean
+        Dim isremoved As Boolean = False
+        Try
+            Using conn As New SqlConnection(CP.ConnectionString)
+                conn.Open()
+                Dim xSQl As New StringBuilder
+                xSQl.AppendLine("DELETE FROM Tbl_TempTransaction ")
+                xSQl.AppendLine("WHERE CashierSessionID = @session ")
+                If id <> "" Then
+                    xSQl.AppendLine("AND id = @id ")
+                End If
+                Dim command As New SqlCommand(xSQl.ToString, conn)
+                command.Parameters.AddWithValue("@session", My.Settings.SessionID)
+                command.Parameters.AddWithValue("@id", id)
+                Dim isExecute As Integer = command.ExecuteNonQuery
+                If isExecute <> 0 Then isremoved = True
+                conn.Close()
+            End Using
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        End Try
+        Return isremoved
+    End Function
+
+    Friend Function InsertSession(SesData As SessionData) As Boolean
+        Dim isSent As Boolean = False
+        Try
+            Using conn As New SqlConnection(CP.ConnectionString)
+                conn.Open()
+                Dim xSQL As New StringBuilder
+                xSQL.AppendLine("INSERT INTO ")
+                xSQL.AppendLine("Tbl_CashierSession ")
+                xSQL.AppendLine("( ")
+                xSQL.AppendLine("TransactionNo, ")
+                xSQL.AppendLine("SessionId, ")
+                xSQL.AppendLine("xDatexTime, ")
+                xSQL.AppendLine("CashAmount, ")
+                xSQL.AppendLine("Notes, ")
+                xSQL.AppendLine("xTransaction, ")
+                xSQL.AppendLine("SessionUser ")
+                xSQL.AppendLine(") VALUES ( ")
+                xSQL.AppendLine("@TransactionNo, ")
+                xSQL.AppendLine("@SessionId, ")
+                xSQL.AppendLine("@xDatexTime, ")
+                xSQL.AppendLine("@CashAmount, ")
+                xSQL.AppendLine("@Notes, ")
+                xSQL.AppendLine("@xTransaction, ")
+                xSQL.AppendLine("@SessionUser ")
+                xSQL.AppendLine(") ")
+                Dim command As New SqlCommand(xSQL.ToString, conn)
+                command.Parameters.AddWithValue("@TransactionNo", SesData.TransactionNo)
+                command.Parameters.AddWithValue("@SessionId", SesData.SessionID)
+                command.Parameters.AddWithValue("@xDatexTime", SesData.DateTime)
+                command.Parameters.AddWithValue("@CashAmount", SesData.CashAmount)
+                command.Parameters.AddWithValue("@Notes", SesData.Notes)
+                command.Parameters.AddWithValue("@xTransaction", SesData.xTransaction)
+                command.Parameters.AddWithValue("@SessionUser", SesData.SessionUser)
+                Dim isExecute As Integer = command.ExecuteNonQuery
+                If isExecute <> 0 Then isSent = True
+                conn.Close()
+            End Using
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        End Try
+        Return isSent
+    End Function
+
+    Friend Function GetTransSession() As DataTable
+        Dim ReportDT As New DataTable
+        Try
+            Using conn As New SqlConnection(CP.ConnectionString)
+                conn.Open()
+                Dim xSQL As New StringBuilder
+                xSQL.AppendLine("SELECT TOP 1 TransactionNo FROM Tbl_CashierSession ORDER BY id DESC")
+                Dim command As New SqlCommand(xSQL.ToString, conn)
+                Dim DA As New SqlDataAdapter(command)
+                Dim DS As New DataSet
+                DA.Fill(DS)
+                If DS.Tables.Count > 0 Then
+                    ReportDT = DS.Tables(0)
+                End If
+                conn.Close()
+            End Using
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        End Try
+        Return ReportDT
+    End Function
+
+    Friend Function UpdateSessionAcct() As Boolean
+        Dim isUpdated As Boolean = False
+        Try
+            Using conn As New SqlConnection(CP.ConnectionString)
+                conn.Open()
+                Dim xSQL As New StringBuilder
+                xSQL.AppendLine("UPDATE Tbl_UserAccounts SET ")
+                xSQL.AppendLine("CurrentSession = @session ")
+                xSQL.AppendLine("WHERE COOP_id = @id  ")
+                Dim command As New SqlCommand(xSQL.ToString, conn)
+                command.Parameters.AddWithValue("@session", My.Settings.SessionID)
+                command.Parameters.AddWithValue("@id", My.Settings.UserID)
+                Dim isExecute As Integer = command.ExecuteNonQuery
+                If isExecute <> 0 Then isUpdated = True
+                conn.Close()
+            End Using
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        End Try
+        Return isUpdated
+    End Function
 End Class
 
 
