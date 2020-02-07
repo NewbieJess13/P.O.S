@@ -173,10 +173,14 @@ Public Class FrmViaAllowance
 
     Sub PrintReport()
         Dim DT As DataTable = CSCrud.GetReport(receiptNum)
+        CRVAllowance.Show()
         If DT.Rows.Count > 0 Then
             crystal.SetDataSource(DT)
             CRVAllowance.ReportSource = crystal
             RaiseEvent LoadDataToGridToCheckOut(Me, Nothing)
+            crystal.PrintOptions.PrinterName = My.Settings.PrinterName
+            crystal.PrintToPrinter(1, False, 1, 1)
+            CRVAllowance.Hide()
             Me.Close()
         End If
     End Sub

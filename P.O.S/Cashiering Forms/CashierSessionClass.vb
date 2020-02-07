@@ -521,7 +521,7 @@ Public Class CashierSessionCrud
         Return ReportDT
     End Function
 
-    Friend Function UpdateSessionAcct() As Boolean
+    Friend Function UpdateSessionAcct(session As String) As Boolean
         Dim isUpdated As Boolean = False
         Try
             Using conn As New SqlConnection(CP.ConnectionString)
@@ -531,7 +531,7 @@ Public Class CashierSessionCrud
                 xSQL.AppendLine("CurrentSession = @session ")
                 xSQL.AppendLine("WHERE COOP_id = @id  ")
                 Dim command As New SqlCommand(xSQL.ToString, conn)
-                command.Parameters.AddWithValue("@session", My.Settings.SessionID)
+                command.Parameters.AddWithValue("@session", session)
                 command.Parameters.AddWithValue("@id", My.Settings.UserID)
                 Dim isExecute As Integer = command.ExecuteNonQuery
                 If isExecute <> 0 Then isUpdated = True

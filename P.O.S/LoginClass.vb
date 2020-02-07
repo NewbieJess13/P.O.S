@@ -45,7 +45,7 @@ Friend Class LoginCrud
         Return LoginDT
     End Function
 
-    Friend Function UpdateStatus(coop_ID) As Boolean
+    Friend Function UpdateStatus(coop_ID As String, status As String) As Boolean
         Dim isUpdated As Boolean = False
         Try
             Using conn As New SqlConnection(CP.ConnectionString)
@@ -56,7 +56,7 @@ Friend Class LoginCrud
                 xSQl.AppendLine("WHERE COOP_id = @coopID ")
                 Dim cmd As New SqlCommand(xSQl.ToString, conn)
                 cmd.Parameters.AddWithValue("@coopID", coop_ID)
-                cmd.Parameters.AddWithValue("@status", "1")
+                cmd.Parameters.AddWithValue("@status", status)
                 Dim isExecute As Integer = cmd.ExecuteNonQuery
                 If isExecute <> 0 Then isUpdated = True
             End Using

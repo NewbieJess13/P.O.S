@@ -26,9 +26,7 @@ Partial Class FrmSettings
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.PnlContent = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.BtnBarcodePrinter = New System.Windows.Forms.Button()
-        Me.BtnCredit = New System.Windows.Forms.Button()
-        Me.BtnAppSettings = New System.Windows.Forms.Button()
+        Me.BtnSetPrinter = New System.Windows.Forms.Button()
         Me.BtnEditProfile = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -60,9 +58,7 @@ Partial Class FrmSettings
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.BtnBarcodePrinter)
-        Me.Panel2.Controls.Add(Me.BtnCredit)
-        Me.Panel2.Controls.Add(Me.BtnAppSettings)
+        Me.Panel2.Controls.Add(Me.BtnSetPrinter)
         Me.Panel2.Controls.Add(Me.BtnEditProfile)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel2.Location = New System.Drawing.Point(0, 89)
@@ -70,48 +66,19 @@ Partial Class FrmSettings
         Me.Panel2.Size = New System.Drawing.Size(191, 490)
         Me.Panel2.TabIndex = 4
         '
-        'BtnBarcodePrinter
+        'BtnSetPrinter
         '
-        Me.BtnBarcodePrinter.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
-        Me.BtnBarcodePrinter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnBarcodePrinter.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnBarcodePrinter.Image = Global.P.O.S.My.Resources.Resources.printer
-        Me.BtnBarcodePrinter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBarcodePrinter.Location = New System.Drawing.Point(0, 273)
-        Me.BtnBarcodePrinter.Name = "BtnBarcodePrinter"
-        Me.BtnBarcodePrinter.Size = New System.Drawing.Size(191, 63)
-        Me.BtnBarcodePrinter.TabIndex = 3
-        Me.BtnBarcodePrinter.Text = "Barcode Printer"
-        Me.BtnBarcodePrinter.UseVisualStyleBackColor = False
-        '
-        'BtnCredit
-        '
-        Me.BtnCredit.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
-        Me.BtnCredit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCredit.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCredit.Image = Global.P.O.S.My.Resources.Resources.upload_symbol
-        Me.BtnCredit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnCredit.Location = New System.Drawing.Point(0, 204)
-        Me.BtnCredit.Name = "BtnCredit"
-        Me.BtnCredit.Size = New System.Drawing.Size(191, 63)
-        Me.BtnCredit.TabIndex = 2
-        Me.BtnCredit.Text = "Credit Settings"
-        Me.BtnCredit.UseVisualStyleBackColor = False
-        '
-        'BtnAppSettings
-        '
-        Me.BtnAppSettings.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
-        Me.BtnAppSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAppSettings.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAppSettings.Image = Global.P.O.S.My.Resources.Resources.home_delivery_of_goods
-        Me.BtnAppSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnAppSettings.Location = New System.Drawing.Point(0, 135)
-        Me.BtnAppSettings.Name = "BtnAppSettings"
-        Me.BtnAppSettings.Size = New System.Drawing.Size(191, 63)
-        Me.BtnAppSettings.TabIndex = 1
-        Me.BtnAppSettings.Text = "Application Settings"
-        Me.BtnAppSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnAppSettings.UseVisualStyleBackColor = False
+        Me.BtnSetPrinter.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
+        Me.BtnSetPrinter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSetPrinter.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSetPrinter.Image = Global.P.O.S.My.Resources.Resources.printer
+        Me.BtnSetPrinter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnSetPrinter.Location = New System.Drawing.Point(0, 135)
+        Me.BtnSetPrinter.Name = "BtnSetPrinter"
+        Me.BtnSetPrinter.Size = New System.Drawing.Size(191, 63)
+        Me.BtnSetPrinter.TabIndex = 3
+        Me.BtnSetPrinter.Text = "Set Printer"
+        Me.BtnSetPrinter.UseVisualStyleBackColor = False
         '
         'BtnEditProfile
         '
@@ -169,10 +136,8 @@ Partial Class FrmSettings
     Friend WithEvents PnlContent As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents BtnAppSettings As Button
     Friend WithEvents BtnEditProfile As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents BtnCredit As Button
-    Friend WithEvents BtnBarcodePrinter As Button
+    Friend WithEvents BtnSetPrinter As Button
 End Class

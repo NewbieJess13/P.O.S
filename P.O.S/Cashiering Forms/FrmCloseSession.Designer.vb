@@ -34,7 +34,7 @@ Partial Class FrmCloseSession
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.BtnClear = New System.Windows.Forms.Button()
-        Me.BtnReplenish = New System.Windows.Forms.Button()
+        Me.Btnclose = New System.Windows.Forms.Button()
         Me.BtnExit = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -44,6 +44,7 @@ Partial Class FrmCloseSession
         '
         'TableLayoutPanel1
         '
+        Me.TableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
         Me.TableLayoutPanel1.ColumnCount = 2
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.0!))
@@ -70,18 +71,18 @@ Partial Class FrmCloseSession
         '
         Me.TxtNotes.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TxtNotes.Font = New System.Drawing.Font("Century Gothic", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNotes.Location = New System.Drawing.Point(216, 189)
+        Me.TxtNotes.Location = New System.Drawing.Point(218, 190)
         Me.TxtNotes.Name = "TxtNotes"
-        Me.TxtNotes.Size = New System.Drawing.Size(494, 57)
+        Me.TxtNotes.Size = New System.Drawing.Size(491, 57)
         Me.TxtNotes.TabIndex = 10
         '
         'TxtCashAmount
         '
         Me.TxtCashAmount.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TxtCashAmount.Font = New System.Drawing.Font("Century Gothic", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCashAmount.Location = New System.Drawing.Point(216, 127)
+        Me.TxtCashAmount.Location = New System.Drawing.Point(218, 128)
         Me.TxtCashAmount.Name = "TxtCashAmount"
-        Me.TxtCashAmount.Size = New System.Drawing.Size(494, 57)
+        Me.TxtCashAmount.Size = New System.Drawing.Size(491, 57)
         Me.TxtCashAmount.TabIndex = 9
         '
         'TxtCashierName
@@ -89,19 +90,19 @@ Partial Class FrmCloseSession
         Me.TxtCashierName.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TxtCashierName.Enabled = False
         Me.TxtCashierName.Font = New System.Drawing.Font("Century Gothic", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCashierName.Location = New System.Drawing.Point(216, 65)
+        Me.TxtCashierName.Location = New System.Drawing.Point(218, 66)
         Me.TxtCashierName.Name = "TxtCashierName"
-        Me.TxtCashierName.Size = New System.Drawing.Size(494, 57)
+        Me.TxtCashierName.Size = New System.Drawing.Size(491, 57)
         Me.TxtCashierName.TabIndex = 8
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(3, 186)
+        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(4, 187)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(207, 64)
+        Me.Label7.Size = New System.Drawing.Size(207, 62)
         Me.Label7.TabIndex = 7
         Me.Label7.Text = "NOTES"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -110,10 +111,10 @@ Partial Class FrmCloseSession
         '
         Me.Label5.AutoSize = True
         Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(3, 124)
+        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(4, 125)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(207, 62)
+        Me.Label5.Size = New System.Drawing.Size(207, 61)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "ENDING CASH"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -122,10 +123,10 @@ Partial Class FrmCloseSession
         '
         Me.Label3.AutoSize = True
         Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(3, 62)
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(4, 63)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(207, 62)
+        Me.Label3.Size = New System.Drawing.Size(207, 61)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "CASHIER NAME"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -134,10 +135,10 @@ Partial Class FrmCloseSession
         '
         Me.Label2.AutoSize = True
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 0)
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(4, 1)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(207, 62)
+        Me.Label2.Size = New System.Drawing.Size(207, 61)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "BUSINESS DATE"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -147,9 +148,9 @@ Partial Class FrmCloseSession
         Me.TxtBusinessDate.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TxtBusinessDate.Enabled = False
         Me.TxtBusinessDate.Font = New System.Drawing.Font("Century Gothic", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtBusinessDate.Location = New System.Drawing.Point(216, 3)
+        Me.TxtBusinessDate.Location = New System.Drawing.Point(218, 4)
         Me.TxtBusinessDate.Name = "TxtBusinessDate"
-        Me.TxtBusinessDate.Size = New System.Drawing.Size(494, 57)
+        Me.TxtBusinessDate.Size = New System.Drawing.Size(491, 57)
         Me.TxtBusinessDate.TabIndex = 1
         '
         'Panel1
@@ -168,7 +169,7 @@ Partial Class FrmCloseSession
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.TableLayoutPanel2.Controls.Add(Me.BtnClear, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.BtnReplenish, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.Btnclose, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.BtnExit, 2, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(0, 0)
@@ -197,23 +198,23 @@ Partial Class FrmCloseSession
         Me.BtnClear.Text = "CLEAR"
         Me.BtnClear.UseVisualStyleBackColor = False
         '
-        'BtnReplenish
+        'Btnclose
         '
-        Me.BtnReplenish.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.Btnclose.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnReplenish.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
-        Me.BtnReplenish.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnReplenish.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnReplenish.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnReplenish.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnReplenish.Location = New System.Drawing.Point(0, 0)
-        Me.BtnReplenish.Margin = New System.Windows.Forms.Padding(0)
-        Me.BtnReplenish.Name = "BtnReplenish"
-        Me.BtnReplenish.Size = New System.Drawing.Size(237, 78)
-        Me.BtnReplenish.TabIndex = 29
-        Me.BtnReplenish.Text = "CLOSE"
-        Me.BtnReplenish.UseVisualStyleBackColor = False
+        Me.Btnclose.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
+        Me.Btnclose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btnclose.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btnclose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Btnclose.Location = New System.Drawing.Point(0, 0)
+        Me.Btnclose.Margin = New System.Windows.Forms.Padding(0)
+        Me.Btnclose.Name = "Btnclose"
+        Me.Btnclose.Size = New System.Drawing.Size(237, 78)
+        Me.Btnclose.TabIndex = 29
+        Me.Btnclose.Text = "CLOSE"
+        Me.Btnclose.UseVisualStyleBackColor = False
         '
         'BtnExit
         '
@@ -279,7 +280,7 @@ Partial Class FrmCloseSession
     Friend WithEvents Panel1 As Panel
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents BtnClear As Button
-    Friend WithEvents BtnReplenish As Button
+    Friend WithEvents Btnclose As Button
     Friend WithEvents BtnExit As Button
     Friend WithEvents Label1 As Label
 End Class

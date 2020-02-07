@@ -30,8 +30,8 @@ Public Class frmLogin
                 status = dr(5)
                 CashierSession = dr(6)
             Next
-            If status <> "1" Then
-                If Login.UpdateStatus(TxtCoopID.Text) Then
+            If CashierSession = "--" Then
+                If Login.UpdateStatus(TxtCoopID.Text, "1") Then
                     FrmMainMenu.Show()
                 End If
             Else

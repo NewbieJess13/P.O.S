@@ -156,4 +156,8 @@ Public Class FrmCashierSession
             LoadDataToGrid()
         End If
     End Sub
+
+    Private Sub BtnEndSession_Click(sender As Object, e As EventArgs) Handles BtnEndSession.Click
+        FrmCloseSession.ShowDialog()
+    End Sub
 End Class

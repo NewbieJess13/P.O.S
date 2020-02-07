@@ -110,7 +110,7 @@ Partial Class frmLogin
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(460, 109)
         Me.Label1.TabIndex = 13
-        Me.Label1.Text = "Username"
+        Me.Label1.Text = "User ID"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'TxtCoopID
@@ -119,6 +119,7 @@ Partial Class frmLogin
         Me.TxtCoopID.Font = New System.Drawing.Font("Century Gothic", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtCoopID.Location = New System.Drawing.Point(3, 112)
         Me.TxtCoopID.Name = "TxtCoopID"
+        Me.TxtCoopID.PasswordChar = Global.Microsoft.VisualBasic.ChrW(1422)
         Me.TxtCoopID.Size = New System.Drawing.Size(460, 50)
         Me.TxtCoopID.TabIndex = 0
         '

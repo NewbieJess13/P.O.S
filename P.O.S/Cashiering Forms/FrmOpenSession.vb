@@ -3,20 +3,17 @@ Imports System.Text.RegularExpressions
 Imports System.Data.SqlClient
 Public Class FrmOpenSession
 
-    Dim dateTime As String
     Dim CSCrud As New CashierSessionCrud
     Dim SesData As New SessionData
+    Dim TransNo As String = "0"
     Sub New()
         InitializeComponent()
         TxtBusinessDate.Text = Format(Date.Now, "dd-mm-yy hh:mm:ss")
-    End Sub
-
-    Private Sub FrmOpenSession_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         TxtCashierName.Text = My.Settings.FullName
     End Sub
 
-    Private Sub BtnReplenish_Click(sender As Object, e As EventArgs) Handles BtnOpen.Click
+
+    Private Sub BtnOpen_Click(sender As Object, e As EventArgs) Handles BtnOpen.Click
         If TxtBegCash.Text <> "" And TxtNotes.Text <> "" Then
             InsertCashierSession()
         Else
@@ -33,8 +30,6 @@ Public Class FrmOpenSession
     End Sub
 
 
-
-    Dim TransNo As String = "0"
     Private Sub GetTransactionID()
         Try
             Dim DT As DataTable = CSCrud.GetTransSession
@@ -64,15 +59,9 @@ Public Class FrmOpenSession
         If CSCrud.InsertSession(SesData) Then
             ClearTexts()
             FrmCashierSession.Show()
-            Me.Close()
+            FrmMainMenu.Close()
             My.Settings.SessionID = SesData.SessionID
-            UpdateAcctSes()
-        End If
-    End Sub
-
-    Sub UpdateAcctSes()
-        If CSCrud.UpdateSessionAcct() Then
-
+            CSCrud.UpdateSessionAcct(SesData.SessionID)
         End If
     End Sub
 
@@ -88,7 +77,6 @@ Public Class FrmOpenSession
     End Sub
 
     Private Sub FrmOpenSession_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
-
         If e.KeyCode = Keys.Enter Then
             BtnOpen.PerformClick()
         End If

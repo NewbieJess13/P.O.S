@@ -6,21 +6,10 @@
         a.Dock = DockStyle.Fill
     End Sub
 
-    Private Sub BtnCredit_Click(sender As Object, e As EventArgs) Handles BtnCredit.Click
+    Private Sub BtnSetPrinter_Click(sender As Object, e As EventArgs) Handles BtnSetPrinter.Click
         PnlContent.Controls.Clear()
-        Dim a As New UCCreditSet
+        Dim a As New UCSetPrinter
         a.Parent = PnlContent
         a.Dock = DockStyle.Fill
-    End Sub
-
-    Private Sub BtnBarcodePrinter_Click(sender As Object, e As EventArgs) Handles BtnBarcodePrinter.Click
-        PnlContent.Controls.Clear()
-        Dim a As New UCBarcodePrinter
-        a.Parent = PnlContent
-        a.Dock = DockStyle.Fill
-    End Sub
-
-    Private Sub BtnAppSettings_Click(sender As Object, e As EventArgs) Handles BtnAppSettings.Click
-        PnlContent.Controls.Clear()
     End Sub
 End Class

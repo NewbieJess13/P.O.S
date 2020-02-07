@@ -25,30 +25,30 @@ Partial Class FrmMainMenu
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMainMenu))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BtnLogout = New System.Windows.Forms.Button()
         Me.LblTimer = New System.Windows.Forms.Label()
         Me.LblName = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.BtnDelivery = New System.Windows.Forms.Button()
         Me.BtnUploadEmployee = New System.Windows.Forms.Button()
         Me.BtnProducts = New System.Windows.Forms.Button()
         Me.BtnOpenSession = New System.Windows.Forms.Button()
         Me.BtnSettings = New System.Windows.Forms.Button()
         Me.BtnReports = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.BtnLogout)
         Me.Panel1.Controls.Add(Me.LblTimer)
         Me.Panel1.Controls.Add(Me.LblName)
         Me.Panel1.Controls.Add(Me.Label2)
@@ -59,12 +59,27 @@ Partial Class FrmMainMenu
         Me.Panel1.Size = New System.Drawing.Size(980, 63)
         Me.Panel1.TabIndex = 0
         '
+        'BtnLogout
+        '
+        Me.BtnLogout.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnLogout.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.BtnLogout.BackgroundImage = Global.P.O.S.My.Resources.Resources.logout
+        Me.BtnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.BtnLogout.FlatAppearance.BorderSize = 0
+        Me.BtnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BtnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnLogout.Location = New System.Drawing.Point(927, 20)
+        Me.BtnLogout.Name = "BtnLogout"
+        Me.BtnLogout.Size = New System.Drawing.Size(41, 34)
+        Me.BtnLogout.TabIndex = 25
+        Me.BtnLogout.UseVisualStyleBackColor = False
+        '
         'LblTimer
         '
         Me.LblTimer.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.LblTimer.Font = New System.Drawing.Font("PMingLiU-ExtB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTimer.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.LblTimer.Location = New System.Drawing.Point(671, -10)
+        Me.LblTimer.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.LblTimer.Location = New System.Drawing.Point(680, 13)
         Me.LblTimer.Name = "LblTimer"
         Me.LblTimer.Size = New System.Drawing.Size(241, 47)
         Me.LblTimer.TabIndex = 24
@@ -74,7 +89,7 @@ Partial Class FrmMainMenu
         'LblName
         '
         Me.LblName.Font = New System.Drawing.Font("PMingLiU-ExtB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblName.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.LblName.ForeColor = System.Drawing.SystemColors.ControlText
         Me.LblName.Location = New System.Drawing.Point(176, 13)
         Me.LblName.Name = "LblName"
         Me.LblName.Size = New System.Drawing.Size(334, 47)
@@ -85,13 +100,25 @@ Partial Class FrmMainMenu
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("PMingLiU-ExtB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label2.Location = New System.Drawing.Point(72, 13)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(109, 47)
         Me.Label2.TabIndex = 22
         Me.Label2.Text = "CASHIER |"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox2.Image = Global.P.O.S.My.Resources.Resources.logoSGSreport
+        Me.PictureBox2.Location = New System.Drawing.Point(12, 3)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(54, 57)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 20
+        Me.PictureBox2.TabStop = False
         '
         'Panel2
         '
@@ -133,9 +160,6 @@ Partial Class FrmMainMenu
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(980, 456)
         Me.TableLayoutPanel1.TabIndex = 2
-        '
-        'Timer1
-        '
         '
         'BtnDelivery
         '
@@ -261,30 +285,8 @@ Partial Class FrmMainMenu
         Me.BtnReports.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnReports.UseVisualStyleBackColor = False
         '
-        'Button1
+        'Timer1
         '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.Button1.BackgroundImage = Global.P.O.S.My.Resources.Resources.logout
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(236, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(241, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(927, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(50, 49)
-        Me.Button1.TabIndex = 25
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.P.O.S.My.Resources.Resources.logoSGSreport
-        Me.PictureBox2.Location = New System.Drawing.Point(12, 3)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(54, 57)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 20
-        Me.PictureBox2.TabStop = False
         '
         'FrmMainMenu
         '
@@ -302,9 +304,9 @@ Partial Class FrmMainMenu
         Me.Text = "POS -  Main Menu"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -314,7 +316,7 @@ Partial Class FrmMainMenu
     Friend WithEvents LblTimer As Label
     Friend WithEvents LblName As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnLogout As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel

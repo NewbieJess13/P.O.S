@@ -54,8 +54,8 @@ Partial Class FrmViaAllowance
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.CRVAllowance = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -496,10 +496,6 @@ Partial Class FrmViaAllowance
         Me.Label4.Text = "Amount:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'ErrorProvider1
-        '
-        Me.ErrorProvider1.ContainerControl = Me
-        '
         'CRVAllowance
         '
         Me.CRVAllowance.ActiveViewIndex = -1
@@ -511,6 +507,10 @@ Partial Class FrmViaAllowance
         Me.CRVAllowance.Size = New System.Drawing.Size(489, 555)
         Me.CRVAllowance.TabIndex = 1
         Me.CRVAllowance.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+        '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
         '
         'FrmViaAllowance
         '

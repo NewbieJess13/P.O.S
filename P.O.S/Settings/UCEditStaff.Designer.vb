@@ -42,10 +42,6 @@ Partial Class UCEditStaff
         Me.RchTxtRealBarcode = New System.Windows.Forms.RichTextBox()
         Me.LblId = New System.Windows.Forms.Label()
         Me.LblBarcode = New System.Windows.Forms.Label()
-        Me.BtnSave = New System.Windows.Forms.Button()
-        Me.BtnEdit = New System.Windows.Forms.Button()
-        Me.BtnAdd = New System.Windows.Forms.Button()
-        Me.BtnDelete = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TxtFullName = New System.Windows.Forms.TextBox()
         Me.DGUserAccounts = New System.Windows.Forms.DataGridView()
@@ -58,6 +54,10 @@ Partial Class UCEditStaff
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BtnSave = New System.Windows.Forms.Button()
+        Me.BtnEdit = New System.Windows.Forms.Button()
+        Me.BtnAdd = New System.Windows.Forms.Button()
+        Me.BtnDelete = New System.Windows.Forms.Button()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -306,66 +306,6 @@ Partial Class UCEditStaff
         Me.LblBarcode.TabIndex = 11
         Me.LblBarcode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'BtnSave
-        '
-        Me.BtnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(148, Byte), Integer))
-        Me.BtnSave.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnSave.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnSave.Image = Global.P.O.S.My.Resources.Resources.save
-        Me.BtnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnSave.Location = New System.Drawing.Point(653, 3)
-        Me.BtnSave.Name = "BtnSave"
-        Me.BtnSave.Size = New System.Drawing.Size(133, 129)
-        Me.BtnSave.TabIndex = 12
-        Me.BtnSave.Text = "SAVE"
-        Me.BtnSave.UseVisualStyleBackColor = False
-        '
-        'BtnEdit
-        '
-        Me.BtnEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.BtnEdit.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnEdit.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEdit.Image = Global.P.O.S.My.Resources.Resources.resume_2_
-        Me.BtnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEdit.Location = New System.Drawing.Point(514, 3)
-        Me.BtnEdit.Name = "BtnEdit"
-        Me.BtnEdit.Size = New System.Drawing.Size(133, 129)
-        Me.BtnEdit.TabIndex = 8
-        Me.BtnEdit.Text = "EDIT"
-        Me.BtnEdit.UseVisualStyleBackColor = False
-        '
-        'BtnAdd
-        '
-        Me.BtnAdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
-        Me.BtnAdd.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAdd.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAdd.Image = Global.P.O.S.My.Resources.Resources.add_contact
-        Me.BtnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnAdd.Location = New System.Drawing.Point(375, 3)
-        Me.BtnAdd.Name = "BtnAdd"
-        Me.BtnAdd.Size = New System.Drawing.Size(133, 129)
-        Me.BtnAdd.TabIndex = 10
-        Me.BtnAdd.Text = "ADD"
-        Me.BtnAdd.UseVisualStyleBackColor = False
-        '
-        'BtnDelete
-        '
-        Me.BtnDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.BtnDelete.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnDelete.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDelete.Image = Global.P.O.S.My.Resources.Resources.remove_user
-        Me.BtnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnDelete.Location = New System.Drawing.Point(792, 3)
-        Me.BtnDelete.Name = "BtnDelete"
-        Me.BtnDelete.Size = New System.Drawing.Size(135, 129)
-        Me.BtnDelete.TabIndex = 9
-        Me.BtnDelete.Text = "DELETE"
-        Me.BtnDelete.UseVisualStyleBackColor = False
-        '
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.ColumnCount = 1
@@ -490,6 +430,66 @@ Partial Class UCEditStaff
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(938, 545)
         Me.Panel1.TabIndex = 1
+        '
+        'BtnSave
+        '
+        Me.BtnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(148, Byte), Integer))
+        Me.BtnSave.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnSave.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSave.Image = Global.P.O.S.My.Resources.Resources.save
+        Me.BtnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnSave.Location = New System.Drawing.Point(653, 3)
+        Me.BtnSave.Name = "BtnSave"
+        Me.BtnSave.Size = New System.Drawing.Size(133, 129)
+        Me.BtnSave.TabIndex = 12
+        Me.BtnSave.Text = "SAVE"
+        Me.BtnSave.UseVisualStyleBackColor = False
+        '
+        'BtnEdit
+        '
+        Me.BtnEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.BtnEdit.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnEdit.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEdit.Image = Global.P.O.S.My.Resources.Resources.resume_2_
+        Me.BtnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnEdit.Location = New System.Drawing.Point(514, 3)
+        Me.BtnEdit.Name = "BtnEdit"
+        Me.BtnEdit.Size = New System.Drawing.Size(133, 129)
+        Me.BtnEdit.TabIndex = 8
+        Me.BtnEdit.Text = "EDIT"
+        Me.BtnEdit.UseVisualStyleBackColor = False
+        '
+        'BtnAdd
+        '
+        Me.BtnAdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
+        Me.BtnAdd.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAdd.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAdd.Image = Global.P.O.S.My.Resources.Resources.add_contact
+        Me.BtnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnAdd.Location = New System.Drawing.Point(375, 3)
+        Me.BtnAdd.Name = "BtnAdd"
+        Me.BtnAdd.Size = New System.Drawing.Size(133, 129)
+        Me.BtnAdd.TabIndex = 10
+        Me.BtnAdd.Text = "ADD"
+        Me.BtnAdd.UseVisualStyleBackColor = False
+        '
+        'BtnDelete
+        '
+        Me.BtnDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.BtnDelete.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnDelete.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDelete.Image = Global.P.O.S.My.Resources.Resources.remove_user
+        Me.BtnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnDelete.Location = New System.Drawing.Point(792, 3)
+        Me.BtnDelete.Name = "BtnDelete"
+        Me.BtnDelete.Size = New System.Drawing.Size(135, 129)
+        Me.BtnDelete.TabIndex = 9
+        Me.BtnDelete.Text = "DELETE"
+        Me.BtnDelete.UseVisualStyleBackColor = False
         '
         'UCEditStaff
         '

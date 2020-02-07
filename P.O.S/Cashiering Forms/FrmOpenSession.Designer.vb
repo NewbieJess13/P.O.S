@@ -137,6 +137,7 @@ Partial Class FrmOpenSession
         '
         'TableLayoutPanel1
         '
+        Me.TableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
         Me.TableLayoutPanel1.ColumnCount = 2
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.0!))
@@ -163,18 +164,18 @@ Partial Class FrmOpenSession
         '
         Me.TxtNotes.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TxtNotes.Font = New System.Drawing.Font("Century Gothic", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNotes.Location = New System.Drawing.Point(197, 189)
+        Me.TxtNotes.Location = New System.Drawing.Point(198, 190)
         Me.TxtNotes.Name = "TxtNotes"
-        Me.TxtNotes.Size = New System.Drawing.Size(447, 57)
+        Me.TxtNotes.Size = New System.Drawing.Size(445, 57)
         Me.TxtNotes.TabIndex = 10
         '
         'TxtBegCash
         '
         Me.TxtBegCash.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TxtBegCash.Font = New System.Drawing.Font("Century Gothic", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtBegCash.Location = New System.Drawing.Point(197, 127)
+        Me.TxtBegCash.Location = New System.Drawing.Point(198, 128)
         Me.TxtBegCash.Name = "TxtBegCash"
-        Me.TxtBegCash.Size = New System.Drawing.Size(447, 57)
+        Me.TxtBegCash.Size = New System.Drawing.Size(445, 57)
         Me.TxtBegCash.TabIndex = 9
         '
         'TxtCashierName
@@ -182,19 +183,19 @@ Partial Class FrmOpenSession
         Me.TxtCashierName.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TxtCashierName.Enabled = False
         Me.TxtCashierName.Font = New System.Drawing.Font("Century Gothic", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCashierName.Location = New System.Drawing.Point(197, 65)
+        Me.TxtCashierName.Location = New System.Drawing.Point(198, 66)
         Me.TxtCashierName.Name = "TxtCashierName"
-        Me.TxtCashierName.Size = New System.Drawing.Size(447, 57)
+        Me.TxtCashierName.Size = New System.Drawing.Size(445, 57)
         Me.TxtCashierName.TabIndex = 8
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(3, 186)
+        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(4, 187)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(188, 64)
+        Me.Label7.Size = New System.Drawing.Size(187, 62)
         Me.Label7.TabIndex = 7
         Me.Label7.Text = "NOTES"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -203,10 +204,10 @@ Partial Class FrmOpenSession
         '
         Me.Label5.AutoSize = True
         Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(3, 124)
+        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(4, 125)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(188, 62)
+        Me.Label5.Size = New System.Drawing.Size(187, 61)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "BEGINNING CASH"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -215,10 +216,10 @@ Partial Class FrmOpenSession
         '
         Me.Label3.AutoSize = True
         Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(3, 62)
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(4, 63)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(188, 62)
+        Me.Label3.Size = New System.Drawing.Size(187, 61)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "CASHIER NAME"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -227,10 +228,10 @@ Partial Class FrmOpenSession
         '
         Me.Label2.AutoSize = True
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 0)
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(4, 1)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(188, 62)
+        Me.Label2.Size = New System.Drawing.Size(187, 61)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "BUSINESS DATE"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -240,9 +241,9 @@ Partial Class FrmOpenSession
         Me.TxtBusinessDate.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TxtBusinessDate.Enabled = False
         Me.TxtBusinessDate.Font = New System.Drawing.Font("Century Gothic", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtBusinessDate.Location = New System.Drawing.Point(197, 3)
+        Me.TxtBusinessDate.Location = New System.Drawing.Point(198, 4)
         Me.TxtBusinessDate.Name = "TxtBusinessDate"
-        Me.TxtBusinessDate.Size = New System.Drawing.Size(447, 57)
+        Me.TxtBusinessDate.Size = New System.Drawing.Size(445, 57)
         Me.TxtBusinessDate.TabIndex = 1
         '
         'FrmOpenSession

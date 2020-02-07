@@ -1,7 +1,7 @@
 ﻿Public Class FrmMainMenu
+    Dim Login As New LoginCrud
     Private Sub BtnOpenSession_Click(sender As Object, e As EventArgs) Handles BtnOpenSession.Click
         FrmOpenSession.ShowDialog()
-
     End Sub
 
     Private Sub FrmMainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -46,5 +46,11 @@
 
     Private Sub BtnReports_Click(sender As Object, e As EventArgs) Handles BtnReports.Click
         FrmReports.ShowDialog()
+    End Sub
+
+    Private Sub BtnLogout_Click(sender As Object, e As EventArgs) Handles BtnLogout.Click
+        If Login.UpdateStatus(My.Settings.UserID, "1") Then
+            Application.Restart()
+        End If
     End Sub
 End Class

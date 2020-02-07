@@ -178,6 +178,7 @@
     <Compile Include="Cashiering Forms\SessionData.vb" />
     <Compile Include="ConnectionString.vb" />
     <Compile Include="LoginClass.vb" />
+    <Compile Include="Products\ProductData.vb" />
     <Compile Include="Reports\FrmReports.Designer.vb">
       <DependentUpon>FrmReports.vb</DependentUpon>
     </Compile>
@@ -190,12 +191,6 @@
     </Compile>
     <Compile Include="Reports\InventoryList.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Settings\BarcodePrint.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BarcodePrint.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Cashiering Forms\FrmCashierSession.Designer.vb">
       <DependentUpon>FrmCashierSession.vb</DependentUpon>
@@ -280,22 +275,16 @@
     <Compile Include="Products\UCProductDetails.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Settings\UCBarcodePrinter.Designer.vb">
-      <DependentUpon>UCBarcodePrinter.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Settings\UCBarcodePrinter.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Settings\UCCreditSet.Designer.vb">
-      <DependentUpon>UCCreditSet.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Settings\UCCreditSet.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Settings\UCEditStaff.Designer.vb">
       <DependentUpon>UCEditStaff.vb</DependentUpon>
     </Compile>
     <Compile Include="Settings\UCEditStaff.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\UCSetPrinter.Designer.vb">
+      <DependentUpon>UCSetPrinter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\UCSetPrinter.vb">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
@@ -348,10 +337,6 @@
     <EmbeddedResource Include="Reports\InventoryList.resx">
       <DependentUpon>InventoryList.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Settings\BarcodePrint.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>BarcodePrint.vb</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Cashiering Forms\FrmCashierSession.resx">
       <DependentUpon>FrmCashierSession.vb</DependentUpon>
     </EmbeddedResource>
@@ -391,14 +376,11 @@
     <EmbeddedResource Include="Products\UCProductDetails.resx">
       <DependentUpon>UCProductDetails.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Settings\UCBarcodePrinter.resx">
-      <DependentUpon>UCBarcodePrinter.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Settings\UCCreditSet.resx">
-      <DependentUpon>UCCreditSet.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Settings\UCEditStaff.resx">
       <DependentUpon>UCEditStaff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\UCSetPrinter.resx">
+      <DependentUpon>UCSetPrinter.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

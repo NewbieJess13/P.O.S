@@ -63,10 +63,14 @@ Public Class FrmCheckOut
             If DT.Rows.Count > 0 Then
                 ReceiptNo = DT.Rows(0)(0)
                 Dim DTprint As DataTable = CSCrud.GetReport(ReceiptNo)
+                CRVcash.Show()
                 If DTprint.Rows.Count > 0 Then
                     crystal.SetDataSource(DTprint)
                     CRVcash.ReportSource = crystal
                     RaiseEvent LoadDataToGridToCheckOut(Me, Nothing)
+                    crystal.PrintOptions.PrinterName = My.Settings.PrinterName
+                    crystal.PrintToPrinter(1, False, 1, 1)
+                    CRVcash.Hide()
                     Me.Close()
                 End If
             End If
