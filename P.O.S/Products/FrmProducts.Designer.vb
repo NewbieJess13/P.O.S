@@ -66,7 +66,7 @@ Partial Class FrmProducts
         'ItemCodeToolStripMenuItem
         '
         Me.ItemCodeToolStripMenuItem.Name = "ItemCodeToolStripMenuItem"
-        Me.ItemCodeToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
+        Me.ItemCodeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ItemCodeToolStripMenuItem.Text = "Item code"
         '
         'Panel3

@@ -6,5 +6,7 @@
         a.Dock = DockStyle.Fill
     End Sub
 
-
+    Private Sub ItemCodeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ItemCodeToolStripMenuItem.Click
+        FrmItemCode.ShowDialog()
+    End Sub
 End Class

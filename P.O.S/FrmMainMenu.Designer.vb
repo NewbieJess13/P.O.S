@@ -33,7 +33,6 @@ Partial Class FrmMainMenu
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.BtnDelivery = New System.Windows.Forms.Button()
         Me.BtnUploadEmployee = New System.Windows.Forms.Button()
         Me.BtnProducts = New System.Windows.Forms.Button()
         Me.BtnOpenSession = New System.Windows.Forms.Button()
@@ -146,12 +145,11 @@ Partial Class FrmMainMenu
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel1.Controls.Add(Me.BtnDelivery, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.BtnUploadEmployee, 3, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.BtnProducts, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.BtnOpenSession, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.BtnSettings, 2, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.BtnReports, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.BtnSettings, 1, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 63)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -160,27 +158,6 @@ Partial Class FrmMainMenu
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(980, 456)
         Me.TableLayoutPanel1.TabIndex = 2
-        '
-        'BtnDelivery
-        '
-        Me.BtnDelivery.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnDelivery.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(165, Byte), Integer))
-        Me.BtnDelivery.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnDelivery.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(210, Byte), Integer))
-        Me.BtnDelivery.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.BtnDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnDelivery.Font = New System.Drawing.Font("Microsoft YaHei", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDelivery.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnDelivery.Image = CType(resources.GetObject("BtnDelivery.Image"), System.Drawing.Image)
-        Me.BtnDelivery.Location = New System.Drawing.Point(329, 231)
-        Me.BtnDelivery.Name = "BtnDelivery"
-        Me.BtnDelivery.Size = New System.Drawing.Size(320, 222)
-        Me.BtnDelivery.TabIndex = 11
-        Me.BtnDelivery.Text = "Delivery (F5)"
-        Me.BtnDelivery.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.BtnDelivery.UseVisualStyleBackColor = False
         '
         'BtnUploadEmployee
         '
@@ -256,9 +233,9 @@ Partial Class FrmMainMenu
         Me.BtnSettings.Font = New System.Drawing.Font("Microsoft YaHei", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSettings.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnSettings.Image = CType(resources.GetObject("BtnSettings.Image"), System.Drawing.Image)
-        Me.BtnSettings.Location = New System.Drawing.Point(655, 231)
+        Me.BtnSettings.Location = New System.Drawing.Point(329, 231)
         Me.BtnSettings.Name = "BtnSettings"
-        Me.BtnSettings.Size = New System.Drawing.Size(322, 222)
+        Me.BtnSettings.Size = New System.Drawing.Size(320, 222)
         Me.BtnSettings.TabIndex = 12
         Me.BtnSettings.Text = "Settings (F6)"
         Me.BtnSettings.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -320,7 +297,6 @@ Partial Class FrmMainMenu
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents BtnDelivery As Button
     Friend WithEvents BtnUploadEmployee As Button
     Friend WithEvents BtnProducts As Button
     Friend WithEvents BtnOpenSession As Button

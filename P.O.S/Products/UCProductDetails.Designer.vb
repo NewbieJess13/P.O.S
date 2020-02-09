@@ -22,8 +22,8 @@ Partial Class UCProductDetails
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TxtQuanti = New System.Windows.Forms.TextBox()
         Me.TxtSellingPrice = New System.Windows.Forms.TextBox()
         Me.TxtRetailPrice = New System.Windows.Forms.TextBox()
@@ -44,11 +44,11 @@ Partial Class UCProductDetails
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.CmbCategory = New System.Windows.Forms.ComboBox()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.CmbCategory = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.DGProductList = New System.Windows.Forms.DataGridView()
@@ -88,7 +88,7 @@ Partial Class UCProductDetails
         Me.TxtSellingPrice.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TxtSellingPrice.Enabled = False
         Me.TxtSellingPrice.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtSellingPrice.Location = New System.Drawing.Point(195, 68)
+        Me.TxtSellingPrice.Location = New System.Drawing.Point(195, 100)
         Me.TxtSellingPrice.Name = "TxtSellingPrice"
         Me.TxtSellingPrice.Size = New System.Drawing.Size(280, 27)
         Me.TxtSellingPrice.TabIndex = 2
@@ -98,7 +98,7 @@ Partial Class UCProductDetails
         Me.TxtRetailPrice.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TxtRetailPrice.Enabled = False
         Me.TxtRetailPrice.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtRetailPrice.Location = New System.Drawing.Point(195, 36)
+        Me.TxtRetailPrice.Location = New System.Drawing.Point(195, 68)
         Me.TxtRetailPrice.Name = "TxtRetailPrice"
         Me.TxtRetailPrice.Size = New System.Drawing.Size(280, 27)
         Me.TxtRetailPrice.TabIndex = 1
@@ -118,7 +118,7 @@ Partial Class UCProductDetails
         Me.Label1.AutoSize = True
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(482, 1)
+        Me.Label1.Location = New System.Drawing.Point(4, 33)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(184, 31)
         Me.Label1.TabIndex = 0
@@ -227,7 +227,7 @@ Partial Class UCProductDetails
         Me.Label2.AutoSize = True
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(4, 33)
+        Me.Label2.Location = New System.Drawing.Point(4, 65)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(184, 31)
         Me.Label2.TabIndex = 1
@@ -263,9 +263,9 @@ Partial Class UCProductDetails
         Me.TxtDesc.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TxtDesc.Enabled = False
         Me.TxtDesc.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtDesc.Location = New System.Drawing.Point(673, 4)
+        Me.TxtDesc.Location = New System.Drawing.Point(195, 36)
         Me.TxtDesc.Name = "TxtDesc"
-        Me.TxtDesc.Size = New System.Drawing.Size(282, 27)
+        Me.TxtDesc.Size = New System.Drawing.Size(280, 27)
         Me.TxtDesc.TabIndex = 0
         '
         'TableLayoutPanel3
@@ -279,20 +279,20 @@ Partial Class UCProductDetails
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.cmbunit, 3, 2)
         Me.TableLayoutPanel3.Controls.Add(Me.Label7, 2, 3)
+        Me.TableLayoutPanel3.Controls.Add(Me.TxtDesc, 1, 1)
         Me.TableLayoutPanel3.Controls.Add(Me.Label8, 2, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label5, 0, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label1, 0, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label5, 0, 3)
         Me.TableLayoutPanel3.Controls.Add(Me.TxtQuanti, 3, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.TxtSellingPrice, 1, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.TxtRetailPrice, 1, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.TxtSellingPrice, 1, 3)
+        Me.TableLayoutPanel3.Controls.Add(Me.TxtRetailPrice, 1, 2)
         Me.TableLayoutPanel3.Controls.Add(Me.TxtItemCode, 1, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label1, 2, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label2, 0, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label3, 0, 3)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label2, 0, 2)
         Me.TableLayoutPanel3.Controls.Add(Me.Label4, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.Label6, 2, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.TxtDesc, 3, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.CmbCategory, 1, 3)
         Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel5, 3, 3)
+        Me.TableLayoutPanel3.Controls.Add(Me.CmbCategory, 3, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label3, 2, 0)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 3)
         Me.TableLayoutPanel3.MaximumSize = New System.Drawing.Size(0, 131)
@@ -348,35 +348,12 @@ Partial Class UCProductDetails
         Me.Label5.AutoSize = True
         Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(4, 65)
+        Me.Label5.Location = New System.Drawing.Point(4, 97)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(184, 31)
+        Me.Label5.Size = New System.Drawing.Size(184, 33)
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "SELLING PRICE"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(4, 97)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(184, 33)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "CATEGORY"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'CmbCategory
-        '
-        Me.CmbCategory.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CmbCategory.Enabled = False
-        Me.CmbCategory.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CmbCategory.FormattingEnabled = True
-        Me.CmbCategory.Location = New System.Drawing.Point(195, 100)
-        Me.CmbCategory.Name = "CmbCategory"
-        Me.CmbCategory.Size = New System.Drawing.Size(280, 29)
-        Me.CmbCategory.TabIndex = 3
         '
         'TableLayoutPanel5
         '
@@ -416,6 +393,29 @@ Partial Class UCProductDetails
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "UNAVAILABLE"
         Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'CmbCategory
+        '
+        Me.CmbCategory.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CmbCategory.Enabled = False
+        Me.CmbCategory.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CmbCategory.FormattingEnabled = True
+        Me.CmbCategory.Location = New System.Drawing.Point(673, 4)
+        Me.CmbCategory.Name = "CmbCategory"
+        Me.CmbCategory.Size = New System.Drawing.Size(282, 29)
+        Me.CmbCategory.TabIndex = 3
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(482, 1)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(184, 31)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "CATEGORY"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TableLayoutPanel2
         '
@@ -458,24 +458,24 @@ Partial Class UCProductDetails
         Me.DGProductList.AllowUserToDeleteRows = False
         Me.DGProductList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DGProductList.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGProductList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGProductList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGProductList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column8, Me.Column9, Me.Column7})
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGProductList.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGProductList.DefaultCellStyle = DataGridViewCellStyle2
         Me.DGProductList.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DGProductList.Location = New System.Drawing.Point(110, 4)
         Me.DGProductList.MultiSelect = False

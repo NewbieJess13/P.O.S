@@ -1,14 +1,13 @@
-﻿Imports ClassSql
-Imports System.Data.SqlClient
-Imports System.IO
+﻿
 Public Class UCProductDetails
     Dim tbl As DataTable
     Dim _action As String
+    Dim ProdCrud As New ProductCrud
     Private Sub UCProductDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         '   MsSql.connectionString = My.Settings.ConnectionString
 
         PopulateComboCategory()
-
+        PopTxtCode()
     End Sub
 
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
@@ -49,14 +48,7 @@ Public Class UCProductDetails
         cmbunit.Enabled = False
     End Sub
 
-    Sub DeleteITem()
-        '   If MsSql.ExecuteQuery("DELETE FROM Tbl_Products WHERE id='" & LblId.Text & "'", Nothing) = True Then
-        ClearTexts()
-            DisableTexts()
 
-        MessageBox.Show("Item successfully deleted.", My.Settings.Title, MessageBoxButtons.OK, MessageBoxIcon.Information)
-        '   End If
-    End Sub
 
     Private Sub PopulateComboCategory()
         '       tbl = MsSql.Table("SELECT * FROM Tbl_Category")
@@ -64,6 +56,27 @@ Public Class UCProductDetails
         CmbCategory.ValueMember = "id"
         CmbCategory.DisplayMember = "CategoryName"
         CmbCategory.SelectedIndex = -1
+    End Sub
+
+    Sub PopTxtCode()
+        Dim DT As DataTable = ProdCrud.PopulateItemCode
+        Dim col As New AutoCompleteStringCollection
+        Dim i As Integer
+        For i = 0 To DT.Rows.Count - 1
+            col.Add(DT.Rows(i)("SKU_Code").ToString)
+
+        Next
+        TxtItemCode.AutoCompleteSource = AutoCompleteSource.CustomSource
+        TxtItemCode.AutoCompleteCustomSource = col
+        TxtItemCode.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+
+    End Sub
+
+    Sub loadItem()
+        Dim DT As DataTable = ProdCrud.PopulateItemCode(TxtItemCode.Text)
+        If DT.Rows.Count > 0 Then
+            TxtDesc.Text = DT.Rows(0)(1)
+        End If
     End Sub
 
     Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
@@ -104,4 +117,9 @@ Public Class UCProductDetails
         DisableTexts()
     End Sub
 
+    Private Sub TxtItemCode_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtItemCode.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            loadItem()
+        End If
+    End Sub
 End Class

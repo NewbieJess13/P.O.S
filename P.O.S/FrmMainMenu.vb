@@ -36,9 +36,7 @@
         If e.KeyCode = Keys.F4 Then
             BtnReports.PerformClick()
         End If
-        If e.KeyCode = Keys.F5 Then
-            BtnDelivery.PerformClick()
-        End If
+
         If e.KeyCode = Keys.F6 Then
             BtnSettings.PerformClick()
         End If
