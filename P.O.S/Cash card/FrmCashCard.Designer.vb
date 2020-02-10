@@ -24,16 +24,10 @@ Partial Class FrmCashCard
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TxtCardID = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TxtEmpName = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TxtEmpID = New System.Windows.Forms.TextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TxtSearch = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.BtnCancel = New System.Windows.Forms.Button()
@@ -42,13 +36,19 @@ Partial Class FrmCashCard
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.BtnDelete = New System.Windows.Forms.Button()
         Me.DGCardList = New System.Windows.Forms.DataGridView()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.TxtSearch = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.TxtEmpID = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TxtEmpName = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TxtCardID = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
-        Me.RBactive = New System.Windows.Forms.RadioButton()
         Me.RBInActive = New System.Windows.Forms.RadioButton()
+        Me.RBactive = New System.Windows.Forms.RadioButton()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -58,11 +58,11 @@ Partial Class FrmCashCard
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
-        Me.TableLayoutPanel2.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
         CType(Me.DGCardList, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel5.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -90,17 +90,6 @@ Partial Class FrmCashCard
         Me.TabPage1.Text = "Cash card"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'TabPage2
-        '
-        Me.TabPage2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(937, 644)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Load card"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble
@@ -122,109 +111,37 @@ Partial Class FrmCashCard
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(931, 638)
         Me.TableLayoutPanel1.TabIndex = 0
         '
-        'TableLayoutPanel2
+        'Panel1
         '
-        Me.TableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
-        Me.TableLayoutPanel2.ColumnCount = 4
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.75!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.25!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.75!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.25!))
-        Me.TableLayoutPanel2.Controls.Add(Me.Label5, 2, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.TxtEmpID, 3, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label3, 2, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.TxtEmpName, 1, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.TxtCardID, 1, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label4, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel5, 3, 1)
-        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(6, 39)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 2
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.52941!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.47059!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(919, 70)
-        Me.TableLayoutPanel2.TabIndex = 0
+        Me.Panel1.Controls.Add(Me.TxtSearch)
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(6, 118)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(919, 35)
+        Me.Panel1.TabIndex = 7
         '
-        'Label4
+        'TxtSearch
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(4, 1)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(165, 32)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "CARD ID"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.TxtSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TxtSearch.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtSearch.Location = New System.Drawing.Point(704, 7)
+        Me.TxtSearch.Name = "TxtSearch"
+        Me.TxtSearch.Size = New System.Drawing.Size(215, 23)
+        Me.TxtSearch.TabIndex = 18
         '
-        'TxtCardID
+        'Label9
         '
-        Me.TxtCardID.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TxtCardID.Enabled = False
-        Me.TxtCardID.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCardID.Location = New System.Drawing.Point(176, 4)
-        Me.TxtCardID.MaxLength = 11
-        Me.TxtCardID.Name = "TxtCardID"
-        Me.TxtCardID.Size = New System.Drawing.Size(279, 27)
-        Me.TxtCardID.TabIndex = 5
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(4, 34)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(165, 35)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "EMPLOYEE NAME"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TxtEmpName
-        '
-        Me.TxtEmpName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TxtEmpName.Enabled = False
-        Me.TxtEmpName.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtEmpName.Location = New System.Drawing.Point(176, 37)
-        Me.TxtEmpName.Name = "TxtEmpName"
-        Me.TxtEmpName.Size = New System.Drawing.Size(279, 27)
-        Me.TxtEmpName.TabIndex = 7
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(6, 3)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(919, 30)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "CARD SETTINGS"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(462, 1)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(165, 32)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "EMPLOYEE ID"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TxtEmpID
-        '
-        Me.TxtEmpID.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TxtEmpID.Enabled = False
-        Me.TxtEmpID.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtEmpID.Location = New System.Drawing.Point(634, 4)
-        Me.TxtEmpID.Name = "TxtEmpID"
-        Me.TxtEmpID.Size = New System.Drawing.Size(281, 27)
-        Me.TxtEmpID.TabIndex = 9
+        Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(653, 14)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(53, 16)
+        Me.Label9.TabIndex = 17
+        Me.Label9.Text = "Search"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TableLayoutPanel3
         '
@@ -356,37 +273,42 @@ Partial Class FrmCashCard
         Me.DGCardList.Size = New System.Drawing.Size(809, 462)
         Me.DGCardList.TabIndex = 1
         '
-        'Panel1
+        'Label2
         '
-        Me.Panel1.Controls.Add(Me.TxtSearch)
-        Me.Panel1.Controls.Add(Me.Label9)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(6, 118)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(919, 35)
-        Me.Panel1.TabIndex = 7
+        Me.Label2.AutoSize = True
+        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(6, 3)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(919, 30)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "CARD SETTINGS"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'TxtSearch
+        'TableLayoutPanel2
         '
-        Me.TxtSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TxtSearch.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtSearch.Location = New System.Drawing.Point(704, 7)
-        Me.TxtSearch.Name = "TxtSearch"
-        Me.TxtSearch.Size = New System.Drawing.Size(215, 23)
-        Me.TxtSearch.TabIndex = 18
-        '
-        'Label9
-        '
-        Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(653, 14)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(53, 16)
-        Me.Label9.TabIndex = 17
-        Me.Label9.Text = "Search"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.TableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
+        Me.TableLayoutPanel2.ColumnCount = 4
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.75!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.25!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.75!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.25!))
+        Me.TableLayoutPanel2.Controls.Add(Me.Label5, 2, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.TxtEmpID, 3, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label3, 2, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.TxtEmpName, 1, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.TxtCardID, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label4, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel5, 3, 1)
+        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(6, 39)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 2
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.52941!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.47059!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(919, 70)
+        Me.TableLayoutPanel2.TabIndex = 0
         '
         'Label5
         '
@@ -399,6 +321,73 @@ Partial Class FrmCashCard
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "STATUS"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TxtEmpID
+        '
+        Me.TxtEmpID.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TxtEmpID.Enabled = False
+        Me.TxtEmpID.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtEmpID.Location = New System.Drawing.Point(634, 4)
+        Me.TxtEmpID.Name = "TxtEmpID"
+        Me.TxtEmpID.Size = New System.Drawing.Size(281, 27)
+        Me.TxtEmpID.TabIndex = 9
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(462, 1)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(165, 32)
+        Me.Label3.TabIndex = 8
+        Me.Label3.Text = "EMPLOYEE ID"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TxtEmpName
+        '
+        Me.TxtEmpName.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TxtEmpName.Enabled = False
+        Me.TxtEmpName.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtEmpName.Location = New System.Drawing.Point(176, 37)
+        Me.TxtEmpName.Name = "TxtEmpName"
+        Me.TxtEmpName.Size = New System.Drawing.Size(279, 27)
+        Me.TxtEmpName.TabIndex = 7
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(4, 34)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(165, 35)
+        Me.Label1.TabIndex = 6
+        Me.Label1.Text = "EMPLOYEE NAME"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TxtCardID
+        '
+        Me.TxtCardID.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TxtCardID.Enabled = False
+        Me.TxtCardID.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCardID.Location = New System.Drawing.Point(176, 4)
+        Me.TxtCardID.MaxLength = 11
+        Me.TxtCardID.Name = "TxtCardID"
+        Me.TxtCardID.Size = New System.Drawing.Size(279, 27)
+        Me.TxtCardID.TabIndex = 5
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(4, 1)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(165, 32)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "CARD ID"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TableLayoutPanel5
         '
@@ -415,19 +404,6 @@ Partial Class FrmCashCard
         Me.TableLayoutPanel5.Size = New System.Drawing.Size(281, 29)
         Me.TableLayoutPanel5.TabIndex = 11
         '
-        'RBactive
-        '
-        Me.RBactive.AutoSize = True
-        Me.RBactive.Enabled = False
-        Me.RBactive.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RBactive.Location = New System.Drawing.Point(3, 3)
-        Me.RBactive.Name = "RBactive"
-        Me.RBactive.Size = New System.Drawing.Size(62, 19)
-        Me.RBactive.TabIndex = 1
-        Me.RBactive.TabStop = True
-        Me.RBactive.Text = "ACTIVE"
-        Me.RBactive.UseVisualStyleBackColor = True
-        '
         'RBInActive
         '
         Me.RBInActive.AutoSize = True
@@ -441,6 +417,30 @@ Partial Class FrmCashCard
         Me.RBInActive.Text = "INACTIVE"
         Me.RBInActive.UseVisualStyleBackColor = True
         '
+        'RBactive
+        '
+        Me.RBactive.AutoSize = True
+        Me.RBactive.Enabled = False
+        Me.RBactive.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RBactive.Location = New System.Drawing.Point(3, 3)
+        Me.RBactive.Name = "RBactive"
+        Me.RBactive.Size = New System.Drawing.Size(62, 19)
+        Me.RBactive.TabIndex = 1
+        Me.RBactive.TabStop = True
+        Me.RBactive.Text = "ACTIVE"
+        Me.RBactive.UseVisualStyleBackColor = True
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(937, 644)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Load card"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
         'Column1
         '
         Me.Column1.HeaderText = "id"
@@ -453,6 +453,7 @@ Partial Class FrmCashCard
         Me.Column2.HeaderText = "Card ID"
         Me.Column2.Name = "Column2"
         Me.Column2.ReadOnly = True
+        Me.Column2.Visible = False
         '
         'Column3
         '
@@ -465,6 +466,7 @@ Partial Class FrmCashCard
         Me.Column4.HeaderText = "Balance"
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
+        Me.Column4.Visible = False
         '
         'Column6
         '
@@ -477,6 +479,7 @@ Partial Class FrmCashCard
         Me.Column5.HeaderText = "Status"
         Me.Column5.Name = "Column5"
         Me.Column5.ReadOnly = True
+        Me.Column5.Visible = False
         '
         'FrmCashCard
         '
@@ -491,13 +494,13 @@ Partial Class FrmCashCard
         Me.TabPage1.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
-        Me.TableLayoutPanel2.ResumeLayout(False)
-        Me.TableLayoutPanel2.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel4.ResumeLayout(False)
         CType(Me.DGCardList, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.TableLayoutPanel2.PerformLayout()
         Me.TableLayoutPanel5.ResumeLayout(False)
         Me.TableLayoutPanel5.PerformLayout()
         Me.ResumeLayout(False)

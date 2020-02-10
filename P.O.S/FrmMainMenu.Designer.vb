@@ -33,11 +33,11 @@ Partial Class FrmMainMenu
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.BtnUploadEmployee = New System.Windows.Forms.Button()
+        Me.BtnCashCard = New System.Windows.Forms.Button()
         Me.BtnProducts = New System.Windows.Forms.Button()
         Me.BtnOpenSession = New System.Windows.Forms.Button()
-        Me.BtnSettings = New System.Windows.Forms.Button()
         Me.BtnReports = New System.Windows.Forms.Button()
+        Me.BtnSettings = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -145,7 +145,7 @@ Partial Class FrmMainMenu
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel1.Controls.Add(Me.BtnUploadEmployee, 3, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.BtnCashCard, 3, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.BtnProducts, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.BtnOpenSession, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.BtnReports, 0, 1)
@@ -159,26 +159,26 @@ Partial Class FrmMainMenu
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(980, 456)
         Me.TableLayoutPanel1.TabIndex = 2
         '
-        'BtnUploadEmployee
+        'BtnCashCard
         '
-        Me.BtnUploadEmployee.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.BtnCashCard.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnUploadEmployee.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(165, Byte), Integer))
-        Me.BtnUploadEmployee.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnUploadEmployee.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(210, Byte), Integer))
-        Me.BtnUploadEmployee.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.BtnUploadEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnUploadEmployee.Font = New System.Drawing.Font("Microsoft YaHei", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnUploadEmployee.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnUploadEmployee.Image = CType(resources.GetObject("BtnUploadEmployee.Image"), System.Drawing.Image)
-        Me.BtnUploadEmployee.Location = New System.Drawing.Point(655, 3)
-        Me.BtnUploadEmployee.Name = "BtnUploadEmployee"
-        Me.BtnUploadEmployee.Size = New System.Drawing.Size(322, 222)
-        Me.BtnUploadEmployee.TabIndex = 9
-        Me.BtnUploadEmployee.Text = "CASH CARD(F3)"
-        Me.BtnUploadEmployee.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.BtnUploadEmployee.UseVisualStyleBackColor = False
+        Me.BtnCashCard.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(165, Byte), Integer))
+        Me.BtnCashCard.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnCashCard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(210, Byte), Integer))
+        Me.BtnCashCard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.BtnCashCard.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCashCard.Font = New System.Drawing.Font("Microsoft YaHei", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCashCard.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnCashCard.Image = CType(resources.GetObject("BtnCashCard.Image"), System.Drawing.Image)
+        Me.BtnCashCard.Location = New System.Drawing.Point(655, 3)
+        Me.BtnCashCard.Name = "BtnCashCard"
+        Me.BtnCashCard.Size = New System.Drawing.Size(322, 222)
+        Me.BtnCashCard.TabIndex = 9
+        Me.BtnCashCard.Text = "CASH CARD(F3)"
+        Me.BtnCashCard.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.BtnCashCard.UseVisualStyleBackColor = False
         '
         'BtnProducts
         '
@@ -220,27 +220,6 @@ Partial Class FrmMainMenu
         Me.BtnOpenSession.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnOpenSession.UseVisualStyleBackColor = False
         '
-        'BtnSettings
-        '
-        Me.BtnSettings.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnSettings.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(165, Byte), Integer))
-        Me.BtnSettings.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(210, Byte), Integer))
-        Me.BtnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.BtnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnSettings.Font = New System.Drawing.Font("Microsoft YaHei", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnSettings.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnSettings.Image = CType(resources.GetObject("BtnSettings.Image"), System.Drawing.Image)
-        Me.BtnSettings.Location = New System.Drawing.Point(329, 231)
-        Me.BtnSettings.Name = "BtnSettings"
-        Me.BtnSettings.Size = New System.Drawing.Size(320, 222)
-        Me.BtnSettings.TabIndex = 12
-        Me.BtnSettings.Text = "Settings (F6)"
-        Me.BtnSettings.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.BtnSettings.UseVisualStyleBackColor = False
-        '
         'BtnReports
         '
         Me.BtnReports.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -261,6 +240,27 @@ Partial Class FrmMainMenu
         Me.BtnReports.Text = "Reports (F4)"
         Me.BtnReports.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnReports.UseVisualStyleBackColor = False
+        '
+        'BtnSettings
+        '
+        Me.BtnSettings.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnSettings.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(165, Byte), Integer))
+        Me.BtnSettings.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(210, Byte), Integer))
+        Me.BtnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.BtnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSettings.Font = New System.Drawing.Font("Microsoft YaHei", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSettings.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnSettings.Image = CType(resources.GetObject("BtnSettings.Image"), System.Drawing.Image)
+        Me.BtnSettings.Location = New System.Drawing.Point(329, 231)
+        Me.BtnSettings.Name = "BtnSettings"
+        Me.BtnSettings.Size = New System.Drawing.Size(320, 222)
+        Me.BtnSettings.TabIndex = 12
+        Me.BtnSettings.Text = "Settings (F6)"
+        Me.BtnSettings.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.BtnSettings.UseVisualStyleBackColor = False
         '
         'Timer1
         '
@@ -297,7 +297,7 @@ Partial Class FrmMainMenu
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents BtnUploadEmployee As Button
+    Friend WithEvents BtnCashCard As Button
     Friend WithEvents BtnProducts As Button
     Friend WithEvents BtnOpenSession As Button
     Friend WithEvents BtnSettings As Button

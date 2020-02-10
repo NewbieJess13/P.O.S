@@ -31,7 +31,7 @@
             BtnProducts.PerformClick()
         End If
         If e.KeyCode = Keys.F3 Then
-            BtnUploadEmployee.PerformClick()
+            BtnCashCard.PerformClick()
         End If
         If e.KeyCode = Keys.F4 Then
             BtnReports.PerformClick()
@@ -50,5 +50,9 @@
         If Login.UpdateStatus(My.Settings.UserID, "1") Then
             Application.Restart()
         End If
+    End Sub
+
+    Private Sub BtnCashCard_Click(sender As Object, e As EventArgs) Handles BtnCashCard.Click
+        FrmCashCard.ShowDialog()
     End Sub
 End Class

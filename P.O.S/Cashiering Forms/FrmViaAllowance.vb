@@ -113,7 +113,7 @@ Public Class FrmViaAllowance
 
     Sub SaveItemTrans()
         If CSCrud.InsertIntoItems() Then
-            CaptureTransaction()
+            GetTransactionNo()
         End If
     End Sub
 

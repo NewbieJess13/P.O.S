@@ -50,12 +50,16 @@
   <ItemGroup>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
     </Reference>
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
     </Reference>
     <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -66,7 +70,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="MealAllowance">
-      <HintPath>E:\Release\MealAllowance.dll</HintPath>
+      <HintPath>..\..\..\MealAllowance.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
@@ -110,6 +114,48 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bin\Debug\BillingMealAllowance.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BillingMealAllowance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\BillInvoice.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BillInvoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\ReceiptEndSession.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReceiptEndSession.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\ReceiptMealAllowance.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReceiptMealAllowance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\ReceiptReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReceiptReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\ReceiptViaCard.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReceiptViaCard.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\SOA.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SOA.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Cash card\CashCardData.vb" />
     <Compile Include="Cash card\FrmCashCard.Designer.vb">
       <DependentUpon>FrmCashCard.vb</DependentUpon>
@@ -244,6 +290,34 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="bin\Debug\BillingMealAllowance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BillingMealAllowance.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\BillInvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BillInvoice.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\ReceiptEndSession.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReceiptEndSession.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\ReceiptMealAllowance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReceiptMealAllowance.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\ReceiptReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReceiptReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\ReceiptViaCard.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReceiptViaCard.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\SOA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SOA.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cash card\FrmCashCard.resx">
       <DependentUpon>FrmCashCard.vb</DependentUpon>
     </EmbeddedResource>
@@ -306,15 +380,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\BillingMealAllowance.rpt" />
-    <None Include="bin\Debug\BillInvoice.rpt" />
-    <None Include="bin\Debug\ReceiptCashCard.rpt" />
-    <None Include="bin\Debug\ReceiptCashPullout.rpt" />
-    <None Include="bin\Debug\ReceiptEndSession.rpt" />
-    <None Include="bin\Debug\ReceiptMealAllowance.rpt" />
-    <None Include="bin\Debug\ReceiptReport.rpt" />
-    <None Include="bin\Debug\ReceiptViaCard.rpt" />
-    <None Include="bin\Debug\SOA.rpt" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -328,7 +393,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="DB\POSDbase.bak" />
     <None Include="Resources\proxy.duckduckgo.com.png" />
   </ItemGroup>
   <ItemGroup>
