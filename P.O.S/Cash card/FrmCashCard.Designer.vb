@@ -36,6 +36,12 @@ Partial Class FrmCashCard
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.BtnDelete = New System.Windows.Forms.Button()
         Me.DGCardList = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -49,12 +55,6 @@ Partial Class FrmCashCard
         Me.RBInActive = New System.Windows.Forms.RadioButton()
         Me.RBactive = New System.Windows.Forms.RadioButton()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -273,6 +273,46 @@ Partial Class FrmCashCard
         Me.DGCardList.Size = New System.Drawing.Size(809, 462)
         Me.DGCardList.TabIndex = 1
         '
+        'Column1
+        '
+        Me.Column1.HeaderText = "id"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Visible = False
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Card ID"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Visible = False
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Employee Name"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Balance"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Visible = False
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Employee ID"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Status"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Visible = False
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -440,46 +480,6 @@ Partial Class FrmCashCard
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Load card"
         Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "id"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Visible = False
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Card ID"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Visible = False
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Employee Name"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Balance"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        Me.Column4.Visible = False
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Employee ID"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Status"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        Me.Column5.Visible = False
         '
         'FrmCashCard
         '

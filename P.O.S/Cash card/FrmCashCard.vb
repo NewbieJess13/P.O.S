@@ -5,6 +5,7 @@
     Dim CCData As New CashCardData
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
         EnableTexts()
+        cleartexts()
         _action = "add"
     End Sub
     Sub EnableTexts()
