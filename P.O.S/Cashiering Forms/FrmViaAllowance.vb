@@ -54,10 +54,9 @@ Public Class FrmViaAllowance
         If e.KeyCode = Keys.Enter Then
             If txtBarcode.TextLength = 11 Then
                 InquiryID = txtBarcode.Text.Substring(0, txtBarcode.TextLength - 2)
-                ' errorCode = ibiden.BalanceInquiry(server, InquiryID, regAllowancestr, speAllowancestr, sectionName)
+                errorCode = ibiden.BalanceInquiry(server, InquiryID, regAllowancestr, speAllowancestr, sectionName)
                 TotalBal = regAllowancestr + speAllowancestr
                 LblBalance.Text = "₱ " & TotalBal
-
                 MessageBox.Show(realID)
                 If errorCode = "-1" Then
                     MessageBox.Show("Server not Found!", My.Settings.Title, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -127,7 +126,9 @@ Public Class FrmViaAllowance
 
     Sub CaptureTransaction()
         TransactionDate = Date.Now.ToString("yyyyMMddhhmm")
-        errorCode = ibiden.CaptureTransaction(server, InquiryID, TotalBal, purchasedList, purchasedAmount, My.Settings.FullName, receiptNum, TransactionDate, CanteenCode, regAllowance, speAllowance, CostCenterCode, employeeClass)
+        errorCode = ibiden.CaptureTransaction(server, InquiryID, TotalBal, purchasedList, purchasedAmount, My.Settings.FullName,
+                                              receiptNum, TransactionDate, CanteenCode,
+                                              regAllowance, speAllowance, CostCenterCode, employeeClass)
         remBalance = regAllowance + speAllowance
         If errorCode = "-1" Then
             MessageBox.Show("Server not Found!", My.Settings.Title, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -223,5 +224,7 @@ Public Class FrmViaAllowance
         change = txtChange.Text
     End Sub
 
-
+    Private Sub Btn1_Click(sender As Object, e As EventArgs) Handles Btn1.Click, Btn2.Click, Btn3.Click, Btn4.Click, Btn5.Click, Btn6.Click, Btn7.Click, Btn8.Click, Btn9.Click, Btn0.Click, Btndot.Click
+        txtTendered.Text += sender.text
+    End Sub
 End Class
