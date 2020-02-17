@@ -312,8 +312,6 @@
   <ItemGroup>
     <None Include="bin\Debug\BillingMealAllowance.rpt" />
     <None Include="bin\Debug\BillInvoice.rpt" />
-    <None Include="bin\Debug\ReceiptCashCard.rpt" />
-    <None Include="bin\Debug\ReceiptCashPullout.rpt" />
     <None Include="bin\Debug\ReceiptEndSession.rpt" />
     <None Include="bin\Debug\ReceiptMealAllowance.rpt" />
     <None Include="bin\Debug\ReceiptReport.rpt" />

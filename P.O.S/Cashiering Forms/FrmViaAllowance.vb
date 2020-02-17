@@ -95,7 +95,10 @@ Public Class FrmViaAllowance
     End Sub
 
     Private Sub BtnBillOut_Click(sender As Object, e As EventArgs) Handles BtnBillOut.Click
-        ConfirmBillOut()
+        If txtBarcode.TextLength < 11 Then
+        Else
+            ConfirmBillOut()
+        End If
     End Sub
 
     Sub ConfirmBillOut()
@@ -227,4 +230,6 @@ Public Class FrmViaAllowance
     Private Sub Btn1_Click(sender As Object, e As EventArgs) Handles Btn1.Click, Btn2.Click, Btn3.Click, Btn4.Click, Btn5.Click, Btn6.Click, Btn7.Click, Btn8.Click, Btn9.Click, Btn0.Click, Btndot.Click
         txtTendered.Text += sender.text
     End Sub
+
+
 End Class
